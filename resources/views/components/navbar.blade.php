@@ -11,7 +11,7 @@
                     <a class="nav-link" aria-current="page" href="{{route('welcome')}}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Prodotti</a>
+                    <a class="nav-link" href="{{route('create_article')}}">Create</a>
                 </li>
                 @auth
                 <li class="nav-item">
