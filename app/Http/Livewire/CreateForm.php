@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use App\Models\Article;
 use App\Models\Category;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
 class CreateForm extends Component
@@ -20,6 +21,7 @@ class CreateForm extends Component
         'title'=> $this->title,
         'price'=> $this->price,
         'body'=> $this->body,
+        'user_id' => Auth::id(),
     ]);
 
 
