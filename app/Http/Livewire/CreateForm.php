@@ -25,6 +25,7 @@ class CreateForm extends Component
 
 
     $this->reset();
+    session()->flash('message','Articolo inserito correttamente');
 
    }
 
