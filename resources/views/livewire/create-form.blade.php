@@ -1,5 +1,4 @@
-
-    <form wire:submit.prevent="articleStore">
+ <form wire:submit.prevent="create">
 
                     <div class="mb-3">
                         <label for="title" class="form-label">Title item</label>
@@ -15,8 +14,6 @@
                         <label for="body" class="form-label">Description</label>
                         <textarea name="body" id="body" wire:model="body" cols="30" rows="10" class="form-control"></textarea>
                     </div>
-
-                    
 
                     <button type="submit" class="btn btn-primary">Submit</button>
 

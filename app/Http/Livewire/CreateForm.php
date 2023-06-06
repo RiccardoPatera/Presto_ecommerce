@@ -11,14 +11,15 @@ class CreateForm extends Component
     public $price;
     public $body;
 
-   public function articleStore(){
+   public function create(){
     // $this->validate();
-    dd($this->title);
-    $article = Article::create([
+    Article::create([
         'title'=> $this->title,
         'price'=> $this->price,
         'body'=> $this->body,
     ]);
+
+    $this->reset();
 
    }
 
