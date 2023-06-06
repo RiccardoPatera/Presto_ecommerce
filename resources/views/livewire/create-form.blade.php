@@ -1,19 +1,19 @@
 
-    <form>
+    <form wire:submit.prevent="articleStore">
 
                     <div class="mb-3">
-                        <label for="itemTitle" class="form-label">Title item</label>
-                        <input type="text" class="form-control" id="" wire:model="title" aria-describedby="emailHelp">
+                        <label for="title" class="form-label">Title item</label>
+                        <input type="text" class="form-control" id="title" wire:model="title" aria-describedby="emailHelp">
                     </div>
 
                     <div class="mb-3">
-                        <label for="itemPrice" class="form-label">Price</label>
-                        <input type="text" class="form-control" id="" wire:model="price" aria-describedby="emailHelp">
+                        <label for="price" class="form-label">Price</label>
+                        <input type="text" class="form-control" id="price" wire:model="price" aria-describedby="emailHelp">
                     </div>
 
                     <div class="mb-3">
-                        <label for="itemBody" class="form-label">Description</label>
-                        <textarea name="body" id="" wire:model="body" cols="30" rows="10" class="form-control"></textarea>
+                        <label for="body" class="form-label">Description</label>
+                        <textarea name="body" id="body" wire:model="body" cols="30" rows="10" class="form-control"></textarea>
                     </div>
 
                     
