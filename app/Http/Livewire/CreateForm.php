@@ -11,18 +11,18 @@ class CreateForm extends Component
     public $title;
     public $price;
     public $body;
-    public $category_id =[];
+    public $category_id;
 
    public function create(){
     // $this->validate();
-    $article = Article::create([
+    $category=Category::find($this->category_id);
+    $category->articles()->create([
         'title'=> $this->title,
         'price'=> $this->price,
         'body'=> $this->body,
-        'category_id'=> $this->category_id,
     ]);
 
-    
+
 
     $this->reset();
 
