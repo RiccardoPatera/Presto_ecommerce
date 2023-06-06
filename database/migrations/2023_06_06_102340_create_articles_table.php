@@ -29,7 +29,7 @@ return new class extends Migration
     {
         Schema::dropIfExists('articles', function (Blueprint $table){
             $table->dropForeign(['category_id']);
-            $table->ropColumn('category_id');
+            $table->dropColumn('category_id');
         });
 
     }

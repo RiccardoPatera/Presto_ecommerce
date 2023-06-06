@@ -19,10 +19,10 @@ class CreateForm extends Component
         'title'=> $this->title,
         'price'=> $this->price,
         'body'=> $this->body,
-        // 'category_id'=> $this->category_id,
+        'category_id'=> $this->category_id,
     ]);
 
-    $article->categories()->attach($this->category_id);
+    
 
     $this->reset();
 
