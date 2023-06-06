@@ -16,6 +16,8 @@ return new class extends Migration
             $table->string('title');
             $table->string('price');
             $table->text('body');
+            $table->unsignedBigInteger('category_id')->nullable();
+            $table->foreign('category_id')->references('id')->on('categories');
             $table->timestamps();
         });
     }
@@ -25,6 +27,10 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('articles');
+        Schema::dropIfExists('articles', function (Blueprint $table){
+            $table->dropForeign(['category_id']);
+            $table->ropColumn('category_id');
+        });
+
     }
 };
