@@ -13,13 +13,13 @@ class CreateForm extends Component
 
    public function articleStore(){
     // $this->validate();
-    dd($this->title);
+    
     $article = Article::create([
         'title'=> $this->title,
         'price'=> $this->price,
         'body'=> $this->body,
     ]);
-
+dd($this->title);
    }
 
 
