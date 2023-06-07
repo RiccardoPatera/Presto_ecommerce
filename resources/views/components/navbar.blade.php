@@ -6,7 +6,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 " >
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="{{route('welcome')}}">Home</a>
                 </li>

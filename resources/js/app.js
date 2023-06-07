@@ -1,3 +1,3 @@
 import './bootstrap';
-import 'bootstrap/dist/js/bootstrap';
+import 'bootstrap/dist/js/bootstrap.bundle';
 import './script';

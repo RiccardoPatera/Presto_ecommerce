@@ -8,10 +8,30 @@
     cursor: pointer;
 }
 
-.category{
-    cursor: pointer;
+.category-search{
+    transition: 3s;
 }
 
 .navbar{
     background-color: rgba(255, 255, 255, 0.915);
+}
+
+
+.categoryfixed{
+    position:fixed;
+    top:60px;
+    z-index: 1;
+    opacity: 0.7;
+    width: 80%;
+    transition: 3s;
+
+}
+.card-detail{
+    min-width: auto;
+    min-height:100%;
+}
+
+.carousel-control-prev-icon ,.carousel-control-next-icon{
+    background-color: black;
+    border-radius: 5px;
 }
