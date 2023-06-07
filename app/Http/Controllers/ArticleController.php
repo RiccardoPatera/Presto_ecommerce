@@ -38,7 +38,7 @@ class ArticleController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show($id, Article $article)
+    public function show(Article $article)
     {
         
         return view('Articles.detail', compact('article'));
