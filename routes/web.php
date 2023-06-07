@@ -17,4 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PublicController::class, 'welcome'])->name('welcome');
 Route::get('/create',[ArticleController::class,'create'])->name('create_article');
+
+// Rotta per dettaglio articolo
+Route::get('/articles/detail/{id}', [ArticleController::class, 'show'])->name('show_article');
 Route::get('/items',[ArticleController::class, 'index'])->name('items');
