@@ -1,17 +1,33 @@
 <div>
-    <div class="container-fluid my-5">
+    <div class="container-fluid my-2">
         <div class="row justify-content-center">
-            <div class="col-10 bg-black my-3" >
+            <div class="col-10 bg-black my-5" >
                 <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Categories
-                    </button>
-                    <ul class="dropdown-menu">
+                    <form wire:submit.prevent="filterByCategory">
+                        <select name="category" wire:model="category" class="btn">
+                            <option value="0">
+                                All Categories
+                            @foreach ($categories as $category)
+                                <option value="{{$category->id}}">
+                                    {{$category->category}}
+                                </option>
+
+                            @endforeach
+                        </select>
+
+                        <button type="submit" class="btn btn-secondary">Cerca</button>
+                    </form>
+
+
+
+
+
+                    {{-- <ul class="dropdown-menu">
                         @foreach ($categories as $category)
                         <li>
-                            <a class="dropdown-item text-dark category" wire:model='{{$category->id}}'>{{$category->category}}</a></li>
+                            <a class="dropdown-item text-dark category"   wire:click='filterByCategory' wire:model="category" value="{{$category->id}}">{{$category->category}} </a></li>
                         @endforeach
-                    </ul>
+                    </ul> --}}
                 </div>
             </div>
 
