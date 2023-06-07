@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ArticleController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         return view('article.index', compact('articles'));
@@ -28,7 +30,14 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // $article = Auth::user()->article()->create([
+        //     'title'=>$request->title,
+        //     'price'=>$request->price,
+        //     'body'=>$request->body,
+        // ]);
+
+        // return view('create_article');
+    
     }
 
     /**
