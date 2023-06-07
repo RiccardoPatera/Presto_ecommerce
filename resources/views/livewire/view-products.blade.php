@@ -37,7 +37,7 @@
 
 
                 @foreach ($articles as $article)
-                <div class="col-12 col-md-6 d-flex justify-content-center">
+                <div class="col-12 col-md-6 d-flex justify-content-center my-4">
                     <div class="card">
                         <img src="{{Storage::url($article->img)}}" class="card-img-top" alt="...">
                         <div class="card-body">
