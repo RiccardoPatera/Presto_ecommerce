@@ -6,7 +6,7 @@
     </div>
         <div class="mb-3">
             <label for="title" class="form-label">Title item</label>
-            <input type="text" class="form-control" id="title" wire:model.lazy="title" aria-describedby="emailHelp">
+            <input type="text" class="form-control" id="title" wire:model.lazy="title" aria-describedby="titleHelp">
         </div>
 
         @error('title')
@@ -15,7 +15,7 @@
 
         <div class="mb-3">
             <label for="price" class="form-label">Price</label>
-            <input type="number" step="0.01" class="form-control" id="price" wire:model="price" aria-describedby="emailHelp">
+            <input type="number" step="0.01" class="form-control" id="price" wire:model="price" aria-describedby="priceHelp">
         </div>
 
         @error('price')
@@ -26,6 +26,12 @@
         <div class="mb-3">
             <label for="body" class="form-label">Description</label>
             <textarea name="body" id="body" wire:model.lazy="body" cols="30" rows="10" class="form-control"></textarea>
+        </div>
+
+
+        <div class="mb-3">
+            <label for="img" class="form-label">Image</label>
+            <input type="file" class="form-control" id="img" wire:model="img" aria-describedby="imgHelp">
         </div>
 
 

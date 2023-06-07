@@ -37,14 +37,11 @@ class ArticleController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show($id)
+    public function show($id, Article $article)
     {
-        $articles = Article::all();
-        foreach($articles as $article){
-            if($article->id == $id){
-                return view('detail', compact('article'));
-            }
-        }
+        
+        return view('Articles.detail', compact('article'));
+            
     }
 
     /**
