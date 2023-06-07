@@ -30,22 +30,20 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        // $article = Auth::user()->article()->create([
-        //     'title'=>$request->title,
-        //     'price'=>$request->price,
-        //     'body'=>$request->body,
-        // ]);
-
-        // return view('create_article');
-    
+        //
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Article $article)
+    public function show($id)
     {
-        //
+        $articles = Article::all();
+        foreach($articles as $article){
+            if($article->id == $id){
+                return view('detail', compact('article'));
+            }
+        }
     }
 
     /**
