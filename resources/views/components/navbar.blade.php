@@ -10,6 +10,11 @@
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="{{route('welcome')}}">Home</a>
                 </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('items')}}">Our products</a>
+                </li>
+
                 @auth
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('create_article')}}">Create</a>

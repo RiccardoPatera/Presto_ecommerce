@@ -6,16 +6,34 @@
     </div>
         <div class="mb-3">
             <label for="title" class="form-label">Title item</label>
-            <input type="text" class="form-control" id="title" wire:model="title" aria-describedby="emailHelp">
+            <input type="text" class="form-control" id="title" wire:model.lazy="title" aria-describedby="emailHelp">
         </div>
+
+        @error('title')
+        <p class="text-danger">{{$message}}</p>
+        @enderror
+
         <div class="mb-3">
             <label for="price" class="form-label">Price</label>
-            <input type="number" class="form-control" id="price" wire:model="price" aria-describedby="emailHelp">
+            <input type="number" class="form-control" id="price" wire:model.lazy="price" aria-describedby="emailHelp">
         </div>
+
+        @error('price')
+        <p class="text-danger">{{$message}}</p>
+        @enderror
+
+
         <div class="mb-3">
             <label for="body" class="form-label">Description</label>
-            <textarea name="body" id="body" wire:model="body" cols="30" rows="10" class="form-control"></textarea>
+            <textarea name="body" id="body" wire:model.lazy="body" cols="30" rows="10" class="form-control"></textarea>
         </div>
+
+
+        @error('body')
+        <p class="text-danger">{{$message}}</p>
+        @enderror
+
+        {{-- categoria --}}
 
         <div class="mb-3">
            <div class="accordion" id="accordionExample">
@@ -29,7 +47,7 @@
                 <div class="accordion-body">
                     @foreach ($categories as $category)
                     <div class="form-check">
-                        <input class="form-check-input" type="radio"  name='flexRadioDisabled' value="{{$category->id}}" id={{$category->category}} wire:model="category_id">
+                        <input class="form-check-input" type="radio"  name='flexRadioDisabled' value="{{$category->id}}" id={{$category->category}} wire:model.lazy="category_id">
                         <label class="form-check-label" for="{{$category->category}}">
                             {{$category->category}}
                         </label>
@@ -38,6 +56,10 @@
                 </div>
             </div>
         </div>
+
+        @error('category_id')
+        <p class="text-danger">{{$message}}</p>
+        @enderror
 
         <button type="submit" class="btn btn-primary my-4">Submit</button>
 </form>

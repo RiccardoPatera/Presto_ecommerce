@@ -15,9 +15,22 @@ class CreateForm extends Component
     public $body;
     public $category_id;
 
+    protected $rules = [
+        'title' => 'required|min:5',
+        'price' => 'required|doesnt_start_with:-',
+        'body' => 'required|min:5',
+        'category_id'=> 'required',
+    ];
+
+    protected $messages = [
+        'title.required'=> 'The title is required',
+        'price.required'=> 'The price is required',
+        'body.required'=> 'The description is required',
+        'category_id.required'=> "The category is required",
+    ];
 
    public function create(){
-        // $this->validate();
+        $this->validate();
 
         Article::create([
         'title'=> $this->title,
@@ -28,17 +41,16 @@ class CreateForm extends Component
 
 
     ]);
-
-
-
-
-
-
-    $this->reset();
+    
     session()->flash('message','Articolo inserito correttamente');
+    $this->reset();
 
-   }
+    }
 
+    public function updated($propertyName)
+            {
+                $this->validateOnly($propertyName);
+            }
 
 
     public function render()
