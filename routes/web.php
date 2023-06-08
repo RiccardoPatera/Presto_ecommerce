@@ -24,13 +24,19 @@ Route::get('/articles/detail/{article}', [ArticleController::class, 'show'])->na
 
 Route::get('/items',[ArticleController::class, 'index'])->name('items');
 
-// HomeRevisor
-Route::get('/revisor/home', [RevisorController::class, 'index'])->name('revisor.index');
-// AccAnnunci
-Route::Patch('/accetta/annuncio/{announcement}', [RevisorController::class, 'acceptAnnouncement'])->name('revisor.acceptAnnouncement');
-// RifAnnunci
-Route::Patch('/rifiuta/annuncio/{announcement}',[RevisorController::class, 'rejectAnnouncement'])->name('revisor.rejectAnnouncement');
-// richesta revisore
+// Home revisor
+Route::get('/revisor/home',[RevisorController::class, 'index'])->name('revisor_index');
+
+// accetta
+
+Route::patch('/accept/article/{article}',[RevisorController::class, 'accept'])->name('revisor_accept');
+
+// rifiuta
+
+Route::patch('/reject/article/{article}',[RevisorController::class, 'reject'])->name('revisor_reject');
+
+// diventare revisore
 Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
-// rendi utente revisore
-Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
+
+//  utente revisore
+Route::get ('/rendi/revisore/{user}',[RevisorController::class, 'makeRevisor'])->name('make.revisor');
