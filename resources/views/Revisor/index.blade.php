@@ -44,18 +44,18 @@
                     <form  method='POST' action="{{route('revisor_accept', compact('article'))}}">
                         @csrf
                         @method('patch')
-                        <button type='submit' class="btn btn-success m-5" >Accetta articolo</button>
+                        <button type='submit' class="btn btn-success m-5" >Accept</button>
                     </form>
                     <form method='POST' action="{{route('revisor_reject', compact('article'))}}">
                         @csrf
                         @method('patch')
-                        <button type='submit' class="btn btn-danger m-5">Rifiuta articolo</button>
+                        <button type='submit' class="btn btn-danger m-5">Reject</button>
                     </form>
                     </div>
                 </div>
             </div>
             @else
-            <h2 class="text-center">Nessun Prodotto da revisionare</h2>
+            <h2 class="text-center">No products to review</h2>
             @endif
         </div>
     </div>

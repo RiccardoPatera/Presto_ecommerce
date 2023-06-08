@@ -19,9 +19,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('create_article')}}">Create</a>
                 </li>
-                @endauth
 
-                @auth (Auth::user()->is_revisor)
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
@@ -31,7 +29,7 @@
                         <li><a class="dropdown-item" href="">Profile</a></li>
 
 
-
+                    @if(Auth::user()->is_revisor)
                             <li>
                                 <a class="dropdown-item" href="{{route('revisor_index')}}">Revisor
                                     <span class="position-absolute top-50 start-100 translate-middle badge rounded-pill bg-danger">
@@ -39,6 +37,7 @@
                                     </span>
                                 </a>
                             </li>
+                    @endif
 
 
                         <form id="logoutForm" method="POST" action="{{route('logout')}}">
