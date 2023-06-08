@@ -69,7 +69,8 @@
             </div>
             <div class="text-center lead fs-6 my-5">
                 <p>Copyright 2023 by CodeArtisans, All rights Reserved.</p>
-                <p>Lorem, ipsum.</p>
+                <p>Vuoi Lavorare Con Noi? Clicca Qui</p>
+                <a href="{{route('become.revisor')}}" class="btn btn-warning text-light shadow my-3">DIVENTA REVISORE</a>
                 <p>Lorem ipsum dolor sit.</p>
             </div>
         </div>

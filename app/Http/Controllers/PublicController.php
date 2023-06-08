@@ -8,9 +8,10 @@ use Illuminate\Http\Request;
 class PublicController extends Controller
 {
     public function welcome() {
-        $articles = Article::take(6)->orderBy('created_at', 'DESC')->get();
-        return view('welcome', compact('articles'));
+        $articles_all=Article::all();
+        $articles_all=Article::orderBy('created_at', 'DESC')->where('is_accepted',true)->get();
+        return view('welcome', ['articles'=>$articles_all]);
     }
 
-    
+
 }
