@@ -38,7 +38,7 @@
                             id="passwordConfirmation">
                     </div>
                     <p>Already Register? <a href="{{route('login')}}"> Login Here</a></p>
-                    <button type="submit" class="btn btn-primary">Registrati</button>
+                    <button type="submit" class="btn btn-outline-dark">Registrati</button>
 
                 </form>
 

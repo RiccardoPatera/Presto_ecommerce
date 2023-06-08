@@ -24,7 +24,7 @@
                         <input type="password" class="form-control" name="password" id="password">
                     </div>
                     <p>Not Register? <a href="{{route('register')}}"> Register Here</a></p>
-                    <button type="submit" class="btn btn-primary">Login</button>
+                    <button type="submit" class="btn btn-outline-dark">Login</button>
 
                 </form>
             </div>
