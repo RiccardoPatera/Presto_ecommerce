@@ -38,5 +38,11 @@
 .new{
     color: var(--main);
     height: 50vh;
-    padding-top: 150px;
+    padding-top: 170px;
+}
+.navcl{
+    text-align: center;
+}
+.logo{
+    width: 220px;
 }
