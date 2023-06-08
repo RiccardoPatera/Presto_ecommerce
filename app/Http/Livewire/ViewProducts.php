@@ -11,7 +11,7 @@ class ViewProducts extends Component
 
     public $articles;
     public $category;
-
+    public $noproduct;
 
 
     public function filterByCategory(){
@@ -20,13 +20,18 @@ class ViewProducts extends Component
         }
         else{
             $this->articles=Article::where('category_id', $this->category)->get();
-        }
+        };
+        // if($this->articles==[]){
+        //     session()->flash('message','Nessun Prodotto trovato');
+        // }
+
 
     }
 
 
     public function render()
     {
+
 
         return view('livewire.view-products',['categories'=>Category::all()]);
     }

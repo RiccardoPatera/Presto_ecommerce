@@ -1,8 +1,8 @@
 <x-layout>
     <div class="container-fluid">
         <div class="row ">
-            <div class="col-12 bg-black d-flex justify-content-center ">
-                <img src="{{Storage::url('public/media/header.webp')}}" alt="" class="header ">
+            <div class="col-12 bg-black d-flex justify-content-center align-items-center header ">
+                <h1 class="display-1 text-center new">New Arrivals</h1>
             </div>
             @foreach ($articles as $article)
             <div class="col-12 col-md-4 d-flex justify-content-center my-3">
