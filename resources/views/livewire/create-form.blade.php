@@ -35,7 +35,7 @@
 
         <div class="mb-3">
             <label for="img" class="form-label">Image</label>
-            <input type="file" multiple class="form-control" id="img" wire:model="img" aria-describedby="imgHelp">
+            <input type="file"  class="form-control" id="img" wire:model="img" aria-describedby="imgHelp">
         </div>
 
 
