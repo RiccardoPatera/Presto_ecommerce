@@ -1,7 +1,7 @@
 <x-layout>
     <div class="container-fluid align-items-center">
         <div class="row ">
-            <div class="col-12 bg-black d-flex justify-content-center d-flex">
+            <div class="col-12 header d-flex justify-content-center d-flex">
                 {{-- <img src="{{Storage::url('public/media/header.jpg')}}" alt="" class="header"> --}}
                 <h1 class="display-1 text-center new ">NEW ARRIVALS</h1>
             </div>

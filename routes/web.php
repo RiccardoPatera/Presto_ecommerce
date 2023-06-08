@@ -36,9 +36,9 @@ Route::patch('/reject/article/{article}',[RevisorController::class, 'reject_arti
 
 
 // diventare revisore
-Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
+// Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
 
-//  utente revisore
-Route::get ('/rendi/revisore/{user}',[RevisorController::class, 'makeRevisor'])->name('make.revisor');
+// //  utente revisore
+// Route::get ('/rendi/revisore/{user}',[RevisorController::class, 'makeRevisor'])->name('make.revisor');
 
 
