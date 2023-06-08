@@ -47,3 +47,9 @@
 .icona-footer{
     color: black;
 }
+    
+.new{
+    color: var(--main);
+    height: 50vh;
+    padding-top: 150px;
+}
