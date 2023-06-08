@@ -37,7 +37,21 @@
                         Welcome {{Auth::user()->name}}
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="">Profilo</a></li>
+                        <li><a class="dropdown-item" href="">Profile</a></li>
+
+                        @if (Auth::user()->is_revisor)
+
+                            <li>
+                                <a class="dropdown-item" href="{{route('revisor_index')}}">Revisor
+                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                        {{Article::toBeRevisionedCount()}}
+                                    </span>
+                                </a>
+                            </li>
+
+                        @endif
+
+
                         <form id="logoutForm" method="POST" action="{{route('logout')}}">
                          @csrf
                         <a id="logout" class="dropdown-item">Logout</a>
@@ -56,15 +70,15 @@
                     </ul>
                 </li>
                 @endauth
+                
             </ul>
-            <div class="">
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-dark" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </form>
-            </div>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-dark" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
         </div>
     </div>
+                
 </nav>
 
 <script>

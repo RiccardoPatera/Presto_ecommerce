@@ -40,3 +40,4 @@ Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->
 
 //  utente revisore
 Route::get ('/rendi/revisore/{user}',[RevisorController::class, 'makeRevisor'])->name('make.revisor');
+
