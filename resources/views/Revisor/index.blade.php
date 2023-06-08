@@ -1,6 +1,11 @@
 <x-layout>
     <div class="container my-5">
         <div class="row">
+            @if(session('message'))
+                <h3 class="alert alert-success">{{session('message')}}</h3>
+            @endif
+
+            @if ($article)
             <div class="col-12 col-md-6 my-3">
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
@@ -35,9 +40,23 @@
                     <h5>Price: {{ $article->price }}&euro;</h5>
                     <h5>Description: {{ $article->body }}</h5>
                     <p>Category: {{ $article->category->category }}</p>
-                    <a class="btn btn-outline-dark" href="#">Add to cart</a>
+                    <div class="d-flex w-100 justify-content-center ">
+                    <form  method='POST' action="{{route('revisor_accept', compact('article'))}}">
+                        @csrf
+                        @method('patch')
+                        <button type='submit' class="btn btn-success m-5" >Accetta articolo</button>
+                    </form>
+                    <form method='POST' action="{{route('revisor_reject', compact('article'))}}">
+                        @csrf
+                        @method('patch')
+                        <button type='submit' class="btn btn-danger m-5">Rifiuta articolo</button>
+                    </form>
+                    </div>
                 </div>
             </div>
+            @else
+            <h2 class="text-center">Nessun Prodotto da revisionare</h2>
+            @endif
         </div>
     </div>
 </x-layout>
