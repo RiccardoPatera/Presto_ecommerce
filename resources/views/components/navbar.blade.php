@@ -20,8 +20,8 @@
                     <a class="nav-link" href="{{route('create_article')}}">Create</a>
                 </li>
                 @endauth
-                @auth
-                @if (Auth::user()->is_revisor)
+
+                @auth (Auth::user()->is_revisor)
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
@@ -39,7 +39,6 @@
                                     </span>
                                 </a>
                             </li>
-                        @endif
 
 
                         <form id="logoutForm" method="POST" action="{{route('logout')}}">
