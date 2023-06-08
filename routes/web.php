@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controller\RevisorController;
+
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RevisorController;
 
 /*
 |--------------------------------------------------------------------------

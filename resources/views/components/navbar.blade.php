@@ -20,55 +20,45 @@
                     <a class="nav-link" href="{{route('create_article')}}">Create</a>
                 </li>
                 @endauth
-                @if(Auth::user()->is_revisor)
-                  <li class="nav-item">
-                    <a href="{{route('revisor.index')}}" class="nav-link btn btn-outline-success btn-sm position-relative" aria-current="page"> ZONA REVISORE
-                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                            {{App\Models\Announcement::toBeRevisionedCount()}}
-                           <span class="visually-hidden">unread messages</span>
-                        </span>
-                    </a>
-                  </li>  
-                @endif
                 @auth
                 @if (Auth::user()->is_revisor)
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Welcome {{Auth::user()->name}}
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="">Profile</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Welcome {{Auth::user()->name}}
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="">Profile</a></li>
 
 
 
-                            <li>
-                                <a class="dropdown-item" href="{{route('revisor_index')}}">Revisor
-                                    <span class="position-absolute top-50 start-100 translate-middle badge rounded-pill bg-danger">
-                                         {{App\Models\Article::toBeRevisionedCount()}}
-                                    </span>
-                                </a>
-                            </li>
-                        @endif
+                                <li>
+                                    <a class="dropdown-item" href="{{route('revisor_index')}}">Revisor
+                                        <span class="position-absolute top-50 start-100 translate-middle badge rounded-pill bg-danger">
+                                            {{App\Models\Article::toBeRevisionedCount()}}
+                                        </span>
+                                    </a>
+                                </li>
+                            @endif
 
 
-                        <form id="logoutForm" method="POST" action="{{route('logout')}}">
-                         @csrf
-                        <a id="logout" class="dropdown-item">Logout</a>
-                        </form>
-                    </ul>
-                </li>
+                            <form id="logoutForm" method="POST" action="{{route('logout')}}">
+                            @csrf
+                            <a id="logout" class="dropdown-item">Logout</a>
+                            </form>
+                        </ul>
+                    </li>
                 @else
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Welcome user
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{route('register')}}">Register</a></li>
-                        <li><a class="dropdown-item" href="{{route('login')}}">Login</a></li>
-                    </ul>
-                </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Welcome user
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{route('register')}}">Register</a></li>
+                            <li><a class="dropdown-item" href="{{route('login')}}">Login</a></li>
+                        </ul>
+                    </li>
                 @endauth
 
             </ul>
