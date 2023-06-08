@@ -3,6 +3,9 @@
     --acc:rgb(0,0,0);
 }
 
+.mt-150{
+    margin-top: 150px;
+}
 
 #logoutForm{
     cursor: pointer;
@@ -34,4 +37,13 @@
 .carousel-control-prev-icon ,.carousel-control-next-icon{
     background-color: black;
     border-radius: 5px;
+}
+
+/* FOOTER */
+.borderFooterTop{
+    border-top: solid 2px black;
+}
+
+.icona-footer{
+    color: black;
 }

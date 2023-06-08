@@ -15,6 +15,7 @@
 
     {{$slot}}
 
+    <x-footer/>
 
     @livewireScripts
     @vite(['resources/js/app.js'])

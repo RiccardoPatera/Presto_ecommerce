@@ -4,6 +4,7 @@
             <p class="alert alert-success text-center ">{{session('message')}}</p>
         @endif
     </div>
+
         <div class="mb-3">
             <label for="title" class="form-label">Title item</label>
             <input type="text" class="form-control" id="title" wire:model.lazy="title" aria-describedby="titleHelp">
