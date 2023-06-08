@@ -1,4 +1,4 @@
- <form wire:submit.prevent="create">
+ <form wire:submit.prevent="create" class="shadow p-5 my-2">
     <div class="col-12">
         @if(session('message'))
             <p class="alert alert-success text-center ">{{session('message')}}</p>
@@ -27,17 +27,18 @@
             <label for="body" class="form-label">Description</label>
             <textarea name="body" id="body" wire:model.lazy="body" cols="30" rows="10" class="form-control"></textarea>
         </div>
+        @error('body')
+        <p class="text-danger">{{$message}}</p>
+        @enderror
 
 
         <div class="mb-3">
             <label for="img" class="form-label">Image</label>
-            <input type="file" class="form-control" id="img" wire:model="img" aria-describedby="imgHelp">
+            <input type="file" multiple class="form-control" id="img" wire:model="img" aria-describedby="imgHelp">
         </div>
 
 
-        @error('body')
-        <p class="text-danger">{{$message}}</p>
-        @enderror
+
 
         {{-- categoria --}}
 
@@ -67,5 +68,5 @@
         <p class="text-danger">{{$message}}</p>
         @enderror
 
-        <button type="submit" class="btn btn-primary my-4">Submit</button>
+        <button type="submit" class="btn btn-outline-dark my-4">Submit</button>
 </form>

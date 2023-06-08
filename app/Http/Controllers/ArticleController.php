@@ -10,12 +10,12 @@ class ArticleController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth')->except(['index','show']);
     }
     public function index()
     {
         $articles = Article::orderBy('created_at', 'DESC')->get();
-        
+
         return view('articles.items', compact('articles'));
     }
 
@@ -38,11 +38,11 @@ class ArticleController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show($id, Article $article)
+    public function show(Article $article)
     {
-        
+
         return view('Articles.detail', compact('article'));
-            
+
     }
 
     /**
