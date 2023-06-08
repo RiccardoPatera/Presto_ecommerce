@@ -29,15 +29,16 @@ Route::get('/revisor/home',[RevisorController::class, 'index'])->name('revisor_i
 
 // accetta
 
-Route::patch('/accept/article/{article}',[RevisorController::class, 'accept'])->name('revisor_accept');
+Route::patch('/accept/article/{article}',[RevisorController::class, 'accept_article'])->name('revisor_accept');
 
 // rifiuta
+Route::patch('/reject/article/{article}',[RevisorController::class, 'reject_article'])->name('revisor_reject');
 
-Route::patch('/reject/article/{article}',[RevisorController::class, 'reject'])->name('revisor_reject');
 
 // diventare revisore
 Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
 
 //  utente revisore
 Route::get ('/rendi/revisore/{user}',[RevisorController::class, 'makeRevisor'])->name('make.revisor');
+
 
