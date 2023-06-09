@@ -1,8 +1,14 @@
 :root{
     --main:rgb(236,236,236);
     --acc:rgb(0,0,0);
+    --richblue:#0d1821;
+    --gray:#7d7c84;
+    --isabeline:#F1F0EA;
 }
 
+body{
+    background-color:
+}
 .mt-150{
     margin-top: 150px;
 }
@@ -39,6 +45,7 @@
     border-radius: 5px;
 }
 
+
 /* FOOTER */
 .borderFooterTop{
     border-top: solid 2px black;
@@ -47,13 +54,30 @@
 .icona-footer{
     color: black;
 }
-
+.header{
+    background-color: var(--richblue);
+}
 .new{
     color: var(--main);
     height: 50vh;
     padding-top: 170px;
 }
 
+
 .logo{
     width: 200px;
+}
+
+
+.nav-custom{
+    border-bottom: 1px solid rgb(232, 232, 232);
+    background-color: var(--richblue);
+
+}
+
+
+
+/* Footer */
+.footer {
+    border-top:2px solid rgba(0, 0, 0, 0.381);
 }

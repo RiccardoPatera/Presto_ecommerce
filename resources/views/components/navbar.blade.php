@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg sticky-top ">
+<nav class="navbar navbar-expand-lg sticky-top  nav-custom">
     <div class="container-fluid">
-        <a class="navbar-brand fw-semibold logo" href="{{route('welcome')}}">PRESTO</a>
+        <a class="navbar-brand fw-semibold logo text-white" href="{{route('welcome')}}">PRESTO</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -8,22 +8,20 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto mb-lg-0" >
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="{{route('welcome')}}">Home</a>
+                    <a class="nav-link text-white" aria-current="page" href="{{route('welcome')}}">Home</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('items')}}">Our products</a>
+                    <a class="nav-link text-white" href="{{route('items')}}">Our products</a>
                 </li>
 
                 @auth
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('create_article')}}">Create</a>
+                    <a class="nav-link text-white" href="{{route('create_article')}}">Create</a>
                 </li>
-                @endauth
 
-                @auth (Auth::user()->is_revisor)
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         Welcome {{Auth::user()->name}}
                     </a>
@@ -31,7 +29,7 @@
                         <li><a class="dropdown-item" href="">Profile</a></li>
 
 
-
+                    @if(Auth::user()->is_revisor)
                             <li>
                                 <a class="dropdown-item" href="{{route('revisor_index')}}">Revisor
                                     <span class="position-absolute top-50 start-100 translate-middle badge rounded-pill bg-danger">
@@ -39,6 +37,7 @@
                                     </span>
                                 </a>
                             </li>
+                    @endif
 
 
                             <form id="logoutForm" method="POST" action="{{route('logout')}}">

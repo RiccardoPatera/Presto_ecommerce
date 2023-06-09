@@ -1,8 +1,8 @@
-<footer class="container-fluid mt-150">
+<footer class="container-fluid mt-150 footer">
     <div class="row mx-5">
         <div class="col-12 col-md-3">
             <div class="mt-5">
-                <a href=""><img src="" class="" alt="">Logo sito</a>
+                <a href=""><img src="" class="" alt="">PRESTO</a>
             </div>
             <div class="mt-4 lead fs-6">
                 <li><a class="text-decoration-none text-black" href="">25901 Lorem Ipsum, dolor sit, Lorem ipsum
@@ -69,10 +69,12 @@
             </div>
             <div class="text-center lead fs-6 my-5">
                 <p>Copyright 2023 by CodeArtisans, All rights Reserved.</p>
-                <p>Vuoi Lavorare Con Noi? Clicca Qui</p>
-                <a href="{{route('become.revisor')}}" class="btn btn-warning text-light shadow my-3">DIVENTA REVISORE</a>
-                <p>Lorem ipsum dolor sit.</p>
             </div>
         </div>
     </div>
 </footer>
+
+
+{{-- <p>Work with us! Click here</p>
+                <a href="{{route('become.revisor')}}" class="btn btn-warning text-light shadow my-3">BECOME A REVISOR</a>
+                <p>Lorem ipsum dolor sit.</p> --}}
