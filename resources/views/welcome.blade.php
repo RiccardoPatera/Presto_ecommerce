@@ -5,6 +5,10 @@
                 {{-- <img src="{{Storage::url('public/media/header.jpg')}}" alt="" class="header"> --}}
                 <h1 class="display-1 text-center new ">NEW ARRIVALS</h1>
             </div>
+            @if (session('access.denied'))
+            <h3 class="text-center alert alert-danger">{{session('access.denied')}}</h3>
+
+            @endif
             @foreach ($articles as $article)
             <div class="col-12 col-md-4 d-flex justify-content-center my-3">
                 <div class="card">

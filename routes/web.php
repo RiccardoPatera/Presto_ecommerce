@@ -26,14 +26,14 @@ Route::get('/articles/detail/{article}', [ArticleController::class, 'show'])->na
 Route::get('/items',[ArticleController::class, 'index'])->name('items');
 
 // Home revisor
-Route::get('/revisor/home',[RevisorController::class, 'index'])->name('revisor_index');
+Route::get('/revisor/home',[RevisorController::class, 'index'])->middleware('is.revisor')->name('revisor_index');
 
 // accetta
 
-Route::patch('/accept/article/{article}',[RevisorController::class, 'accept_article'])->name('revisor_accept');
+Route::patch('/accept/article/{article}',[RevisorController::class, 'accept_article'])->middleware('is.revisor')->name('revisor_accept');
 
 // rifiuta
-Route::patch('/reject/article/{article}',[RevisorController::class, 'reject_article'])->name('revisor_reject');
+Route::patch('/reject/article/{article}',[RevisorController::class, 'reject_article'])->middleware('is.revisor')->name('revisor_reject');
 
 
 // diventare revisore
