@@ -1,13 +1,13 @@
 <footer class="container-fluid mt-150 footer">
     <div class="row mx-5">
         <div class="col-12 col-md-3">
-            <div class="mt-5">
+            <div class="mt-4">
                 <a href=""><img src="" class="" alt="">PRESTO</a>
             </div>
             <div class="mt-4 lead fs-6">
-                <li><a class="text-decoration-none text-light" href="">25901 Lorem Ipsum, dolor sit, Lorem ipsum
+                <li class="text-light"> <a class="text-decoration-none text-light" href="">25901 Lorem Ipsum, dolor sit, Lorem ipsum
                         FL 66220 sit amet.</a></li>
-                <li class="mt- mb-2 text-light">lorem@email.com</li>
+                <li class="mb-2 text-light">lorem@email.com</li>
                 <li class="text-light">010-555-0028</li>
             </div>
         </div>

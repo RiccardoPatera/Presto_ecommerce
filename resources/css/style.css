@@ -78,8 +78,11 @@
 
 /* Footer */
 .footer {
-    border-top:2px solid rgba(0, 0, 0, 0.381);
     background-color: var(--richblue);
+}
+
+.borderFooterTop{
+    border-top: 2px solid var(--gray);
 }
 
 .icona-footer{
