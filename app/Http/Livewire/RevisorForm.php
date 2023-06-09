@@ -16,7 +16,7 @@ class RevisorForm extends Component
     public $name;
     public $surname;
     public $body;
-    public $file;
+    // public $file;
 
     protected $rules = [
         'name' => 'required|min:5',
@@ -36,8 +36,8 @@ class RevisorForm extends Component
 
    public function become_revisor(){
         $this->validate();
-
-        Mail::to('admin@presto.it')->send(new BecomeRevisor());
+        $data=compact($this->name, $this->surname,$this->body);
+        Mail::to('admin@presto.it')->send(new BecomeRevisor($data));
 
 
     session()->flash('message','Thank you! Your candidature is under review');

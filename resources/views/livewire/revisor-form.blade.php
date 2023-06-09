@@ -6,8 +6,8 @@
     </div>
 
         <div class="mb-3">
-            <label for="Name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="Name" wire:model.lazy="Name" aria-describedby="NameHelp">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" wire:model.lazy="name" aria-describedby="NameHelp">
         </div>
 
         @error('name')
@@ -15,8 +15,8 @@
         @enderror
 
         <div class="mb-3">
-            <label for="Surname" class="form-label">Surname</label>
-            <input type="text" step="0.01" class="form-control" id="Surname" wire:model="Surname" aria-describedby="SurnameHelp">
+            <label for="surname" class="form-label">Surname</label>
+            <input type="text" step="0.01" class="form-control" id="surname" wire:model="surname" aria-describedby="SurnameHelp">
         </div>
 
         @error('surname')
@@ -33,13 +33,13 @@
         @enderror
 
 
-        <div class="mb-3">
+        {{-- <div class="mb-3">
             <label for="file" class="form-label">Curriculum</label>
             <input type="file"  class="form-control" id="file" wire:model="file" aria-describedby="fileHelp">
         </div>
         @error('file')
         <p class="text-danger">{{$message}}</p>
-        @enderror
+        @enderror --}}
 
 
 
