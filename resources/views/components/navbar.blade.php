@@ -37,14 +37,14 @@
                             </a>
                         </li>
                     @endif
-                    
+
                         <form id="logoutForm" method="POST" action="{{route('logout')}}">
                         @csrf
                         <a id="logout" class="dropdown-item">Logout</a>
                         </form>
                     </ul>
                 </li>
-                
+
                 @else
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
@@ -59,7 +59,7 @@
                 @endauth
 
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="{{route('become.revisor')}}">Work with us</a>
+                    <a class="nav-link text-white" href="{{route('become_revisor')}}">Work with us</a>
                 </li>
 
             </ul>

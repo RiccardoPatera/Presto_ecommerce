@@ -49,7 +49,7 @@
         <div class="col-12 col-md-3">
             <div class="lead fs-6">
                 <h4 class="fs-3 title-footer fw-semibold mt-4 text-light">Help & Information</h4>
-                <a class="text-decoration-none text-light" href="{{route('become.revisor')}}">
+                <a class="text-decoration-none text-light" href="{{route('become_revisor')}}">
                     <li class="mt-4">Work with us</li>
                 </a>
                 <a class="text-decoration-none text-light" href="">

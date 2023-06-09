@@ -22,22 +22,25 @@ class RevisorForm extends Component
         'name' => 'required|min:5',
         'surname' => 'required|doesnt_start_with:-',
         'body' => 'required|min:5',
-        'file'=> 'required',
+        // 'file'=> 'required',
     ];
 
     protected $messages = [
         'name.required'=> 'The name is required',
         'surname.required'=> 'The surname is required',
         'body.required'=> 'The description is required',
-        'file.required'=> "The curriculum is required"
+        // 'file.required'=> "The curriculum is required"
         // 'file.mimetypes:application'=> "The curriculum is required",
 
     ];
 
    public function become_revisor(){
         $this->validate();
-        $data=compact($this->name, $this->surname,$this->body);
-        Mail::to('admin@presto.it')->send(new BecomeRevisor($data));
+        $name=$this->name;
+        $surname=$this->surname;
+        $body=$this->body;
+        $data=compact('name','surname','body');
+        Mail::to('admin@presto.it')->send(new BecomeRevisor($data,Auth::user()));
 
 
     session()->flash('message','Thank you! Your candidature is under review');
@@ -45,7 +48,9 @@ class RevisorForm extends Component
 
     }
 
-
+    public function mount(){
+        $this->name=Auth::user()->name;
+    }
 
     public function render()
     {

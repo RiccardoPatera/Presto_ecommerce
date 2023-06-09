@@ -2,11 +2,13 @@
 
 namespace App\Mail;
 
+use App\Models\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
+use Illuminate\Mail\Mailables\Address;
 use Illuminate\Queue\SerializesModels;
 
 class BecomeRevisor extends Mailable
@@ -14,11 +16,17 @@ class BecomeRevisor extends Mailable
     use Queueable, SerializesModels;
 
     public $data;
+    public $user;
 
 
-    public function __construct($data)
+
+    public function __construct($data, User $user)
     {
         $this->data=$data;
+        $this->user=$user;
+
+
+
     }
 
     /**
@@ -27,6 +35,7 @@ class BecomeRevisor extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
+            from: new Address('presto@admin.it', 'CodeArtisans'),
             subject: 'Become Revisor',
         );
     }
