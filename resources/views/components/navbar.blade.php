@@ -40,12 +40,12 @@
                     @endif
 
 
-                        <form id="logoutForm" method="POST" action="{{route('logout')}}">
-                         @csrf
-                        <a id="logout" class="dropdown-item">Logout</a>
-                        </form>
-                    </ul>
-                </li>
+                            <form id="logoutForm" method="POST" action="{{route('logout')}}">
+                            @csrf
+                            <a id="logout" class="dropdown-item">Logout</a>
+                            </form>
+                        </ul>
+                    </li>
                 @else
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
