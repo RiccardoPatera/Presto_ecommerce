@@ -1,6 +1,8 @@
 <x-layout>
+
     <div class="container my-5">
         <div class="row">
+            
             @if(session('message'))
                 <h3 class="alert alert-success">{{session('message')}}</h3>
             @endif
@@ -9,15 +11,19 @@
             <div class="col-12 col-md-6 my-3">
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
+
                         <div class="carousel-item active">
                             <img src={{ Storage::url($article->img) }} class="d-block w-100" alt="...">
                         </div>
+
                         <div class="carousel-item">
                             <img src={{ Storage::url($article->img) }} class="d-block w-100" alt="...">
                         </div>
+
                         <div class="carousel-item">
                             <img src={{ Storage::url($article->img) }} class="d-block w-100" alt="...">
                         </div>
+
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
                         data-bs-slide="prev">
@@ -41,22 +47,25 @@
                     <h5>Description: {{ $article->body }}</h5>
                     <p>Category: {{ $article->category->category }}</p>
                     <div class="d-flex w-100 justify-content-center ">
-                    <form  method='POST' action="{{route('revisor_accept', compact('article'))}}">
+                        <form  method='POST' action="{{route('revisor_accept', compact('article'))}}">
                         @csrf
                         @method('patch')
-                        <button type='submit' class="btn btn-success m-5" >Accept</button>
-                    </form>
-                    <form method='POST' action="{{route('revisor_reject', compact('article'))}}">
+                            <button type='submit' class="btn btn-success m-5" >Accept</button>
+                        </form>
+                        <form method='POST' action="{{route('revisor_reject', compact('article'))}}">
                         @csrf
                         @method('patch')
-                        <button type='submit' class="btn btn-danger m-5">Reject</button>
-                    </form>
+                            <button type='submit' class="btn btn-danger m-5">Reject</button>
+                        </form>
                     </div>
                 </div>
             </div>
+
             @else
             <h2 class="text-center">No products to review</h2>
             @endif
+            
         </div>
     </div>
+
 </x-layout>

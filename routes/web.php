@@ -16,23 +16,25 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+// HOME-PAGE
 Route::get('/', [PublicController::class, 'welcome'])->name('welcome');
+
+// FORM PER AGGIUNGERE PRODOTTO
 Route::get('/create',[ArticleController::class,'create'])->name('create_article');
 
-// Rotta per dettaglio articolo
+// DETTAGLIO PRODOTTO
 Route::get('/articles/detail/{article}', [ArticleController::class, 'show'])->name('show_article');
 
+// VISTA DI TUTTI I PRODOTTI
 Route::get('/items',[ArticleController::class, 'index'])->name('items');
 
-// Home revisor
+// HOME REVISOR
 Route::get('/revisor/home',[RevisorController::class, 'index'])->middleware('is.revisor')->name('revisor_index');
 
-// accetta
-
+// REVISORE-ACCETTA PRODOTTO
 Route::patch('/accept/article/{article}',[RevisorController::class, 'accept_article'])->middleware('is.revisor')->name('revisor_accept');
 
-// rifiuta
+// REVISORE-RIFIUTA PRODOTTO
 Route::patch('/reject/article/{article}',[RevisorController::class, 'reject_article'])->middleware('is.revisor')->name('revisor_reject');
 
 
