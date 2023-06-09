@@ -7,6 +7,7 @@
 }
 
 
+
 .mt-150{
     margin-top: 150px;
 }
@@ -78,4 +79,9 @@
 /* Footer */
 .footer {
     border-top:2px solid rgba(0, 0, 0, 0.381);
+    background-color: var(--richblue);
+}
+
+.icona-footer{
+    color: white;
 }
