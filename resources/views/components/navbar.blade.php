@@ -27,7 +27,6 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="">Profile</a></li>
-
                     @if(Auth::user()->is_revisor)
                         <li>
                             <a class="dropdown-item" href="{{route('revisor_index')}}">Revisor
@@ -58,9 +57,17 @@
                 </li>
                 @endauth
 
+                @auth
+                @if(!Auth::user()->is_revisor)
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{route('become_revisor')}}">Work with us</a>
                 </li>
+                @endif
+                @endauth
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{{route('become_revisor')}}">Work with us</a>
+                </li>
+
 
             </ul>
             <form class="d-flex" role="search">
