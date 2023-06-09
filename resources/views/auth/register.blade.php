@@ -19,6 +19,10 @@
                         <label for="userName" class="form-label">Username</label>
                         <input type="text" class="form-control" name="name" id="userName"
                             aria-describedby="emailHelp">
+
+                    @error('name')
+                        <div class="alert alert-danger">{{$message}}</div>
+                    @enderror
                     </div>
 
                     <div class="mb-3">
@@ -27,16 +31,28 @@
                             aria-describedby="emailHelp">
                     </div>
 
+                    @error('email')
+                        <div class="alert alert-danger">{{$message}}</div>
+                    @enderror
+
                     <div class="mb-3">
                         <label for="password" class="form-label">Password</label>
                         <input type="password" class="form-control" name="password" id="password">
                     </div>
+
+                    @error('password')
+                        <div class="alert alert-danger">{{$message}}</div>
+                    @enderror
 
                     <div class="mb-3">
                         <label for="passwordConfirmation" class="form-label">Confirm Password</label>
                         <input type="password" name="password_confirmation" class="form-control"
                             id="passwordConfirmation">
                     </div>
+                    @error('password_confirmation')
+                    <div class="alert alert-danger">{{$message}}</div>
+                @enderror
+
 
                     <p>Already Register? <a href="{{route('login')}}">Login Here</a></p>
 

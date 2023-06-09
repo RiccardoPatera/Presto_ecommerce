@@ -12,7 +12,7 @@ class MakeUserRevisor extends Command
      *
      * @var string
      */
-    protected $signature = 'presto:make-user-revisor{email}';
+    protected $signature = 'presto:makeUserRevisor {email}';
 
     /**
      * The console command description.

@@ -27,7 +27,6 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="">Profile</a></li>
-
                     @if(Auth::user()->is_revisor)
                         <li>
                             <a class="dropdown-item" href="{{route('revisor_index')}}">Revisor
@@ -37,14 +36,14 @@
                             </a>
                         </li>
                     @endif
-                    
+
                         <form id="logoutForm" method="POST" action="{{route('logout')}}">
                         @csrf
                         <a id="logout" class="dropdown-item">Logout</a>
                         </form>
                     </ul>
                 </li>
-                
+
                 @else
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
@@ -58,9 +57,14 @@
                 </li>
                 @endauth
 
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="{{route('become.revisor')}}">Work with us</a>
-                </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="{{route('become_revisor')}}">Work with us</a>
+                        </li>
+
+
+
+
 
             </ul>
             <!--
