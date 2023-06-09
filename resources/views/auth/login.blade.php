@@ -19,10 +19,19 @@
                         <input type="email" class="form-control" name="email" id="userMail" aria-describedby="emailHelp">
                     </div>
 
+                    @error('email')
+                        <div class="alert alert-danger">{{$message}}</div>
+                    @enderror
+                    
+
                     <div class="mb-3">
                         <label for="password" class="form-label">Password</label>
                         <input type="password" class="form-control" name="password" id="password">
                     </div>
+
+                     @error('password')
+                        <div class="alert alert-danger">{{$message}}</div>
+                    @enderror
 
                     <p>Not Register? <a href="{{route('register')}}">Register Here</a></p>
                     
