@@ -8,4 +8,5 @@
            @livewire('view-products', compact('articles'))
         </div>
     </div>
+
 </x-layout>
