@@ -19,8 +19,8 @@
                         <label for="userName" class="form-label">Username</label>
                         <input type="text" class="form-control" name="name" id="userName"
                             aria-describedby="emailHelp">
-                    
-                    @error('username')
+
+                    @error('name')
                         <div class="alert alert-danger">{{$message}}</div>
                     @enderror
                     </div>
@@ -49,7 +49,10 @@
                         <input type="password" name="password_confirmation" class="form-control"
                             id="passwordConfirmation">
                     </div>
-                    
+                    @error('password_confirmation')
+                    <div class="alert alert-danger">{{$message}}</div>
+                @enderror
+
 
                     <p>Already Register? <a href="{{route('login')}}">Login Here</a></p>
 
