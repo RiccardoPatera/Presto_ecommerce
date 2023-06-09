@@ -22,7 +22,7 @@ class RevisorForm extends Component
         'name' => 'required|min:5',
         'surname' => 'required|doesnt_start_with:-',
         'body' => 'required|min:5',
-        'file'=> 'required'|"mimetypes:application/pdf"|"max:10000",
+        'file'=> 'required',
     ];
 
     protected $messages = [

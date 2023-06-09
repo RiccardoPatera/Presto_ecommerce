@@ -2,16 +2,18 @@
     <div class="container my-5">
         <div class="row">
             <div class="col-12 col-md-6 my-3">
+
+
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src={{ Storage::url($article->img) }} class="d-block w-100" alt="...">
+                            <img src={{ Storage::url($article->img) }} class="d-block w-100" alt="img">
                         </div>
                         <div class="carousel-item">
-                            <img src={{ Storage::url($article->img) }} class="d-block w-100" alt="...">
+                            <img src={{ Storage::url($article->img) }} class="d-block w-100" alt="img">
                         </div>
                         <div class="carousel-item">
-                            <img src={{ Storage::url($article->img) }} class="d-block w-100" alt="...">
+                            <img src={{ Storage::url($article->img) }} class="d-block w-100" alt="img">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"

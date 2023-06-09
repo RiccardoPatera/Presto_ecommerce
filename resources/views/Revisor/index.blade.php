@@ -2,7 +2,9 @@
 
     <div class="container my-5">
         <div class="row">
-            
+
+
+
             @if(session('message'))
                 <h3 class="alert alert-success">{{session('message')}}</h3>
             @endif
@@ -13,15 +15,15 @@
                     <div class="carousel-inner">
 
                         <div class="carousel-item active">
-                            <img src={{ Storage::url($article->img) }} class="d-block w-100" alt="...">
+                            <img src={{ Storage::url($article->img) }} class="d-block w-100" alt="img">
                         </div>
 
                         <div class="carousel-item">
-                            <img src={{ Storage::url($article->img) }} class="d-block w-100" alt="...">
+                            <img src={{ Storage::url($article->img) }} class="d-block w-100" alt="img">
                         </div>
 
                         <div class="carousel-item">
-                            <img src={{ Storage::url($article->img) }} class="d-block w-100" alt="...">
+                            <img src={{ Storage::url($article->img) }} class="d-block w-100" alt="img">
                         </div>
 
                     </div>
@@ -64,7 +66,7 @@
             @else
             <h2 class="text-center">No products to review</h2>
             @endif
-            
+
         </div>
     </div>
 

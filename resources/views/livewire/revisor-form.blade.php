@@ -37,7 +37,7 @@
             <label for="file" class="form-label">Curriculum</label>
             <input type="file"  class="form-control" id="file" wire:model="file" aria-describedby="fileHelp">
         </div>
-        @error('img')
+        @error('file')
         <p class="text-danger">{{$message}}</p>
         @enderror
 
