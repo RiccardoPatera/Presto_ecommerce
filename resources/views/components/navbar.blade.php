@@ -57,16 +57,13 @@
                 </li>
                 @endauth
 
-                @auth
-                @if(!Auth::user()->is_revisor)
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="{{route('become_revisor')}}">Work with us</a>
-                </li>
-                @endif
-                @endauth
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="{{route('become_revisor')}}">Work with us</a>
-                </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="{{route('become_revisor')}}">Work with us</a>
+                        </li>
+
+
+
 
 
             </ul>
