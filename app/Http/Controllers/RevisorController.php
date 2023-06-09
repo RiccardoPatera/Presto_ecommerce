@@ -25,4 +25,9 @@ class RevisorController extends Controller
 
     }
 
+
+    public function become_revisor(){
+        return view('revisor.form');
+    }
+
 }

@@ -45,8 +45,8 @@
         <div class="col-12 col-md-3">
             <div class="lead fs-6">
                 <h4 class="fs-3 title-footer fw-semibold mt-4 text-light">Help & Information</h4>
-                <a class="text-decoration-none text-light" href="">
-                    <li class="mt-4">Help</li>
+                <a class="text-decoration-none text-light" href="{{route('become.revisor')}}">
+                    <li class="mt-4">Work with us</li>
                 </a>
                 <a class="text-decoration-none text-light" href="">
                     <li class="my-2">FAQ's</li>
@@ -75,6 +75,4 @@
 </footer>
 
 
-{{-- <p>Work with us! Click here</p>
-                <a href="{{route('become.revisor')}}" class="btn btn-warning text-light shadow my-3">BECOME A REVISOR</a>
-                <p>Lorem ipsum dolor sit.</p> --}}
+

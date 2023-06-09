@@ -59,6 +59,10 @@
                 </li>
                 @endauth
 
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{{route('become.revisor')}}">Work with us</a>
+                </li>
+
             </ul>
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

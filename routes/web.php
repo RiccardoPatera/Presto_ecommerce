@@ -36,10 +36,10 @@ Route::patch('/accept/article/{article}',[RevisorController::class, 'accept_arti
 Route::patch('/reject/article/{article}',[RevisorController::class, 'reject_article'])->middleware('is.revisor')->name('revisor_reject');
 
 
-// diventare revisore
-// Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
+// Richiesta per diventare revisore
+ Route::get('/richiesta/revisore', [RevisorController::class, 'become_Revisor'])->middleware('auth')->name('become.revisor');
 
-// //  utente revisore
-// Route::get ('/rendi/revisore/{user}',[RevisorController::class, 'makeRevisor'])->name('make.revisor');
+//  Rotta per confermare revisore
+ Route::get ('/rendi/revisore/{user}',[RevisorController::class, 'make_Revisor'])->name('make.revisor');
 
 
