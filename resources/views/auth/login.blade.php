@@ -29,7 +29,7 @@
                         <input type="password" class="form-control" name="password" id="password">
                     </div>
 
-                     @error('password')
+                    @error('password')
                         <div class="alert alert-danger">{{$message}}</div>
                     @enderror
 
