@@ -19,10 +19,6 @@
                         <input type="email" class="form-control" name="email" id="userMail" aria-describedby="emailHelp">
                     </div>
 
-                    @error('email')
-                        <div class="alert alert-danger">{{$message}}</div>
-                    @enderror
-                    
 
                     <div class="mb-3">
                         <label for="password" class="form-label">Password</label>
@@ -34,7 +30,7 @@
                     @enderror
 
                     <p>Not Register? <a href="{{route('register')}}">Register Here</a></p>
-                    
+
                     <button type="submit" class="btn btn-outline-dark">Login</button>
 
                 </form>
