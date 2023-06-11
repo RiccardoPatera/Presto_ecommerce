@@ -61,16 +61,12 @@
                         <li class="nav-item">
                             <a class="nav-link text-white" href="{{route('become_revisor')}}">Work with us</a>
                         </li>
-
-
-
-
-
             </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-light" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
+            <livewire:search-bar />
+
+
+
+
         </div>
     </div>
 

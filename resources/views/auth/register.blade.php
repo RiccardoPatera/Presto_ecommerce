@@ -49,9 +49,9 @@
                         <input type="password" name="password_confirmation" class="form-control"
                             id="passwordConfirmation">
                     </div>
-                    @error('password_confirmation')
+                    @error('password')
                     <div class="alert alert-danger">{{$message}}</div>
-                @enderror
+                    @enderror
 
 
                     <p>Already Register? <a href="{{route('login')}}">Login Here</a></p>

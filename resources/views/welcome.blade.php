@@ -11,7 +11,7 @@
                 {{-- <img src="{{Storage::url('public/media/header.jpg')}}" alt="" class="header"> --}}
                 <h1 class="display-1 text-center new ">NEW ARRIVALS</h1>
             </div>
-            @foreach ($articles as $article)
+            @foreach ($articles->take(6) as $article)
             <div class="col-12 col-md-4 d-flex justify-content-center my-3">
                 <div class="card">
                 <img src="{{Storage::url($article->img)}}" class="card-img-top" alt="Img">
