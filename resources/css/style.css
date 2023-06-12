@@ -59,6 +59,9 @@ body{
     /* border-bottom: 1px solid rgb(232, 232, 232); */
     background-color: var(--richblue);
 }
+/* .navbar-toggler-icon{
+    background-image:;
+} */
 
 .logo{
     width: 200px;
@@ -66,7 +69,7 @@ body{
 }
 
 .logo-div{
-    width: 350px;
+    width: 20vw;
 }
 
 

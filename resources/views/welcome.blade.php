@@ -14,10 +14,10 @@
             </div>
 
             <div class="col-12 header d-flex align-items-center d-flex flex-column ">
-                <div class="col-12 d-flex align-items-end divcustom ">
+                <div class="col-12 d-flex align-items-end divcustom mt-5 mt-lg-0 ">
                     <p class="textcustom ms-5 ">Elevate Your Style with Timeless Luxury.</p>
                 </div>
-                <div class="col-12 justify-content-center d-flex p-0 mb-5 ">
+                <div class="col-12 justify-content-center d-flex p-0  ">
                     <h1 class=" new mb-5">presto</h1>
                 </div>
             </div>
