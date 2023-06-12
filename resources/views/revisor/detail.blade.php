@@ -31,7 +31,7 @@
 
 
             <div class="col-12 col-md-6 my-3">
-                <div class="card card-detail  shadow p-3 d-flex justify-content-center ">
+                <div class="card card-detail  shadow p-3 d-flex justify-content-center bg-light">
                     <h3>{{ $article->title }}</h3>
                     <hr class="hr">
                     <h5>Price: {{ $article->price }}&euro;</h5>
