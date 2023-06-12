@@ -21,20 +21,8 @@ class ArticleController extends Controller
     }
     public function index()
     {
-<<<<<<< HEAD
-        $articles=Article::paginate(5);
-        $articles=Article::orderBy('created_at', 'DESC')->where('is_accepted',true)->get();
-        return view('articles.items', compact('articles'));
-=======
-
-<<<<<<< HEAD
-        $articles_all=Article::orderBy('created_at', 'DESC')->where('is_accepted',true)->paginate(4);
-        return view('articles.items', ['articles'=>$articles_all]);
->>>>>>> a26efa62ffad7b0ca76c4163cb9a419dfced4af9
-=======
         $articles=Article::orderBy('created_at', 'DESC')->where('is_accepted',true)->paginate(4);
         return view('articles.items', compact('articles'));
->>>>>>> bffca78088390e22db60aa71c0f95d6ba41d432b
     }
 
     public function search(Request $request){
@@ -108,5 +96,5 @@ class ArticleController extends Controller
     {
         //
     }
-    
+
 }
