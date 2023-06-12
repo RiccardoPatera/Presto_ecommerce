@@ -2,9 +2,9 @@
     <div class="container-fluid">
         <div class="row pt-5">
             <div class="col-12">
-                <h1 class="text-center my-2 pt-3"> Our Products </h1>
+                <h1 class="text-center my-2 pt-3 text-white"> Our Products </h1>
             </div>
-            <h4 class="text-center">{{$articles->total()}} results </h4>
+            <h4 class="text-center text-white">{{$articles->total()}} results </h4>
             @forelse ($articles as $article)
         <div class="col-12 col-md-4 d-flex justify-content-center my-4">
             <div class="card">
