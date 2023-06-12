@@ -21,30 +21,30 @@ class ArticleController extends Controller
     }
     public function index()
     {
-        $articles=Article::orderBy('created_at', 'DESC')->where('is_accepted',true)->paginate(4);
+        $articles=Article::orderBy('created_at', 'DESC')->where('is_accepted',true)->paginate(12);
         return view('articles.items', compact('articles'));
     }
 
     public function search(Request $request){
         if($request->category==0){
             if ($request->search==null){
-                $articles=Article::orderBy('created_at', 'DESC')->where('is_accepted', true)->paginate(4);
+                $articles=Article::orderBy('created_at', 'DESC')->where('is_accepted', true)->paginate(12);
                 return view('articles.items', compact('articles'), );
             }
             else{
-            $articles=Article::search($request->search)->orderBy('created_at', 'DESC')->where('is_accepted', true)->paginate(4);
+            $articles=Article::search($request->search)->orderBy('created_at', 'DESC')->where('is_accepted', true)->paginate(12);
             return view('articles.items', compact('articles'));
         }
 
         }
         else{
             if ($request->search==null){
-            $articles= Article::orderBy('created_at', 'DESC')->where('is_accepted', true)->where('category_id', $request->category)->paginate(4);
+            $articles= Article::orderBy('created_at', 'DESC')->where('is_accepted', true)->where('category_id', $request->category)->paginate(12);
             return view('articles.items', compact('articles'));
 
         }
             else{
-            $articles= Article::search($request->search)->orderBy('created_at', 'DESC')->where('is_accepted', true)->where('category_id', $request->category)->paginate(5);
+            $articles= Article::search($request->search)->orderBy('created_at', 'DESC')->where('is_accepted', true)->where('category_id', $request->category)->paginate(12);
             return view('articles.items', compact('articles'));
 
         }

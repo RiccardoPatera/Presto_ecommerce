@@ -1,9 +1,9 @@
-<footer class="container-fluid mt-150 footer">
+<footer class="container-fluid  footer">
     <div class="row mx-5">
 
         <div class="col-12 col-md-3">
             <div class="mt-4">
-                <a href=""><img src="" class="" alt="">PRESTO</a>
+                <a href="{{route('welcome')}}" class="text-decoration-none"><h3 class="fw-semibold logo text-white textnav" alt="">prst </h3></a>
             </div>
             <div class="mt-4 lead fs-6">
                 <li class="text-light"> <a class="text-decoration-none text-light" href="">25901 Lorem Ipsum, dolor sit, Lorem ipsum

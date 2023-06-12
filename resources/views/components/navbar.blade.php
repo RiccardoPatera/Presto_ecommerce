@@ -1,6 +1,8 @@
 <nav class="navbar navbar-expand-lg sticky-top  nav-custom">
     <div class="container-fluid">
-        <a class="navbar-brand fw-semibold logo text-white textnav" href="{{route('welcome')}}">prst</a>
+        <div class="logo-div">
+        <a class="navbar-brand fw-semibold logo text-white" href="{{route('welcome')}}">prst</a>
+        </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

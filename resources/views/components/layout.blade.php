@@ -17,10 +17,10 @@
     <x-navbar />
 
     {{$slot}}
-
     <x-footer/>
 
     @livewireScripts
+    <script src="https://kit.fontawesome.com/203597dd98.js" crossorigin="anonymous"></script>
     @vite(['resources/js/app.js'])
 </body>
 </html>
