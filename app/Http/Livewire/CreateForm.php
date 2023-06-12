@@ -56,8 +56,8 @@ class CreateForm extends Component
             'user_id'=>Auth::id(),
             ]);
         };
-    
-    session()->flash('message','Articolo inserito correttamente');
+
+    session()->flash('message','Article created successfully');
     $this->reset();
 
     }
