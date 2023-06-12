@@ -24,9 +24,14 @@ Route::get('/create',[ArticleController::class,'create'])->name('create_article'
 
 // DETTAGLIO PRODOTTO
 Route::get('/articles/detail/{article}', [ArticleController::class, 'show'])->name('show_article');
+// Rotta ricerca prodotti
 
+Route::get ('/ricerca/annuncio',[PublicController::class, 'search_article'])->name('search_article');
 // VISTA DI TUTTI I PRODOTTI
-Route::get('/items',[ArticleController::class, 'index'])->name('items');
+Route::get('/items/',[ArticleController::class, 'index'])->name('items');
+
+// VISTA PRODOTTI FILTRATI
+Route::get('/items/searched',[ArticleController::class, 'search'])->name('search');
 
 // HOME REVISOR
 Route::get('/revisor/home',[RevisorController::class, 'index'])->middleware('is.revisor')->name('revisor_index');
@@ -46,4 +51,7 @@ Route::patch('/reject/article/{article}',[RevisorController::class, 'reject_arti
 
 // Ricerca annuncio
 Route::get('/ricerca/annuncio)', [PublicController::class, 'searchArticles'])->name('articles.search');
+
+
+
 

@@ -41,7 +41,11 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'queue' => env('SCOUT_QUEUE', false),
+=======
+    'queue' => env('SCOUT_QUEUE', true),
+>>>>>>> 1b0bde523c2f5ce46057580a2be03d36205f98bf
 
     /*
     |--------------------------------------------------------------------------
@@ -116,13 +120,22 @@ return [
         'secret' => env('ALGOLIA_SECRET', ''),
     ],
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1b0bde523c2f5ce46057580a2be03d36205f98bf
     'tntsearch' => [
         'storage'  => storage_path(), //place where the index files will be stored
         'fuzziness' => env('TNTSEARCH_FUZZINESS', true),
         'fuzzy' => [
             'prefix_length' => 2,
             'max_expansions' => 50,
+<<<<<<< HEAD
             'distance' => 2,
+=======
+            'distance' => 7,
+        'no_limit' => true
+>>>>>>> 1b0bde523c2f5ce46057580a2be03d36205f98bf
         ],
         'asYouType' => false,
         'searchBoolean' => env('TNTSEARCH_BOOLEAN', false),

@@ -6,10 +6,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Scout\Searchable;
 
+
 class Article extends Model
 {
-    //use HasFactory;
-    //protected $fillable = ['title', 'price', 'body', 'img', 'user_id','category_id'];
 
     use Hasfactory, Searchable;
     protected $fillable = ['title', 'price', 'body', 'img', 'user_id', 'category_id'];
@@ -24,6 +23,7 @@ class Article extends Model
         ];
         return $array;
     }
+
 
     public function category(){
         return $this->belongsTo(Category::class);

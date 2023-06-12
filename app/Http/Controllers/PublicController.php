@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Models\Category;
+
 
 class PublicController extends Controller
 {
@@ -13,6 +16,7 @@ class PublicController extends Controller
         return view('welcome', ['articles'=>$articles_all]);
     }
 
+<<<<<<< HEAD
     public function searchArticles(Request $request) {
         $articles = Article::search($request->searched)->where('is_accepted', true)->paginate(10);
         
@@ -21,4 +25,9 @@ class PublicController extends Controller
     }
 
 
+=======
+>>>>>>> 1b0bde523c2f5ce46057580a2be03d36205f98bf
 }
+
+
+
