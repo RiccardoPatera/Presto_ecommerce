@@ -1,6 +1,6 @@
 <form method="GET" action="{{route('search')}}" class="d-flex" role="search">
     @csrf
-    <div class="d-flex">
+    <div class="d-flex textnav">
         <select name="category" wire:model="category" class="form-select me-2">
             <option value="0">
                 All Categories

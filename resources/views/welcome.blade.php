@@ -5,11 +5,21 @@
         <h3 class="text-center alert alert-success">{{session('message')}}</h3>
 @endif
 <x-layout>
+    
     <div class="container-fluid align-items-center">
-        <div class="row ">
-            <div class="col-12 header d-flex justify-content-center d-flex">
-                {{-- <img src="{{Storage::url('public/media/header.jpg')}}" alt="" class="header"> --}}
-                <h1 class="display-1 text-center new ">NEW ARRIVALS</h1>
+        <div class="row">
+
+            <div class="col-12 justify-content-end d-flex">
+                <p class="textcustom">Codeartisans.</p>
+            </div>
+
+            <div class="col-12 header d-flex align-items-center d-flex flex-column">
+                <div class="col-12 align-items-end d-flex divcustom">
+                    <p class="textcustom">Elevate Your Style with Timeless Luxury.</p>
+                </div>
+                <div class="col-12 justify-content-center d-flex">
+                    <h1 class=" text-center new">presto</h1>
+                </div>
             </div>
             @foreach ($articles->take(6) as $article)
             <div class="col-12 col-md-4 d-flex justify-content-center my-3">
