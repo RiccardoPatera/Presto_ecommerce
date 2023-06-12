@@ -23,7 +23,6 @@ class ArticleController extends Controller
     {
         $articles=Article::orderBy('created_at', 'DESC')->where('is_accepted',true)->paginate(4);
         return view('articles.items', compact('articles'));
-
     }
 
     public function search(Request $request){
@@ -97,5 +96,5 @@ class ArticleController extends Controller
     {
         //
     }
-    
+
 }
