@@ -18,8 +18,8 @@ class SearchBar extends Component
 
     public function searched(Request $request){
 
-        request()->session()->put('search', $this->search);
-        request()->session()->put('category', $this->category);
+        request()->session()->reflash('search', $this->search);
+        request()->session()->reflash('category', $this->category);
 
 
 
