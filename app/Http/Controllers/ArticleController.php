@@ -22,8 +22,8 @@ class ArticleController extends Controller
     public function index()
     {
 
-        $articles_all=Article::orderBy('created_at', 'DESC')->where('is_accepted',true)->paginate(4);
-        return view('articles.items', ['articles'=>$articles_all]);
+        $articles=Article::orderBy('created_at', 'DESC')->where('is_accepted',true)->paginate(4);
+        return view('articles.items', compact('articles'));
     }
 
     public function search(Request $request){
