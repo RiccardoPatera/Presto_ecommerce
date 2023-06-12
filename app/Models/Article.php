@@ -9,15 +9,9 @@ use Laravel\Scout\Searchable;
 
 class Article extends Model
 {
-<<<<<<< HEAD
-=======
     use HasFactory;
     use Searchable;
     protected $fillable = ['title', 'price', 'body', 'img', 'user_id','category_id','is_accepted'];
->>>>>>> 12686eb5b45a7f0f32db90587fe1d56d93a90067
-
-    use Hasfactory, Searchable;
-    protected $fillable = ['title', 'price', 'body', 'img', 'user_id', 'category_id'];
 
     public function toSearchableArray() {
         $category = $this->category;
