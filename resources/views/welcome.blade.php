@@ -14,7 +14,7 @@
             @foreach ($articles->take(6) as $article)
             <div class="col-12 col-md-4 d-flex justify-content-center my-3">
                 <div class="card">
-                <img src="{{Storage::url($article->img)}}" class="card-img-top" alt="Img">
+                <img src="{{Storage::url($article->img)}}" class="card-img-top img-fluid" alt="Img">
                     <div class="card-body">
                         <h5 class="card-title">{{$article->title}}</h5>
                         <p class="card-text">{{$article->price}}</p>

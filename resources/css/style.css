@@ -91,5 +91,5 @@
 .card-img-top{
     height: 600px;
     width: 600px;
-    object-fit: cover;
+    object-fit:scale-down;
 }
