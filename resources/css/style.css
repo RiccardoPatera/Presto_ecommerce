@@ -84,3 +84,12 @@
 .icona-footer{
     color: white;
 }
+.card{
+    height: 800px;
+
+}
+.card-img-top{
+    height: 600px;
+    width: 600px;
+    object-fit: cover;
+}

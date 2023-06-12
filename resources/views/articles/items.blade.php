@@ -6,6 +6,7 @@
                 <h1 class="text-center my-2 pt-3"> Our Products </h1>
             </div>
            @livewire('view-products', compact('articles'))
+           
         </div>
     </div>
 

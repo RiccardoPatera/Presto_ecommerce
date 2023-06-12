@@ -12,7 +12,7 @@
                 <h1 class="display-1 text-center new ">NEW ARRIVALS</h1>
             </div>
             @foreach ($articles as $article)
-            <div class="col-12 col-md-4 d-flex justify-content-center my-3">
+            <div class="col-12 col-md-4 d-flex justify-content-center my-5">
                 <div class="card">
                 <img src="{{Storage::url($article->img)}}" class="card-img-top" alt="Img">
                     <div class="card-body">
