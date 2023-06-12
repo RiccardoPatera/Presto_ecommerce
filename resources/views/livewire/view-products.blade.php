@@ -42,7 +42,7 @@
         </div>
         @endforeach
         -->
-        
+        @dd($articles)
         @forelse ($articles as $article)
         <div class="col-12 col-md-6 d-flex justify-content-center my-4">
             <div class="card">
@@ -62,5 +62,6 @@
             </div>
         </div>
         @endforelse
+
     </div>
 </div>

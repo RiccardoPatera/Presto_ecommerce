@@ -17,15 +17,13 @@ class Article extends Model
     public function toSearchableArray() {
         $category = $this->category;
         $array = [
-            'user_id'=> $this->user_id,
+            'id'=> $this->id,
             'title'=> $this->title,
             'body'=> $this->body,
-            'category_id'=> $this->category_id,
+            'category'=> $this->category,
         ];
         return $array;
     }
-
-
 
     public function category(){
         return $this->belongsTo(Category::class);
