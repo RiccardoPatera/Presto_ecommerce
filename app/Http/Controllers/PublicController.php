@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Models\Category;
+
 
 class PublicController extends Controller
 {
@@ -13,5 +16,7 @@ class PublicController extends Controller
         return view('welcome', ['articles'=>$articles_all]);
     }
 
-
 }
+
+
+

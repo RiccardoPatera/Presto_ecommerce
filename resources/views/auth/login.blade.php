@@ -29,8 +29,9 @@
                     </div>
 
                     @error('password')
-                        <div class="alert alert-danger">{{$message}}</div>
+                    <div class="alert alert-danger">{{$message}}</div>
                     @enderror
+
 
                     <p>Not Register? <a href="{{route('register')}}">Register Here</a></p>
 

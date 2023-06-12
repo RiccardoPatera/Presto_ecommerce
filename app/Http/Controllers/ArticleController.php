@@ -8,22 +8,52 @@ use Illuminate\Support\Facades\Auth;
 
 class ArticleController extends Controller
 {
+    public $search;
+    public $category;
+    public $data;
+
+
     public function __construct()
     {
-        $this->middleware('auth')->except(['index','show']);
+        $this->middleware('auth')->except(['index','show','search']);
+
+
     }
 
     public function index()
     {
-        
-        $articles = Article::all();
-        $articles = Article::orderBy('created_at', 'DESC')->where('is_accepted',true)->get();
+
+        $articles=Article::orderBy('created_at', 'DESC')->where('is_accepted',true)->paginate(4);
         return view('articles.items', compact('articles'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+    public function search(Request $request){
+        if($request->category==0){
+            if ($request->search==null){
+                $articles=Article::orderBy('created_at', 'DESC')->where('is_accepted', true)->paginate(4);
+                return view('articles.items', compact('articles'), );
+            }
+            else{
+            $articles=Article::search($request->search)->orderBy('created_at', 'DESC')->where('is_accepted', true)->paginate(4);
+            return view('articles.items', compact('articles'));
+        }
+
+        }
+        else{
+            if ($request->search==null){
+            $articles= Article::orderBy('created_at', 'DESC')->where('is_accepted', true)->where('category_id', $request->category)->paginate(4);
+            return view('articles.items', compact('articles'));
+
+        }
+            else{
+            $articles= Article::search($request->search)->orderBy('created_at', 'DESC')->where('is_accepted', true)->where('category_id', $request->category)->paginate(5);
+            return view('articles.items', compact('articles'));
+
+        }
+        };
+        
+    }
+
     public function create()
     {
         return view ('articles.create');
@@ -47,9 +77,8 @@ class ArticleController extends Controller
 
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
+
+
     public function edit(Article $article)
     {
         //
@@ -70,4 +99,5 @@ class ArticleController extends Controller
     {
         //
     }
+    
 }
