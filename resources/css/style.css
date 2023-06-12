@@ -87,12 +87,69 @@
 }
 
 .card{
-    height: 500px;
-    width: 400px;
+    height: 100%;
+    position: relative;
 }
 
-.card-img-top{
+/* .card{
     height: 500px;
-    width: 500px;
+    width: 400px;
+} */
+
+.card-img-top{
+    height: 600px;
+    width: 600px;
+    object-fit: cover;
+    color: #0d182180;
+      
+    
+}
+.card-body{
+    position: absolute;
+    display:flex;
+    flex-direction: column;
+    bottom: 0;
+
+    
+}
+.card a{
+    text-decoration: none;
+    color: var(--richblue);
+    
+}
+
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #ffffff6f;
+  
+  
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+.text{
+    color: rgb(0, 0, 0);
+}
+.fadex{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  background: rgba(255, 255, 255, 0) linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.504));
 }
 
