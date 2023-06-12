@@ -32,7 +32,7 @@ class ViewProducts extends Component
     public function render()
     {
 
-
+        $articles = Article::paginate(2);
         return view('livewire.view-products',['categories'=>Category::all()]);
     }
 }

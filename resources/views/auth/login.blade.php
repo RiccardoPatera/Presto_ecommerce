@@ -16,9 +16,12 @@
 
                     <div class="mb-3">
                         <label for="userMail" class="form-label">Email</label>
-                        <input type="email" class="form-control" name="email" id="userMail" aria-describedby="emailHelp">
+                        <input type="email" class="form-control" name="email" value="{{old('email')}}" id="userMail" aria-describedby="emailHelp">
                     </div>
 
+                    @error('email')
+                        <div class="alert alert-danger">{{$message}}</div>
+                    @enderror
 
                     <div class="mb-3">
                         <label for="password" class="form-label">Password</label>
