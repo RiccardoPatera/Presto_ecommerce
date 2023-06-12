@@ -57,7 +57,7 @@ class CreateForm extends Component
             ]);
         };
 
-    session()->flash('message','Article created successfully');
+    session()->flash('message','Article created successfully. Wait for the revisor to accept it.');
     $this->reset();
 
     }
