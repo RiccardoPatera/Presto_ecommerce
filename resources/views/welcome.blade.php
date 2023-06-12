@@ -4,7 +4,9 @@
 @if (session('message'))
         <h3 class="text-center alert alert-success">{{session('message')}}</h3>
 @endif
+
 <x-layout>
+    
     <div class="container-fluid align-items-center">
         <div class="row ">
             <div class="col-12 header d-flex justify-content-center d-flex">
@@ -12,7 +14,7 @@
                 <h1 class="display-1 text-center new ">NEW ARRIVALS</h1>
             </div>
             @foreach ($articles->take(6) as $article)
-            <div class="col-12 col-md-4 d-flex justify-content-center my-3">
+            <div class="col-12 col-md-4 d-flex justify-content-center mt-150">
                 <div class="card">
                 <img src="{{Storage::url($article->img)}}" class="card-img-top img-fluid" alt="Img">
                     <div class="card-body">

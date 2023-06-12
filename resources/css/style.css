@@ -30,7 +30,6 @@
     opacity: 0.7;
     width: 80%;
     transition: 3s;
-
 }
 
 /* CARD */
@@ -53,9 +52,11 @@
 .icona-footer{
     color: black;
 }
+
 .header{
     background-color: var(--richblue);
 }
+
 .new{
     color: var(--main);
     height: 50vh;
@@ -84,12 +85,14 @@
 .icona-footer{
     color: white;
 }
-.card{
-    height: 800px;
 
+.card{
+    height: 500px;
+    width: 400px;
 }
+
 .card-img-top{
-    height: 600px;
-    width: 600px;
-    object-fit: cover;
+    height: 500px;
+    width: 500px;
 }
+

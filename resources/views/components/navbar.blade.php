@@ -62,9 +62,21 @@
                             <a class="nav-link text-white" href="{{route('become_revisor')}}">Work with us</a>
                         </li>
             </ul>
-            <livewire:search-bar />
 
 
+            <p>
+                <button class="btn btn-info mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </p>
+            <div class="collapse" id="collapseExample">
+                <div class="card-body">
+                    <livewire:search-bar />
+                </div>
+            </div>
+
+
+            {{-- <livewire:search-bar /> --}}
 
 
         </div>
