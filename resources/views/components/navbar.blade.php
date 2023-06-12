@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg sticky-top  nav-custom">
     <div class="container-fluid">
-        <a class="navbar-brand fw-semibold logo text-white" href="{{route('welcome')}}">PRESTO</a>
+        <a class="navbar-brand fw-semibold logo text-white textnav" href="{{route('welcome')}}">prst</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -46,7 +46,7 @@
 
                 @else
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                    <a class="nav-link dropdown-toggle text-white " href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         Welcome user
                     </a>

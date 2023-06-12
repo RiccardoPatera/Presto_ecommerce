@@ -6,6 +6,10 @@
     --isabeline:#F1F0EA;
 }
 
+body{
+    background-color: var(--richblue);
+}
+
 .mt-150{
     margin-top: 150px;
 }
@@ -55,22 +59,48 @@
 }
 .header{
     background-color: var(--richblue);
+    color: var(--main);
+    height: 60vw;
+    display: flex;
+    
 }
 .new{
-    color: var(--main);
-    height: 50vh;
-    padding-top: 170px;
+    font-family: 'Righteous', cursive;
+    font-size: 30vw;
+    height: fit-content;
+    letter-spacing: 4px;
+    /* padding-top: 170px; */
+    
+}
+.textcustom{
+
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--isabeline);
+    padding: 0%;
+    border: 0%;
+    margin: 0%;
+}
+.divcustom{
+    height: 25vw;
 }
 
 .logo{
     width: 200px;
 }
-
+/* navbar  */
 .nav-custom{
-    border-bottom: 1px solid rgb(232, 232, 232);
+    /* border-bottom: 1px solid rgb(232, 232, 232); */
     background-color: var(--richblue);
+    
 
 }
+
+.textnav{
+    font-family: 'Righteous', cursive;
+}
+
+
 
 /* Footer */
 .footer {

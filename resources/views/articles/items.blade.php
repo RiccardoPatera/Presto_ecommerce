@@ -17,8 +17,9 @@
                     <h5 class="card-title text">{{$article->title}}</h5>
                     <p class="card-text text">{{$article->price}}€</p>
                     <p class="card-text text">{{$article->category->category}}</p>
-                </a>
                     </div>
+                </a>
+                    
             </div>
         </div>
         @empty
