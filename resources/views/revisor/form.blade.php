@@ -8,10 +8,10 @@
                 <p class="text-center">Tell us why you want work with PRESTO</p>
                 <livewire:revisor-form>
             @else
-                    <h3 class="alert alert-success text-center"> You're already a revisor</h3>
+                    <h4 class="alert alert-success text-center"> You're already a revisor</h4>
                     <div class="d-flex justify-content-center  align-items-center flex-column">
-                        <h2>Press to view your Reviewing Zone</h2>
-                        <a href="{{route('revisor_index')}}"class="">Go!</a>
+                        <h4>Press to view your Reviewing Zone</h4>
+                        <a href="{{route('revisor_index')}}" class=" btn btn-custom">Go!</a>
                     </div>
                     @endif
             </div>

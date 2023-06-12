@@ -12,11 +12,11 @@
                 <h1 class="display-1 text-center new ">NEW ARRIVALS</h1>
             </div>
             @foreach ($articles->take(6) as $article)
-            <div class="col-12 col-md-4 d-flex justify-content-center my-3">
+            <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center my-3">
                 <div class="card">
                     <div class="fadex"></div>
                         <a href="{{route('show_article', compact('article'))}}" class="">
-                            <img src="{{Storage::url($article->img)}}" class="card-img-top img-fluid" alt="Img">
+                            <img src="{{Storage::url($article->img)}}" class="card-img-top-welcome img-fluid" alt="Img">
                             <div class=" overlay">
                             </div>
                         <div class="card-body">

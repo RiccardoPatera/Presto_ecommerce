@@ -91,11 +91,17 @@
 
 }
 .card-img-top{
-    height: 600px;
-    width: 600px;
-    object-fit: cover;
+    height:40vh;
+    width:40vh;
+    object-fit:cover;
     color: #0d182180;
+}
 
+.card-img-top-welcome{
+        height:60vh;
+        width:60vh;
+        object-fit:cover;
+        color: #0d182180;
 
 }
 .card-body{
@@ -145,4 +151,21 @@
   width: 100%;
   opacity: 1;
   background: rgba(255, 255, 255, 0) linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.504));
+}
+
+.btn-custom{
+    width: 100px;
+    border-radius: 3px;
+    background-color:var(--richblue) ;
+    color: white;
+}
+.btn-custom:hover{
+    border-color:var(--richblue) ;
+    color:var(--richblue);
+}
+
+.alert-custom{
+    height:30px;
+    width:100%;
+    background-color:#0d1821 ;
 }
