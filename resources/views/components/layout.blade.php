@@ -13,12 +13,21 @@
     @vite(['resources/css/app.css'])
 </head>
 <body>
-
     <x-navbar />
 
+    <section id="Main">
     {{$slot}}
-    <x-footer/>
 
+
+
+    </section>
+
+
+
+
+
+
+    <x-footer/>
     @livewireScripts
     <script src="https://kit.fontawesome.com/203597dd98.js" crossorigin="anonymous"></script>
     @vite(['resources/js/app.js'])
