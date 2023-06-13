@@ -112,7 +112,7 @@
     // let megaContainer = document.querySelector('#megaContainer');
 
     // search.addEventListener('click', ()=>{
-    
+
     // if (btnIsClicked == false) {
     //     megaContainer.classList.remove('d-none');
     //     btnIsClicked = true
@@ -120,7 +120,7 @@
     //     megaContainer.classList.add('d-none');
     //     btnIsClicked = false
     // }
-    
+
 
     // });
 

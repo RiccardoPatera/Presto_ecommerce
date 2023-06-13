@@ -2,22 +2,16 @@
     <div class="container my-2 d-flex align-items-center vh-100">
         <div class="row align-items-center">
             <div class="col-12">
-                <h1 class="text-center text-white">Detail {{$article->title}}</h1>
+                <h1 class="text-center text-white">Detail: {{$article->title}}</h1>
             </div>
             <div class="col-12 col-md-6 my-5 ">
-
-
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src={{ Storage::url($article->img) }} class="d-block w-100" alt="img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src={{ Storage::url($article->img) }} class="d-block w-100" alt="img">
-                        </div>
-                        <div class="carousel-item">
-                            <img src={{ Storage::url($article->img) }} class="d-block w-100" alt="img">
-                        </div>
+                        @foreach ($article->images as $image)
+                                <div class="carousel-item @if($loop->first) active @endif">
+                                    <img src={{ Storage::url($image->path) }} class="img-fluid d-block w-100" alt="img">
+                                </div>
+                         @endforeach
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
                         data-bs-slide="prev">

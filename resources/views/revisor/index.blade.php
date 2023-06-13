@@ -3,15 +3,17 @@
     <div class="container my-5">
         <div class="row justify-content-center align-items-center">
 
-
-
-            @if(session('message'))
-                <h3 class="alert alert-success text-center">{{session('message')}}</h3>
+            @if(session('accept'))
+                <h3 class="alert alert-success text-center">{{session('accept')}}</h3>
+            @endif
+            @if(session('refuse'))
+                <h3 class="alert alert-danger text-center">{{session('refuse')}}</h3>
             @endif
             {{-- @dd(session('previous_article')) --}}
+
             @if(session('previous_article'))
-            <div class="col-12">
-                <a href="#" id="open-modal"><i class="icon fa-solid fa-arrow-rotate-left fa-2xl" data-bs-toggle="modal" data-bs-target="#Modal"></i></a>
+                <div class="col-12">
+                    <a href="#" id="open-modal"><i class="icon fa-solid fa-arrow-rotate-left fa-2xl" data-bs-toggle="modal" data-bs-target="#Modal"></i></a>
                     <div id="Modal" class="modal fade" tabindex="-1">
                         <div class="modal-dialog">
                           <div class="modal-content">
@@ -27,33 +29,21 @@
                                     <button  type='submit' class="btn btn-success">{{__('ui.sure')}}</button>
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{__('ui.cancel')}}</button>
                                 </div>
-                            </form>
                             </div>
-                            </div>
-                          </div>
                         </div>
-
-
+                    </div>
+                </div>
             @endif
-
 
             @if ($article)
             <div class="col-12 col-md-6 my-3">
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
-
-                        <div class="carousel-item active">
-                            <img src={{ Storage::url($article->img) }} class="d-block w-100" alt="img">
-                        </div>
-
-                        <div class="carousel-item">
-                            <img src={{ Storage::url($article->img) }} class="d-block w-100" alt="img">
-                        </div>
-
-                        <div class="carousel-item">
-                            <img src={{ Storage::url($article->img) }} class="d-block w-100" alt="img">
-                        </div>
-
+                        @foreach ($article->images as $image)
+                            <div class="carousel-item @if($loop->first) active @endif">
+                                <img src={{ Storage::url($image->path) }} class="img-fluid d-block w-100" alt="img">
+                            </div>
+                        @endforeach
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
                         data-bs-slide="prev">
@@ -68,7 +58,6 @@
                 </div>
             </div>
 
-
             <div class="col-12 col-md-6 my-3">
                 <div class="card card-detail  shadow p-3 d-flex justify-content-center bg-light">
                     <h3>{{ $article->title }}</h3>
@@ -77,7 +66,7 @@
                     <h5>{{__('ui.desc')}}: {{ $article->body }}</h5>
                     <p>{{__('ui.singleCat')}}: {{ $article->category->category }}</p>
                     <div class="d-flex w-100 justify-content-center ">
-                        <form  method='POST' action="{{route('revisor_accept', compact('article'))}}">
+                        <form method='POST' action="{{route('revisor_accept', compact('article'))}}">
                         @csrf
                         @method('patch')
                             <button type='submit' class="btn btn-success m-5" >{{__('ui.accept')}}</button>
