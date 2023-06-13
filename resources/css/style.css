@@ -271,3 +271,11 @@ div.vh-50 .btn{
 .icon{
     color: white;
 }
+
+/* img - form */
+.img-preview{
+    width: 15vw;
+    height: 15vw;
+    background-position: center;
+    background-size: cover;
+}
