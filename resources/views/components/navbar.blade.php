@@ -14,7 +14,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="{{route('items')}}">Our products</a>
+                    <a class="nav-link text-white text-nowrap" href="{{route('items')}}">Our products</a>
                 </li>
 
                 @auth
