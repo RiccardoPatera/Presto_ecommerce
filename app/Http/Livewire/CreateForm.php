@@ -2,12 +2,14 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\Article;
-use App\Models\Category;
 use App\Models\User;
-use Illuminate\Support\Facades\Auth;
+use App\Models\Article;
 use Livewire\Component;
+use App\Models\Category;
+use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 
 class CreateForm extends Component
 {
@@ -18,13 +20,17 @@ class CreateForm extends Component
     public $body;
     public $category_id;
     public $img;
+    public $images = [];
+    public $temporary_images;
+    public $article;
 
     protected $rules = [
         'title' => 'required|min:5',
         'price' => 'required|doesnt_start_with:-',
         'body' => 'required|min:5',
         'category_id'=> 'required',
-        // 'img'=> 'required',
+        'images.*'=> 'image|required|max:3072',
+        'temporary_images.*'=> 'image|required|max:3072',
     ];
 
     protected $messages = [
@@ -38,28 +44,43 @@ class CreateForm extends Component
    public function create(){
         $this->validate();
 
-        if($this->img) {
-            Article::create([
-            'title'=> $this->title,
-            'price'=> $this->price,
-            'body'=> $this->body,
-            'category_id'=>$this->category_id,
-            'user_id'=>Auth::id(),
-            'img' => $this->img->store('public/media'),
-            ]);
-        }else {
-            Article::create([
+            $this -> article = Article::create([
             'title'=> $this->title,
             'price'=> $this->price,
             'body'=> $this->body,
             'category_id'=>$this->category_id,
             'user_id'=>Auth::id(),
             ]);
-        };
+
+            if(count($this->images)){
+                foreach ($this->images as $image) {
+                    // $this->article->images()->create(['path'=>$image->store('images', 'public')]);
+                    $newFileName="articles/{$this->article->id}";
+                    $newImage=$this->article->images()->create(['path'=>$image->store($newFileName, 'public')]);
+                    dispatch(new ResizeImage($newImage->path,500,500));
+                }
+                File::deleteDirectory(storage_path('/app/livewire-tmp'));
+            }
 
     session()->flash('message','Article created successfully');
     $this->reset();
 
+    }
+
+    public function updatedTemporaryImages(){
+        if ($this->validate([
+            'temporary_images.*'=>"image|max:3072",
+        ])) {
+        foreach ($this->temporary_images as $image) {
+            $this->images[] = $image;
+        }
+        }
+    }
+
+    public function removeImage($key){
+        if (in_array($key, array_keys($this->images))) {
+            unset($this->images[$key]);
+        }
     }
 
     public function updated($propertyName)

@@ -19,14 +19,15 @@
                         <input type="email" class="form-control" name="email" id="userMail" aria-describedby="emailHelp">
                     </div>
 
+                    @error('email')
+                        <div class="alert alert-danger">{{$message}}</div>
+                    @enderror
 
                     <div class="mb-3">
                         <label for="password" class="form-label text-light">Password</label>
                         <input type="password" class="form-control" name="password" id="password">
                     </div>
-                    @error('email')
-                    <div class="alert alert-danger">{{$message}}</div>
-                    @enderror
+
                     @error('password')
                     <div class="alert alert-danger">{{$message}}</div>
                     @enderror

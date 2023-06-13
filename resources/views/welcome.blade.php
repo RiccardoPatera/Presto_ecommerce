@@ -4,6 +4,7 @@
 @if (session('message'))
         <h3 class="text-center alert alert-success">{{session('message')}}</h3>
 @endif
+
 <x-layout>
 
     <div class="container-fluid align-items-center">
