@@ -16,7 +16,7 @@
                         <div class="modal-dialog">
                           <div class="modal-content">
                             <div class="modal-header">
-                              <h5 class="modal-title">Are you sure you want to restore the article? </h5>
+                              <h5 class="modal-title">{{__('ui.areYouSure')}} </h5>
                               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body vh-25 d-flex align-items-end justify-content-end w-100">
@@ -24,8 +24,8 @@
                                 @csrf
                                 @method('patch')
 
-                                    <button  type='submit' class="btn btn-success">Sure</button>
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                    <button  type='submit' class="btn btn-success">{{__('ui.sure')}}</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{__('ui.cancel')}}</button>
                                 </div>
                             </form>
                             </div>
@@ -58,12 +58,12 @@
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
                         data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
+                        <span class="visually-hidden">{{__('ui.prev')}}</span>
                     </button>
                     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
                         data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
+                        <span class="visually-hidden">{{__('ui.next')}}</span>
                     </button>
                 </div>
             </div>
@@ -73,30 +73,30 @@
                 <div class="card card-detail  shadow p-3 d-flex justify-content-center bg-light">
                     <h3>{{ $article->title }}</h3>
                     <hr class="hr">
-                    <h5>Price: {{ $article->price }}&euro;</h5>
-                    <h5>Description: {{ $article->body }}</h5>
-                    <p>Category: {{ $article->category->category }}</p>
+                    <h5>{{__('ui.price')}}: {{ $article->price }}&euro;</h5>
+                    <h5>{{__('ui.desc')}}: {{ $article->body }}</h5>
+                    <p>{{__('ui.singleCat')}}: {{ $article->category->category }}</p>
                     <div class="d-flex w-100 justify-content-center ">
                         <form  method='POST' action="{{route('revisor_accept', compact('article'))}}">
                         @csrf
                         @method('patch')
-                            <button type='submit' class="btn btn-success m-5" >Accept</button>
+                            <button type='submit' class="btn btn-success m-5" >{{__('ui.accept')}}</button>
                         </form>
                         <form method='POST' action="{{route('revisor_reject', compact('article'))}}">
                         @csrf
                         @method('patch')
-                            <button type='submit' class="btn btn-danger m-5">Reject</button>
+                            <button type='submit' class="btn btn-danger m-5">{{__('ui.reject')}}</button>
                         </form>
                     </div>
                 </div>
             </div>
 
             @else
-            <h1 class="text-white text-center">Review Dashboard</h1>
+            <h1 class="text-white text-center">{{__('ui.revDash')}}</h1>
             <div class="col-12 d-flex  flex-column justify-content-center vh-75 align-items-center ">
                 <div class="d-flex align-items-center justify-content-center flex-column notify mt-3">
-                <h3 class="text-center">No articles to review</h3>
-                <h3 class="text-center"> See you soon <i class="fa-regular fa-face-smile" style="color: #000000;"></i></h3>
+                <h3 class="text-center">{{__('ui.noRevArt')}}</h3>
+                <h3 class="text-center"> {{__('ui.seeSoon')}} <i class="fa-regular fa-face-smile" style="color: #000000;"></i></h3>
                 </div>
             </div>
             @endif

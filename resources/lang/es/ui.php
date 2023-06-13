@@ -11,6 +11,7 @@ return[
     'password'=> 'Contrasena',
     'notReg'=>'No estas registrado?',
     'hereReg'=> 'Registrate aqui',
+    'hereLog'=>'Ingresa Aquì',
     'username'=> 'Nombre usuario',
     'confPass'=> 'Confirma contrasena',
     'applyJob'=>'Porque quisieras trabajar con nosotros?',
@@ -41,4 +42,14 @@ return[
     'thankYou'=>'Gracias tu solicitud esta por ser revisada',
     'allCat'=>'Todas las categorias',
     'search'=>'Busca',
+    'alrReg'=>'Ya està Registrado?',
+    'prev'=>'Anterior',
+    'next'=>'Proxìmo',
+    'sure'=>'Si',
+    'cancel'=>'No', 
+    'areYouSure'=>'¿Estás seguro de que quieres restaurar el artículo?',
+    'detail'=>'Detalle',
+    'prof'=>'Perfil',
+    'noArt'=>'No hay artículos encontrados, pruebe con una búsqueda diferente',
+
 ];

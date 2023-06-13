@@ -29,10 +29,10 @@
                         {{__('ui.welcome')}} {{Auth::user()->name}}
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="">Profile</a></li>
+                        <li><a class="dropdown-item" href="">{{__('ui.prof')}}</a></li>
                     @if(Auth::user()->is_revisor)
                         <li>
-                            <a class="dropdown-item" href="{{route('revisor_index')}}">Revisor
+                            <a class="dropdown-item" href="{{route('revisor_index')}}">{{__('ui.rev')}}
                                 <span class="position-absolute top-50 start-100 translate-middle badge rounded-pill bg-danger">
                                         {{App\Models\Article::toBeRevisionedCount()}}
                                 </span>

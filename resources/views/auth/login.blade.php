@@ -24,7 +24,7 @@
                     @enderror
 
                     <div class="mb-3">
-                        <label for="password" class="form-label text-light">Password</label>
+                        <label for="password" class="form-label text-light">{{__('ui.password')}}</label>
                         <input type="password" class="form-control" name="password" id="password">
                     </div>
 
