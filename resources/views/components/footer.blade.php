@@ -15,7 +15,7 @@
 
         <div class="col-12 col-md-3">
             <div class="lead fs-6">
-                <h4 class="fs-3 title-footer fw-semibold mt-4 text-light">Shopping & Categories</h4>
+                <h4 class="fs-3 title-footer fw-semibold mt-4 text-light">{{__('ui.shop')}}</h4>
                 <a class="text-decoration-none text-light" href="">
                     <li class="mt-4">Category 1</li>
                 </a>
@@ -30,7 +30,7 @@
 
         <div class="col-12 col-md-3">
             <div class="lead fs-6">
-                <h4 class="fs-3 title-footer fw-semibold mt-4 text-light">Useful Links</h4>
+                <h4 class="fs-3 title-footer fw-semibold mt-4 text-light">{{__('ui.link')}}</h4>
                 <a class="text-decoration-none text-light" href="">
                     <li class="mt-4">Homepage</li>
                 </a>
