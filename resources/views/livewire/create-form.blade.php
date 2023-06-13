@@ -38,7 +38,6 @@
     <div class="mb-3">
         <label for="img" class="form-label">{{__('ui.image')}}</label>
         <input type="file" class="form-control" id="img" name="images" wire:model="temporary_images" multiple aria-describedby="imgHelp">
-        <button onclick="document.getElementById('img').click()">Scegli qui</button>
     </div>
     @if(!empty($images))
         <div class="row">
