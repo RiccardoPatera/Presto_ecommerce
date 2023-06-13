@@ -14,11 +14,7 @@
                 </li>
 
                 <li class="nav-item">
-<<<<<<< HEAD
-                    <a class="nav-link text-white text-nowrap" href="{{route('items')}}">Our products</a>
-=======
                     <a class="nav-link text-white" href="{{route('items')}}">{{__('ui.allArticles')}}</a>
->>>>>>> 41754cb611ad54f810a0295d418976967b50a241
                 </li>
 
                 @auth

@@ -3,8 +3,11 @@
     <div class="container my-5">
         <div class="row justify-content-center align-items-center">
 
-            @if(session('message'))
-                <h3 class="alert alert-success text-center">{{session('message')}}</h3>
+            @if(session('accept'))
+                <h3 class="alert alert-success text-center">{{session('accept')}}</h3>
+            @endif
+            @if(session('refuse'))
+                <h3 class="alert alert-danger text-center">{{session('refuse')}}</h3>
             @endif
             {{-- @dd(session('previous_article')) --}}
 
@@ -41,7 +44,7 @@
                                 <img src={{ Storage::url($image->path) }} class="img-fluid d-block w-100" alt="img">
                             </div>
                         @endforeach
-                    </div>  
+                    </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
                         data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -82,7 +85,7 @@
             <div class="col-12 d-flex flex-column justify-content-center vh-75 align-items-center">
                 <div class="d-flex align-items-center justify-content-center flex-column notify mt-3">
                     <h3 class="text-center">No articles to review</h3>
-                    <h3 class="text-center"> See you soon <i class="fa-regular fa-face-smile" style="color: #000000;"></i></h3> 
+                    <h3 class="text-center"> See you soon <i class="fa-regular fa-face-smile" style="color: #000000;"></i></h3>
                 </div>
             </div>
             @endif
