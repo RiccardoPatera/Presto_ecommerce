@@ -52,15 +52,10 @@ Route::patch('/restore/article/{article}',[RevisorController::class, 'restore_ar
 //  Rotta per confermare revisore
  Route::get ('/rendi/revisore/{user}',[RevisorController::class, 'make_revisor'])->name('make_revisor');
 
-<<<<<<< HEAD
-// Ricerca annuncio
-Route::get('/ricerca/annuncio)', [PublicController::class, 'searchArticles'])->name('articles.search');
-=======
 //  Cambia lingua 
 
 Route::post('/language/{lang}',[PublicController::class, 'setLanguage'])->name('set_language_locale');
 
->>>>>>> b58767894d3e19b7016acc3313b9467a33712d5c
 
 
 
