@@ -17,17 +17,15 @@
             <div class="col-12 col-md-4 d-flex justify-content-center my-3">
                 <div class="card">
                     <div class="fadex"></div>
-                        <a href="{{route('show_article', compact('article'))}}" class="">
-                            <img src="{{Storage::url($article->img)}}" class="card-img-top img-fluid" alt="Img">
-                            <div class=" overlay">
-                            </div>
+                    <a href="{{route('show_article', compact('article'))}}" class="">
+                        <img src="{{Storage::url($article->img)}}" class="card-img-top img-fluid" alt="Img">
+                        <div class=" overlay"></div>
                         <div class="card-body">
-                        <h5 class="card-title text">{{$article->title}}</h5>
-                        <p class="card-text text">{{$article->price}}</p>
-                        <p class="card-text text">{{$article->category->category}}</p>
-
-                        </a>
-                    </div>
+                            <h5 class="card-title text">{{$article->title}}</h5>
+                            <p class="card-text text">{{$article->price}}</p>
+                            <p class="card-text text">{{$article->category->category}}</p>
+                        </div>
+                    </a>
                 </div>
             </div>
             @endforeach

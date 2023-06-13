@@ -63,26 +63,23 @@
                         </li>
             </ul>
 
-
-            <p>
-                <button class="btn btn-info mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-            </p>
-            <div class="collapse" id="collapseExample">
-                <div class="card-body">
-                    <livewire:search-bar />
-                </div>
-            </div>
+            {{-- <button id="search" class="btn btn-light"><i class="fa-solid fa-magnifying-glass"></i></button> --}}
 
 
-            {{-- <livewire:search-bar /> --}}
+            <livewire:search-bar />
 
 
         </div>
     </div>
 
 </nav>
+
+{{-- LOGICA DEL CONTAINER-SEARCH --}}
+{{-- <div id="megaContainer" class="fixed-top d-none">
+    <livewire:search-collaps />
+</div> --}}
+
+
 
 <script>
 
@@ -92,5 +89,24 @@
         let logoutForm = document.querySelector('#logoutForm');
         logoutForm.submit();
     });
+
+// LOGICA DEL CONTAINER-SEARCH
+
+    // let btnIsClicked = false;
+    // let search = document.querySelector('#search');
+    // let megaContainer = document.querySelector('#megaContainer');
+
+    // search.addEventListener('click', ()=>{
+    
+    // if (btnIsClicked == false) {
+    //     megaContainer.classList.remove('d-none');
+    //     btnIsClicked = true
+    // } else {
+    //     megaContainer.classList.add('d-none');
+    //     btnIsClicked = false
+    // }
+    
+
+    // });
 
 </script>
