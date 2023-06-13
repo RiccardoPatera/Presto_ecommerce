@@ -36,9 +36,14 @@
 
 
     <div class="mb-3">
-        <label for="img" class="form-label">Image</label>
-        <input type="file" class="form-control" id="img" name="images" wire:model="temporary_images" multiple aria-describedby="imgHelp">
+        <label for="images" class="form-label">Add one or more images</label>
+        <input type="file" class="form-control shadow @error('temporary_images.*') is-invalid @enderror" id="images" name="images" wire:model="temporary_images" multiple aria-describedby="imagesHelp">
     </div>
+
+    @error('temporary_images')
+        <p class="text-danger">{{$message}}</p>
+    @enderror
+
     @if(!empty($images))
         <div class="row">
             <p>Photo prewiew:</p>

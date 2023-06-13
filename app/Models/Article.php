@@ -12,7 +12,7 @@ class Article extends Model
 {
     use HasFactory;
     use Searchable;
-    protected $fillable = ['title', 'price', 'body', 'img', 'user_id','category_id','is_accepted'];
+    protected $fillable = ['title', 'price', 'body', 'user_id','category_id','is_accepted'];
 
 
 
