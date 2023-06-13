@@ -6,7 +6,7 @@
     </div>
 
         <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
+            <label for="name" class="form-label">{{__('ui.name')}}</label>
             <input type="text" class="form-control" id="name" wire:model.lazy="name" aria-describedby="NameHelp">
         </div>
 
@@ -15,7 +15,7 @@
         @enderror
 
         <div class="mb-3">
-            <label for="surname" class="form-label">Surname</label>
+            <label for="surname" class="form-label">{{__('ui.surname')}}</label>
             <input type="text" step="0.01" class="form-control" id="surname" wire:model="surname" aria-describedby="SurnameHelp">
         </div>
 
@@ -25,7 +25,7 @@
 
 
         <div class="mb-3">
-            <label for="body" class="form-label">Why you're apply to this job</label>
+            <label for="body" class="form-label">{{__('ui.applyJob')}}</label>
             <textarea name="body" id="body" wire:model.lazy="body" cols="30" rows="10" class="form-control"></textarea>
         </div>
         @error('body')

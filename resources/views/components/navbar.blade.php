@@ -14,19 +14,19 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="{{route('items')}}">Our products</a>
+                    <a class="nav-link text-white" href="{{route('items')}}">{{__('ui.allArticles')}}</a>
                 </li>
 
                 @auth
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="{{route('create_article')}}">Create</a>
+                    <a class="nav-link text-white" href="{{route('create_article')}}">{{__('ui.create')}}</a>
                 </li>
 
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        Welcome {{Auth::user()->name}}
+                        {{__('ui.welcome')}} {{Auth::user()->name}}
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="">Profile</a></li>
@@ -51,11 +51,11 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white " href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        Welcome user
+                        {{__('ui.welcome')}}
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{route('register')}}">Register</a></li>
-                        <li><a class="dropdown-item" href="{{route('login')}}">Login</a></li>
+                        <li><a class="dropdown-item" href="{{route('register')}}">{{__('ui.register')}}</a></li>
+                        <li><a class="dropdown-item" href="{{route('login')}}">{{__('ui.login')}}</a></li>
                     </ul>
                 </li>
                 @endauth

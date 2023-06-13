@@ -7,7 +7,7 @@
     </div>
 
     <div class="mb-3">
-        <label for="title" class="form-label">Title item</label>
+        <label for="title" class="form-label">{{__('ui.titleItem')}}</label>
         <input type="text" class="form-control" id="title" wire:model.lazy="title" aria-describedby="titleHelp">
     </div>
 
@@ -17,7 +17,7 @@
 
 
     <div class="mb-3">
-        <label for="price" class="form-label">Price</label>
+        <label for="price" class="form-label">{{__('ui.price')}}</label>
         <input type="number" step="0.01" class="form-control" id="price" wire:model="price" aria-describedby="priceHelp">
     </div>
 
@@ -27,7 +27,7 @@
 
 
     <div class="mb-3">
-        <label for="body" class="form-label">Description</label>
+        <label for="body" class="form-label">{{__('ui.desc')}}</label>
         <textarea name="body" id="body" wire:model.lazy="body" cols="30" rows="10" class="form-control"></textarea>
     </div>
     @error('body')
@@ -36,7 +36,7 @@
 
 
     <div class="mb-3">
-        <label for="img" class="form-label">Image</label>
+        <label for="img" class="form-label">{{__('ui.image')}}</label>
         <input type="file" class="form-control" id="img" name="images" wire:model="temporary_images" multiple aria-describedby="imgHelp">
         <button onclick="document.getElementById('img').click()">Scegli qui</button>
     </div>
@@ -61,7 +61,7 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Categories
+                        {{__('ui.cat')}}
                     </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
@@ -84,6 +84,6 @@
     <p class="text-danger">{{$message}}</p>
     @enderror
 
-    <button type="submit" class="btn btn-outline-dark my-4">Submit</button>
+    <button type="submit" class="btn btn-outline-dark my-4">{{__('ui.submit')}}</button>
 
 </form>

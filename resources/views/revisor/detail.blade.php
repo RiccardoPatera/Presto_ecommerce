@@ -34,9 +34,9 @@
                 <div class="card card-detail  shadow p-3 d-flex justify-content-center bg-light">
                     <h3>{{ $article->title }}</h3>
                     <hr class="hr">
-                    <h5>Price: {{ $article->price }}&euro;</h5>
-                    <h5>Description: {{ $article->body }}</h5>
-                    <p>Category: {{ $article->category->category }}</p>
+                    <h5>{{__('ui.price')}}: {{ $article->price }}&euro;</h5>
+                    <h5>{{__('ui.desc')}}: {{ $article->body }}</h5>
+                    <p>{{__('ui.cat')}}: {{ $article->category->category }}</p>
                     <a class="btn btn-outline-dark" href="#">Add to cart</a>
                 </div>
             </div>
