@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1 class="text-center display-1 my-5">Login</h1>
+                <h1 class="text-center display-1 my-5 text-light">Login</h1>
             </div>
         </div>
     </div>
@@ -15,8 +15,8 @@
                     @csrf
 
                     <div class="mb-3">
-                        <label for="userMail" class="form-label">Email</label>
-                        <input type="email" class="form-control" name="email" value="{{old('email')}}" id="userMail" aria-describedby="emailHelp">
+                        <label for="userMail" class="form-label text-light">Email</label>
+                        <input type="email" class="form-control" name="email" id="userMail" aria-describedby="emailHelp">
                     </div>
 
                     @error('email')
@@ -24,7 +24,7 @@
                     @enderror
 
                     <div class="mb-3">
-                        <label for="password" class="form-label">Password</label>
+                        <label for="password" class="form-label text-light">Password</label>
                         <input type="password" class="form-control" name="password" id="password">
                     </div>
 
@@ -33,9 +33,10 @@
                     @enderror
 
 
-                    <p>Not Register? <a href="{{route('register')}}">Register Here</a></p>
 
-                    <button type="submit" class="btn btn-outline-dark">Login</button>
+                    <p class=" text-light">Not Register? <a href="{{route('register')}}" class=" text-light">Register Here</a></p>
+
+                    <button type="submit" class="btn btn-outline-dark text-light">Login</button>
 
                 </form>
             </div>

@@ -17,16 +17,20 @@ class RevisorController extends Controller
 
     public function accept_article(Article $article){
         $article->setAccepted(true);
-        return redirect()->back()->with('message',"You've accepted the article");
+        return redirect(route('revisor_index'))->with('previous_article',$article)->with('message',"You've accepted the article");
     }
 
 
     public function reject_Article(Article $article){
         $article->setAccepted(false);
-        return redirect()->back()->with('message',"You've rejected the article");
-
+        return redirect(route('revisor_index'))->with('previous_article',$article)->with('message',"You've accepted the article");
     }
 
+    public function restore_Article(Article $article){
+
+        $article->setAccepted(null);
+        return redirect(route('revisor_index',['article'=>$article]))->with('message',"Article Restored");
+    }
 
     public function become_revisor(){
         return view('revisor.form');

@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8">
-                <h1 class="text-center display-1 my-5">Register</h1>
+                <h1 class="text-center display-1 my-5 text-light">Register</h1>
             </div>
         </div>
     </div>
@@ -16,7 +16,7 @@
                     @csrf
 
                     <div class="mb-3">
-                        <label for="userName" class="form-label">Username</label>
+                        <label for="userName" class="form-label text-light">Username</label>
                         <input type="text" class="form-control" name="name" id="userName"
                             aria-describedby="emailHelp">
                     </div>
@@ -25,7 +25,7 @@
                     @enderror
 
                     <div class="mb-3">
-                        <label for="userMail" class="form-label">Email</label>
+                        <label for="userMail" class="form-label text-light">Email</label>
                         <input type="email" class="form-control" name="email" id="userMail"
                             aria-describedby="emailHelp">
                     </div>
@@ -35,7 +35,7 @@
                     @enderror
 
                     <div class="mb-3">
-                        <label for="password" class="form-label">Password</label>
+                        <label for="password" class="form-label text-light">Password</label>
                         <input type="password" class="form-control" name="password" id="password">
                     </div>
 
@@ -44,7 +44,7 @@
                     @enderror
 
                     <div class="mb-3">
-                        <label for="passwordConfirmation" class="form-label">Confirm Password</label>
+                        <label for="passwordConfirmation" class="form-label text-light">Confirm Password</label>
                         <input type="password" name="password_confirmation" class="form-control"
                             id="passwordConfirmation">
                     </div>
@@ -54,9 +54,9 @@
                     @enderror
                     
 
-                    <p>Already Register? <a href="{{route('login')}}">Login Here</a></p>
+                    <p class=" text-light">Already Register? <a href="{{route('login')}}" class=" text-light">Login Here</a></p>
 
-                    <button type="submit" class="btn btn-outline-dark">Register</button>
+                    <button type="submit" class="btn btn-outline-dark text-light">Register</button>
 
                 </form>
 

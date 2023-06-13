@@ -11,7 +11,7 @@ class Article extends Model
 {
     use HasFactory;
     use Searchable;
-    protected $fillable = ['title', 'price', 'body', 'img', 'user_id','category_id'];
+    protected $fillable = ['title', 'price', 'body', 'img', 'user_id','category_id','is_accepted'];
 
 
 
@@ -41,6 +41,14 @@ class Article extends Model
         return true;
 
     }
+    public function setNull($article){
+        $this->is_accepted = null;
+        $this->save();
+        return true;
+
+    }
+
+
     public static function toBeRevisionedCount(){
         return Article::where('is_accepted',null)->count();
     }

@@ -1,4 +1,4 @@
-<form wire:submit.prevent="become_revisor" class="shadow p-5 my-2">
+<form wire:submit.prevent="become_revisor" class="shadow p-5 my-2 bg-light">
     <div class="col-12">
         @if(session('message'))
             <p class="alert alert-success text-center ">{{session('message')}}</p>

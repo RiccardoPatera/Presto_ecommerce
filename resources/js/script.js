@@ -9,3 +9,12 @@
 //         }
 
 //         })
+
+
+let open_modal = document.querySelector("#open-modal");
+let modal=document.querySelector("#modal");
+open_modal.addEventListener('click',()=>{
+    modal.style.display = "block";
+})
+
+

@@ -42,6 +42,9 @@ Route::patch('/accept/article/{article}',[RevisorController::class, 'accept_arti
 // REVISORE-RIFIUTA PRODOTTO
 Route::patch('/reject/article/{article}',[RevisorController::class, 'reject_article'])->middleware('is.revisor')->name('revisor_reject');
 
+//RIPRISTINA PRODOTTO
+Route::patch('/restore/article/{article}',[RevisorController::class, 'restore_article'])->middleware('is.revisor')->name('revisor_restore');
+
 
 // Richiesta per diventare revisore
  Route::get('/richiesta/revisore', [RevisorController::class, 'become_revisor'])->middleware('auth')->name('become_revisor');
