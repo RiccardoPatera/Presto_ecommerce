@@ -15,6 +15,10 @@ class PublicController extends Controller
         $articles_all=Article::orderBy('created_at', 'DESC')->where('is_accepted',true)->get();
         return view('welcome', ['articles'=>$articles_all]);
     }
+    public function setLanguage($lang){
+        session()->put('locale',$lang);
+        return redirect()->back();
+    }
 
 }
 

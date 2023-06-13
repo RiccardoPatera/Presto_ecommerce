@@ -52,6 +52,10 @@ Route::patch('/restore/article/{article}',[RevisorController::class, 'restore_ar
 //  Rotta per confermare revisore
  Route::get ('/rendi/revisore/{user}',[RevisorController::class, 'make_revisor'])->name('make_revisor');
 
+//  Cambia lingua 
+
+Route::post('/language/{lang}',[PublicController::class, 'setLanguage'])->name('set_language_locale');
+
 
 
 
