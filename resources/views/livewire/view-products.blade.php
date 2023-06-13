@@ -6,7 +6,7 @@
                     <div class="d-flex">
                         <select name="category" wire:model="category" class="form-select me-2">
                             <option value="0">
-                                All Categories
+                                {{__('ui.allCat')}}
                             </option>
                             @foreach ($categories as $category)
                             <option value="{{$category->id}}">
@@ -15,7 +15,7 @@
                             @endforeach
                         </select>
                         <button type="submit" class="btn btn-outline-dark">
-                            Search
+                            {{__('ui.search')}}
                         </button>
                     </div>
                 </form>

@@ -5,7 +5,7 @@ return[
     'work' => 'Trabaja con nosotros',
     'new'=>'Ultimos productos',
     'shop'=>'Compras & Categorias',
-    'link'=>'Links utiles',
+    'link'=>'Enlaces utiles',
     'register'=> 'Registrate',
     'login' => 'Accseso',
     'password'=> 'Contrasena',
@@ -38,5 +38,7 @@ return[
     'singleCat'=>'Categoria',
     'acceptArt'=> 'Has aceptado el articulo',
     'createMess'=>'Tu articulo ha sido creado correctamente. Espera que un revisor acepte tu articulo ',
-    'thankYou'=>'Gracias tu solicitud esta por ser revisada'
+    'thankYou'=>'Gracias tu solicitud esta por ser revisada',
+    'allCat'=>'Todas las categorias',
+    'search'=>'Busca',
 ];

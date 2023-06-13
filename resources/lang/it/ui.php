@@ -18,7 +18,7 @@ return[
     'surname'=>'Cognome',
     'submit'=>'Invia',
     'tellUs'=>'Dicci perchè vuoi lavorare con PRESTO',
-    'Welcome'=>'Benvenuto',
+    'welcome'=>'Benvenuto',
     'create'=>'Crea',
     'sell'=>'Vendi i tuoi prodotti',
     'titleItem'=>'Nome prodotto',

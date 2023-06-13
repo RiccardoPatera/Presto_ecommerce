@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1 class="text-center display-1 my-5 text-light">Login</h1>
+                <h1 class="text-center display-1 my-5 text-light">{{__('ui.login')}}</h1>
             </div>
         </div>
     </div>
@@ -34,9 +34,9 @@
 
 
 
-                    <p class=" text-light">Not Register? <a href="{{route('register')}}" class=" text-light">Register Here</a></p>
+                    <p class=" text-light">{{__('ui.notReg')}} <a href="{{route('register')}}" class=" text-light">{{__('ui.hereReg')}}</a></p>
 
-                    <button type="submit" class="btn btn-outline-dark text-light">Login</button>
+                    <button type="submit" class="btn btn-outline-dark text-light">{{__('ui.login')}}</button>
 
                 </form>
             </div>
