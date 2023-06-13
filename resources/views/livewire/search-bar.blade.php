@@ -3,7 +3,7 @@
     <div class="d-flex textnav">
         <select name="category" wire:model="category" class="form-select me-2">
             <option value="0">
-                All Categories
+                {{__('ui.allCat')}}
             </option>
             @foreach ($categories as $category)
             <option value="{{$category->id}}" >

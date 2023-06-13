@@ -14,19 +14,17 @@ class Article extends Model
     use Searchable;
     protected $fillable = ['title', 'price', 'body', 'user_id','category_id','is_accepted'];
 
-
-
-    public function toSearchableArray(){
-
-            $category=$this->category;
-            $array=[
-                'id'=>$this->id,
-                'title'=>$this->title,
-                'body'=>$this->body,
-                'category'=>$category,
-            ];
+    public function toSearchableArray() {
+        $category = $this->category;
+        $array = [
+            'id'=> $this->id,
+            'title'=> $this->title,
+            'body'=> $this->body,
+            'category'=> $this->category,
+        ];
         return $array;
     }
+
 
     public function category(){
         return $this->belongsTo(Category::class);

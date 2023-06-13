@@ -22,8 +22,8 @@
                     <h1 class=" new mb-5">presto</h1>
                 </div>
             </div>
-                <div class="col-12 col-md-3 d-flex justify-content-center mt-5">
-                    <h2 class="title-text">New Arrivals</h2>
+                <div class="col-12 col-md-3 d-flex justify-content-center mt-5 ">
+                    <h2 class="title-text">{{__('ui.new')}}</h2>
                 </div>
             <div class="col-md-9 col-12">
                 <div class="row">
