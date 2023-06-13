@@ -77,6 +77,10 @@
                             <x-_locale lang="es"/>
                         </li>
             </ul>
+
+            {{-- <button id="search" class="btn btn-light"><i class="fa-solid fa-magnifying-glass"></i></button> --}}
+
+
             <livewire:search-bar />
 
 
@@ -84,6 +88,13 @@
     </div>
 
 </nav>
+
+{{-- LOGICA DEL CONTAINER-SEARCH --}}
+{{-- <div id="megaContainer" class="fixed-top d-none">
+    <livewire:search-collaps />
+</div> --}}
+
+
 
 <script>
 
@@ -93,5 +104,24 @@
         let logoutForm = document.querySelector('#logoutForm');
         logoutForm.submit();
     });
+
+// LOGICA DEL CONTAINER-SEARCH
+
+    // let btnIsClicked = false;
+    // let search = document.querySelector('#search');
+    // let megaContainer = document.querySelector('#megaContainer');
+
+    // search.addEventListener('click', ()=>{
+    
+    // if (btnIsClicked == false) {
+    //     megaContainer.classList.remove('d-none');
+    //     btnIsClicked = true
+    // } else {
+    //     megaContainer.classList.add('d-none');
+    //     btnIsClicked = false
+    // }
+    
+
+    // });
 
 </script>

@@ -14,4 +14,3 @@
     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name='search'  wire:model="search" >
   <button class="btn btn-outline-light" type="submit" wire:click="searched"><i class="fa-solid fa-magnifying-glass"></i></button>
 </form>
-

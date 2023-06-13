@@ -19,6 +19,7 @@ class ArticleController extends Controller
 
 
     }
+
     public function index()
     {
         $articles=Article::orderBy('created_at', 'DESC')->where('is_accepted',true)->paginate(12);
@@ -49,6 +50,7 @@ class ArticleController extends Controller
 
         }
         };
+        
     }
 
     public function create()

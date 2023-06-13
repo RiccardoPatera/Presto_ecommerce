@@ -18,13 +18,17 @@ class CreateForm extends Component
     public $body;
     public $category_id;
     public $img;
+    public $images = [];
+    public $temporary_images;
+    public $article;
 
     protected $rules = [
         'title' => 'required|min:5',
         'price' => 'required|doesnt_start_with:-',
         'body' => 'required|min:5',
         'category_id'=> 'required',
-        // 'img'=> 'required',
+        'images.*'=> 'image|required|max:3072',
+        'temporary_images.*'=> 'image|required|max:3072',
     ];
 
     protected $messages = [
@@ -38,28 +42,39 @@ class CreateForm extends Component
    public function create(){
         $this->validate();
 
-        if($this->img) {
-            Article::create([
-            'title'=> $this->title,
-            'price'=> $this->price,
-            'body'=> $this->body,
-            'category_id'=>$this->category_id,
-            'user_id'=>Auth::id(),
-            'img' => $this->img->store('public/media'),
-            ]);
-        }else {
-            Article::create([
+            $this -> article = Article::create([
             'title'=> $this->title,
             'price'=> $this->price,
             'body'=> $this->body,
             'category_id'=>$this->category_id,
             'user_id'=>Auth::id(),
             ]);
-        };
+
+            if(count($this->images)){
+                foreach ($this->images as $image) {
+                    $this->article->images()->create(['path'=>$image->store('images', 'public')]);
+                }
+            }
 
     session()->flash('message','Article created successfully. Wait for the revisor to accept it.');
     $this->reset();
 
+    }
+
+    public function updatedTemporaryImages(){
+        if ($this->validate([
+            'temporary_images.*'=>"image|max:3072",
+        ])) {
+        foreach ($this->temporary_images as $image) {
+            $this->images[] = $image;
+        }
+        }
+    }
+
+    public function removeImage($key){
+        if (in_array($key, array_keys($this->images))) {
+            unset($this->images[$key]);
+        }
     }
 
     public function updated($propertyName)

@@ -37,8 +37,21 @@
 
     <div class="mb-3">
         <label for="img" class="form-label">Image</label>
-        <input type="file"  class="form-control" id="img" wire:model="img" aria-describedby="imgHelp">
+        <input type="file" class="form-control" id="img" name="images" wire:model="temporary_images" multiple aria-describedby="imgHelp">
     </div>
+    @if(!empty($images))
+        <div class="row">
+            <p>Photo prewiew:</p>
+            <div class="d-flex justify-content-evenly border border-4 border-danger rounded shadow py-4">
+            @foreach ($images as $key => $image)
+                <div class="my-3">
+                    <div class="img-preview mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}})"></div>
+                    <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">Delete</button>
+                </div>
+            @endforeach
+            </div>
+        </div>
+    @endif
 
 
     {{-- categoria --}}
