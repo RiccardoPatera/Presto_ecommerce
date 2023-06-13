@@ -22,6 +22,7 @@
                     <a class="nav-link text-white" href="{{route('create_article')}}">Create</a>
                 </li>
 
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
@@ -61,7 +62,19 @@
 
 
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="{{route('become_revisor')}}">Work with us</a>
+                            <a class="nav-link text-white" href="{{route('become_revisor')}}">{{__('ui.work')}}</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <x-_locale lang="it"/>
+                        </li>
+
+                        <li class="nav-item">
+                            <x-_locale lang="en"/>
+                        </li>
+
+                        <li class="nav-item">
+                            <x-_locale lang="es"/>
                         </li>
             </ul>
             <livewire:search-bar />

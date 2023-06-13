@@ -40,7 +40,7 @@
                     <h5>Price: {{ $article->price }}&euro;</h5>
                     <h5>Description: {{ $article->body }}</h5>
                     <p>Category: {{ $article->category->category }}</p>
-                    <a class="btn btn-outline-dark" href="#">Add to cart</a>
+                    {{-- <a class="btn btn-outline-dark" href="#">Add to cart</a> --}}
                 </div>
             </div>
         </div>
