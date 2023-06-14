@@ -26,7 +26,7 @@
                         {{__('ui.welcome')}} {{Auth::user()->name}}
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="">{{__('ui.prof')}}</a></li>
+                        <li><a class="dropdown-item" href="{{route('user_profile',['user'=>Auth::user() ])}}">{{__('ui.prof')}}</a></li>
                     @if(Auth::user()->is_revisor)
                         <li>
                             <a class="dropdown-item" href="{{route('revisor_index')}}">{{__('ui.rev')}}
