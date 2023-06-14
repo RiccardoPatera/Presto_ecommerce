@@ -51,6 +51,8 @@ return[
     'detail'=>'Dettaglio',
     'prof'=>'Profilo',
     'noArt'=>'Nessun articolo trovato, prova con una ricerca differente',
+    'ourvision'=>'"La visione per un negozio di utilizzo di vintage è quella di creare uno spazio in cui la bellezza, la nostalgia e l`artigianato delle ere passate vengano celebrati e riutilizzati per l`uso moderno. Si mira a offrire una collezione curata di pezzi vintage unici e di alta qualità che possano essere integrati senza soluzione di continuità nello stile di vita contemporaneo. Il negozio promuove la sostenibilità incoraggiando il riutilizzo e l`upcycling dei pezzi vintage, consentendo ai clienti di infondere i propri ambienti con carattere e storia. Si propone di essere un punto di riferimento per la creatività e l`ispirazione, dove le persone possono trovare tesori unici che raccontano storie e evocano un senso di atemporalità."',
+    'ourv'=> 'La nostra visione',
     'reqTitle'=>'Il titolo è richiesto',
     'reqPrice'=>'Il prezzo è richiesto',
     'reqDesc'=>'La descrizione è richiesta',

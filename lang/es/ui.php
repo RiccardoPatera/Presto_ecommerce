@@ -51,14 +51,3 @@ return[
     'detail'=>'Detalle',
     'prof'=>'Perfil',
     'noArt'=>'No hay artículos encontrados, pruebe con una búsqueda diferente',
-    'reqTitle'=>'Se requiere el título',
-    'reqPrice'=>'Se requiere el precio',
-    'reqDesc'=>'Se requiere la descripción',
-    'reqCat'=>'Se requiere la categoría',
-    'reqImage'=>'Se requiere la imagen',
-    'reqName'=>'Se requiere el nombre',
-    'reqSurname'=>'Se requiere el apellido',
-    'reqEmail'=>'Se requiere la email',
-    'reqPass'=>'Se requiere la constrasena',
-
-];
