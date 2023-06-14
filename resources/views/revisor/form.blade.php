@@ -9,15 +9,11 @@
                 </div>
             @else
                 <div class="col-12 d-flex justify-content-center align-items-center flex-column vh-50">
-                    <div class="notify">
-                        <h4 class=" text-center "> {{__('ui.alRev')}}</h4>
+                    <div class="notify rounded mt-5 mb-3 text-center">
+                        <h4>{{__('ui.alRev')}}</h4>
                         <h4>{{__('ui.viewRev')}}</h4>
                     </div>
-                    <button class="btn btn-test rounded p-2 mt-4 fs-5 fw-semibold"><a href="{{route('revisor_index')}}" class="a-custom">{{__('ui.go')}}</a></button>
-
-                    {{-- <a href="{{route('revisor_index')}}" class="btn btn-submit mt-4">
-                        <h5 class="mt-2">{{__('ui.go')}}</h5>
-                    </a> --}}
+                    <button class="btn rounded p-2 mt-4 fs-5 fw-semibold"><a href="{{route('revisor_index')}}" class="text-decoration-none text-light">{{__('ui.go')}}</a></button>
                 </div>
             @endif
         </div>

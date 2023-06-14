@@ -72,7 +72,7 @@ class ArticleController extends Controller
     public function show(Article $article)
     {
 
-        return view('Articles.detail', compact('article'));
+        return view('articles.detail', compact('article'));
 
     }
 
@@ -80,9 +80,11 @@ class ArticleController extends Controller
 
     public function edit(Article $article)
     {
-        //
+        return view('articles.edit', compact('article'));
     }
 
+
+    
     /**
      * Update the specified resource in storage.
      */
