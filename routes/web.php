@@ -57,7 +57,7 @@ Route::post('/language/{lang}',[PublicController::class, 'setLanguage'])->name('
 
 // Rotta profilo utente
 
-Route::get ('/user/{user}',[UserController::class, 'user_profile'])->name('user_profile');
+Route::get ('/user/{user}',[UserController::class, 'user_dashboard'])->name('user_dashboard');
 
 
 

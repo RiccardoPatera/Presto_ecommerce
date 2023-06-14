@@ -35,7 +35,7 @@ class CreateForm extends Component
     ];
 
     protected $messages = [
-        'title..required'=> 'The title is required',
+        'title.required'=> 'The title is required',
         'price.required'=> 'The price is required',
         'body.required'=> 'The description is required',
         'category_id.required'=> "The category is required",

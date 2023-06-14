@@ -43,9 +43,10 @@
     @error('temporary_images.*')
         <p class="text-danger">{{$message}}</p>
     @enderror
-    @error('images.*')
+     @error('images.*')
         <p class="text-danger">{{$message}}</p>
     @enderror
+
     @error('images')
         <p class="text-danger">{{$message}}</p>
     @enderror
