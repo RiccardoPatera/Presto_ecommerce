@@ -25,9 +25,13 @@ Route::get('/create',[ArticleController::class,'create'])->name('create_article'
 
 // DETTAGLIO PRODOTTO
 Route::get('/articles/detail/{article}', [ArticleController::class, 'show'])->name('show_article');
-// Rotta ricerca prodotti
 
+// MODIFICA PRODOTTO
+Route::get('/article/edit/{article}', [ArticleController::class, 'edit'])->name('edit_article');
+
+// ROTTA RICERCA PRODOTTO
 Route::get ('/ricerca/annuncio',[PublicController::class, 'search_article'])->name('search_article');
+
 // VISTA DI TUTTI I PRODOTTI
 Route::get('/items/',[ArticleController::class, 'index'])->name('items');
 
@@ -48,16 +52,16 @@ Route::patch('/restore/article/{article}',[RevisorController::class, 'restore_ar
 
 
 // Richiesta per diventare revisore
- Route::get('/richiesta/revisore', [RevisorController::class, 'become_revisor'])->middleware('auth')->name('become_revisor');
+Route::get('/richiesta/revisore', [RevisorController::class, 'become_revisor'])->middleware('auth')->name('become_revisor');
 
 //  Rotta per confermare revisore
- Route::get ('/rendi/revisore/{user}',[RevisorController::class, 'make_revisor'])->name('make_revisor');
+Route::get ('/rendi/revisore/{user}',[RevisorController::class, 'make_revisor'])->name('make_revisor');
  //  Cambia lingua
- Route::post('/language/{lang}',[PublicController::class, 'setLanguage'])->name('set_language_locale');
+Route::post('/language/{lang}',[PublicController::class, 'setLanguage'])->name('set_language_locale');
 
- // Rotta profilo utente
+// Rotta profilo utente
 
-  Route::get ('/user/{user}',[UserController::class, 'user_profile'])->name('user_profile');
+Route::get ('/user/{user}',[UserController::class, 'user_profile'])->name('user_profile');
 
 
 

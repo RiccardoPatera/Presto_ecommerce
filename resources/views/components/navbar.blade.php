@@ -23,7 +23,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        {{__('ui.welcome')}} {{Auth::user()->name}}
+                        {{__('ui.welcome')}} {{ucwords(Auth::user()->name)}}
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{{route('user_profile',['user'=>Auth::user() ])}}">{{__('ui.prof')}}</a></li>

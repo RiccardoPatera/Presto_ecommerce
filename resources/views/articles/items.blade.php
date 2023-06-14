@@ -4,7 +4,7 @@
             <div class="col-12">
                 <h1 class="text-center my-2 text-white "> {{__('ui.allArticles')}} </h1>
             </div>
-                <h4 class="text-center text-white">{{$articles->total()}} {{__('ui.results')}} </h4>
+            <h4 class="text-center text-white">{{$articles->total()}} {{__('ui.results')}} </h4>
             @forelse ($articles as $article)
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center my-4">
                     <a href="{{route('show_article',compact('article'))}}" class="">
@@ -16,6 +16,9 @@
                                 <h5 class="card-title text">{{$article->title}}</h5>
                                 <p class="card-text text">{{$article->price}} €</p>
                                 <p class="card-text text">{{$article->category->category}}</p>
+                                <div class="bg-dark rounded d-flex align-items-center justify-content-center p-1 shadow">
+                                    <h6 class="text-light">Created by: {{Ucwords($article->user->name)}}</h6>
+                                </div>
                             </div>
                         </div>
                     </a>
