@@ -25,9 +25,13 @@ Route::get('/create',[ArticleController::class,'create'])->name('create_article'
 
 // DETTAGLIO PRODOTTO
 Route::get('/articles/detail/{article}', [ArticleController::class, 'show'])->name('show_article');
-// Rotta ricerca prodotti
 
+// MODIFICA PRODOTTO
+Route::get('/article/edit/{article}', [ArticleController::class, 'edit'])->name('edit_article');
+
+// ROTTA RICERCA PRODOTTO
 Route::get ('/ricerca/annuncio',[PublicController::class, 'search_article'])->name('search_article');
+
 // VISTA DI TUTTI I PRODOTTI
 Route::get('/items/',[ArticleController::class, 'index'])->name('items');
 

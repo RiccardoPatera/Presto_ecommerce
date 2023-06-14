@@ -33,6 +33,7 @@ body{
     width: fit-content;
     background-color: white;
     border-radius: 3px;
+    padding: 25px;
 }
 .mt-150{
     margin-top: 150px;
@@ -276,27 +277,16 @@ div.vh-50 .btn{
 }
 
 div.vh-50 .btn {
-    width: 100px;
-    height: fit-content;
-    padding: 0;
     border: 2px solid white;
     background-color: var(--richblue);
     color: var(--richblue);
-    transition: 1s;
+    transition: 0s;
 }
 
 div.vh-50 .btn:hover {
-    width: 100px;
-    height: fit-content;
-    padding: 0;
     border: 2px solid white;
-    background-color: white;
-    color: var(--richblue);
-    transition: 1s;
-}
-
-.a-custom{
-    text-decoration: none;
+    box-shadow: 1px 2px 20px 1px white;
+    transition: 0s;
 }
 
 /* Form crea prodotto - categoria */
