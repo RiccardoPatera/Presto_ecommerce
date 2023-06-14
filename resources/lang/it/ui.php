@@ -61,7 +61,4 @@ return[
     'reqSurname'=>'Il cognome è richiesto',
     'reqEmail'=>'La email è richiesta',
     'reqPass'=>'La password è richiesta',
-    
-
-
 ];
