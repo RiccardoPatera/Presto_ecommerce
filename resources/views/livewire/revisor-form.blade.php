@@ -44,5 +44,5 @@
 
 
 
-        <button type="submit" class="btn btn-outline-dark my-4">Submit</button>
+        <button type="submit" class="btn btn-outline-dark my-4">{{__('ui.submit')}}</button>
 </form>
