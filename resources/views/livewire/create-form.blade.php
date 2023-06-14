@@ -2,7 +2,7 @@
 
     <div class="col-12">
         @if(session('message'))
-            <p class="alert alert-success text-center">{{session('message')}}</p>
+            <p class="alert alert-success text-center ">{{__('ui.createMess')}}</p>
         @endif
     </div>
 
@@ -12,7 +12,7 @@
     </div>
 
     @error('title')
-    <p class="text-danger">{{$message}}</p>
+    <p class="text-danger">{{__('ui.reqTitle')}}</p>
     @enderror
 
 
@@ -22,7 +22,7 @@
     </div>
 
     @error('price')
-    <p class="text-danger">{{$message}}</p>
+    <p class="text-danger">{{__('ui.reqPrice')}}</p>
     @enderror
 
 
@@ -31,7 +31,7 @@
         <textarea name="body" id="body" wire:model.lazy="body" cols="30" rows="10" class="form-control shadow @error('body') is-invalid @enderror"></textarea>
     </div>
     @error('body')
-    <p class="text-danger">{{$message}}</p>
+    <p class="text-danger">{{__('ui.reqDesc')}}</p>
     @enderror
 
 
@@ -94,7 +94,7 @@
     </div>
 
     @error('category_id')
-    <p class="text-danger">{{$message}}</p>
+    <p class="text-danger">{{__('ui.reqCat')}}</p>
     @enderror
 
     <button type="submit" class="btn btn-submit shadow my-4">{{__('ui.submit')}}</button>
