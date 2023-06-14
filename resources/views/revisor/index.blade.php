@@ -1,11 +1,18 @@
 <x-layout>
 
     <div class="container my-5">
-        <div class="row justify-content-center align-items-center">
+        <div class="row justify-content-center align-items-center my-3">
 
-            @if(session('message'))
-                <h3 class="alert alert-success text-center">{{session('message')}}</h3>
+            @if(session('accept'))
+                <h3 class="alert alert-success text-center">{{session('accept')}}</h3>
             @endif
+            @if(session('refuse'))
+                <h3 class="alert alert-danger text-center">{{session('refuse')}}</h3>
+            @endif
+
+            <div class="col-12 justifu-content-center">
+                <h1 class="text-center text-light">Dashboard</h1>
+            </div>
             {{-- @dd(session('previous_article')) --}}
 
             @if(session('previous_article'))
@@ -13,18 +20,18 @@
                     <a href="#" id="open-modal"><i class="icon fa-solid fa-arrow-rotate-left fa-2xl" data-bs-toggle="modal" data-bs-target="#Modal"></i></a>
                     <div id="Modal" class="modal fade" tabindex="-1">
                         <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">Are you sure you want to restore the article?</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body vh-25 d-flex align-items-end justify-content-end w-100">
-                                    <form method='POST' action="{{route('revisor_restore', ['article'=>session('previous_article')])}}">
-                                    @csrf
-                                    @method('patch')
-                                        <button  type='submit' class="btn btn-success">Sure</button>
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                    </form>
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title">{{__('ui.areYouSure')}} </h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body vh-25 d-flex align-items-end justify-content-end w-100">
+                                <form  method='POST' action="{{route('revisor_restore', ['article'=>session('previous_article')])}}">
+                                @csrf
+                                @method('patch')
+
+                                    <button  type='submit' class="btn btn-success">{{__('ui.sure')}}</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{__('ui.cancel')}}</button>
                                 </div>
                             </div>
                         </div>
@@ -38,19 +45,19 @@
                     <div class="carousel-inner">
                         @foreach ($article->images as $image)
                             <div class="carousel-item @if($loop->first) active @endif">
-                                <img src={{ Storage::url($image->path) }} class="img-fluid d-block w-100" alt="img">
+                                <img src={{$image->getUrl(500,500)}} class="img-fluid d-block w-100" alt="img">
                             </div>
                         @endforeach
-                    </div>  
+                    </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
                         data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
+                        <span class="visually-hidden">{{__('ui.prev')}}</span>
                     </button>
                     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
                         data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
+                        <span class="visually-hidden">{{__('ui.next')}}</span>
                     </button>
                 </div>
             </div>
@@ -59,30 +66,30 @@
                 <div class="card card-detail  shadow p-3 d-flex justify-content-center bg-light">
                     <h3>{{ $article->title }}</h3>
                     <hr class="hr">
-                    <h5>Price: {{ $article->price }}&euro;</h5>
-                    <h5>Description: {{ $article->body }}</h5>
-                    <p>Category: {{ $article->category->category }}</p>
+                    <h5>{{__('ui.price')}}: {{ $article->price }}&euro;</h5>
+                    <h5>{{__('ui.desc')}}: {{ $article->body }}</h5>
+                    <p>{{__('ui.singleCat')}}: {{ $article->category->category }}</p>
                     <div class="d-flex w-100 justify-content-center ">
                         <form method='POST' action="{{route('revisor_accept', compact('article'))}}">
                         @csrf
                         @method('patch')
-                            <button type='submit' class="btn btn-success m-5">Accept</button>
+                            <button type='submit' class="btn btn-success m-5" >{{__('ui.accept')}}</button>
                         </form>
                         <form method='POST' action="{{route('revisor_reject', compact('article'))}}">
                         @csrf
                         @method('patch')
-                            <button type='submit' class="btn btn-danger m-5">Reject</button>
+                            <button type='submit' class="btn btn-danger m-5">{{__('ui.reject')}}</button>
                         </form>
                     </div>
                 </div>
             </div>
 
             @else
-            <h1 class="text-white text-center">Review Dashboard</h1>
-            <div class="col-12 d-flex flex-column justify-content-center vh-75 align-items-center">
+            <h1 class="text-white text-center">{{__('ui.revDash')}}</h1>
+            <div class="col-12 d-flex  flex-column justify-content-center vh-75 align-items-center ">
                 <div class="d-flex align-items-center justify-content-center flex-column notify mt-3">
-                    <h3 class="text-center">No articles to review</h3>
-                    <h3 class="text-center"> See you soon <i class="fa-regular fa-face-smile" style="color: #000000;"></i></h3> 
+                <h3 class="text-center">{{__('ui.noRevArt')}}</h3>
+                <h3 class="text-center"> {{__('ui.seeSoon')}} <i class="fa-regular fa-face-smile" style="color: #000000;"></i></h3>
                 </div>
             </div>
             @endif

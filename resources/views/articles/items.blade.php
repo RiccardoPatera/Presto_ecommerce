@@ -10,7 +10,7 @@
                     <a href="{{route('show_article',compact('article'))}}" class="">
                         <div class="card shadow">
                             <div class="fadex"></div>
-                            <img src="{{Storage::url($article->images()->first()->path)}}" class="card-img-top img-fluid" alt="...">
+                            <img src="{{$article->images()->first()->GetUrl(500,500)}}" class="card-img-top img-fluid" alt="...">
                             <div class="overlay"></div>
                             <div class="card-body">
                                 <h5 class="card-title text">{{$article->title}}</h5>
@@ -20,11 +20,11 @@
                         </div>
                     </a>
                 </div>
-            @empty
-            <div class="col-12 d-flex justify-content-center my-4">
-                <h3 class="alert text-white">No articles found, try with a different search!</h3>
-            </div>
-            @endforelse
+        @empty
+        <div class="col-12 d-flex justify-content-center my-4">
+            <h3 class="alert text-white">{{__('ui.noArt')}}</h3>
+        </div>
+        @endforelse
             <div class="col-12 d-flex justify-content-center mt-5">{{$articles->links()}}</div>
         </div>
     </div>

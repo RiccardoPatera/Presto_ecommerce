@@ -9,9 +9,6 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto mb-lg-0" >
-                <li class="nav-item">
-                    <a class="nav-link text-white" aria-current="page" href="{{route('welcome')}}">Home</a>
-                </li>
 
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{route('items')}}">{{__('ui.allArticles')}}</a>
@@ -29,10 +26,10 @@
                         {{__('ui.welcome')}} {{Auth::user()->name}}
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="">Profile</a></li>
+                        <li><a class="dropdown-item" href="{{route('user_profile',['user'=>Auth::user() ])}}">{{__('ui.prof')}}</a></li>
                     @if(Auth::user()->is_revisor)
                         <li>
-                            <a class="dropdown-item" href="{{route('revisor_index')}}">Revisor
+                            <a class="dropdown-item" href="{{route('revisor_index')}}">{{__('ui.rev')}}
                                 <span class="position-absolute top-50 start-100 translate-middle badge rounded-pill bg-danger">
                                         {{App\Models\Article::toBeRevisionedCount()}}
                                 </span>
@@ -112,7 +109,7 @@
     // let megaContainer = document.querySelector('#megaContainer');
 
     // search.addEventListener('click', ()=>{
-    
+
     // if (btnIsClicked == false) {
     //     megaContainer.classList.remove('d-none');
     //     btnIsClicked = true
@@ -120,7 +117,7 @@
     //     megaContainer.classList.add('d-none');
     //     btnIsClicked = false
     // }
-    
+
 
     // });
 

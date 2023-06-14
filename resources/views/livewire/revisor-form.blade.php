@@ -42,7 +42,6 @@
     <p class="text-danger">{{$message}}</p>
     @enderror --}}
 
-
-    <button type="submit" class="btn btn-submit my-4">Submit</button>
-
+    <button type="submit" class="btn btn-submit my-4">{{__('ui.submit')}}</button>
+    
 </form>

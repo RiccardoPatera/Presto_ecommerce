@@ -54,9 +54,9 @@
                     @enderror
                     
 
-                    <p class=" text-light">Already Register? <a href="{{route('login')}}" class=" text-light">Login Here</a></p>
+                    <p class=" text-light">{{__('ui.alrReg')}} <a href="{{route('login')}}" class=" text-light">{{__('ui.hereLog')}}</a></p>
 
-                    <button type="submit" class="btn btn-log">Register</button>
+                    <button type="submit" class="btn btn-log">{{__('ui.register')}}</button>
 
                 </form>
 
