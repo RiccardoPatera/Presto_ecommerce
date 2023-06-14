@@ -40,7 +40,10 @@
         <input type="file" class="form-control shadow @error('temporary_images') is-invalid @enderror" id="images" name="images" wire:model="temporary_images" multiple aria-describedby="imagesHelp" placeholder="Img">
     </div>
 
-    @error('temporary_images')
+    @error('temporary_images.*')
+        <p class="text-danger">{{$message}}</p>
+    @enderror
+    @error('images.*')
         <p class="text-danger">{{$message}}</p>
     @enderror
 

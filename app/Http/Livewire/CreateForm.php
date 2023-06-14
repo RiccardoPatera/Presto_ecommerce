@@ -30,23 +30,23 @@ class CreateForm extends Component
         'body' => 'required|min:5',
         'category_id'=> 'required',
 
-        'images'=> 'required|image|max:3072',
-        'temporary_images'=> 'required|image|max:3072',
+        'images.*'=> 'required|image|max:3072',
+        'temporary_images.*'=> 'required|image|max:3072',
     ];
 
     protected $messages = [
-        'title.required'=> 'The title is required',
+        'title..required'=> 'The title is required',
         'price.required'=> 'The price is required',
         'body.required'=> 'The description is required',
         'category_id.required'=> "The category is required",
 
-        'images.required'=> 'The image is required',
-        'images.max'=> 'The file need to be max 3MB',
-        'images.image'=> 'The file need to be a image',
+        'images.*.required'=> 'The image is required',
+        'images.*.max'=> 'The file need to be max 3MB',
+        'images.*.image'=> 'The file need to be a image',
 
-        'temporary_images.required'=> 'The image is required',
-        'temporary_images.max'=> 'The file need to be max 3MB',
-        'temporary_images.image'=> 'The file need to be a image',
+        'temporary_images.*.required'=> 'The image is required',
+        'temporary_images.*.max'=> 'The file need to be max 3MB',
+        'temporary_images.*.image'=> 'The file need to be a image',
     ];
 
    public function create(){
@@ -77,7 +77,7 @@ class CreateForm extends Component
 
     public function updatedTemporaryImages(){
         if ($this->validate([
-            'temporary_images.*'=>"image|max:3072",
+            'temporary_images.*'=>"required|image|max:3072",
         ])) {
         foreach ($this->temporary_images as $image) {
             $this->images[] = $image;
