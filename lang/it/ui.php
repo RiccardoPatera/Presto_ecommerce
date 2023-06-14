@@ -37,7 +37,8 @@ return[
     'accept'=>'Accetta',
     'reject'=>'Rifiuta',
     'singleCat'=>'Categoria',
-    'acceptArt'=>'Hai accettato l articolo',
+    'acceptArt'=>'Articolo accettato',
+    'rejectArt'=>'Articolo rifutato',
     'createMess'=>'Articolo creato con successo. Aspetta che il revisore accetti il tuo articolo.',
     'thankYou'=>'Grazie! La tua candidatura è sotto revisione',
     'allCat'=>'Tutte le categorie',
@@ -61,5 +62,5 @@ return[
     'reqName'=>'Il nome è richiesto',
     'reqSurname'=>'Il cognome è richiesto',
     'reqEmail'=>'La email è richiesta',
-    'reqPass'=>'La password è richiesta'
+    'reqPass'=>'La password è richiesta',
 ];
