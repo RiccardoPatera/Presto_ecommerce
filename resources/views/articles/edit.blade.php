@@ -1,15 +1,13 @@
 <x-layout>
 
-    <h1 class="text-center display-1">Edit your article</h1>
-
-    <div class="container">
+    <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-12 col-md-6 mt-5">
-
+            <div class="col-12 col-md-8 pt-5">
+                <h1 class="text-center pb-5 text-white">{{__('ui.sell')}}</h1>
                 @livewire('edit-article', compact('article'))
-
             </div>
         </div>
     </div>
 
 </x-layout>
+

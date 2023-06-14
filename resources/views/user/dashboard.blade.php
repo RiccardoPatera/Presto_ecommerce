@@ -46,9 +46,12 @@
                                     <div class="swiper-slide">
                                             <a href="{{route('show_article',compact('article'))}}" class="">
                                                 <div class="card shadow">
-                                                    <div class="fadex"></div>
+
+                                                    <div class="fadex">
+                                                    </div>
                                                     <img src="{{$article->images()->first()->GetUrl(500,500)}}" class="card-img-top img-fluid" alt="...">
-                                                    <div class="overlay"></div>
+                                                    <div class="overlay">
+                                                    </div>
                                                     <div class="card-body">
                                                         <h5 class="card-title text">{{$article->title}}</h5>
                                                         <p class="card-text text">{{$article->price}} €</p>
@@ -62,9 +65,10 @@
                                                                 <h6 class="text-light text-center mt-1">Accepted</h6>
                                                             </div>
                                                         @elseif($article->is_accepted==0)
-                                                        <div class="bg-danger rounded">
-                                                            <h6 class="text-light text-center mt-1">Rejected</h6>
-                                                        </div>
+                                                            <div class="bg-danger rounded">
+                                                                <h6 class="text-light text-center mt-1">Rejected</h6>
+                                                            </div>
+
 
                                                         @endif
                                                     </div>
@@ -72,7 +76,7 @@
                                             </a>
                                     </div>
                                    @endforeach
-                                <div class="swiper-pagination"></div>
+
                               </div>
                             </div>
                         </div>

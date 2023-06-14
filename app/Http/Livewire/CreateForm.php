@@ -31,7 +31,7 @@ class CreateForm extends Component
         'category_id'=> 'required',
         'images'=> 'required',
         'images.*'=> 'required|image|max:3072',
-        'temporary_images'=> 'required|image|max:3072',
+        'temporary_images.*'=> 'required|image|max:3072',
     ];
 
     protected $messages = [
@@ -53,7 +53,7 @@ class CreateForm extends Component
    public function create(){
         $this->validate();
 
-            $this -> article = Article::create([
+            $this->article = Article::create([
             'title'=> $this->title,
             'price'=> $this->price,
             'body'=> $this->body,
