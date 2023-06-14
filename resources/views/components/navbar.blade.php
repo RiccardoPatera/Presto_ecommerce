@@ -62,6 +62,7 @@
                             <a class="nav-link text-white" href="{{route('become_revisor')}}">{{__('ui.work')}}</a>
                         </li>
 
+
                         <li class="nav-item">
                             <x-_locale lang="it"/>
                         </li>
