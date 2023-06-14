@@ -10,6 +10,7 @@ use App\Models\Category;
 
 class PublicController extends Controller
 {
+
     public function welcome() {
         $articles_all=Article::all();
         $articles_all=Article::orderBy('created_at', 'DESC')->where('is_accepted',true)->get();

@@ -1,4 +1,4 @@
-<form wire:submit.prevent="" class="shadow p-5 my-2 bg-light">
+<form wire:submit.prevent="edit" class="shadow p-5 my-2 bg-light">
 
     <div class="col-12">
         @if(session('message'))
@@ -35,7 +35,7 @@
     @enderror
 
 
-    <div class="mb-3">
+    {{-- <div class="mb-3">
         <label for="images" class="form-label">{{__('ui.image')}}</label>
         <input type="file" class="form-control shadow @error('temporary_images') is-invalid @enderror" id="images" name="images" wire:model="temporary_images" multiple aria-describedby="imagesHelp" placeholder="Img">
     </div>
@@ -50,36 +50,46 @@
         <p class="text-danger">{{$message}}</p>
     @enderror
 
-    @if(!empty($images))
-        <div class="row">
+    <div class="row">
+            @if(!empty($images))
             <p>Photo prewiew:</p>
-            <div class="d-flex justify-content-evenly border border-4 border-danger rounded shadow py-4">
+            <div class="d-flex justify-content-evenly border border-4  rounded shadow py-4">
             @foreach ($images as $key => $image)
-                <div class="my-3">
-                    <div class="img-preview mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}})"></div>
-                    <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">Delete</button>
-                </div>
+                    <div class="my-3">
+                        <div class="img-preview mx-auto shadow rounded" style="background-image: url({{Storage::url($image->path)}})"></div>
+                        <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">Delete</button>
+                    </div>
             @endforeach
-            </div>
-        </div>
-    @endif
+            </div> --}}
+            {{-- @elseif(!empty($image->temporaryUrl()))
+            @foreach ($images as $key => $image)
+                    <div class="my-3">
+                        <div class="img-preview mx-auto shadow rounded" style="background-image: url({{Storage::url($image->path)}}"></div>
+                        <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">Delete</button>
+                    </div>
+            @endforeach --}}
 
+
+
+            {{-- @endif --}}
+
+        {{-- </div> --}}
 
     {{-- categoria --}}
 
-    <div class="mb-3">
+    <div class="mb-3 my-3">
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
-                <h2 class="accordion-header shadow" id="headingOne">
+                <h2 class="accordion-header " id="headingOne">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         {{__('ui.cat')}}
                     </button>
                 </h2>
-                <div id="collapseOne" class="accordion-collapse shadow collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div id="collapseOne" class="accordion-collapse  collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         @foreach ($categories as $category)
                             <div class="form-check">
-                                <input class="form-check-input @error('category_id') is-invalid @enderror" type="radio"  name='flexRadioDisabled' value="{{$category->id}}" id={{$category->category}} wire:model.lazy="category_id">
+                                <input class="form-check-input @error('category_id') is-invalid @enderror" type="radio"  name='flexRadioDisabled'  value="{{$category->id}}" id={{$category->category}} wire:model.lazy="category_id">
                                 <label class="form-check-label" for="{{$category->category}}">
                                     {{$category->category}}
                                 </label>

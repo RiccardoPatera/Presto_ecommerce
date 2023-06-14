@@ -43,8 +43,7 @@
     @error('temporary_images.*')
         <p class="text-danger">{{$message}}</p>
     @enderror
-
-    @error('images.*')
+     @error('images.*')
         <p class="text-danger">{{$message}}</p>
     @enderror
 
@@ -55,7 +54,7 @@
     @if(!empty($images))
         <div class="row">
             <p>Photo prewiew:</p>
-            <div class="d-flex justify-content-evenly border border-4 border-danger rounded shadow py-4">
+            <div class="d-flex justify-content-evenly border border-4  rounded shadow py-4">
             @foreach ($images as $key => $image)
                 <div class="my-3">
                     <div class="img-preview mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}});"></div>

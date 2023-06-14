@@ -180,7 +180,13 @@ footer {
     flex-direction: column;
     bottom: 0;
 }
-
+.user-crud{
+        position: absolute;
+        display:flex;
+        flex-direction: column;
+        top:0;
+        left:0;
+}
 .card a{
     text-decoration: none;
     color: var(--richblue);
