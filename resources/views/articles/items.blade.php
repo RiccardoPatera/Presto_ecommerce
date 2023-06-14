@@ -16,6 +16,9 @@
                                 <h5 class="card-title text">{{$article->title}}</h5>
                                 <p class="card-text text">{{$article->price}} €</p>
                                 <p class="card-text text">{{$article->category->category}}</p>
+                                <div class="bg-dark rounded d-flex align-items-center justify-content-center p-1 shadow">
+                                    <h6 class="text-light">Created by: {{Ucwords($article->user->name)}}</h6>
+                                </div>
                             </div>
                         </div>
                     </a>
