@@ -1,6 +1,11 @@
 <x-layout>
     <div class="container-fluid">
         <div class="row pt-5">
+            @if(session('message'))
+                    <div class="col-12 ">
+                        <p class="alert alert-danger text-center  ">{{session('message')}}</p>
+                    </div>
+                @endif
             <div class="col-12">
                 <h1 class="text-center my-2 text-white "> {{__('ui.allArticles')}} </h1>
             </div>
@@ -16,9 +21,9 @@
                                 <h5 class="card-title text">{{$article->title}}</h5>
                                 <p class="card-text text">{{$article->price}} €</p>
                                 <p class="card-text text">{{$article->category->category}}</p>
-                                <div class="bg-dark rounded d-flex align-items-center justify-content-center p-1 shadow">
-                                    <h6 class="text-light">Created by: {{Ucwords($article->user->name)}}</h6>
-                                </div>
+                                <a href="" class="z-3 bg-dark rounded shadow mt-2 ">
+                                    <h6 class="text-light text-center mt-1">Created by: {{Ucwords($article->user->name)}}</h6>
+                                </a>
                             </div>
                         </div>
                     </a>

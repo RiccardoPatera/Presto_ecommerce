@@ -71,8 +71,23 @@ class ArticleController extends Controller
      */
     public function show(Article $article)
     {
-
-        return view('articles.detail', compact('article'));
+        if ($article->is_accepted===0){
+            if(Auth::id()==$article->user_id){
+                return view('Articles.edit',compact('article'))->with('message','Your article need to be updated');
+            }
+            else{
+                return redirect(route('items'))->with('message',"The request article doesn't exist");
+            }
+        }
+        if ($article->is_accepted===null){
+            if(Auth::id()==$article->user_id){
+                return redirect(route('user_dashboard',['user'=>Auth::user()]))->with('message','Your article is under review, try later');
+            }
+            else{
+                return redirect(route('items'))->with('message',"The request article doesn't exist");
+            }
+        }
+        return view('Articles.detail', compact('article'));
 
     }
 
@@ -84,7 +99,6 @@ class ArticleController extends Controller
     }
 
 
-    
     /**
      * Update the specified resource in storage.
      */

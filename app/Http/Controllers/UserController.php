@@ -11,9 +11,9 @@ class UserController extends Controller{
     $this->middleware('auth');
     }
 
-    public function user_profile(User $user){
+    public function user_dashboard(User $user){
 
-        return view('user.profile', compact('user'));
+        return view('user.dashboard', compact('user'));
     }
 
 }
