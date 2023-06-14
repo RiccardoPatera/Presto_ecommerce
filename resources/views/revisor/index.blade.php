@@ -4,10 +4,10 @@
         <div class="row justify-content-center align-items-center my-3">
 
             @if(session('accept'))
-                <h3 class="alert alert-success text-center">{{session('accept')}}</h3>
+                <h3 class="alert alert-success text-center">{{__('ui.acceptArt')}}</h3>
             @endif
             @if(session('refuse'))
-                <h3 class="alert alert-danger text-center">{{session('refuse')}}</h3>
+                <h3 class="alert alert-danger text-center">{{__('ui.rejectArt')}}</h3>
             @endif
 
             <div class="col-12 justifu-content-center">

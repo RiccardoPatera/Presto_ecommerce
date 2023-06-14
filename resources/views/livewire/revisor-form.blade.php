@@ -1,7 +1,7 @@
 <form wire:submit.prevent="become_revisor" class="shadow p-5 my-2 bg-light">
     <div class="col-12">
         @if(session('message'))
-            <p class="alert alert-success text-center ">{{session('message')}}</p>
+            <p class="alert alert-success text-center ">{{__('ui.thankYou')}}</p>
         @endif
     </div>
 
@@ -11,7 +11,7 @@
         </div>
 
         @error('name')
-        <p class="text-danger">{{$message}}</p>
+        <p class="text-danger">{{__('ui.reqName')}}</p>
         @enderror
 
         <div class="mb-3">
@@ -20,7 +20,7 @@
         </div>
 
         @error('surname')
-        <p class="text-danger">{{$message}}</p>
+        <p class="text-danger">{{__('ui.reqSurname')}}</p>
         @enderror
 
 
@@ -29,7 +29,7 @@
             <textarea name="body" id="body" wire:model.lazy="body" cols="30" rows="10" class="form-control"></textarea>
         </div>
         @error('body')
-        <p class="text-danger">{{$message}}</p>
+        <p class="text-danger">{{__('ui.reqDesc')}}</p>
         @enderror
 
 

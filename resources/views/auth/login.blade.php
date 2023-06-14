@@ -20,7 +20,7 @@
                     </div>
 
                     @error('email')
-                        <div class="alert alert-danger">{{$message}}</div>
+                        <div class="alert alert-danger">{{__('ui.reqEmail')}}</div>
                     @enderror
 
                     <div class="mb-3">
@@ -29,7 +29,7 @@
                     </div>
 
                     @error('password')
-                    <div class="alert alert-danger">{{$message}}</div>
+                    <div class="alert alert-danger">{{__('ui.reqPass')}}</div>
                     @enderror
 
 

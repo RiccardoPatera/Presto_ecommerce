@@ -37,8 +37,7 @@ return[
     'accept'=>'Accetta',
     'reject'=>'Rifiuta',
     'singleCat'=>'Categoria',
-    'acceptArt'=>'Articolo accettato',
-    'rejectArt'=>'Articolo rifiutato',
+    'acceptArt'=>'Hai accettato l articolo',
     'createMess'=>'Articolo creato con successo. Aspetta che il revisore accetti il tuo articolo.',
     'thankYou'=>'Grazie! La tua candidatura è sotto revisione',
     'allCat'=>'Tutte le categorie',
@@ -52,16 +51,4 @@ return[
     'detail'=>'Dettaglio',
     'prof'=>'Profilo',
     'noArt'=>'Nessun articolo trovato, prova con una ricerca differente',
-    'reqTitle'=>'Il titolo è richiesto',
-    'reqPrice'=>'Il prezzo è richiesto',
-    'reqDesc'=>'La descrizione è richiesta',
-    'reqCat'=>'La categoria è richiesta',
-    'reqImage'=>'Immagine richiesta',
-    'reqName'=>'Il nome è richiesto',
-    'reqSurname'=>'Il cognome è richiesto',
-    'reqEmail'=>'La email è richiesta',
-    'reqPass'=>'La password è richiesta',
-    
-
-
 ];
