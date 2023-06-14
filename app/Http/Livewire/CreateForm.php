@@ -31,7 +31,7 @@ class CreateForm extends Component
         'category_id'=> 'required',
         'images'=> 'required',
         'images.*'=> 'required|image|max:3072',
-        'temporary_images'=> 'required|image|max:3072',
+        'temporary_images.*'=> 'required|image|max:3072',
     ];
 
     protected $messages = [

@@ -71,7 +71,6 @@ class ArticleController extends Controller
      */
     public function show(Article $article)
     {
-<<<<<<< HEAD
         if ($article->is_accepted===0){
             if(Auth::id()==$article->user_id){
                 return view('Articles.edit',compact('article'))->with('message','Your article need to be updated');
@@ -89,10 +88,6 @@ class ArticleController extends Controller
             }
         }
         return view('Articles.detail', compact('article'));
-=======
-
-        return view('articles.detail', compact('article'));
->>>>>>> de1eab99581ef1757b1c6749a4ca4a5c3e117ecb
 
     }
 
@@ -104,11 +99,6 @@ class ArticleController extends Controller
     }
 
 
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> de1eab99581ef1757b1c6749a4ca4a5c3e117ecb
     /**
      * Update the specified resource in storage.
      */

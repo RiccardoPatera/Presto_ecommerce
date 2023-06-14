@@ -2,11 +2,7 @@
 
     <div class="col-12">
         @if(session('message'))
-<<<<<<< HEAD
             <p class="alert alert-success text-center ">{{__('ui.createMess')}}</p>
-=======
-            <p class="alert alert-success text-center">{{session('message')}}</p>
->>>>>>> 23cfc855794da3e9be7e7d4b1c33fa7194d9c6d3
         @endif
     </div>
 
