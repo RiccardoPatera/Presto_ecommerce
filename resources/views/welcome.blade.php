@@ -6,7 +6,7 @@
 @endif
 
 <x-layout>
-
+{{-- LOGO --}}
     <div class="container-fluid align-items-center">
         <div class="row ">
 
@@ -25,7 +25,7 @@
         </div>
     </div>
     
-    
+    {{-- VISION  --}}
 
                 <div class="container underlogo align-items-center justify-content-center d-flex">
                     <div class="row justify-content-center">
@@ -39,7 +39,7 @@
                             </div>
                     </div>
                 </div>
-
+{{-- ARRIVALS/CARD  --}}
 
                 <div class="container-fluid align-items-center">
                     <div class="row">

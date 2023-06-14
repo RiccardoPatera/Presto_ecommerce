@@ -1,7 +1,7 @@
 <x-layout>
 
     <div class="container my-5">
-        <div class="row justify-content-center align-items-center">
+        <div class="row justify-content-center align-items-center my-3">
 
             @if(session('accept'))
                 <h3 class="alert alert-success text-center">{{session('accept')}}</h3>
@@ -9,6 +9,10 @@
             @if(session('refuse'))
                 <h3 class="alert alert-danger text-center">{{session('refuse')}}</h3>
             @endif
+
+            <div class="col-12 justifu-content-center">
+                <h1 class="text-center text-light">Dashboard</h1>
+            </div>
             {{-- @dd(session('previous_article')) --}}
 
             @if(session('previous_article'))
@@ -41,7 +45,7 @@
                     <div class="carousel-inner">
                         @foreach ($article->images as $image)
                             <div class="carousel-item @if($loop->first) active @endif">
-                                <img src={{ Storage::url($image->path) }} class="img-fluid d-block w-100" alt="img">
+                                <img src={{$image->getUrl(500,500)}} class="img-fluid d-block w-100" alt="img">
                             </div>
                         @endforeach
                     </div>

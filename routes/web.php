@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\ArticleController;
-use App\Http\Controllers\PublicController;
-use App\Http\Controllers\RevisorController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\PublicController;
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\RevisorController;
 
 
 /*
@@ -47,15 +48,16 @@ Route::patch('/restore/article/{article}',[RevisorController::class, 'restore_ar
 
 
 // Richiesta per diventare revisore
- Route::get('/richiesta/revisore', [RevisorController::class, 'become_revisor'])->middleware('auth')->name('become_revisor');
+Route::get('/richiesta/revisore', [RevisorController::class, 'become_revisor'])->middleware('auth')->name('become_revisor');
 
 //  Rotta per confermare revisore
- Route::get ('/rendi/revisore/{user}',[RevisorController::class, 'make_revisor'])->name('make_revisor');
-
-//  Cambia lingua 
-
+Route::get ('/rendi/revisore/{user}',[RevisorController::class, 'make_revisor'])->name('make_revisor');
+ //  Cambia lingua
 Route::post('/language/{lang}',[PublicController::class, 'setLanguage'])->name('set_language_locale');
 
+// Rotta profilo utente
+
+Route::get ('/user/{user}',[UserController::class, 'user_profile'])->name('user_profile');
 
 
 
