@@ -51,4 +51,13 @@ return[
     'detail'=>'Detail',
     'prof'=>'Profile',
     'noArt'=>'No articles found, try with a different search',
+    'reqTitle'=>'The title is required',
+    'reqPrice'=>'The price is required',
+    'reqDesc'=>'The description is required',
+    'reqCat'=>'The category is required',
+    'reqImage'=>'The image is required',
+    'reqName'=>'The name is required',
+    'reqSurname'=>'The surname is required',
+    'reqEmail'=>'The email is required',
+    'reqPass'=>'The password is required',
 ];
