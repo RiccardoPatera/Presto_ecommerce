@@ -47,10 +47,10 @@ Route::patch('/restore/article/{article}',[RevisorController::class, 'restore_ar
 
 
 // Richiesta per diventare revisore
- Route::get('/richiesta/revisore', [RevisorController::class, 'become_revisor'])->middleware('auth')->name('become_revisor');
+Route::get('/richiesta/revisore', [RevisorController::class, 'become_revisor'])->middleware('auth')->name('become_revisor');
 
 //  Rotta per confermare revisore
- Route::get ('/rendi/revisore/{user}',[RevisorController::class, 'make_revisor'])->name('make_revisor');
+Route::get ('/rendi/revisore/{user}',[RevisorController::class, 'make_revisor'])->name('make_revisor');
 
 //  Cambia lingua 
 
