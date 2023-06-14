@@ -48,16 +48,16 @@ Route::patch('/restore/article/{article}',[RevisorController::class, 'restore_ar
 
 
 // Richiesta per diventare revisore
- Route::get('/richiesta/revisore', [RevisorController::class, 'become_revisor'])->middleware('auth')->name('become_revisor');
+Route::get('/richiesta/revisore', [RevisorController::class, 'become_revisor'])->middleware('auth')->name('become_revisor');
 
 //  Rotta per confermare revisore
- Route::get ('/rendi/revisore/{user}',[RevisorController::class, 'make_revisor'])->name('make_revisor');
+Route::get ('/rendi/revisore/{user}',[RevisorController::class, 'make_revisor'])->name('make_revisor');
  //  Cambia lingua
- Route::post('/language/{lang}',[PublicController::class, 'setLanguage'])->name('set_language_locale');
+Route::post('/language/{lang}',[PublicController::class, 'setLanguage'])->name('set_language_locale');
 
- // Rotta profilo utente
+// Rotta profilo utente
 
-  Route::get ('/user/{user}',[UserController::class, 'user_profile'])->name('user_profile');
+Route::get ('/user/{user}',[UserController::class, 'user_profile'])->name('user_profile');
 
 
 

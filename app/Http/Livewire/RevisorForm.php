@@ -10,7 +10,6 @@ use Livewire\WithFileUploads;
 
 class RevisorForm extends Component
 {
-
     use WithFileUploads;
 
     public $name;
@@ -19,7 +18,7 @@ class RevisorForm extends Component
     // public $file;
 
     protected $rules = [
-        'name' => 'required|min:5',
+        'name' => 'required',
         'surname' => 'required|doesnt_start_with:-',
         'body' => 'required|min:5',
         // 'file'=> 'required',
@@ -43,8 +42,8 @@ class RevisorForm extends Component
         Mail::to('admin@presto.it')->send(new BecomeRevisor($data,Auth::user()));
 
 
-    session()->flash('message','Thank you! Your candidature is under review');
-    $this->reset();
+        session()->flash('message','Thank you! Your candidature is under review');
+        $this->reset();
 
     }
 
