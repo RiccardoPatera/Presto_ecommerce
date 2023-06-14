@@ -60,4 +60,6 @@ return[
     'reqSurname'=>'Se requiere el appellido',
     'reqEmail'=>'Se requiere la email',
     'reqPass'=>'Se requiere la contrasena',
+    'ourvision'=>'"La visión de una tienda de uso de vintage es crear un espacio donde se celebre la belleza, la nostalgia y la artesanía de eras pasadas, dándoles un nuevo propósito en el uso moderno. Se busca ofrecer una cuidada colección de piezas vintage únicas y de alta calidad que se integren sin problemas en los estilos de vida contemporáneos. La tienda promueve la sostenibilidad al fomentar la reutilización y el reciclaje creativo de artículos vintage, permitiendo a los clientes infundir carácter e historia en sus entornos. Aspira a ser un centro de creatividad e inspiración, donde las personas puedan encontrar tesoros únicos que cuenten historias y evocan una sensación de atemporalidad."',
+    'ourv'=> 'Nuestra visiòn',
 ];
