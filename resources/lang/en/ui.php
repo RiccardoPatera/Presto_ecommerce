@@ -51,4 +51,6 @@ return[
     'detail'=>'Detail',
     'prof'=>'Profile',
     'noArt'=>'No articles found, try with a different search',
+    'ourvision'=> '"The vision for a vintage usage shop is to create a space where the beauty, nostalgia, and craftsmanship of bygone eras are celebrated and repurposed for modern-day use. It aims to provide a curated collection of unique and high-quality vintage items that can be integrated seamlessly into contemporary lifestyles. The shop promotes sustainability by encouraging the reuse and upcycling of vintage pieces, allowing customers to infuse their surroundings with character and history. It aspires to be a hub for creativity and inspiration, where individuals can find one-of-a-kind treasures that tell stories and evoke a sense of timelessness."',
+    'ourv'=> 'Our vision'
 ];

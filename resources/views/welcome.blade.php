@@ -11,15 +11,21 @@
         <div class="row ">
 
             <div class="col-12 justify-content-end align-items-start d-flex">
-                <p class="textcustom">Codeartisans.</p>
+                <p class="textcustom d-none d-xl-block">DISCOVER TREASURES FROM THE PAST, ANEW.</p>
             </div>
 
             <div class="col-12 header d-flex align-items-center d-flex flex-column">
                 <div class="col-12 d-flex align-items-end divcustom mt-5 mt-lg-0 ">
-                    <p class="textcustom ms-5 ">Elevate Your Style with Timeless Luxury.</p>
+                    <p class="textcustom ms-5 text-center">Elevate Your Style with Timeless Luxury.</p>
+                </div>
+                <div class="col-12 d-flex align-items-center d-flex flex-column ">
+                <div class="col-12 d-flex align-items-end copy mt-5 mt-lg-0 ">
+                    <p class="d-none d-xl-block">Codeartisans 2023 ©</p>
+                    
                 </div>
                 <div class="col-12 justify-content-center d-flex p-0">
-                    <h1 class=" new mb-5">presto</h1>
+                    
+                    <h1 class="new mb-5">presto</h1>
                 </div>
             </div>
         </div>
@@ -29,19 +35,20 @@
 
                 <div class="container underlogo align-items-center justify-content-center d-flex">
                     <div class="row justify-content-center">
+
                             <div class="col-12 col-md-6 text-light under">
-                                <h2>Our vision</h2>
+                                <h2>{{__('ui.ourv')}}</h2>
                                 
                             </div>
                             <div class="col-12 col-md-6 text-light under1">
-                                <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero est soluta dicta aspernatur corporis totam magni aperiam ratione, magnam unde porro nihil facere? Saepe quod, aperiam odio odit reiciendis iste?"</p>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora dolorem sunt odio tempore ad esse eveniet animi excepturi molestias odit eius mollitia iure, consectetur quam fugiat quia eaque ducimus! Labore!</p>
+                                <p>{{__('ui.ourvision')}}</p>
+                                
                             </div>
                     </div>
                 </div>
 {{-- ARRIVALS/CARD  --}}
 
-                <div class="container-fluid align-items-center">
+                <div class="container-fluid align-items-center pt-5">
                     <div class="row">
                         <div class="col-12 col-md-3 d-flex justify-content-center mt-5 ">
                     <h2 class="title-text">{{__('ui.new')}}</h2>
