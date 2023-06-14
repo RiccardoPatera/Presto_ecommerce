@@ -29,7 +29,7 @@ class CreateForm extends Component
         'price' => 'required|doesnt_start_with:-',
         'body' => 'required|min:5',
         'category_id'=> 'required',
-
+        'images'=> 'required',
         'images.*'=> 'required|image|max:3072',
         'temporary_images.*'=> 'required|image|max:3072',
     ];
@@ -43,6 +43,7 @@ class CreateForm extends Component
         'images.*.required'=> 'The image is required',
         'images.*.max'=> 'The file need to be max 3MB',
         'images.*.image'=> 'The file need to be a image',
+        'images.required'=> 'The image is required',
 
         'temporary_images.*.required'=> 'The image is required',
         'temporary_images.*.max'=> 'The file need to be max 3MB',

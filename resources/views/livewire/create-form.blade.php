@@ -46,6 +46,9 @@
     @error('images.*')
         <p class="text-danger">{{$message}}</p>
     @enderror
+    @error('images')
+        <p class="text-danger">{{$message}}</p>
+    @enderror
 
     @if(!empty($images))
         <div class="row">
