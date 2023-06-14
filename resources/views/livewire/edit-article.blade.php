@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <form wire:submit.prevent="edit" class="shadow p-5 my-2 bg-light">
 
     <div class="col-12">
@@ -108,3 +109,8 @@
     <button type="submit" class="btn btn-submit shadow my-4">{{__('ui.submit')}}</button>
 
 </form>
+=======
+<div>
+    {{-- Be like water. --}}
+</div>
+>>>>>>> de1eab99581ef1757b1c6749a4ca4a5c3e117ecb
