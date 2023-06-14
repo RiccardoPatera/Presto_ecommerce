@@ -20,11 +20,6 @@
                         </div>
                     </a>
                 </div>
-            @empty
-            <div class="col-12 d-flex justify-content-center my-4">
-                <h3 class="alert text-white">No articles found, try with a different search!</h3>
-            </div>
-        </div>
         @empty
         <div class="col-12 d-flex justify-content-center my-4">
             <h3 class="alert text-white">{{__('ui.noArt')}}</h3>
