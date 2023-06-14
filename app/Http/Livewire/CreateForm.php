@@ -29,9 +29,9 @@ class CreateForm extends Component
         'price' => 'required|doesnt_start_with:-',
         'body' => 'required|min:5',
         'category_id'=> 'required',
-        'images'=> 'required',
+        // 'images'=> 'required',
         'images.*'=> 'required|image|max:3072',
-        'temporary_images'=> 'required|image|max:3072',
+        'temporary_images.*'=> 'required|image|max:3072',
     ];
 
     protected $messages = [
@@ -49,6 +49,16 @@ class CreateForm extends Component
         'temporary_images.*.max'=> 'The file need to be max 3MB',
         'temporary_images.*.image'=> 'The file need to be a image',
     ];
+
+    public function updatedTemporaryImages(){
+        if ($this->validate([
+            'temporary_images.*'=>'image|max:3072',
+        ])) {
+        foreach ($this->temporary_images as $image) {
+            $this->images[] = $image;
+        }
+        }
+    }
 
    public function create(){
         $this->validate();
@@ -76,15 +86,7 @@ class CreateForm extends Component
 
     }
 
-    public function updatedTemporaryImages(){
-        if ($this->validate([
-            'temporary_images.*'=>"required|image|max:3072",
-        ])) {
-        foreach ($this->temporary_images as $image) {
-            $this->images[] = $image;
-        }
-        }
-    }
+ 
 
     public function removeImage($key){
         if (in_array($key, array_keys($this->images))) {
