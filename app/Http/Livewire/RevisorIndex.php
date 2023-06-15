@@ -34,7 +34,10 @@ class RevisorIndex extends Component
         ]);
 
         $this->article=null;
-        session()->flash('accepted',"You've accepted the article");
+        session()->flash('rejected',"You've rejected this article");
+        redirect()->back();
+
+
 
     }
 
@@ -47,7 +50,11 @@ class RevisorIndex extends Component
         ]);
 
         $this->article=null;
+
         session()->flash('rejected',"You've rejected this article");
+        redirect()->back();
+
+
 
     }
 

@@ -12,6 +12,7 @@ class DashboardRevisor extends Component
     public $articles;
 
 
+
     public function review(Article $article) {
         $article->update([
             'is_accepted'=>null,
