@@ -26,8 +26,7 @@
                                 <hr class="hr">
 
                                 <h5>Articols uploaded: {{count($user->articles)}}</h5>
-                                <h5>Articles rejected: {{count($user->articles->where('is_accepted',0))}}</h5>
-                                <h5>Articles under review: {{count($user->articles->where('is_accepted',null))}}</h5>
+                                <h5>Articles accepted: {{count($user->articles->where('is_accepted',1))}}</h5>
                                 <h5>Iscritto il: {{$user->created_at }}</h5>
                                 {{-- <a class="btn btn-outline-dark" href="#">Add to cart</a> --}}
                             </div>
