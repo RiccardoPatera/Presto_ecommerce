@@ -7,42 +7,42 @@
 
 <x-layout>
 {{-- LOGO --}}
-    <div class="container-fluid align-items-center">
-        <div class="row ">
+    <div class="container-fluid align-items-center ">
+        <div class="row p-0 m-0 b-0 opacity-0" id='container-home' >
 
-            <div class="col-12 justify-content-end align-items-start d-flex">
+            <div class="col-12 justify-content-end align-items-start d-flex " id='slogan'>
                 <p class="textcustom d-none d-xl-block">DISCOVER TREASURES FROM THE PAST, ANEW.</p>
             </div>
 
-            <div class="col-12 header d-flex align-items-center d-flex flex-column">
-                <div class="col-12 d-flex align-items-end divcustom mt-5 mt-lg-0 ">
+            <div class="col-12 header d-flex align-items-center d-flex flex-column ">
+                <div class="col-12 d-flex align-items-end divcustom mt-5 mt-lg-0 " id='slogan2'>
                     <p class="textcustom ms-5 text-center pads">Elevate Your Style with Timeless Luxury.</p>
                 </div>
                 <div class="col-12 d-flex align-items-center d-flex flex-column ">
                 <div class="col-12 d-flex align-items-end copy mt-5 mt-lg-0 ">
                     <p class="d-none d-xl-block pads">Codeartisans 2023 ©</p>
-                    
+
                 </div>
-                <div class="col-12 justify-content-center d-flex p-0">
-                    
+                <div class="col-12 justify-content-center d-flex p-0 " id="logo">
+
                     <h1 class="new mb-5">presto</h1>
                 </div>
             </div>
         </div>
     </div>
-    
+
     {{-- VISION  --}}
 
-                <div class="container underlogo align-items-center justify-content-center d-flex">
-                    <div class="row justify-content-center">
+                <div class="container underlogo align-items-center justify-content-center d-flex opacity-0 mb-5 "  id="ourvision"  >
+                    <div class="row justify-content-center" >
 
                             <div class="col-12 col-md-6 text-light under">
                                 <h2>{{__('ui.ourv')}}</h2>
-                                
+
                             </div>
-                            <div class="col-12 col-md-6 text-light under1">
+                            <div class="col-12 col-md-6 text-light under1 " id="ourv-obs-point" >
                                 <p>{{__('ui.ourvision')}}</p>
-                                
+
                             </div>
                     </div>
                 </div>
@@ -77,7 +77,7 @@
 
             </div>
             </div>
-                
+
 
 
 
