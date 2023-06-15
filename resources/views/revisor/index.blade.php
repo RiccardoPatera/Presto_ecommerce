@@ -101,9 +101,5 @@
 
 
  <x-layout>
-    @if(isset($article))
           @livewire('revisor-index',compact('article'))
-    @else
-        @livewire('revisor-index')
-    @endif
  </x-layout>
