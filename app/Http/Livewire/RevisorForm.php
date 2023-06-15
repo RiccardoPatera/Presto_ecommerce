@@ -48,7 +48,7 @@ class RevisorForm extends Component
     }
 
     public function mount(){
-        $this->name=Auth::user()->name;
+        $this->name=Ucwords(Auth::user()->name);
     }
 
     public function render()
