@@ -20,13 +20,13 @@
                         </div>
                         <div class="col-9 my-3">
                             <div class="card card-detail  shadow p-5 d-flex justify-content-center bg-light ">
+
                                 <h3>{{Ucwords($user->name)}}</h3>
                                 <p>{{$user->email}}</p>
                                 <hr class="hr">
-                                <h5>Articols uploaded: {{count($user->articles)}}</h5>
-                                <h5>Articles rejected: {{count($user->articles->where('is_accepted',0))}}</h5>
-                                <h5>Articles under review: {{count($user->articles->where('is_accepted',null))}}</h5>
 
+                                <h5>Articols uploaded: {{count($user->articles)}}</h5>
+                                <h5>Articles accepted: {{count($user->articles->where('is_accepted',1))}}</h5>
                                 <h5>Iscritto il: {{$user->created_at }}</h5>
                                 {{-- <a class="btn btn-outline-dark" href="#">Add to cart</a> --}}
                             </div>
@@ -42,7 +42,7 @@
                         <div class="col-12">
                             <div class="swiper mySwiper">
                                 <div class="swiper-wrapper">
-                                    @foreach ($user->articles as $article)
+                                    @forelse ($user->articles as $article)
                                     <div class="swiper-slide">
                                             <a href="{{route('show_article',compact('article'))}}" class="">
                                                 <div class="card shadow">
@@ -68,18 +68,20 @@
                                                             <div class="bg-danger rounded">
                                                                 <h6 class="text-light text-center mt-1">Rejected</h6>
                                                             </div>
-
-
                                                         @endif
                                                     </div>
                                                 </div>
                                             </a>
-                                    </div>
-                                   @endforeach
+                                        </div>
+                                            @empty
+                                            <div class="col-12  d-flex align-item-center justify-content-center">
+                                                <h4 class="text-center text-light">No products found</h4>
+                                            </div>
+                                            @endforelse
 
-                              </div>
+                                    </div>
                             </div>
-                        </div>
+                          </div>
                     </div>
 
                 </div>

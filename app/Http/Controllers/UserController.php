@@ -13,6 +13,9 @@ class UserController extends Controller{
 
     public function user_dashboard(User $user){
 
+        if($user->is_revisor==1){
+            return redirect(route('revisor_dashboard',compact('user')));
+        }
         return view('user.dashboard', compact('user'));
     }
 

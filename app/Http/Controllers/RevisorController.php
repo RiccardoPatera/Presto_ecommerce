@@ -11,9 +11,14 @@ class RevisorController extends Controller
 {
     public function index()
     {
-        $article_to_check = Article::where('is_accepted',null)->first();
-        return view ('revisor.index', ['article'=>$article_to_check]);
+        return view ('revisor.index');
     }
+
+    public function dashboard(User $user)
+    {
+        return view ('revisor.dashboard',compact('user'));
+    }
+
 
     public function accept_article(Article $article){
         $article->setAccepted(true);
@@ -39,7 +44,5 @@ class RevisorController extends Controller
     public function make_revisor(User $user){
         Artisan::call('presto:makeUserRevisor', ["email"=>$user->email]);
         return redirect('/')->with('message','The user is now a revisor');
-
-
     }
 }

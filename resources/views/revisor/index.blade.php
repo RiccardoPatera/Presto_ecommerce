@@ -1,4 +1,4 @@
-<x-layout>
+{{-- <x-layout>
 
     <div class="container my-5">
         <div class="row justify-content-center align-items-center my-3">
@@ -13,7 +13,7 @@
             <div class="col-12 justifu-content-center">
                 <h1 class="text-center text-light">Dashboard</h1>
             </div>
-            {{-- @dd(session('previous_article')) --}}
+            {{-- @dd(session('previous_article'))
 
             @if(session('previous_article'))
                 <div class="col-12">
@@ -97,4 +97,13 @@
         </div>
     </div>
 
-</x-layout>
+</x-layout> --}}
+
+
+ <x-layout>
+    @if(isset($article))
+          @livewire('revisor-index',compact('article'))
+    @else
+        @livewire('revisor-index')
+    @endif
+ </x-layout>
