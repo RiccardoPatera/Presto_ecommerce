@@ -14,6 +14,10 @@ class Image extends Model
 
     protected $fillable = ['path'];
 
+    protected $casts = [
+        'labels'=>'array'
+    ];
+
     public function article(){
         return $this->belongsTo(Article::class);
     }
