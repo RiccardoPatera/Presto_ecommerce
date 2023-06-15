@@ -36,3 +36,37 @@
       },
     });
 
+    let swiper2 = new Swiper('.swiper-revisor', {
+        scrollbar: '.swiper-scrollbar',
+        effect: 'coverflow',
+        direction: 'vertical',
+        loop: false,
+        slideToClickedSlide: true,
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflowEffect: {
+          rotate: -5,
+          stretch: 270,
+          depth: 100,
+          modifier: 1,
+          slideShadows: false
+        },
+        freeMode:false,
+        freeModeSticky:true
+      });
+
+
+
+    // let swiper2 = new Swiper(".mySwiper-revisor", {
+    //     cssMode: true,
+    //     navigation: {
+    //       nextEl: ".swiper-button-next-revisor",
+    //       prevEl: ".swiper-button-prev-revisor",
+    //     },
+    //     pagination: {
+    //       el: ".swiper-pagination-revisor",
+    //     },
+    //     mousewheel: true,
+    //     keyboard: true,
+    //   });

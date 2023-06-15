@@ -62,7 +62,7 @@
                             <a class="nav-link text-white" href="{{route('become_revisor')}}">{{__('ui.work')}}</a>
                         </li>
 
-
+                        <div class="d-flex">
                         <li class="nav-item">
                             <x-_locale lang="it"/>
                         </li>
@@ -74,6 +74,7 @@
                         <li class="nav-item">
                             <x-_locale lang="es"/>
                         </li>
+                        </div>
             </ul>
 
             {{-- <button id="search" class="btn btn-light"><i class="fa-solid fa-magnifying-glass"></i></button> --}}

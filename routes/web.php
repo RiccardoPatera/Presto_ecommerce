@@ -38,8 +38,10 @@ Route::get('/items/',[ArticleController::class, 'index'])->name('items');
 // VISTA PRODOTTI FILTRATI
 Route::get('/items/searched',[ArticleController::class, 'search'])->name('search');
 
-// HOME REVISOR
+//  REVISOR CHECk
 Route::get('/revisor/home',[RevisorController::class, 'index'])->middleware('is.revisor')->name('revisor_index');
+// REVISOR DASHBOARD
+Route::get('/revisor/dashboard/{user}',[RevisorController::class, 'dashboard'])->middleware('is.revisor')->name('revisor_dashboard');
 
 // REVISORE-ACCETTA PRODOTTO
 Route::patch('/accept/article/{article}',[RevisorController::class, 'accept_article'])->middleware('is.revisor')->name('revisor_accept');
@@ -59,9 +61,10 @@ Route::get ('/rendi/revisore/{user}',[RevisorController::class, 'make_revisor'])
  //  Cambia lingua
 Route::post('/language/{lang}',[PublicController::class, 'setLanguage'])->name('set_language_locale');
 
-// Rotta profilo utente
-
+// Rotta profilo utente /Redirect Revisore
 Route::get ('/user/{user}',[UserController::class, 'user_dashboard'])->name('user_dashboard');
+
+
 
 
 

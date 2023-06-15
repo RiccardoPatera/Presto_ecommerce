@@ -136,43 +136,20 @@ footer {
     letter-spacing: 4px;
     line-height: 13vw;
     /* padding-top: 170px; */
-    
 }
 
 .textcustom{
-    
+    font-size: 23px;
     font-weight: bold;
     color: var(--isabeline);
     padding: 0%;
     border: 0%;
     margin: 0%;
-    padding-right: 45px;
-
-}
-.pads{
-    padding-left: 20px;
-}
-@media screen and (min-width:768px) {
-    .textcustom{
-        font-size: 23px;
-
-    }
-}
-@media screen and (max-width:767px) {
-    .textcustom{
-        font-size: 19px;
-    }
 }
 
 .divcustom{
     height:20vw;
 }
-
-.copy{
-    padding-left: 48px;
-    font-size: 20px;
-}
-
 
 /* Card */
 .card{
@@ -203,7 +180,7 @@ footer {
     flex-direction: column;
     bottom: 0;
 }
-.user-crud{
+.user_crud{
         position: absolute;
         display:flex;
         flex-direction: column;
@@ -285,6 +262,14 @@ div.vh-50 .btn{
     color: var(--richblue);
 }
 
+.btn-custom{
+    border-radius: 3px;
+    border-style: none;
+    padding: 3px;
+    min-width: 60px;
+    max-height: 30px;
+
+}
 .btn-submit{
     border: solid 1px var(--richblue);
     color: var(--richblue);
@@ -359,54 +344,32 @@ div.vh-50 .btn:hover {
 /* sotto logo  */
 
 .underlogo{
-   position: relative;
     height: 90vh;
     /* width: 70rem; */
     background-color: rgba(255, 255, 255, 0.146);
     border-radius: 20px;
-    margin-top: 15vh;
-    padding-top: 3vw;
     padding-left: 50px;
     padding-right: 50px;
     padding-bottom: 50px;
-    z-index: 3;
-
 }
 .under{
     padding-top: 5rem;
     font-family: 'Righteous', cursive;
-    z-index: 3;
-    
 }
 h2{
     font-size: 3rem;
-    z-index: 3;
 }
 .under1{
-    /* font-size: 15px; */
-    font-family: 'Righteous', cursive;
-}
-@media screen and (min-width:768px) {
-    .under1{
-        font-size: 22px;
-    }
-}
-@media screen and (max-width:767px) {
-    .under1{
-        font-size: 15px;
-    }
-}
-.behindbox{
-    z-index: -1;
-    overflow: hidden;
+    font-size: 19px;
 }
 
 
 /* Swiper CSS*/
 .swiper {
     width: 100%;
+    height: fit-content;
     padding-top: 25px;
-    padding-bottom: 25px;
+    padding-bottom: 35px;
   }
 
   .swiper-slide {
@@ -420,3 +383,4 @@ h2{
     display: block;
     width: 100%;
   }
+

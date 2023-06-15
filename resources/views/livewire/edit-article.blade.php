@@ -1,3 +1,9 @@
+@if($article->tips!=null)
+    <div class="col-12 alert alert-danger">
+        <h4 class="text-center">Tip from revisor: {{$article->tips}}</h4>
+    </div>
+@endif
+
 <form wire:submit.prevent="edit" class="shadow p-5 my-2 bg-light">
 
     <div class="col-12">
@@ -8,7 +14,7 @@
 
     <div class="mb-3">
         <label for="title" class="form-label">{{__('ui.titleItem')}}</label>
-        <input type="text" class="form-control shadow @error('title') is-invalid @enderror" id="title" wire:model.lazy="title" aria-describedby="titleHelp">
+        <input type="text" value="{{$title}}" class="form-control shadow @error('title') is-invalid @enderror" id="title" wire:model.lazy="title" aria-describedby="titleHelp">
     </div>
 
     @error('title')
@@ -18,7 +24,7 @@
 
     <div class="mb-3">
         <label for="price" class="form-label">{{__('ui.price')}}</label>
-        <input type="number" step="0.01" class="form-control shadow @error('price') is-invalid @enderror" id="price" wire:model="price" aria-describedby="priceHelp">
+        <input type="number" step="0.01" value="{{$price}}" class="form-control shadow @error('price') is-invalid @enderror" id="price" wire:model="price" aria-describedby="priceHelp">
     </div>
 
     @error('price')
@@ -28,7 +34,7 @@
 
     <div class="mb-3">
         <label for="body" class="form-label">{{__('ui.desc')}}</label>
-        <textarea name="body" id="body" wire:model.lazy="body" cols="30" rows="10" class="form-control shadow @error('body') is-invalid @enderror"></textarea>
+        <textarea name="body" id="body" wire:model.lazy="body" cols="30" rows="10" class="form-control shadow @error('body') is-invalid @enderror">{{$body}}</textarea>
     </div>
     @error('body')
     <p class="text-danger">{{$message}}</p>
@@ -89,7 +95,7 @@
                     <div class="accordion-body">
                         @foreach ($categories as $category)
                             <div class="form-check">
-                                <input class="form-check-input @error('category_id') is-invalid @enderror" type="radio"  name='flexRadioDisabled'  value="{{$category->id}}" id={{$category->category}} wire:model.lazy="category_id">
+                                <input class="form-check-input @error('category_id') is-invalid @enderror" type="radio"  name='flexRadioDisabled'  value="{{$category->id}}" id={{$category->category}} wire:model.lazy="category_id" {{$category->id==$article->category_id ? "checked": ''}}>
                                 <label class="form-check-label" for="{{$category->category}}">
                                     {{$category->category}}
                                 </label>
