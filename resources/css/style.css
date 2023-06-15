@@ -7,8 +7,13 @@
 }
 /* Set height to min */
 
+html {
+    min-height: 100vh;
+}
+
 body{
     background-color: var(--richblue);
+    min-height: 100vh;
 }
 
 /* UTILITY */
@@ -136,11 +141,11 @@ footer {
     letter-spacing: 4px;
     line-height: 13vw;
     /* padding-top: 170px; */
-    
+
 }
 
 .textcustom{
-    
+
     font-weight: bold;
     color: var(--isabeline);
     padding: 0%;
@@ -157,12 +162,25 @@ footer {
         font-size: 23px;
 
     }
+
+    .user{
+        margin-top:7vh;
+        width:500px;
+        padding-bottom: 20px;
+    }
 }
 @media screen and (max-width:767px) {
     .textcustom{
         font-size: 19px;
     }
+
+    .user{
+        margin-top:9vh;
+        width:400px;
+    }
 }
+
+
 
 .divcustom{
     height:20vw;
@@ -376,7 +394,7 @@ div.vh-50 .btn:hover {
     padding-top: 5rem;
     font-family: 'Righteous', cursive;
     z-index: 3;
-    
+
 }
 h2{
     font-size: 3rem;
@@ -386,7 +404,7 @@ h2{
     /* font-size: 15px; */
     font-family: 'Righteous', cursive;
 }
-@media screen and (min-width:768px) {
+@media screen and (min-width:991px) {
     .under1{
         font-size: 22px;
     }
@@ -395,6 +413,13 @@ h2{
     .under1{
         font-size: 15px;
     }
+
+@media screen  and (min-width:768px) and (max-width:991px) {
+    .under1{
+        font-size: 17px;
+    }
+
+}
 }
 .behindbox{
     z-index: -1;
@@ -406,7 +431,7 @@ h2{
 .swiper {
     width: 100%;
     padding-top: 25px;
-    padding-bottom: 25px;
+    padding-bottom: 35px;
   }
 
   .swiper-slide {
@@ -420,3 +445,65 @@ h2{
     display: block;
     width: 100%;
   }
+
+
+
+  .down-to-up{
+    animation:down-to-up;
+    animation-duration: 2s;
+  }
+
+
+  .appare{
+    animation:appare;
+    animation-duration: 2s;
+  }
+
+  .opacity{
+    animation:opacity;
+    animation-duration: 4s;
+  }
+
+
+  @keyframes down-to-up
+{
+     0%{
+        opacity: 0;
+        transform:translateY(250px)
+
+     }
+     100%{
+        opacity: 1;
+        transform: translateY(0px);
+     }
+
+}
+
+
+@keyframes appare
+{
+     0%{
+        opacity: 0;
+        transform:translateX(-300px)
+
+     }
+     100%{
+        opacity: 1;
+        transform: translateX(0px);
+     }
+
+}
+
+
+@keyframes opacity
+{
+     0%{
+        opacity: 0;
+
+     }
+     100%{
+        opacity: 1;
+
+     }
+
+}
