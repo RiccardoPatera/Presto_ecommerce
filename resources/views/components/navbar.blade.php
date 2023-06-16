@@ -36,7 +36,6 @@
                             </a>
                         </li>
                     @endif
-
                         <form id="logoutForm" method="POST" action="{{route('logout')}}">
                         @csrf
                         <a id="logout" class="dropdown-item">Logout</a>
@@ -58,23 +57,48 @@
                 @endauth
 
 
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="{{route('become_revisor')}}">{{__('ui.work')}}</a>
-                        </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{{route('become_revisor')}}">{{__('ui.work')}}</a>
+                </li>
 
-                        <div class="d-flex">
-                        <li class="nav-item">
-                            <x-_locale lang="it"/>
-                        </li>
 
-                        <li class="nav-item">
-                            <x-_locale lang="en"/>
-                        </li>
-
-                        <li class="nav-item">
-                            <x-_locale lang="es"/>
-                        </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white " href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Language
+                    </a>
+                    <ul class="dropdown-menu">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <li class="nav-item">
+                                        <x-_locale lang="it"/>
+                                    </li>
+                                    <li class="nav-item">
+                                        <x-_locale lang="en"/>
+                                    </li>
+                                    <li class="nav-item">
+                                        <x-_locale lang="es"/>
+                                    </li>
+                                </div>
+                            </div>
                         </div>
+                    </ul>
+                </li>
+
+                {{-- <div class="d-flex">
+                    <li class="nav-item">
+                        <x-_locale lang="it"/>
+                    </li>
+
+                    <li class="nav-item">
+                        <x-_locale lang="en"/>
+                    </li>
+
+                    <li class="nav-item">
+                        <x-_locale lang="es"/>
+                    </li>
+                </div> --}}
             </ul>
 
             {{-- <button id="search" class="btn btn-light"><i class="fa-solid fa-magnifying-glass"></i></button> --}}
