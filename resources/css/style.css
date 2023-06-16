@@ -4,6 +4,7 @@
     --richblue:#0d1821;
     --gray:#7d7c84;
     --isabeline:#F1F0EA;
+
 }
 /* Set height to min */
 
@@ -46,14 +47,30 @@ body{
 
 
 
-/*  */
+/* Login-Logout */
 #logoutForm{
     cursor: pointer;
 }
 
+.user{
+    margin-top:7vh;
+    width:500px;
+    padding-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+/*
 .category-search{
     transition: 3s;
-}
+} */
 
 /* NAVBAR */
 .navbar{

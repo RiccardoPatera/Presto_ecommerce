@@ -31,7 +31,7 @@ class CreateForm extends Component
         'price' => 'required|doesnt_start_with:-',
         'body' => 'required|min:5',
         'category_id'=> 'required',
-        // 'images'=> 'required',
+        'images'=> 'required',
         'images.*'=> 'required|image|max:3072',
         'temporary_images.*'=> 'required|image|max:3072',
     ];
@@ -90,7 +90,7 @@ class CreateForm extends Component
 
     }
 
- 
+
 
     public function removeImage($key){
         if (in_array($key, array_keys($this->images))) {
