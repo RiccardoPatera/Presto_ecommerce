@@ -9,9 +9,9 @@
 @endif
 @if(!empty($article))
 <div class="container">
-    <div class="row mt-4">
+    <div class="row mt-2">
         <div class="col-12 ">
-            <h1 class="text-center text-light">Review Dashboard</h1>
+            <h1 class="text-center text-light">Review Zone</h1>
         </div>
     </div>
     <div class="row p-5 align-items-center justify-content-center my-2">
@@ -118,8 +118,9 @@
 
 
 <div class="col-12 d-flex justify-content-center ">
-    <h3 class="text-center text-light"> To review your decisions go to your Profile</h3>
-    <a  href={{route('user_dashboard',compact('user'))}} class="bg-light btn  mt-1 ms-2"><h6>Go</h6> </a>
+    <h3 class="text-center text-light mb-"> To review your decisions go to your
+        <a  href={{route('user_dashboard',compact('user'))}} class="btn-link">Dashboard </a>
+    </h3>
 </div>
 
 </div>

@@ -9,7 +9,11 @@
             <div class="col-12">
                 <h1 class="text-center my-2 text-white "> {{__('ui.allArticles')}} </h1>
             </div>
-            <h4 class="text-center text-white">{{$articles->total()}} {{__('ui.results')}} </h4>
+            @if(count($articles)==1)
+                <h4 class="text-center text-white">{{$articles->total()}} Result </h4>
+            @else
+                <h4 class="text-center text-white">{{$articles->total()}} {{__('ui.results')}} </h4>
+            @endif
             @forelse ($articles as $article)
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center my-4">
                     <a href="{{route('show_article',compact('article'))}}" class="">

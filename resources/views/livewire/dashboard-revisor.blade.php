@@ -1,17 +1,23 @@
 <div class="container-fluid py-5">
     <div class="row d-flex justify-content-between">
         <div class="col-12 d-flex justify-content-center">
-            <h1 class="text-light text-center">
-            Dashboard revisor
-            </h1>
+            <h1 class="text-light text-center">Dashboard revisor</h1>
         </div>
-        <div class="row my-5">
             @if(session('message'))
                 <div class="col-12 ">
-                    <p class="alert alert-success text-center  ">{{session('message')}}</p>
+                    <h4 class="alert alert-success text-center  ">{{session('message')}}</h4>
                 </div>
             @endif
-            <div class="col-12 col-md-6 my-5 vh-50 ">
+            @if(count($articles->where('is_accepted','===', null))>0)
+            <div class="col-12  mt-5 ">
+                <h4 class="alert alert-info text-center">There are new articles to review!
+                    <a  class='ms-3 btn-link mt-2' href="{{route('revisor_index')}}">GO</a>
+                </h4>
+
+            </div>
+            @endif
+
+            <div class="col-12 col-md-6 my-3 vh-50 ">
                 <div class="row justify-content-center ">
                     <div class="col-12">
                         <div class="card card-detail  shadow p-5 d-flex justify-content-center bg-light rounded shadow ">
@@ -21,21 +27,23 @@
                             <p>{{$user->email}}</p>
                             <hr class="hr">
                             <h5>Articols Reviewed: {{count($articles)}}</h5>
-                            <h5>Articles Rejected: {{count($articles->where('is_accepted','==', 0))}}</h5>
+                            <h5>Articles Rejected: {{count($articles->where('is_accepted','===', 0))}}</h5>
+                            <h5>Articles to be reviewed: {{count($articles->where('is_accepted','===', null))}}</h5>
                             <h5>Iscritto il: {{$user->created_at }}</h5>
-                            {{-- <a class="btn btn-outline-dark" href="#">Add to cart</a> --}}
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-12 col-md-6  vh-50">
-                <div class="row">
+            <div class="col-12 col-md-6 my-3 vh-50">
+                <div class="row align-items-center ">
                     <div class="col-12">
                         <h2 class="text-white text-center">Articles reviewed</h2>
+                    </div>
+                    <div class="col-12">
                         <div class="swiper mySwiper">
                             <div class="swiper-wrapper">
-                                @forelse ($articles as $article)
+                                @forelse ($articles->where('revisored_by',$this->user->id) as $article)
                                 <div class="swiper-slide">
                                         <a href="{{route('show_article',compact('article'))}}" class="">
                                             <div class="card shadow">
@@ -73,18 +81,18 @@
                                             </div>
                                         </div>
                                     </div>
-                                        @empty
-                                        <div class="col-12  d-flex align-item-center justify-content-center">
-                                            <h4 class="text-center text-light">No products found</h4>
-                                        </div>
-                                        @endforelse
 
                                 </div>
+                            </div>
+                    </div>
+                    @empty
+                        <div class="col-12 vh-50   d-flex align-item-center justify-content-center">
+                            <h4 class="text-center text-light">No products revisored</h4>
                         </div>
+                    @endforelse
 
                 </div>
-
             </div>
-        </div>
+
     </div>
 </div>

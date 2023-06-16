@@ -7,12 +7,6 @@
     --test:#9b875fd0;
 
 }
-/* Set height to min */
-
-
-
-
-
 html {
     min-height: 100vh;
 }
@@ -67,18 +61,20 @@ body{
     padding-bottom: 20px;
 }
 
+.btn-link{
+    text-decoration:none;
+    color: var(--richblue);
+    background-color:white ;
+    border-radius: 5px;
+    padding-top:1px;
+    padding-bottom:1px;
+    padding-left:7px ;
+    padding-right:7px ;
 
-
-
-
-
-
-
-
-/*
-.category-search{
-    transition: 3s;
-} */
+}
+.btn-link:hover{
+   color:var(--richblue) ;
+}
 
 /* NAVBAR */
 .navbar{
@@ -86,7 +82,7 @@ body{
 }
 .nav-custom{
     /* border-bottom: 1px solid rgb(232, 232, 232); */
-    background-color: var(--gray2);
+    background-color: var(--richblue);
 }
 /* .navbar-toggler-icon{
     background-image:;
@@ -140,6 +136,10 @@ body{
 
 footer, .push {
     height: 10vh;
+}
+
+.push{
+    margin-top: 6vh;
 }
 
 .revisor-card{
