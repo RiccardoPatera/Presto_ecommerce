@@ -19,11 +19,14 @@
 
 
 let logout = document.querySelector('#logout');
+
+if (logout) {
     logout.addEventListener('click', (event)=>{
         event.preventDefault();
         let logoutForm = document.querySelector('#logoutForm');
         logoutForm.submit();
     });
+}
 
 // Swiper Js
     let swiper = new Swiper(".mySwiper", {
