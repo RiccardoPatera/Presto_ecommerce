@@ -194,24 +194,16 @@ footer {
     color: rgb(255, 93, 93);
 }
 
-.btn-editDelete{
-    
-}
-
-.overlay-dash:hover{
-    position: absolute;
-    /* top: 15px;
-    right: 50px;
-    left: 0px;
-    bottom: 180px; */
-    /* opacity: 0.7; */
-    background-color: rgba(42, 42, 42, 0.573);
-    color: white;
-    transition: 0.5s;
-}
-
-.text-article{
+.text-accepted{
     color: rgb(131, 222, 131);
+}
+
+.text-rejected{
+    color: rgb(255, 97, 97);
+}
+
+.text-under-rewiew{
+    color: rgb(197, 197, 197);
 }
 
 .user_crud{
@@ -247,18 +239,6 @@ footer {
 .card:hover .overlay {
   opacity: 1;
 }
-
-/* test */
-.bg-test{
-    background-color: rgba(50, 216, 50, 0.799);
-}
-.bg-test1{
-    background-color: rgba(247, 247, 14, 0.604);
-}
-.bg-test2{
-    background-color: rgba(255, 0, 0, 0.549);
-}
-
 
 
 .text{

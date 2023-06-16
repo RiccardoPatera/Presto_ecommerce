@@ -13,17 +13,16 @@
             @forelse ($articles as $article)
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center my-4">
                     <a href="{{route('show_article',compact('article'))}}" class="">
-                        <div class="card shadow">
+                        <div class="card">
                             <div class="fadex"></div>
-                            <img src="{{$article->images()->first()->GetUrl(500,500)}}" class="card-img-top img-fluid" alt="...">
-                            <div class="overlay"></div>
+                            <img src="{{$article->images()->first()->GetUrl(500,500)}}" class="card-img-top img-fluid rounded-bottom" alt="...">
+                            <div class="overlay rounded-end">
+                                <p class="text-card ms-3">{{$article->price}} €</p>
+                                <h6 class="fst-italic ms-3">Created by: {{Ucwords($article->user->name)}}</h6>
+                            </div>
                             <div class="card-body">
-                                <h5 class="card-title text">{{$article->title}}</h5>
-                                <p class="card-text text">{{$article->price}} €</p>
-                                <p class="card-text text">{{$article->category->category}}</p>
-                                <a href="" class="z-3 bg-dark rounded shadow mt-2 ">
-                                    <h6 class="text-light text-center mt-1">Created by: {{Ucwords($article->user->name)}}</h6>
-                                </a>
+                                <p class="card-text text fst-italic text-light mb-2">{{$article->category->category}}</p>
+                                <h5 class="card-title text-light text fw-bold">{{$article->title}}</h5>
                             </div>
                         </div>
                     </a>
