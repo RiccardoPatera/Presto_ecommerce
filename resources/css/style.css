@@ -4,6 +4,7 @@
     --richblue:#0d1821;
     --gray:#7d7c84;
     --isabeline:#F1F0EA;
+
 }
 /* Set height to min */
 
@@ -41,14 +42,30 @@ body{
 
 
 
-/*  */
+/* Login-Logout */
 #logoutForm{
     cursor: pointer;
 }
 
+.user{
+    margin-top:7vh;
+    width:500px;
+    padding-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+/*
 .category-search{
     transition: 3s;
-}
+} */
 
 /* NAVBAR */
 .navbar{
@@ -195,7 +212,7 @@ footer {
 }
 
 .btn-editDelete{
-    
+
 }
 
 .overlay-dash:hover{
@@ -440,3 +457,102 @@ h2{
 
 
 
+
+
+  /* Media Query */
+
+  @media screen and (min-width:991px) {
+    .under1{
+        font-size: 22px;
+    }
+    .textcustom{
+        font-size: 23px;
+
+    }
+}
+
+@media screen and (max-width:767px) {
+    .textcustom{
+        font-size: 19px;
+    }
+
+    .user{
+        margin-top:9vh;
+        width:400px;
+    }
+}
+
+
+@media screen  and (min-width:768px) and (max-width:991px) {
+    .under1{
+        font-size: 17px;
+    }
+
+}
+
+
+
+
+
+
+/* Animation */
+
+.down-to-up{
+    animation:down-to-up;
+    animation-duration: 2s;
+  }
+
+
+  .appare{
+    animation:appare;
+    animation-duration: 2s;
+  }
+
+  .opacity{
+    animation:opacity;
+    animation-duration: 4s;
+  }
+
+
+  @keyframes down-to-up
+{
+     0%{
+        opacity: 0;
+        transform:translateY(250px)
+
+     }
+     100%{
+        opacity: 1;
+        transform: translateY(0px);
+     }
+
+}
+
+
+@keyframes appare
+{
+     0%{
+        opacity: 0;
+        transform:translateX(-300px)
+
+     }
+     100%{
+        opacity: 1;
+        transform: translateX(0px);
+     }
+
+}
+
+
+@keyframes opacity
+{
+     0%{
+        opacity: 0;
+
+     }
+     100%{
+        opacity: 1;
+
+     }
+
+}

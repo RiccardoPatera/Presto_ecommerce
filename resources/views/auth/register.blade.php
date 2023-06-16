@@ -1,8 +1,8 @@
 <x-layout>
 
-    <div class="container user rounded bg-light p-0">
+    <div class="container user rounded bg-light p-0 ">
         <div class="row justify-content-center p-0">
-            <div class="col-12 col-md-8">
+            <div class="col-12 col-md-12">
                 <h1 class="text-center display-1 my-5 ">{{__('ui.register')}}</h1>
             </div>
 

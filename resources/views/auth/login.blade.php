@@ -1,6 +1,6 @@
 <x-layout>
 
-        <div class="container bg-light user  rounded p-0">
+        <div class="container bg-light user rounded p-0  ">
             <div class="row justify-content-center p-0">
                 <div class="col-12">
                     <h1 class="text-center display-1 my-5 ">{{__('ui.login')}}</h1>
