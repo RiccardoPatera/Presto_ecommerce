@@ -20,7 +20,7 @@
                 </div>
                 <div class="col-12 d-flex align-items-center d-flex flex-column ">
                 <div class="col-12 d-flex align-items-end copy mt-5 mt-lg-0 ">
-                    <p class="d-none d-xl-block pads">Codeartisans 2023 ©</p>
+                    <p class="d-none d-xl-block pads ">Codeartisans 2023 ©</p>
 
                 </div>
                 <div class="col-12 justify-content-center d-flex p-0 " id="logo">
