@@ -31,6 +31,34 @@
         </div>
     </div>
 
+    {{-- steps --}}
+
+    <div class="container-fluid justify-content-center mt-5">
+        <div class="row">
+        <div class="col-12 text-light">
+             <h2 class="text-center">Sell your products never was so easy!</h2>
+        </div>
+        <div class="col-12 col-md-6 text-light mt-5">
+            <h3>STEP 1</h3>
+        </div>
+        <div class="col-12 col-md-6 text-light mt-5">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam dolorem nostrum blanditiis, fuga ratione harum odit eligendi ipsum similique fugit sequi consequatur vel ut ex iure voluptatibus non sapiente.</p>
+        </div>
+        <div class="col-12 col-md-6 text-light mt-5">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non commodi quos sapiente beatae expedita itaque et molestiae reprehenderit veritatis, esse amet temporibus nesciunt? Ut, suscipit! Iure laborum pariatur aliquam minus.</p>
+        </div>
+        <div class="col-12 col-md-6 text-light mt-5 justify-content-end">
+            <h3>STEP2</h3>
+        </div>
+        <div class="col-12 col-md-6 text-light mt-5">
+            <h3>STEP 3</h3>
+        </div>
+        <div class="col-12 col-md-6 text-light mt-5">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam dolorem nostrum blanditiis, fuga ratione harum odit eligendi ipsum similique fugit sequi consequatur vel ut ex iure voluptatibus non sapiente.</p>
+        </div>  
+        </div>
+    </div>
+
     {{-- VISION  --}}
 
                 <div class="container underlogo align-items-center justify-content-center d-flex opacity-0 mb-5 "  id="ourvision"  >
