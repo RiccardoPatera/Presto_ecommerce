@@ -34,7 +34,7 @@ class RevisorIndex extends Component
         ]);
 
         $this->article=null;
-        session()->flash('accepted',"You've accepted the article");
+        return redirect(route('revisor_index'))->with('accepted',"You've accepted this article");
 
     }
 
@@ -47,16 +47,17 @@ class RevisorIndex extends Component
         ]);
 
         $this->article=null;
-        session()->flash('rejected',"You've rejected this article");
+        return redirect(route('revisor_index'))->with('rejected',"You've rejected this article");
 
     }
+
+
 
     public function render()
     {
 
-        $this->article=Article::where('is_accepted',null)->first();
         $this->user=Auth::user();
 
-        return view('livewire.revisor-index');
+        return view('livewire.revisor-index',['article'=>$this->article]);
     }
 }

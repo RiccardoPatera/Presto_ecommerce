@@ -5,19 +5,17 @@
             Dashboard revisor
             </h1>
         </div>
-        <div class="row">
+        <div class="row my-5">
             @if(session('message'))
                 <div class="col-12 ">
                     <p class="alert alert-success text-center  ">{{session('message')}}</p>
                 </div>
             @endif
-            <div class="col-12 col-md-6 my-5 vh-50">
-                <div class="row justify-content-center">
+            <div class="col-12 col-md-6 my-5 vh-50 ">
+                <div class="row justify-content-center ">
                     <div class="col-12">
-                        <h2 class="text-white text-center">User info</h2>
-                    </div>
-                    <div class="col-9 my-3">
-                        <div class="card card-detail  shadow p-5 d-flex justify-content-center bg-light ">
+                        <div class="card card-detail  shadow p-5 d-flex justify-content-center bg-light rounded shadow ">
+                            <h2 class=" text-center">Revisor info</h2>
 
                             <h3>{{Ucwords($user->name)}}</h3>
                             <p>{{$user->email}}</p>
@@ -31,12 +29,10 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 my-5 vh-50">
+            <div class="col-12 col-md-6  vh-50">
                 <div class="row">
                     <div class="col-12">
-                        <h2 class="text-white text-center"> User Articles</h2>
-                    </div>
-                    <div class="col-12">
+                        <h2 class="text-white text-center">Articles reviewed</h2>
                         <div class="swiper mySwiper">
                             <div class="swiper-wrapper">
                                 @forelse ($articles as $article)
@@ -85,7 +81,7 @@
 
                                 </div>
                         </div>
-                      </div>
+
                 </div>
 
             </div>

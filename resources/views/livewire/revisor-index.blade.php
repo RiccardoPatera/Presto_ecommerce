@@ -8,14 +8,16 @@
 </div>
 @endif
 @if(!empty($article))
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-12">
             <h1 class="text-center text-light">Review Dashboard</h1>
         </div>
+        
+                
 
 
-            <div class="col-12 col-md-6 my-3">
+            <div class="col-12 col-md-4 my-3">
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         @foreach ($article->images as $image)
@@ -37,7 +39,7 @@
                 </div>
             </div>
 
-        <div class="col-12 col-md-6 my-3">
+        <div class="col-12 col-md-4 my-3">
             <div class="card card-detail  shadow p-3 d-flex justify-content-center bg-light">
                 <h3>{{ $article->title }}</h3>
                 <hr class="hr">
@@ -54,7 +56,7 @@
                     @error('tips')
                         <p class="text-danger"></p>
                     @enderror
-
+                    
 
 
                     <label  class='form-label my-2' for="tips">Explain why the product doesn't meet the requirements</label>
@@ -62,6 +64,23 @@
                 </form>
             </div>
         </div>
+        <div class="col-md-3 border-end text-dark bg-white">
+                    <h5 class="tc-accent mt-3 text-dark">Tags</h5>
+                    <div class="p-2">
+                        @if ($image->labels)
+                            @foreach ($image->labels as $label)
+                                 <p class="d-inline">{{$label}}</p>
+                            @endforeach
+                         @endif
+        
+                        <h5 class="tc-accent mt-5">Revisione Immagini</h5>
+                        <p>Adulti: <span class="{{$image->adult}}"></span></p>
+                        <p>Satira: <span class="{{$image->spoof}}"></span></p>
+                        <p>Medicina: <span class="{{$image->medical}}"></span></p>
+                        <p>Violenza: <span class="{{$image->violence}}"></span></p>
+                        <p>Contenuto ammiccante: <span class="{{$image->racy}}"></span></p>
+                    </div>
+                </div>
     </div>
 </div>
 @else
@@ -75,6 +94,7 @@
             </div>
     </div>
 @endif
+
 
 <div class="col-12 d-flex justify-content-center">
     <h3 class="text-center text-light"> To review your decisions go to your Profile</h3>

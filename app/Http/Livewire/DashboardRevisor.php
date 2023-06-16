@@ -12,6 +12,7 @@ class DashboardRevisor extends Component
     public $articles;
 
 
+
     public function review(Article $article) {
         $article->update([
             'is_accepted'=>null,
@@ -26,7 +27,7 @@ class DashboardRevisor extends Component
 
     {
 
-        $this->articles=Article::all()->where('revisored_by',$this->user->id);
+        $this->articles=Article::orderby('created_at', 'DESC')->where('revisored_by',$this->user->id)->get();
         return view('livewire.dashboard-revisor');
     }
 }

@@ -95,16 +95,7 @@
 
 
 
-<script>
-
-    let logout = document.querySelector('#logout');
-    logout.addEventListener('click', (event)=>{
-        event.preventDefault();
-        let logoutForm = document.querySelector('#logoutForm');
-        logoutForm.submit();
-    });
-
-// LOGICA DEL CONTAINER-SEARCH
+{{-- // LOGICA DEL CONTAINER-SEARCH
 
     // let btnIsClicked = false;
     // let search = document.querySelector('#search');
@@ -121,6 +112,5 @@
     // }
 
 
-    // });
+    // }); --}}
 
-</script>
