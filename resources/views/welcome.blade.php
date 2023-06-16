@@ -61,7 +61,7 @@
                             <a href="{{route('show_article',compact('article'))}}" class="">
                                 <div class="card shadow">
                                     <div class="fadex"></div>
-                                    <img src="{{$article->images()->first()->GetUrl(500,500)}}" class="card-img-top img-fluid" alt="...">
+                                    <img src="{{$article->images()->first()->GetUrl(500,500)}}" class="card-img-top img-fluid rounded-bottom" alt="...">
                                     <div class=" overlay"></div>
                                     <div class="card-body ">
                                         <h5 class="card-title text">{{$article->title}}</h5>
