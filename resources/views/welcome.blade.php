@@ -4,6 +4,9 @@
 @if (session('message'))
         <h3 class="text-center alert alert-success">{{session('message')}}</h3>
 @endif
+@if (session('wasted'))
+        <h3 class="text-center alert alert-danger">{{session('wasted')}}</h3>
+@endif
 
 <x-layout>
 {{-- LOGO --}}
@@ -55,7 +58,7 @@
         </div>
         <div class="col-12 col-md-6 text-light mt-5">
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam dolorem nostrum blanditiis, fuga ratione harum odit eligendi ipsum similique fugit sequi consequatur vel ut ex iure voluptatibus non sapiente.</p>
-        </div>  
+        </div>
         </div>
     </div>
 

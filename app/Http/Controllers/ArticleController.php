@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Category;
+
 
 class ArticleController extends Controller
 {
@@ -100,19 +102,18 @@ class ArticleController extends Controller
 
 
     /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Article $article)
-    {
-        //
-    }
-
-    /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Article $article)
+    public function delete(Article $article)
     {
-        //
+
+        if($article->user_id ==Auth::id()){
+            $article->delete();
+            return redirect(route('user_dashboard',['user'=>Auth::user()]))->with('deleted','Your article has been successfuly deleted');
+        }
+        else{
+            return redirect(route('welcome'))->with('wasted',"You can't access on this reserved area!");
+        }
     }
 
 }

@@ -8,16 +8,18 @@
 </div>
 @endif
 @if(!empty($article))
-<div class="container vh-75">
-    <div class="row p-5 align-items-center justify-content-center my-2">
-        <div class="col-12">
+<div class="container">
+    <div class="row mt-4">
+        <div class="col-12 ">
             <h1 class="text-center text-light">Review Dashboard</h1>
         </div>
+    </div>
+    <div class="row p-5 align-items-center justify-content-center my-2">
 
-
-        <div class="col-md-3 col-12 border-end text-dark bg-white rounded vh-60  p-3">
-            <h5 class="tc-accent mt-3 text-dark">Tags</h5>
-            <div class="row justify-content-start">
+        {{-- Colonna Google API --}}
+        <div class="col-md-3 col-12 border-end text-dark bg-white rounded  revisor-card  p-3">
+            <h5 class="tc-accent mt-3 text-dark text-center">Tags</h5>
+            <div class="row justify-content-center">
                 @if ($article->images)
                     @foreach ($article->images as $image )
                         @foreach ($image->labels as $label)
@@ -28,19 +30,19 @@
                     @endforeach
                 @endif
             </div>
-            <div class="row">
-                <h5 class=" tc-accent mt-5">Revisione Immagini</h5>
+            <div class="row ">
+                <h5 class=" tc-accent mt-5 text-center">Revisione Immagini</h5>
                 <div class="col-4 d-flex">
-                    <p>Adulti: <span class="{{$image->adult}}"></span></p>
+                    <p class="text-nowrap">Adulti: <span class="{{$image->adult}}"></span></p>
                 </div>
                 <div class="col-4 d-flex ">
-                    <p>Satira: <span class="{{$image->spoof}}"></span></p>
+                    <p class="text-nowrap">Satira: <span class="{{$image->spoof}}"></span></p>
                 </div>
                 <div class="col-4 d-flex">
-                    <p>Medicina: <span class="{{$image->medical}}"></span></p>
+                    <p class="text-nowrap">Medicina: <span class="{{$image->medical}}"></span></p>
                 </div>
                 <div class="col-4 d-flex">
-                    <p>Violenza: <span class="{{$image->violence}}"></span></p>
+                    <p class="text-nowrap">Violenza: <span class="{{$image->violence}}"></span></p>
                 </div>
                 <div class="col-4 d-flex">
                     <p class="text-nowrap">Contenuto ammiccante: <span class="{{$image->racy}}"></span></p>
@@ -51,8 +53,8 @@
 
 
 
-
-            <div class="col-12 col-md-6  vh-50 rounded d-flex align-items-center justify-content-center ">
+            {{-- Colonna Foto Articolo --}}
+            <div class="col-12 col-md-6   rounded d-flex align-items-center justify-content-center ">
                 <div id="carouselExampleControls" class="carousel slide " data-bs-ride="carousel">
                     <div class="carousel-inner">
                         @foreach ($article->images as $image)
@@ -74,7 +76,10 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-3 vh-60 card card-detail rounded shadow p-3 bg-light">
+
+
+            {{-- Container Accett/Rifiuta Prodotto --}}
+            <div class="col-12 col-md-3 revisor-card rounded shadow p-3 bg-light">
                 <div class="row">
                     <h3>{{ $article->title }}</h3>
                     <hr class="hr">
@@ -98,7 +103,7 @@
                 </div>
             </div>
     </div>
-</div>
+
 @else
     <div class="col-12">
         <h1 class="text-white text-center">{{__('ui.revDash')}}</h1>
@@ -112,7 +117,9 @@
 @endif
 
 
-<div class="col-12 d-flex justify-content-center mt-5">
+<div class="col-12 d-flex justify-content-center ">
     <h3 class="text-center text-light"> To review your decisions go to your Profile</h3>
-    <a  href={{route('user_dashboard',compact('user'))}} class="btn-custom btn-light mt-1 ms-2"><h6>Go</h6> </a>
+    <a  href={{route('user_dashboard',compact('user'))}} class="bg-light btn  mt-1 ms-2"><h6>Go</h6> </a>
+</div>
+
 </div>

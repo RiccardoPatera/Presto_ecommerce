@@ -29,6 +29,10 @@ Route::get('/articles/detail/{article}', [ArticleController::class, 'show'])->na
 // MODIFICA PRODOTTO
 Route::get('/article/edit/{article}', [ArticleController::class, 'edit'])->name('edit_article');
 
+
+// MODIFICA PRODOTTO
+Route::delete('/article/delete/{article}', [ArticleController::class, 'delete'])->name('delete_article');
+
 // ROTTA RICERCA PRODOTTO
 Route::get ('/ricerca/annuncio',[PublicController::class, 'search_article'])->name('search_article');
 
