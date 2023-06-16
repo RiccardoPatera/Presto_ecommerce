@@ -24,6 +24,10 @@ body{
 .vh-50{
     height: 50vh;
 }
+
+.vh-60{
+        height: 60vh;
+}
 .vh-75{
     height: 75vh;
 }
@@ -464,6 +468,8 @@ h2{
 
 
 
+  /* Animation */
+
   .down-to-up{
     animation:down-to-up;
     animation-duration: 2s;
@@ -481,6 +487,27 @@ h2{
   }
 
 
+
+
+  /* Revisor Zone */
+
+  .tag{
+    background-color: var(--richblue);
+    width: 100px;
+    height:30px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+
+
+
+
+  /* Media Query */
   @keyframes down-to-up
 {
      0%{

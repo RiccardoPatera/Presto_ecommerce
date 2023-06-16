@@ -8,17 +8,52 @@
 </div>
 @endif
 @if(!empty($article))
-<div class="container-fluid">
-    <div class="row">
+<div class="container vh-75">
+    <div class="row p-5 align-items-center justify-content-center my-2">
         <div class="col-12">
             <h1 class="text-center text-light">Review Dashboard</h1>
         </div>
-        
-                
 
 
-            <div class="col-12 col-md-4 my-3">
-                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="col-md-3 col-12 border-end text-dark bg-white rounded vh-60  p-3">
+            <h5 class="tc-accent mt-3 text-dark">Tags</h5>
+            <div class="row justify-content-start">
+                @if ($article->images)
+                    @foreach ($article->images as $image )
+                        @foreach ($image->labels as $label)
+                        <div class="tag col-3 m-1 mt-2  ">
+                        <p class="text-light text-nowrap mt-2">{{$label}}</p>
+                        </div>
+                        @endforeach
+                    @endforeach
+                @endif
+            </div>
+            <div class="row">
+                <h5 class=" tc-accent mt-5">Revisione Immagini</h5>
+                <div class="col-4 d-flex">
+                    <p>Adulti: <span class="{{$image->adult}}"></span></p>
+                </div>
+                <div class="col-4 d-flex ">
+                    <p>Satira: <span class="{{$image->spoof}}"></span></p>
+                </div>
+                <div class="col-4 d-flex">
+                    <p>Medicina: <span class="{{$image->medical}}"></span></p>
+                </div>
+                <div class="col-4 d-flex">
+                    <p>Violenza: <span class="{{$image->violence}}"></span></p>
+                </div>
+                <div class="col-4 d-flex">
+                    <p class="text-nowrap">Contenuto ammiccante: <span class="{{$image->racy}}"></span></p>
+                </div>
+            </div>
+
+    </div>
+
+
+
+
+            <div class="col-12 col-md-6  vh-50 rounded d-flex align-items-center justify-content-center ">
+                <div id="carouselExampleControls" class="carousel slide " data-bs-ride="carousel">
                     <div class="carousel-inner">
                         @foreach ($article->images as $image)
                             <div class="carousel-item @if($loop->first) active @endif">
@@ -39,48 +74,29 @@
                 </div>
             </div>
 
-        <div class="col-12 col-md-4 my-3">
-            <div class="card card-detail  shadow p-3 d-flex justify-content-center bg-light">
-                <h3>{{ $article->title }}</h3>
-                <hr class="hr">
-                <h5>{{__('ui.price')}}: {{ $article->price }}&euro;</h5>
-                <h5>{{__('ui.desc')}}: {{ $article->body }}</h5>
-                <p>{{__('ui.singleCat')}}: {{ $article->category->category }}</p>
-                <div class="col-12 d-flex">
-                    <form wire:submit.prevent='accept_article' class=" d-flex justify-content-center">
-                        <button type='submit' class="btn btn-success m-5" >{{__('ui.accept')}}</button>
+            <div class="col-12 col-md-3 vh-60 card card-detail rounded shadow p-3 bg-light">
+                <div class="row">
+                    <h3>{{ $article->title }}</h3>
+                    <hr class="hr">
+                    <h5>{{__('ui.price')}}: {{ $article->price }}&euro;</h5>
+                    <h5>{{__('ui.desc')}}: {{ $article->body }}</h5>
+                    <p>{{__('ui.singleCat')}}: {{ $article->category->category }}</p>
+                    <div class="col-12  d-flex justify-content-center">
+                        <form wire:submit.prevent='accept_article' class=" d-flex justify-content-center">
+                            <button type='submit' class="btn btn-success m-5" >{{__('ui.accept')}}</button>
+                        </form>
+                        <form wire:submit.prevent="reject_article" class="d-flex justify-content-center">
+                            <button type='submit' class="btn btn-danger m-5">{{__('ui.reject')}}</button>
+                    </div>
+                        @error('tips')
+                            <p class="text-danger"></p>
+                        @enderror
+
+                        <label  class='form-label my-2' for="tips">Explain why the product doesn't meet the requirements</label>
+                        <textarea  id="tips" wire:model="tips" cols="30" rows="3" class="form-control  shadow @error('tips') is-invalid @enderror"></textarea>
                     </form>
-                    <form wire:submit.prevent="reject_article" class="d-flex justify-content-center">
-                        <button type='submit' class="btn btn-danger m-5">{{__('ui.reject')}}</button>
-                    </div>
-                    @error('tips')
-                        <p class="text-danger"></p>
-                    @enderror
-                    
-
-
-                    <label  class='form-label my-2' for="tips">Explain why the product doesn't meet the requirements</label>
-                    <textarea  id="tips" wire:model="tips" cols="30" rows="8" class="form-control  shadow @error('tips') is-invalid @enderror"></textarea>
-                </form>
-            </div>
-        </div>
-        <div class="col-md-3 border-end text-dark bg-white">
-                    <h5 class="tc-accent mt-3 text-dark">Tags</h5>
-                    <div class="p-2">
-                        @if ($image->labels)
-                            @foreach ($image->labels as $label)
-                                 <p class="d-inline">{{$label}}</p>
-                            @endforeach
-                         @endif
-        
-                        <h5 class="tc-accent mt-5">Revisione Immagini</h5>
-                        <p>Adulti: <span class="{{$image->adult}}"></span></p>
-                        <p>Satira: <span class="{{$image->spoof}}"></span></p>
-                        <p>Medicina: <span class="{{$image->medical}}"></span></p>
-                        <p>Violenza: <span class="{{$image->violence}}"></span></p>
-                        <p>Contenuto ammiccante: <span class="{{$image->racy}}"></span></p>
-                    </div>
                 </div>
+            </div>
     </div>
 </div>
 @else
@@ -96,7 +112,7 @@
 @endif
 
 
-<div class="col-12 d-flex justify-content-center">
+<div class="col-12 d-flex justify-content-center mt-5">
     <h3 class="text-center text-light"> To review your decisions go to your Profile</h3>
     <a  href={{route('user_dashboard',compact('user'))}} class="btn-custom btn-light mt-1 ms-2"><h6>Go</h6> </a>
 </div>
