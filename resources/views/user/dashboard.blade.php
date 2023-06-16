@@ -46,10 +46,10 @@
                                         <div class="swiper-slide">
                                             <a class="" href="{{ route('show_article', compact('article')) }}">
                                                 <div class="card">
-                                                    <div class="fadex-2"></div>
+                                                    <div class="fadex"></div>
                                                     <img src="{{ $article->images()->first()->GetUrl(500, 500) }}"
                                                         class="card-img-top img-fluid " alt="...">
-                                                    <div class="card-info">
+                                                    <div class="card-info ms-3 mt-3">
                                                         <p class="text-light fst-italic mb-2">{{ $article->category->category }}</p>
                                                         <h5 class="text-light fw-bold text mb-0">{{ $article->title }}</h5>
                                                         <p class="text-light fst-italic">{{ $article->price }} €</p>

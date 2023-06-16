@@ -27,11 +27,11 @@
                         </div>
                     </a>
                 </div>
-        @empty
-        <div class="col-12 d-flex justify-content-center my-4">
-            <h3 class="alert text-white">{{__('ui.noArt')}}</h3>
-        </div>
-        @endforelse
+            @empty
+                <div class="col-12 d-flex justify-content-center my-4">
+                    <h3 class="alert text-white">{{__('ui.noArt')}}</h3>
+                </div>
+            @endforelse
             <div class="col-12 d-flex justify-content-center mt-5">{{$articles->links()}}</div>
         </div>
     </div>

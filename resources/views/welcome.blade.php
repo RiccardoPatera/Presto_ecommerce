@@ -31,6 +31,34 @@
         </div>
     </div>
 
+    {{-- steps --}}
+
+    <div class="container-fluid justify-content-center mt-5">
+        <div class="row">
+        <div class="col-12 text-light">
+             <h2 class="text-center">Sell your products never was so easy!</h2>
+        </div>
+        <div class="col-12 col-md-6 text-light mt-5">
+            <h3>STEP 1</h3>
+        </div>
+        <div class="col-12 col-md-6 text-light mt-5">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam dolorem nostrum blanditiis, fuga ratione harum odit eligendi ipsum similique fugit sequi consequatur vel ut ex iure voluptatibus non sapiente.</p>
+        </div>
+        <div class="col-12 col-md-6 text-light mt-5">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non commodi quos sapiente beatae expedita itaque et molestiae reprehenderit veritatis, esse amet temporibus nesciunt? Ut, suscipit! Iure laborum pariatur aliquam minus.</p>
+        </div>
+        <div class="col-12 col-md-6 text-light mt-5 justify-content-end">
+            <h3>STEP2</h3>
+        </div>
+        <div class="col-12 col-md-6 text-light mt-5">
+            <h3>STEP 3</h3>
+        </div>
+        <div class="col-12 col-md-6 text-light mt-5">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam dolorem nostrum blanditiis, fuga ratione harum odit eligendi ipsum similique fugit sequi consequatur vel ut ex iure voluptatibus non sapiente.</p>
+        </div>  
+        </div>
+    </div>
+
     {{-- VISION  --}}
 
                 <div class="container underlogo align-items-center justify-content-center d-flex opacity-0 mb-5 "  id="ourvision"  >
@@ -59,16 +87,16 @@
                         @foreach ($articles->take(6) as $article)
                         <div class="col-12 col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center my-4">
                             <a href="{{route('show_article',compact('article'))}}" class="">
-                                <div class="card shadow">
+                                <div class="card">
                                     <div class="fadex"></div>
                                     <img src="{{$article->images()->first()->GetUrl(500,500)}}" class="card-img-top img-fluid rounded-bottom" alt="...">
                                     <div class="overlay rounded-end">
                                         <p class="text-card ms-3">{{$article->price}} €</p>
                                         <h6 class="fst-italic ms-3">Created by: {{Ucwords($article->user->name)}}</h6>
                                     </div>
-                                    <div class="card-body ">
+                                    <div class="card-body">
                                         <p class="card-text text fst-italic text-light mb-2">{{$article->category->category}}</p>
-                                <h5 class="card-title text-light text fw-bold">{{$article->title}}</h5>
+                                        <h5 class="card-title text-light text fw-bold">{{$article->title}}</h5>
                                     </div>
                                 </div>
                             </a>
