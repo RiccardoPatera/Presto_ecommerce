@@ -232,46 +232,7 @@ footer {
 
 }
 
-<<<<<<< HEAD
-.card-info{
-    position: absolute;
-    top: 0;
-    left: 5px;
-    height: fit-content;
-}
-
-.textEdit{
-    color: rgb(238, 238, 130);
-}
-
-.textDelete{
-    color: rgb(255, 93, 93);
-}
-
-.btn-editDelete{
-
-}
-
-.overlay-dash:hover{
-    position: absolute;
-    /* top: 15px;
-    right: 50px;
-    left: 0px;
-    bottom: 180px; */
-    /* opacity: 0.7; */
-    background-color: rgba(42, 42, 42, 0.573);
-    color: white;
-    transition: 0.5s;
-}
-
-.text-article{
-    color: rgb(131, 222, 131);
-}
-
-.user_crud{
-=======
 .card-body{
->>>>>>> 25b8a56628bf732a15cbf9b2897ddde7d0c29761
     position: absolute;
     display:flex;
     flex-direction: column;
@@ -504,51 +465,7 @@ h2{
 
 
 
-<<<<<<< HEAD
-
-
-  /* Media Query */
-
-  @media screen and (min-width:991px) {
-    .under1{
-        font-size: 22px;
-    }
-    .textcustom{
-        font-size: 23px;
-
-    }
-}
-
-@media screen and (max-width:767px) {
-    .textcustom{
-        font-size: 19px;
-    }
-
-    .user{
-        margin-top:9vh;
-        width:400px;
-    }
-}
-
-
-@media screen  and (min-width:768px) and (max-width:991px) {
-    .under1{
-        font-size: 17px;
-    }
-
-}
-
-
-
-
-
-
-/* Animation */
-
-.down-to-up{
-=======
   .down-to-up{
->>>>>>> 25b8a56628bf732a15cbf9b2897ddde7d0c29761
     animation:down-to-up;
     animation-duration: 2s;
   }
