@@ -1,14 +1,14 @@
 <x-layout>
 
-    <div class="container user rounded bg-light">
-        <div class="row justify-content-center">
+    <div class="container user rounded bg-light p-0">
+        <div class="row justify-content-center p-0">
             <div class="col-12 col-md-8">
                 <h1 class="text-center display-1 my-5 ">{{__('ui.register')}}</h1>
             </div>
 
-            <div class="col-12 col-md-8">
+            <div class="col-12 col-md-8 p-0">
 
-                <form method="POST" action="{{ route('register') }}">
+                <form method="POST" action="{{ route('register') }}" class="p-0">
                     @csrf
 
                     <div class="mb-3">
@@ -52,7 +52,7 @@
 
                     <p class=" ">{{__('ui.alrReg')}} <a href="{{route('login')}}" class="text-dark ">{{__('ui.hereLog')}}</a></p>
 
-                    <button type="submit" class="btn btn-dark mb-2">{{__('ui.register')}}</button>
+                    <button type="submit" class="btn btn-dark mb-4">{{__('ui.register')}}</button>
 
                 </form>
 
