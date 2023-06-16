@@ -95,15 +95,6 @@
 
 
 
-<script>
-    let logout = document.querySelector('#logout');
-    logout.addEventListener('click', (event)=>{
-        event.preventDefault();
-        let logoutForm = document.querySelector('#logoutForm');
-        logoutForm.submit();
-    });
-</script>
-
 {{-- // LOGICA DEL CONTAINER-SEARCH
 
     // let btnIsClicked = false;

@@ -37,7 +37,7 @@
 
     <div class="mb-3">
         <label for="images" class="form-label">{{__('ui.image')}}</label>
-        <input type="file" class="form-control shadow @error('temporary_images') is-invalid @enderror" id="images" name="images" wire:model="temporary_images" multiple aria-describedby="imagesHelp" placeholder="Img">
+        <input type="file" class="form-control shadow @error('temporary_images.*') is-invalid @enderror" id="images" name="images" wire:model="temporary_images" multiple aria-describedby="imagesHelp" placeholder="Img">
     </div>
 
     @error('temporary_images.*')
@@ -56,7 +56,7 @@
             <div class="d-flex justify-content-evenly border border-4 border-danger rounded shadow py-4">
             @foreach ($images as $key => $image)
                 <div class="my-3">
-                    <div class="img-preview mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}})"></div>
+                    <div class="img-preview mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}});"></div>
                     <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">Delete</button>
                 </div>
             @endforeach
