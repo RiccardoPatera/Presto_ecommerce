@@ -13,7 +13,7 @@
             </div>
         </div>
 
-        <div class="col-12 col-md-3">
+        <div class="col-12 col-md-3 d-lg-block d-none">
             <div class="lead fs-6">
                 <h4 class="fs-3 title-footer fw-semibold mt-4 text-light">{{__('ui.shop')}}</h4>
                 <a class="text-decoration-none text-light" href="">
@@ -28,7 +28,7 @@
             </div>
         </div>
 
-        <div class="col-12 col-md-3">
+        <div class="col-12 col-md-3 d-lg-block d-none">
             <div class="lead fs-6">
                 <h4 class="fs-3 title-footer fw-semibold mt-4 text-light">{{__('ui.link')}}</h4>
                 <a class="text-decoration-none text-light" href="">
@@ -65,7 +65,7 @@
         </div>
 
         <!-- UNDER FOOTER -->
-        <div class="col-12 col-md-12 borderFooterTop mt-5">
+        <div class="col-12 col-md-12 borderFooterTop mt-2">
             <div class="d-flex justify-content-around text-center my-5">
                 <a href=""><i class="fa-brands icona-footer fa-facebook-f"></i></a>
                 <a href=""><i class="fa-brands icona-footer fa-twitter"></i></a>

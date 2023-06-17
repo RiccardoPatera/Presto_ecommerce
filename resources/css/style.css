@@ -4,8 +4,16 @@
     --richblue:#0d1821;
     --gray:#7d7c84;
     --isabeline:#F1F0EA;
-    --test:#9b875fd0;
+    --test:#222f3ed9;
 
+
+
+bg.test{
+    background-color: var(--test);
+}
+.test{
+    border-color: white;
+}
 }
 html {
     min-height: 100vh;
@@ -77,12 +85,9 @@ body{
 }
 
 /* NAVBAR */
-.navbar{
-    background-color: rgba(255, 255, 255, 0.915);
-}
 .nav-custom{
     /* border-bottom: 1px solid rgb(232, 232, 232); */
-    background-color: var(--richblue);
+    background-color: var(--test);
 }
 /* .navbar-toggler-icon{
     background-image:;
@@ -134,13 +139,11 @@ body{
 
 /* FOOTER */
 
-footer, .push {
-    height: 10vh;
+footer {
+    height:fit-content;
+    background-color: var(--test);
 }
 
-.push{
-    margin-top: 6vh;
-}
 
 .revisor-card{
     height: 65vh;
@@ -189,30 +192,6 @@ footer, .push {
 .pads{
     padding-left: 20px;
 }
-@media screen and (min-width:768px) {
-    .textcustom{
-        font-size: 23px;
-
-    }
-
-    .user{
-        margin-top:7vh;
-        width:500px;
-        padding-bottom: 20px;
-    }
-}
-@media screen and (max-width:767px) {
-    .textcustom{
-        font-size: 19px;
-    }
-
-    .user{
-        margin-top:9vh;
-        width:400px;
-    }
-}
-
-
 
 .divcustom{
     height:20vw;
@@ -464,23 +443,7 @@ h2{
     /* font-size: 15px; */
     font-family: 'Righteous', cursive;
 }
-@media screen and (min-width:991px) {
-    .under1{
-        font-size: 22px;
-    }
-}
-@media screen and (max-width:767px) {
-    .under1{
-        font-size: 15px;
-    }
 
-@media screen  and (min-width:768px) and (max-width:991px) {
-    .under1{
-        font-size: 17px;
-    }
-
-}
-}
 .behindbox{
     z-index: -1;
     overflow: hidden;
@@ -532,13 +495,19 @@ h2{
   /* Revisor Zone */
 
   .tag{
-    background-color: var(--richblue);
-    width: 100px;
-    height:30px;
+    background-color: var(--test);
+    width: fit-content;
+    min-width:100;
+    height:fit-content;
     border-radius: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
+
+  }
+
+  .tag>p{
+    font-size: 14px;
   }
 
 
@@ -548,6 +517,59 @@ h2{
 
 
   /* Media Query */
+  @media screen and (min-width:991px) {
+    .under1{
+        font-size: 22px;
+    }
+    .push{
+        height: 17vh;
+    }
+
+}
+    @media screen and (max-width:767px) {
+    .under1{
+        font-size: 15px;
+    }
+    .push{
+        height: 150vh;
+    }
+    .textcustom{
+        font-size: 19px;
+    }
+
+    .user{
+        margin-top:9vh;
+        width:400px;
+    }
+
+
+    @media screen  and (min-width:768px) and (max-width:991px) {
+    .under1{
+        font-size: 17px;
+    }
+    .push{
+        height: 35vh;
+    }
+
+
+}
+}
+
+@media screen and (min-width:768px) {
+    .textcustom{
+        font-size: 23px;
+
+    }
+
+    .user{
+        margin-top:7vh;
+        width:500px;
+        padding-bottom: 20px;
+    }
+}
+
+
+
   @keyframes down-to-up
 {
      0%{
