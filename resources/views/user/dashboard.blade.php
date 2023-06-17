@@ -19,11 +19,11 @@
         </div>
     @endif
 
-    <div class="container-fluid mb-5">
-        <div class="row">
-            <div class="col-12 col-md-4 mt-5 d-flex flex-column align-items-center justify-content-center">
-                <h3 class="text-center text-light mb-5">User info</h3>
+    <div class="container-fluid ">
+        <div class="row justify-content-between">
+            <div class="col-12 col-md-4  d-flex flex-column align-items-center justify-content-center ">
                 <div class="card card-detail text-center d-flex justify-content-center p-5 bg-light">
+                    <h3 class="text-center  mb-5">User info</h3>
                     <h3>{{Ucwords($user->name)}}</h3>
                     <p class="">{{$user->email}}</p>
                     <hr class="hr-custom">
