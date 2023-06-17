@@ -140,8 +140,13 @@ body{
 
 .card-detailProduct{
     width: 100%;
+<<<<<<< HEAD
     height:50vh;
     box-shadow: 15px 25px 15px 5px rgba(255, 255, 255, 0.681);
+=======
+    min-height:50%;
+    box-shadow: 15px 25px 25px 8px rgba(255, 255, 255, 0.681);
+>>>>>>> 56fa7bc5704c2b1c0363a449e45ab46337ece0c8
     border-radius: 20px;
     background-color: white;
 }
@@ -168,6 +173,7 @@ body{
     border-radius: 25px;
 } */
 
+<<<<<<< HEAD
 @media screen and (min-width: 480px) and (max-width:819px) {
     .carousel{
         width: 100%;
@@ -184,12 +190,24 @@ body{
 }
 
 @media screen and (min-width: 1101px){
+=======
+@media screen and (min-width: 480px) {
+>>>>>>> 56fa7bc5704c2b1c0363a449e45ab46337ece0c8
     .carousel{
         width: 80vh;
         border-radius: 25px;
     }
 }
 
+<<<<<<< HEAD
+=======
+/* @media screen and (min-width: 820) {
+    .carousel{
+        width: 80vh;
+        border-radius: 25px;
+    }
+} */
+>>>>>>> 56fa7bc5704c2b1c0363a449e45ab46337ece0c8
 
 /* FOOTER */
 
@@ -394,7 +412,10 @@ footer {
 .btnEdit{
     background-color: rgba(0, 0, 0, 0.650);
     color: yellow;
+<<<<<<< HEAD
     border: solid 2px rgba(0, 0, 0, 0.650);
+=======
+>>>>>>> 56fa7bc5704c2b1c0363a449e45ab46337ece0c8
     transition: .5s;
 }
 
@@ -408,7 +429,10 @@ footer {
 
 .btnDelete{
     background-color: rgba(0, 0, 0, 0.650);
+<<<<<<< HEAD
     border: solid 2px rgba(0, 0, 0, 0.650);
+=======
+>>>>>>> 56fa7bc5704c2b1c0363a449e45ab46337ece0c8
     color: rgb(255, 93, 93);
     transition: .5s;
 }

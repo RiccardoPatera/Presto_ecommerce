@@ -17,5 +17,9 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+<<<<<<< HEAD
 storage/*.
+=======
+public/storage/*.index
+>>>>>>> 56fa7bc5704c2b1c0363a449e45ab46337ece0c8
 google_credential.json
