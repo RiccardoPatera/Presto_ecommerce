@@ -65,7 +65,7 @@
         </div>
 
         <!-- UNDER FOOTER -->
-        <div class="col-12 col-md-12 borderFooterTop mt-2">
+        <div class="col-12 col-md-12 borderFooterTop mt-5">
             <div class="d-flex justify-content-around text-center my-5">
                 <a href=""><i class="fa-brands icona-footer fa-facebook-f"></i></a>
                 <a href=""><i class="fa-brands icona-footer fa-twitter"></i></a>

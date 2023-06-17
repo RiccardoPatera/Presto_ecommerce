@@ -25,6 +25,9 @@ body{
 }
 
 /* UTILITY */
+.textPrice{
+    font-size: 18px;
+}
 .vh-25{
     height: 25vh;
 }
@@ -52,10 +55,14 @@ body{
     border-radius: 3px;
     padding: 25px;
 }
+
 .mt-150{
     margin-top: 150px;
 }
 
+.mt-100{
+    margin-top: 100px;
+}
 
 
 /* Login-Logout */
@@ -124,6 +131,23 @@ body{
 .card-detail{
     min-width: auto;
     min-height:100%;
+    /* width: 400px; */
+    /* height: 380px; */
+    box-shadow: 15px 25px 25px 8px rgba(255, 255, 255, 0.681);
+
+    border-radius: 20px;
+}
+
+.card-detailProduct{
+    width: 100%;
+    min-height:50%;
+    box-shadow: 15px 25px 25px 8px rgba(255, 255, 255, 0.681);
+    border-radius: 20px;
+    background-color: white;
+}
+
+.hr-custom{
+    /* width: 300px; */
 }
 
 .card-body{
@@ -131,17 +155,32 @@ body{
     height: 100%;
 }
 
-.card{
-    border-width: 4px;
-    border-radius: 3px;
-    border-color: var(--richblue);
-}
-
 /* CAROUSEL */
 .carousel-control-prev-icon ,.carousel-control-next-icon{
-    background-color: black;
-    border-radius: 5px;
+    background-color: var(--richblue);
+    border-radius: 10px;
+    height: 40px;
+    width: 40px;
 }
+
+/* .carousel{
+    width: 80vh;
+    border-radius: 25px;
+} */
+
+@media screen and (min-width: 480px) {
+    .carousel{
+        width: 80vh;
+        border-radius: 25px;
+    }
+}
+
+/* @media screen and (min-width: 820) {
+    .carousel{
+        width: 80vh;
+        border-radius: 25px;
+    }
+} */
 
 /* FOOTER */
 
@@ -213,8 +252,7 @@ footer {
 .card{
     /* height: 100%; */
     position: relative;
-    border-radius: 3px;
-    background-color: var(--richblue);
+    border: none;
 }
 
 .card-img-top{
@@ -225,16 +263,21 @@ footer {
 }
 
 .card-img-top-welcome{
-        height:60vh;
-        width:60vh;
-        object-fit:cover;
-        color: #0d182180;
-
+    height:60vh;
+    width:60vh;
+    object-fit:cover;
+    color: #0d182180;
 }
 
 .card-info{
     position: absolute;
     top: 0;
+}
+
+.card-userInfo{
+    height: 400px;
+    width: 300px;
+    box-shadow: 0px 0px 15px 10px white;
 }
 
 .textEdit{
@@ -255,6 +298,11 @@ footer {
 
 .text-under-rewiew{
     color: rgb(197, 197, 197);
+}
+
+.rounded-custom{
+    border-top-right-radius: var(--bs-border-radius);
+    border-bottom-left-radius: var(--bs-border-radius);
 }
 
 .user_crud{
@@ -309,6 +357,7 @@ footer {
     width: 100%;
     opacity: 1;
     background: linear-gradient(rgba(106, 106, 106, 0.407), rgba(53, 53, 53, 0.363));
+    border-radius: 5px;
 }
 
 /* MEGA CONTAINER SEARCH */
@@ -332,6 +381,35 @@ footer {
 }
 
 /* Button */
+
+.btnEdit{
+    background-color: rgba(0, 0, 0, 0.650);
+    color: yellow;
+    transition: .5s;
+}
+
+.btnEdit:hover{
+    color: black;
+    background-color: white;
+    border: solid 2px yellow;
+    box-shadow: 0px 0px 8px 1px yellow;
+    transition: .5s;
+}
+
+.btnDelete{
+    background-color: rgba(0, 0, 0, 0.650);
+    color: rgb(255, 93, 93);
+    transition: .5s;
+}
+
+.btnDelete:hover{
+    color: black;
+    background-color: white;
+    border: solid 2px rgb(255, 93, 93);
+    box-shadow: 0px 0px 8px 1px rgb(255, 93, 93);
+    transition: .5s;
+}
+
 div.vh-50 > .btn{
     width:100px;
     height: fit-content;
