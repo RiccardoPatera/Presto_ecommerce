@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container-fluid vh-100">
+    <div class="container-fluid articles-show">
         <div class="row pt-5">
             @if(session('message'))
                     <div class="col-12 ">

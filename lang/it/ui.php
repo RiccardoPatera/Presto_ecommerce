@@ -20,7 +20,7 @@ return[
     'submit'=>'Invia',
     'tellUs'=>'Dicci perchè vuoi lavorare con PRESTO',
     'welcome'=>'Benvenuto',
-    'create'=>'Crea',
+    'create'=>'Vendi',
     'sell'=>'Vendi i tuoi prodotti',
     'titleItem'=>'Nome prodotto',
     'price'=>'Prezzo',

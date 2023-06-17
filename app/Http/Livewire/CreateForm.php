@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\User;
+use App\Jobs\Watermark;
 use App\Models\Article;
 use Livewire\Component;
 use App\Models\Category;

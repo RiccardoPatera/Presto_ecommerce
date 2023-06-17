@@ -1,12 +1,12 @@
 <x-layout>
 
     <div>
-        <p class="mb-0 mt-5 text-center fs-1 text-light">Detail</p>
+        <p class="mb-0 text-center fs-1 text-light">Detail</p>
         <h1 class="display-1 text-center text-light">{{$article->title}}</h1>
     </div>
 
-    <div class="container-fluid mt-100">
-        <div class="row">
+    <div class="container-fluid vh-100 mt-100">
+        <div class="row ms-md-5">
             <div class="col-12 col-md-6">
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner carousel">
