@@ -11,7 +11,7 @@
 <div class="container-fluid  p-5 pm-md-0 ">
     <div class="row  justify-content-center">
         <div class="col-12 d-flex justify-content-center">
-            <h1 class=" text-light">Review Zone</h1>
+            <h1 class=" text-light">{{__('ui.revDash')}}</h1>
         </div>
         <div class="col-md-4 col-6 d-flex justify-content-center bg-light rounded">
             <h5 class="text-nowrap">{{count($articles)}} article to review</h5>
@@ -111,9 +111,9 @@
                 </div>
             </div>
             <div class="col-12 d-flex justify-content-center  ">
-                <h3 class="text-center text-light "> To review your decisions go to your
+                <h5 class="text-center text-light "> To review your decisions go to your
                     <a  href={{route('user_dashboard',compact('user'))}} class="btn-link my-2 my-lg-0">Dashboard </a>
-                </h3>
+                </h5>
             </div>
         </div>
     </div>
@@ -137,9 +137,9 @@
 
 
         <div class="col-12 d-flex justify-content-center ">
-            <h3 class="text-center text-light "> To review your decisions go to your
+            <h5 class="text-center text-light "> To review your decisions go to your
                 <a  href={{route('user_dashboard',compact('user'))}} class="btn-link my-2 my-lg-0">Dashboard </a>
-            </h3>
+            </h5>
         </div>
 
 

@@ -13,7 +13,7 @@
                         <h4>{{__('ui.alRev')}}</h4>
                         <h4>{{__('ui.viewRev')}}</h4>
                     </div>
-                    <button class="btn rounded p-2 mt-4 fs-5 fw-semibold"><a href="{{route('revisor_index')}}" class="text-decoration-none text-light">{{__('ui.go')}}</a></button>
+                    <a href="{{route('revisor_index')}}" class="btn-link"><h5>{{__('ui.go')}}</h5></a>
                 </div>
             @endif
         </div>
