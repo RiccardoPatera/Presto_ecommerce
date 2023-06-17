@@ -34,8 +34,10 @@
                     {{-- <a class="btn btn-outline-dark" href="#">Add to cart</a> --}}
                     <div class="d-flex mt-4 mb-5">
                         <div class="fs-5">
+                            @if ($article->user->id==Auth::id())
                             <a class="btn btnEdit fs-5 p-1 me-5" href="{{route('edit_article', compact('article'))}}"><i class="fa-solid fa-pencil p-2"></i></a>
                             <button class="btn btnDelete fs-5 p-1" type="button" data-bs-toggle="modal" data-bs-target="#modal-{{$article->id}}"><i class="fa-solid fa-trash p-2"></i></button>
+                            @endif
                         </div>
                     </div>
                 </div>
