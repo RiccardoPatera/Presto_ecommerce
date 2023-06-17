@@ -52,7 +52,7 @@
 
                     <p class=" ">{{__('ui.alrReg')}} <a href="{{route('login')}}" class="text-dark ">{{__('ui.hereLog')}}</a></p>
 
-                    <button type="submit" class="btn btn-dark mb-4">{{__('ui.register')}}</button>
+                    <button type="submit" class="btn btn-dark mb-5">{{__('ui.register')}}</button>
 
                 </form>
 

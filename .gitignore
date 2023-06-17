@@ -17,5 +17,5 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
-/storage/*.
+/storage/**.index
 google_credential.json

@@ -1,17 +1,20 @@
 <x-layout>
-    <div class="container my-2 d-flex align-items-center vh-100">
-        <div class="row align-items-center">
-            <div class="col-12">
-                <h1 class="text-center text-white">Detail: {{$article->title}}</h1>
-            </div>
-            <div class="col-12 col-md-6 my-5 ">
+
+    <div>
+        <p class="mb-0 mt-5 text-center fs-1 text-light">Detail</p>
+        <h1 class="display-1 text-center text-light">{{$article->title}}</h1>
+    </div>
+
+    <div class="container-fluid mt-100">
+        <div class="row">
+            <div class="col-12 col-md-6">
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
+                    <div class="carousel-inner carousel">
                         @foreach ($article->images as $image)
-                                <div class="carousel-item @if($loop->first) active @endif">
-                                    <img src={{$image->getUrl(500,500) }} class="img-fluid d-block w-100" alt="img">
-                                </div>
-                         @endforeach
+                            <div class="carousel-item @if($loop->first) active @endif">
+                                <img src={{$image->getUrl(500,500) }} class="img-fluid d-block w-100" alt="img">
+                            </div>
+                        @endforeach
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
                         data-bs-slide="prev">
@@ -25,18 +28,48 @@
                     </button>
                 </div>
             </div>
-
-
-            <div class="col-12 col-md-6 my-5 vh-50">
-                <div class="card card-detail  shadow p-3 d-flex justify-content-center bg-light ">
-                    <h3>{{ $article->title }}</h3>
-                    <hr class="hr">
-                    <h5>Price: {{ $article->price }}&euro;</h5>
-                    <h5>Description: {{ $article->body }}</h5>
-                    <p>Category: {{ $article->category->category }}</p>
+            <div class="col-12 col-md-5 d-flex align-items-center mt-5">
+                <div class="card-detailProduct d-flex flex-column align-items-center justify-content-center">
+                    <div class="text-start mt-5">
+                        <h3>{{ $article->title }}</h3>
+                        <hr class="hr">
+                        <p class="fst-italic fs-5">Category: {{ $article->category->category }}</p>
+                        <p class="fs-5 mb-0 fw-semibold">Description: {{ $article->body }}</p>
+                        <p class="fst-italic textPrice">Price: {{ $article->price }}&euro;</p>
+                    </div>
                     {{-- <a class="btn btn-outline-dark" href="#">Add to cart</a> --}}
+                    <div class="d-flex mt-4 mb-5">
+                        <div class="fs-5">
+                            <a class="btn btnEdit fs-5 p-1 me-5" href="{{route('edit_article', compact('article'))}}"><i class="fa-solid fa-pencil p-2"></i></a>
+                            <button class="btn btnDelete fs-5 p-1" type="button" data-bs-toggle="modal" data-bs-target="#modal-{{$article->id}}"><i class="fa-solid fa-trash p-2"></i></button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    
 </x-layout>
+
+@foreach ($article->user->articles as $article)
+    <div class="modal z-5 " id="modal-{{$article->id}}" tabindex="-1" aria-labelledby="Delete Article" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-danger d-flex justify-content-center">
+                    <h1 class="modal-title fs-5" id="Modal-{{$article->id}}-label">Delete Article</h1>
+                </div>
+                <div class="modal-body text-center">
+                    You are about to delete your article, are you sure?
+                </div>
+                <div class="modal-footer d-flex justify-content-evenly">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Discard</button>
+                    <form method="POST"   action="{{route('delete_article',compact('article'))}}">
+                        @csrf
+                        @method('delete')
+                        <button type='submit' type="button" class="btn btn-danger">Delete Article</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+@endforeach

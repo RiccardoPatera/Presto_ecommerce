@@ -4,10 +4,17 @@
     --richblue:#0d1821;
     --gray:#7d7c84;
     --isabeline:#F1F0EA;
+    --test:#222f3ed9;
 
+
+
+bg.test{
+    background-color: var(--test);
 }
-/* Set height to min */
-
+.test{
+    border-color: white;
+}
+}
 html {
     min-height: 100vh;
 }
@@ -18,11 +25,18 @@ body{
 }
 
 /* UTILITY */
+.textPrice{
+    font-size: 18px;
+}
 .vh-25{
     height: 25vh;
 }
 .vh-50{
     height: 50vh;
+}
+
+.vh-60{
+        height: 60vh;
 }
 .vh-75{
     height: 75vh;
@@ -41,10 +55,14 @@ body{
     border-radius: 3px;
     padding: 25px;
 }
+
 .mt-150{
     margin-top: 150px;
 }
 
+.mt-100{
+    margin-top: 100px;
+}
 
 
 /* Login-Logout */
@@ -58,27 +76,25 @@ body{
     padding-bottom: 20px;
 }
 
+.btn-link{
+    text-decoration:none;
+    color: var(--richblue);
+    background-color:white ;
+    border-radius: 5px;
+    padding-top:1px;
+    padding-bottom:1px;
+    padding-left:7px ;
+    padding-right:7px ;
 
-
-
-
-
-
-
-
-
-/*
-.category-search{
-    transition: 3s;
-} */
+}
+.btn-link:hover{
+   color:var(--richblue) ;
+}
 
 /* NAVBAR */
-.navbar{
-    background-color: rgba(255, 255, 255, 0.915);
-}
 .nav-custom{
     /* border-bottom: 1px solid rgb(232, 232, 232); */
-    background-color: var(--richblue);
+    background-color: var(--test);
 }
 /* .navbar-toggler-icon{
     background-image:;
@@ -109,6 +125,23 @@ body{
 .card-detail{
     min-width: auto;
     min-height:100%;
+    /* width: 400px; */
+    /* height: 380px; */
+    box-shadow: 15px 25px 25px 8px rgba(255, 255, 255, 0.681);
+
+    border-radius: 20px;
+}
+
+.card-detailProduct{
+    width: 100%;
+    min-height:50%;
+    box-shadow: 15px 25px 25px 8px rgba(255, 255, 255, 0.681);
+    border-radius: 20px;
+    background-color: white;
+}
+
+.hr-custom{
+    /* width: 300px; */
 }
 
 .card-body{
@@ -118,21 +151,46 @@ body{
 
 /* CAROUSEL */
 .carousel-control-prev-icon ,.carousel-control-next-icon{
-    background-color: black;
-    border-radius: 5px;
+    background-color: var(--richblue);
+    border-radius: 10px;
+    height: 40px;
+    width: 40px;
 }
+
+/* .carousel{
+    width: 80vh;
+    border-radius: 25px;
+} */
+
+@media screen and (min-width: 480px) {
+    .carousel{
+        width: 80vh;
+        border-radius: 25px;
+    }
+}
+
+/* @media screen and (min-width: 820) {
+    .carousel{
+        width: 80vh;
+        border-radius: 25px;
+    }
+} */
 
 /* FOOTER */
+
 footer {
-    margin-top: 150px;
-    bottom: 0;
-    height: 10vh;
-    background-color: var(--richblue);
+    height:fit-content;
+    background-color: var(--test);
 }
 
-.borderFooterTop{
-    border-top: 2px solid var(--gray);
+
+.revisor-card{
+    height: 65vh;
 }
+
+/* .borderFooterTop{
+    border-top: 2px solid var(--gray);
+} */
 
 .icona-footer{
     color: white;
@@ -173,30 +231,6 @@ footer {
 .pads{
     padding-left: 20px;
 }
-@media screen and (min-width:768px) {
-    .textcustom{
-        font-size: 23px;
-
-    }
-
-    .user{
-        margin-top:7vh;
-        width:500px;
-        padding-bottom: 20px;
-    }
-}
-@media screen and (max-width:767px) {
-    .textcustom{
-        font-size: 19px;
-    }
-
-    .user{
-        margin-top:9vh;
-        width:400px;
-    }
-}
-
-
 
 .divcustom{
     height:20vw;
@@ -223,11 +257,10 @@ footer {
 }
 
 .card-img-top-welcome{
-        height:60vh;
-        width:60vh;
-        object-fit:cover;
-        color: #0d182180;
-
+    height:60vh;
+    width:60vh;
+    object-fit:cover;
+    color: #0d182180;
 }
 
 .card-info{
@@ -342,6 +375,35 @@ footer {
 }
 
 /* Button */
+
+.btnEdit{
+    background-color: rgba(0, 0, 0, 0.650);
+    color: yellow;
+    transition: .5s;
+}
+
+.btnEdit:hover{
+    color: black;
+    background-color: white;
+    border: solid 2px yellow;
+    box-shadow: 0px 0px 8px 1px yellow;
+    transition: .5s;
+}
+
+.btnDelete{
+    background-color: rgba(0, 0, 0, 0.650);
+    color: rgb(255, 93, 93);
+    transition: .5s;
+}
+
+.btnDelete:hover{
+    color: black;
+    background-color: white;
+    border: solid 2px rgb(255, 93, 93);
+    box-shadow: 0px 0px 8px 1px rgb(255, 93, 93);
+    transition: .5s;
+}
+
 div.vh-50 > .btn{
     width:100px;
     height: fit-content;
@@ -459,23 +521,7 @@ h2{
     /* font-size: 15px; */
     font-family: 'Righteous', cursive;
 }
-@media screen and (min-width:991px) {
-    .under1{
-        font-size: 22px;
-    }
-}
-@media screen and (max-width:767px) {
-    .under1{
-        font-size: 15px;
-    }
 
-@media screen  and (min-width:768px) and (max-width:991px) {
-    .under1{
-        font-size: 17px;
-    }
-
-}
-}
 .behindbox{
     z-index: -1;
     overflow: hidden;
@@ -486,7 +532,7 @@ h2{
 .swiper {
     width: 100%;
     padding-top: 25px;
-    padding-bottom: 35px;
+    /* padding-bottom: 35px; */
   }
 
   .swiper-slide {
@@ -503,6 +549,8 @@ h2{
 
 
 
+  /* Animation */
+
   .down-to-up{
     animation:down-to-up;
     animation-duration: 2s;
@@ -518,6 +566,86 @@ h2{
     animation:opacity;
     animation-duration: 4s;
   }
+
+
+
+
+  /* Revisor Zone */
+
+  .tag{
+    background-color: var(--test);
+    width: fit-content;
+    min-width:100;
+    height:fit-content;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .tag>p{
+    font-size: 14px;
+  }
+
+
+
+
+
+
+
+  /* Media Query */
+  @media screen and (min-width:991px) {
+    .under1{
+        font-size: 22px;
+    }
+    .push{
+        height: 17vh;
+    }
+
+}
+    @media screen and (max-width:767px) {
+    .under1{
+        font-size: 15px;
+    }
+    .push{
+        height: 150vh;
+    }
+    .textcustom{
+        font-size: 19px;
+    }
+
+    .user{
+        margin-top:9vh;
+        width:400px;
+    }
+
+
+    @media screen  and (min-width:768px) and (max-width:991px) {
+    .under1{
+        font-size: 17px;
+    }
+    .push{
+        height: 35vh;
+    }
+
+
+}
+}
+
+@media screen and (min-width:768px) {
+    .textcustom{
+        font-size: 23px;
+
+    }
+
+    .user{
+        margin-top:7vh;
+        width:500px;
+        padding-bottom: 20px;
+    }
+}
+
 
 
   @keyframes down-to-up

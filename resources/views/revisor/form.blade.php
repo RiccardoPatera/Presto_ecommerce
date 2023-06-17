@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container my-5">
+    <div class="container 100vh">
         <div class="row justify-content-center">
             @if(!Auth::user()->is_revisor)
                 <div class="col-12 col-md-8 pt-5">
@@ -8,7 +8,7 @@
                     <livewire:revisor-form>
                 </div>
             @else
-                <div class="col-12 d-flex justify-content-center align-items-center flex-column vh-50">
+                <div class="col-12 d-flex justify-content-center align-items-center flex-column vh-100">
                     <div class="notify rounded mt-5 mb-3 text-center">
                         <h4>{{__('ui.alRev')}}</h4>
                         <h4>{{__('ui.viewRev')}}</h4>

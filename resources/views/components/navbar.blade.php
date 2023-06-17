@@ -68,16 +68,18 @@
                         Language
                     </a>
                     <ul class="dropdown-menu">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-12">
-                                    <li class="nav-item">
+                        <div class="container ">
+                            <div class="row ">
+                                <div class="col-12 p-0">
+                                    <li class="nav-item bg-dark p-0">
                                         <x-_locale lang="it"/>
                                     </li>
-                                    <li class="nav-item">
+                                    <hr class="hr">
+                                    <li class="nav-item bg-dark p-0">
                                         <x-_locale lang="en"/>
                                     </li>
-                                    <li class="nav-item">
+                                    <hr class="hr">
+                                    <li class="nav-item bg-dark p-0">
                                         <x-_locale lang="es"/>
                                     </li>
                                 </div>

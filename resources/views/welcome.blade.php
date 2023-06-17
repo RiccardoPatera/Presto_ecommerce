@@ -4,6 +4,9 @@
 @if (session('message'))
         <h3 class="text-center alert alert-success">{{session('message')}}</h3>
 @endif
+@if (session('wasted'))
+        <h3 class="text-center alert alert-danger">{{session('wasted')}}</h3>
+@endif
 
 <x-layout>
 {{-- LOGO --}}
@@ -20,7 +23,7 @@
                 </div>
                 <div class="col-12 d-flex align-items-center d-flex flex-column ">
                 <div class="col-12 d-flex align-items-end copy mt-5 mt-lg-0 ">
-                    <p class="d-none d-xl-block pads">Codeartisans 2023 ©</p>
+                    <p class="d-none d-xl-block pads ">Codeartisans 2023 ©</p>
 
                 </div>
                 <div class="col-12 justify-content-center d-flex p-0 " id="logo">
@@ -55,7 +58,7 @@
         </div>
         <div class="col-12 col-md-6 text-light mt-5">
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam dolorem nostrum blanditiis, fuga ratione harum odit eligendi ipsum similique fugit sequi consequatur vel ut ex iure voluptatibus non sapiente.</p>
-        </div>  
+        </div>
         </div>
     </div>
 

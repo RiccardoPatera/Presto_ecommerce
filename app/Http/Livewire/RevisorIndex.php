@@ -57,7 +57,7 @@ class RevisorIndex extends Component
     {
 
         $this->user=Auth::user();
-
+        $this->articles=Article::all()->where('is_accepted','===', NULL);
         return view('livewire.revisor-index',['article'=>$this->article]);
     }
 }
