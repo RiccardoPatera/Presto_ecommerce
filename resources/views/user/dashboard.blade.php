@@ -88,7 +88,7 @@
                                                         <button  class="btn bg-dark p-0" type="button" data-bs-toggle="modal" data-bs-target="#modal-{{$article->id}}"><i class="fa-solid fa-trash textDelete  bg-opacity-75 rounded-top p-2"></i></button>
                                                     </div>
                                                     @endif
-
+                                        </div>
                                         </div>
 
                                             @empty

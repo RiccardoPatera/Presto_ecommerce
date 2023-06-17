@@ -15,15 +15,13 @@
         <h1 class="text-light text-center">Dashboard revisor</h1>
     </div>
 
-    <div class="row d-flex justify-content-between align-items-center  vh-75">
-
+    <div class="row d-flex justify-content-between align-items-center  vh-75 ">
                 {{-- Colonna Dati Revisor --}}
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6  ">
                     <div class="row justify-content-center ">
                         <div class="col-12">
                             <div class="card card-detail  shadow p-5 d-flex justify-content-center bg-light rounded shadow ">
                                 <h2 class=" text-center">Revisor info</h2>
-
                                 <h3>{{Ucwords($user->name)}}</h3>
                                 <p>{{$user->email}}</p>
                                 <hr class="hr">
@@ -79,7 +77,7 @@
                                         <div class="col-12">
                                             <div class="d-flex justify-content-center">
                                                 <form wire:submit.prevent='review({{$article}})'>
-                                                <button class="btn-custom btn-light "><h6>Send to review</h6></button>
+                                                <button class="btn-link  "><h6 class="mt-1">Send to review</h6></button>
                                                 </form>
                                             </div>
                                         </div>
@@ -92,8 +90,12 @@
                 </div>
             </div>
         </div>
-    @else
 
+
+
+
+        {{-- Colonna Articoli revisionati in caso di 0 articoli revisionati --}}
+        @else
             <div class="col-12 col-md-6">
                 <div class="row   justify-content-center vh-50">
                     <div class="col-12">
