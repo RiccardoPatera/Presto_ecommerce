@@ -1,7 +1,7 @@
 <x-layout>
 
     <div>
-        <p class="mb-0 text-center fs-1 text-light">Detail</p>
+        <p class="mb-0 text-center fs-1 text-light borderBottom">Detail</p>
         <h1 class="display-1 text-center text-light">{{$article->title}}</h1>
     </div>
 

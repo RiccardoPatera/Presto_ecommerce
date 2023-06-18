@@ -147,7 +147,8 @@ body{
 }
 
 .hr-custom{
-    /* width: 300px; */
+    border: solid 5px white;
+    opacity: 1;
 }
 
 .card-body{
