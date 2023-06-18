@@ -33,28 +33,28 @@
 
     {{-- steps --}}
 
-    <div class="container-fluid justify-content-center mt-5">
+    <div class="container-fluid justify-content-center mt-5 steps">
         <div class="row">
         <div class="col-12 text-light">
              <h2 class="text-center">Sell your products never was so easy!</h2>
         </div>
         <div class="col-12 col-md-6 text-light mt-5">
-            <h3>STEP 1</h3>
+            <h3 class="text-center">STEP 1 <i class="fa-solid fa-arrow-right fa-sm"></i></h3>
         </div>
         <div class="col-12 col-md-6 text-light mt-5">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam dolorem nostrum blanditiis, fuga ratione harum odit eligendi ipsum similique fugit sequi consequatur vel ut ex iure voluptatibus non sapiente.</p>
+            <p class="textcustom">Registration: Create an account on the selected website by following the registration instructions. Fill in the required fields with your personal information, such as name, email, and password. Verify your account if necessary.</p>
         </div>
         <div class="col-12 col-md-6 text-light mt-5">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non commodi quos sapiente beatae expedita itaque et molestiae reprehenderit veritatis, esse amet temporibus nesciunt? Ut, suscipit! Iure laborum pariatur aliquam minus.</p>
+            <p class="textcustom">Creating your product: Log in to your account and create a new listing for the used product you want to sell. Provide a clear description of the product, including details such as brand, model, condition, and key features. Add high-quality photos to attract buyers' attention and wait our revisor accept it!</p>
         </div>
         <div class="col-12 col-md-6 text-light mt-5 justify-content-end">
-            <h3>STEP2</h3>
+            <h3 class="text-center"><i class="fa-solid fa-arrow-left fa-sm"></i> STEP2</h3>
         </div>
         <div class="col-12 col-md-6 text-light mt-5">
-            <h3>STEP 3</h3>
+            <h3 class="text-center">STEP 3 <i class="fa-solid fa-arrow-right fa-sm"></i></h3>
         </div>
         <div class="col-12 col-md-6 text-light mt-5">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quisquam dolorem nostrum blanditiis, fuga ratione harum odit eligendi ipsum similique fugit sequi consequatur vel ut ex iure voluptatibus non sapiente.</p>
+            <p class="textcustom">Managing Offers and Communication: Monitor your account to check for inquiries from interested buyers. Respond promptly to questions and negotiate any offers. Establish the final selling price and coordinate the payment and delivery method with the buyer. Maintain clear and friendly communication throughout the selling process.</p>
         </div>  
         </div>
     </div>

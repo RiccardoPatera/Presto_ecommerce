@@ -13,8 +13,9 @@ html {
 }
 
 body{
-    background-color: var(--richblue);
+    /* background-color: var(--richblue); */
     min-height: 100vh;
+    background:var(--richblue) linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.397));
 }
 
 /* UTILITY */
@@ -145,7 +146,7 @@ footer {
 
 /* Header */
 .header{
-    background-color: var(--richblue);
+    /* background-color: var(--richblue); */
     color: var(--main);
     height: 60vw;
     display: flex;
@@ -523,4 +524,9 @@ h2{
 
      }
 
+}
+/* STEPS */
+.steps{
+    padding-left: 50px;
+    padding-right: 50px;
 }
