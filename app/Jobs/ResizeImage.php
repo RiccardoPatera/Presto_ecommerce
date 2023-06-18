@@ -41,6 +41,12 @@ class ResizeImage implements ShouldQueue
 
         $croppedImage= Image::load($srcPath)
                     ->crop(Manipulations::CROP_CENTER, $w,$h)
+                    ->watermark(base_path('resources/media/watermark/codeartisans.png'))
+                    ->watermarkWidth(250, Manipulations::UNIT_PIXELS)
+                    ->watermarkHeight(200, Manipulations::UNIT_PIXELS)
+
+
                     ->save($destPath);
     }
+
 }

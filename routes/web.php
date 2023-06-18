@@ -29,6 +29,10 @@ Route::get('/articles/detail/{article}', [ArticleController::class, 'show'])->na
 // MODIFICA PRODOTTO
 Route::get('/article/edit/{article}', [ArticleController::class, 'edit'])->name('edit_article');
 
+
+// MODIFICA PRODOTTO
+Route::delete('/article/delete/{article}', [ArticleController::class, 'delete'])->name('delete_article');
+
 // ROTTA RICERCA PRODOTTO
 Route::get ('/ricerca/annuncio',[PublicController::class, 'search_article'])->name('search_article');
 
@@ -63,7 +67,6 @@ Route::post('/language/{lang}',[PublicController::class, 'setLanguage'])->name('
 
 // Rotta profilo utente /Redirect Revisore
 Route::get ('/user/{user}',[UserController::class, 'user_dashboard'])->name('user_dashboard');
-
 
 
 

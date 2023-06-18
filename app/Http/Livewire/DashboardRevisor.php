@@ -27,7 +27,7 @@ class DashboardRevisor extends Component
 
     {
 
-        $this->articles=Article::orderby('created_at', 'DESC')->where('revisored_by',$this->user->id)->get();
+        $this->articles=Article::orderby('created_at', 'DESC')->get();
         return view('livewire.dashboard-revisor');
     }
 }

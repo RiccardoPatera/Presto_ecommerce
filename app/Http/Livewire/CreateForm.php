@@ -2,14 +2,16 @@
 
 namespace App\Http\Livewire;
 
-use App\Jobs\GoogleVisionLabelImage;
-use App\Jobs\GoogleVisionSafeSearch;
 use App\Models\User;
+use App\Jobs\Watermark;
 use App\Models\Article;
 use Livewire\Component;
 use App\Models\Category;
+use App\Jobs\RemoveFaces;
 use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
+use App\Jobs\GoogleVisionLabelImage;
+use App\Jobs\GoogleVisionSafeSearch;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 
@@ -31,7 +33,7 @@ class CreateForm extends Component
         'price' => 'required|doesnt_start_with:-',
         'body' => 'required|min:5',
         'category_id'=> 'required',
-        // 'images'=> 'required',
+        'images'=> 'required',
         'images.*'=> 'required|image|max:3072',
         'temporary_images.*'=> 'required|image|max:3072',
     ];
@@ -78,9 +80,11 @@ class CreateForm extends Component
                     // $this->article->images()->create(['path'=>$image->store('images', 'public')]);
                     $newFileName="articles/{$this->article->id}";
                     $newImage=$this->article->images()->create(['path'=>$image->store($newFileName, 'public')]);
-                    dispatch(new ResizeImage($newImage->path,500,500));
-                    dispatch(new GoogleVisionSafeSearch($newImage->id));
-                    dispatch(new GoogleVisionLabelImage($newImage->id));
+                    RemoveFaces::withChain([
+                        new ResizeImage($newImage->path,500,500),
+                        new GoogleVisionSafeSearch($newImage->id),
+                        new GoogleVisionLabelImage($newImage->id),
+                    ])->dispatch($newImage->id);
                 }
                 File::deleteDirectory(storage_path('/app/livewire-tmp'));
             }
@@ -90,7 +94,7 @@ class CreateForm extends Component
 
     }
 
- 
+
 
     public function removeImage($key){
         if (in_array($key, array_keys($this->images))) {
