@@ -34,34 +34,6 @@
         </div>
     </div>
 
-    {{-- steps --}}
-
-    <div class="container-fluid justify-content-center mt-5 steps">
-        <div class="row">
-        <div class="col-12 text-light">
-             <h2 class="text-center">Sell your products never was so easy!</h2>
-        </div>
-        <div class="col-12 col-md-6 text-light mt-5">
-            <h3 class="text-center">STEP 1 <i class="fa-solid fa-arrow-right fa-sm"></i></h3>
-        </div>
-        <div class="col-12 col-md-6 text-light mt-5">
-            <p class="textcustom">Registration: Create an account on the selected website by following the registration instructions. Fill in the required fields with your personal information, such as name, email, and password. Verify your account if necessary.</p>
-        </div>
-        <div class="col-12 col-md-6 text-light mt-5">
-            <p class="textcustom">Creating your product: Log in to your account and create a new listing for the used product you want to sell. Provide a clear description of the product, including details such as brand, model, condition, and key features. Add high-quality photos to attract buyers' attention and wait our revisor accept it!</p>
-        </div>
-        <div class="col-12 col-md-6 text-light mt-5 justify-content-end">
-            <h3 class="text-center"><i class="fa-solid fa-arrow-left fa-sm"></i> STEP2</h3>
-        </div>
-        <div class="col-12 col-md-6 text-light mt-5">
-            <h3 class="text-center">STEP 3 <i class="fa-solid fa-arrow-right fa-sm"></i></h3>
-        </div>
-        <div class="col-12 col-md-6 text-light mt-5">
-            <p class="textcustom">Managing Offers and Communication: Monitor your account to check for inquiries from interested buyers. Respond promptly to questions and negotiate any offers. Establish the final selling price and coordinate the payment and delivery method with the buyer. Maintain clear and friendly communication throughout the selling process.</p>
-        </div>  
-        </div>
-    </div>
-
     {{-- VISION  --}}
 
                 <div class="container underlogo align-items-center justify-content-center d-flex opacity-0 mb-5 "  id="ourvision"  >
@@ -77,9 +49,39 @@
                             </div>
                     </div>
                 </div>
+
+                {{-- steps --}}
+
+    <div class="container-fluid justify-content-center mt-5 steps">
+        <div class="row">
+        <div class="col-12 text-light">
+             <h2 class="text-center">Sell your products never was so easy!</h2>
+
+        </div>
+        <div class="col-12 col-md-6 text-light mt-5">
+            <h3 class="text-center steptext">STEP 1 <i class="fa-solid fa-arrow-right fa-sm"></i></h3>
+        </div>
+        <div class="col-12 col-md-6 text-light mt-5">
+            <p class="textcustom text-center">Registration: Create an account on the selected website by following the registration instructions. Fill in the required fields with your personal information, such as name, email, and password. Verify your account if necessary.</p>
+        </div>
+        <div class="col-12 col-md-6 text-light mt-5">
+            <p class="textcustom text-center">Create your product: Log in to your account and create a new listing for the used product you want to sell. Provide a clear description of the product, including details such as brand, model, condition, and key features. Add high-quality photos to attract buyers' attention and wait our revisor accept it!</p>
+        </div>
+        <div class="col-12 col-md-6 text-light mt-5 justify-content-end">
+            <h3 class="text-center steptext"><i class="fa-solid fa-arrow-left fa-sm"></i> STEP2</h3>
+        </div>
+        <div class="col-12 col-md-6 text-light mt-5">
+            <h3 class="text-center steptext">STEP 3 <i class="fa-solid fa-arrow-right fa-sm"></i></h3>
+        </div>
+        <div class="col-12 col-md-6 text-light mt-5">
+            <p class="textcustom text-center">Managing Offers and Communication: Monitor your account to check for inquiries from interested buyers. Respond promptly to questions and negotiate any offers. Establish the final selling price and coordinate the payment and delivery method with the buyer. Maintain clear and friendly communication throughout the selling process.</p>
+        </div>  
+        </div>
+    </div>
+
 {{-- ARRIVALS/CARD  --}}
 
-                <div class="container-fluid align-items-center pt-5">
+                <div class="container-fluid align-items-center pt-5 mt-5">
                     <div class="row">
                         <div class="col-12 col-md-3 d-flex justify-content-center mt-5 ">
                     <h2 class="title-text">{{__('ui.new')}}</h2>
