@@ -20,8 +20,9 @@ html {
 }
 
 body{
-    background-color: var(--richblue);
+    /* background-color: var(--richblue); */
     min-height: 100vh;
+    background:var(--richblue) linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.397));
 }
 
 /* UTILITY */
@@ -71,9 +72,7 @@ body{
 }
 
 .user{
-    margin-top:7vh;
-    width:500px;
-    padding-bottom: 20px;
+    width:400px;
 }
 
 .btn-link{
@@ -131,25 +130,20 @@ body{
 .card-detail{
     min-width: auto;
     min-height:100%;
-    /* width: 400px; */
-    /* height: 380px; */
-    box-shadow: 15px 25px 25px 8px rgba(255, 255, 255, 0.681);
+
+    box-shadow: 20px 20px 8px 0px rgba(255, 255, 255, 0.29);
 
     border-radius: 20px;
 }
 
 .card-detailProduct{
     width: 100%;
-    min-height:50%;
-    box-shadow: 15px 25px 25px 8px rgba(255, 255, 255, 0.681);
+    height:50vh;
+    box-shadow: 20px 20px 8px 0px rgba(255, 255, 255, 0.29);
     border-radius: 20px;
     background-color: white;
 }
 
-.hr-custom{
-    border: solid 5px white;
-    opacity: 1;
-}
 
 .card-body{
     position: absolute;
@@ -169,19 +163,28 @@ body{
     border-radius: 25px;
 } */
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 480px) and (max-width:819px) {
+    .carousel{
+        width: 100%;
+        border-radius: 25px;
+    }
+}
+
+@media screen and (min-width: 820px) and (max-width:1100px) {
+    .carousel{
+        width: 100%;
+        border-radius: 25px;
+    }
+
+}
+
+@media screen and (min-width: 1101px){
     .carousel{
         width: 80vh;
         border-radius: 25px;
     }
 }
 
-/* @media screen and (min-width: 820) {
-    .carousel{
-        width: 80vh;
-        border-radius: 25px;
-    }
-} */
 
 /* FOOTER */
 
@@ -209,7 +212,7 @@ footer {
 
 /* Header */
 .header{
-    background-color: var(--richblue);
+    /* background-color: var(--richblue); */
     color: var(--main);
     height: 60vw;
     display: flex;
@@ -319,6 +322,15 @@ footer {
     top:0;
     left:0;
 }
+
+.user-img{
+    height: 160px;
+    width: 160px;
+    border-radius: 80px;
+    object-fit: cover;
+    object-position: center;
+}
+
 .card a{
     text-decoration: none;
     color: var(--richblue);
@@ -386,6 +398,7 @@ footer {
 .btnEdit{
     background-color: rgba(0, 0, 0, 0.650);
     color: yellow;
+    border: solid 2px rgba(0, 0, 0, 0.650);
     transition: .5s;
 }
 
@@ -399,6 +412,7 @@ footer {
 
 .btnDelete{
     background-color: rgba(0, 0, 0, 0.650);
+    border: solid 2px rgba(0, 0, 0, 0.650);
     color: rgb(255, 93, 93);
     transition: .5s;
 }
@@ -631,8 +645,7 @@ h2{
     }
 
     .user{
-        margin-top:9vh;
-        width:400px;
+        width:450px;
     }
 
 
@@ -655,9 +668,8 @@ h2{
     }
 
     .user{
-        margin-top:7vh;
         width:500px;
-        padding-bottom: 20px;
+        max-height: 80vh;
     }
 }
 
@@ -704,4 +716,12 @@ h2{
 
      }
 
+}
+/* STEPS */
+.steps{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.steptext{
+    font-size: 10vh;
 }

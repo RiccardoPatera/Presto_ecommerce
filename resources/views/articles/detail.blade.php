@@ -1,12 +1,6 @@
 <x-layout>
-
-    <div>
-        <p class="mb-0 text-center fs-1 text-light borderBottom">Detail</p>
-        <h1 class="display-1 text-center text-light">{{$article->title}}</h1>
-    </div>
-
-    <div class="container-fluid vh-100 mt-100">
-        <div class="row ms-md-5">
+    <div class="container-fluid mt-lg-0 mt-5">
+        <div class="row ms-md-5 vh-100 align-items-center">
             <div class="col-12 col-md-6">
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner carousel">
@@ -40,15 +34,16 @@
                     {{-- <a class="btn btn-outline-dark" href="#">Add to cart</a> --}}
                     <div class="d-flex mt-4 mb-5">
                         <div class="fs-5">
+                            @if ($article->user->id==Auth::id())
                             <a class="btn btnEdit fs-5 p-1 me-5" href="{{route('edit_article', compact('article'))}}"><i class="fa-solid fa-pencil p-2"></i></a>
                             <button class="btn btnDelete fs-5 p-1" type="button" data-bs-toggle="modal" data-bs-target="#modal-{{$article->id}}"><i class="fa-solid fa-trash p-2"></i></button>
+                            @endif
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
 </x-layout>
 
 @foreach ($article->user->articles as $article)
