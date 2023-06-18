@@ -1,6 +1,6 @@
 <x-layout>
 
-    <div class="container my-5">
+    <div class="container my-2">
         <div class="row">
             <div class="col-12 d-flex justify-content-center">
                 <h1 class="text-light text-center display-1">Dashboard</h1>
@@ -24,17 +24,17 @@
             <div class="col-12 col-md-5  d-flex flex-column align-items-center justify-content-center ">
                 <div class="card card-detail text-center d-flex justify-content-center p-5 bg-light">
                     <h3 class="text-center  mb-5">User info</h3>
+                    @livewire('user-img',compact('user'))
                     <h3>{{Ucwords($user->name)}}</h3>
                     <p class="">{{$user->email}}</p>
                     <hr class="hr-custom">
-                    <p class="mb-0">Articols Reviewed: {{count($user->articles)}}</p>
-                    <p class="">Articles Rejected: {{count($user->articles->where('is_accepted','==', 0))}}</p>
+                    <p class="mb-0">Articols Uploaded: {{count($user->articles)}}</p>
+                    <p class="">Articles Rejected: {{count($user->articles->where('is_accepted','===', 0))}}</p>
                     <p class="fst-italic mb-0">Iscritto il: {{$user->created_at }}</p>
-
-                    {{-- <a class="btn btn-outline-dark" href="#">Add to cart</a> --}}
-
                 </div>
             </div>
+
+
             <div class="col-12 col-md-7 d-flex flex-column justify-content-center my-lg-0 my-5">
                 <h3 class="text-center text-light mb-5">User Articles</h3>
                 <div class="swiper mySwiper">

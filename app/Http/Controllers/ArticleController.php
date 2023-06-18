@@ -97,7 +97,14 @@ class ArticleController extends Controller
 
     public function edit(Article $article)
     {
-        return view('articles.edit', compact('article'));
+        if($article->id == Auth::id()){
+            return view('articles.edit', compact('article'));
+        }
+        else {
+            return redirect(route('welcome'))->with('wasted',"You can't access on this reserved area!");
+        }
+
+
     }
 
 

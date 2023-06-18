@@ -19,4 +19,5 @@ class UserController extends Controller{
         return view('user.dashboard', compact('user'));
     }
 
+
 }

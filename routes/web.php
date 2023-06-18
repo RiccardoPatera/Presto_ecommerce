@@ -72,4 +72,3 @@ Route::get ('/user/{user}',[UserController::class, 'user_dashboard'])->name('use
 
 
 
-
