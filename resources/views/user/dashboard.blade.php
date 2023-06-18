@@ -23,20 +23,20 @@
         <div class="row justify-content-between">
             <div class="col-12 col-md-5  d-flex flex-column align-items-center justify-content-center ">
                 <div class="card card-detail text-center d-flex justify-content-center p-5 bg-light">
-                    <h3 class="text-center  mb-5">User info</h3>
+                    <h3 class="text-center  mb-5">{{__('ui.userInfo')}}</h3>
                     @livewire('user-img',compact('user'))
                     <h3>{{Ucwords($user->name)}}</h3>
                     <p class="">{{$user->email}}</p>
                     <hr class="hr-custom">
-                    <p class="mb-0">Articols Uploaded: {{count($user->articles)}}</p>
-                    <p class="">Articles Rejected: {{count($user->articles->where('is_accepted','===', 0))}}</p>
-                    <p class="fst-italic mb-0">Iscritto il: {{$user->created_at }}</p>
+                    <p class="mb-0">{{__('ui.artUploaded')}}: {{count($user->articles)}}</p>
+                    <p class="">{{__('ui.artRejected')}}: {{count($user->articles->where('is_accepted','===', 0))}}</p>
+                    <p class="fst-italic mb-0">{{__('ui.joinedOn')}}l: {{$user->created_at }}</p>
                 </div>
             </div>
 
 
             <div class="col-12 col-md-7 d-flex flex-column justify-content-center my-lg-0 my-5">
-                <h3 class="text-center text-light mb-5">User Articles</h3>
+                <h3 class="text-center text-light mb-5">{{__('ui.userArt')}}</h3>
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
                         @forelse ($user->articles as $article)
@@ -55,13 +55,13 @@
                                     @if ($article->is_accepted === null)
 
                                         <div class="bg-dark bg-opacity-75 rounded-end position-absolute start-0 bottom-0 pt-1 px-3">
-                                            <h6 class="text-under-rewiew text-start mt-1 me-4">Under review</h6>
+                                            <h6 class="text-under-rewiew text-start mt-1 me-4">{{__('ui.undRev')}}</h6>
                                         </div>
 
                                     @elseif($article->is_accepted == 1)
 
                                         <div class="bg-dark bg-opacity-75 rounded-end position-absolute start-0 bottom-0 pt-1 px-3">
-                                            <h6 class="text-accepted text-start mt-1 me-4">Accepted</h6>
+                                            <h6 class="text-accepted text-start mt-1 me-4">{{__('ui.accepted')}}</h6>
                                         </div>
 
                                         <div class="fs-5 text-light position-absolute bottom-0 end-0 translate-middle-x">
@@ -72,7 +72,7 @@
                                     @elseif($article->is_accepted == 0)
 
                                         <div class="bg-dark bg-opacity-75 rounded-end position-absolute start-0 bottom-0 pt-1 px-3">
-                                            <h6 class="text-rejected text-start mt-1 me-4">Rejected</h6>
+                                            <h6 class="text-rejected text-start mt-1 me-4">{{__('ui.rejected')}}</h6>
                                         </div>
 
                                         <div class="fs-5 text-light position-absolute bottom-0 end-0 translate-middle-x z-4">
@@ -84,7 +84,7 @@
                             </div>
                         @empty
                             <div class="col-12  d-flex align-item-center justify-content-center">
-                                <h4 class="text-center text-light">No products found</h4>
+                                <h4 class="text-center text-light">{{__('ui.noProdFound')}}</h4>
                             </div>
                         @endforelse
                     </div>
@@ -98,17 +98,17 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header bg-danger d-flex justify-content-center">
-                        <h1 class="modal-title fs-5" id="Modal-{{$article->id}}-label">Delete Article</h1>
+                        <h1 class="modal-title fs-5" id="Modal-{{$article->id}}-label">{{__('ui.noProdFound')}}</h1>
                     </div>
                     <div class="modal-body text-center">
-                        You are about to delete your article, are you sure?
+                    {{__('ui.sureDelArt')}}
                     </div>
                     <div class="modal-footer d-flex justify-content-evenly">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Discard</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{__('ui.discard')}}</button>
                         <form method="POST"   action="{{route('delete_article',compact('article'))}}">
                             @csrf
                             @method('delete')
-                            <button type='submit' type="button" class="btn btn-danger">Delete Article</button>
+                            <button type='submit' type="button" class="btn btn-danger">{{__('ui.deleteArt')}}</button>
                         </form>
                     </div>
                 </div>

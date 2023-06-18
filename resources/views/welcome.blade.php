@@ -28,7 +28,7 @@
                 </div>
                 <div class="col-12 justify-content-center d-flex p-0 " id="logo">
 
-                    <h1 class="new mb-5">presto</h1>
+                    <h1 class="new mb-5">presto</h1> 
                 </div>
             </div>
         </div>
@@ -55,17 +55,17 @@
     <div class="container-fluid justify-content-center mt-5 steps">
         <div class="row">
         <div class="col-12 text-light">
-             <h2 class="text-center">Sell your products never was so easy!</h2>
+             <h2 class="text-center">{{__('ui.stepstart')}}</h2>
 
         </div>
         <div class="col-12 col-md-6 text-light mt-5">
             <h3 class="text-center steptext">STEP 1 <i class="fa-solid fa-arrow-right fa-sm"></i></h3>
         </div>
         <div class="col-12 col-md-6 text-light mt-5">
-            <p class="textcustom text-center">Registration: Create an account on the selected website by following the registration instructions. Fill in the required fields with your personal information, such as name, email, and password. Verify your account if necessary.</p>
+            <p class="textcustom text-center">{{__('ui.homestep1')}}</p>
         </div>
         <div class="col-12 col-md-6 text-light mt-5">
-            <p class="textcustom text-center">Create your product: Log in to your account and create a new listing for the used product you want to sell. Provide a clear description of the product, including details such as brand, model, condition, and key features. Add high-quality photos to attract buyers' attention and wait our revisor accept it!</p>
+            <p class="textcustom text-center">{{__('ui.homestep2')}}</p>
         </div>
         <div class="col-12 col-md-6 text-light mt-5 justify-content-end">
             <h3 class="text-center steptext"><i class="fa-solid fa-arrow-left fa-sm"></i> STEP2</h3>
@@ -74,7 +74,7 @@
             <h3 class="text-center steptext">STEP 3 <i class="fa-solid fa-arrow-right fa-sm"></i></h3>
         </div>
         <div class="col-12 col-md-6 text-light mt-5">
-            <p class="textcustom text-center">Managing Offers and Communication: Monitor your account to check for inquiries from interested buyers. Respond promptly to questions and negotiate any offers. Establish the final selling price and coordinate the payment and delivery method with the buyer. Maintain clear and friendly communication throughout the selling process.</p>
+            <p class="textcustom text-center">{{__('ui.homestep3')}}</p>
         </div>  
         </div>
     </div>
@@ -97,7 +97,7 @@
                                     <img src="{{$article->images()->first()->GetUrl(500,500)}}" class="card-img-top img-fluid rounded-bottom" alt="...">
                                     <div class="overlay rounded-end">
                                         <p class="text-card ms-3">{{$article->price}} €</p>
-                                        <h6 class="fst-italic ms-3">Created by: {{Ucwords($article->user->name)}}</h6>
+                                        <h6 class="fst-italic ms-3">{{__('ui.createby')}} {{Ucwords($article->user->name)}}</h6>
                                     </div>
                                     <div class="card-body">
                                         <p class="card-text text fst-italic text-light mb-2">{{$article->category->category}}</p>
