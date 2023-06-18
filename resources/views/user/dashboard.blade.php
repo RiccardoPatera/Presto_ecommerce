@@ -30,7 +30,7 @@
                     <hr class="hr-custom">
                     <p class="mb-0">{{__('ui.artUploaded')}}: {{count($user->articles)}}</p>
                     <p class="">{{__('ui.artRejected')}}: {{count($user->articles->where('is_accepted','===', 0))}}</p>
-                    <p class="fst-italic mb-0">{{__('ui.joinedOn')}}l: {{$user->created_at }}</p>
+                    <p class="fst-italic mb-0">{{__('ui.joinedOn')}}: {{$user->created_at }}</p>
                 </div>
             </div>
 

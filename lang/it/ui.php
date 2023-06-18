@@ -81,7 +81,7 @@ return[
     'fileImg'=>'Il file deve essere una immagine',
     'update'=>'Aggiorna',
     'tipRev'=>'Suggerimento dal revisore',
-    'delete'=>'elimina',
+    'delete'=>'Elimina',
     'newArticleRev'=>'Ci sono nuovi articoli da revisionare!',
     'artReviewed'=> 'Articoli revisionati',
     'artRejected'=> 'Articoli rifiutati',
@@ -98,5 +98,6 @@ return[
     'deleteArt'=>'Cancella articolo',
     'discard'=> 'Scarta',
     'sureDelArt'=> 'Stai per eliminare il tuo articolo, sei sicuro?',
+    'articles'=>'Articoli',
 ];
 

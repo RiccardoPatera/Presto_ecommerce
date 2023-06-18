@@ -3,20 +3,20 @@
         <div class="col-12 d-flex user-info  justify-content-center ">
             <div class="row justify-content-center">
                 <div class="col-12">
-                    <h3 class="text-center">{{Ucwords($user->name)}} Articles</h3>
+                    <h3 class="text-center">{{Ucwords($user->name)}} {{__('ui.articles')}}</h3>
                 </div>
                 <div class="col-6 d-flex flex-column align-items-center justify-content-center">
                     <img src="{{Storage::url($user->img)}}" alt="user_img" class="img-fluid user-img ">
                 </div>
                 <div class="col-6 d-flex flex-column align-items-center justify-content-center ">
-                    <h6 class="">{{count($user->articles)}} Articles Uploaded</h6>
+                    <h6 class="">{{count($user->articles)}} {{__('ui.artUploaded')}}</h6>
                 </div>
             </div>
         </div>
 
 
         <div class="col-12  d-flex flex-column justify-content-center  user-articles">
-            <h3 class="text-center text-light ">User Articles</h3>
+            <h3 class="text-center text-light ">{{__('ui.userArt')}}</h3>
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     @forelse ($user->articles as $article)
@@ -36,7 +36,7 @@
                         </div>
                     @empty
                         <div class="col-12  d-flex align-item-center justify-content-center">
-                            <h4 class="text-center text-light">No products found</h4>
+                            <h4 class="text-center text-light">{{__('ui.noProdFound')}}</h4>
                         </div>
                     @endforelse
                 </div>

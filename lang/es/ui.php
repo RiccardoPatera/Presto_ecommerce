@@ -99,4 +99,5 @@ return[
     'deleteArt'=>'Eliminar artículo',
     'discard'=> 'Descartar',
     'sureDelArt'=> 'Estás a punto de borrar tu artículo, ¿estás seguro?',
+    'articles'=>'Artículos',
 ];
