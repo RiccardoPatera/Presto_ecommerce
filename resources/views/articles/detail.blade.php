@@ -1,17 +1,6 @@
 <x-layout>
-<<<<<<< HEAD
     <div class="container-fluid mt-lg-0 mt-5">
         <div class="row ms-md-5 vh-100 align-items-center">
-=======
-
-    <div>
-        <p class="mb-0 text-center fs-1 text-light">Detail</p>
-        <h1 class="display-1 text-center text-light">{{$article->title}}</h1>
-    </div>
-
-    <div class="container-fluid vh-100 mt-100">
-        <div class="row ms-md-5">
->>>>>>> 56fa7bc5704c2b1c0363a449e45ab46337ece0c8
             <div class="col-12 col-md-6">
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner carousel">
@@ -45,26 +34,16 @@
                     {{-- <a class="btn btn-outline-dark" href="#">Add to cart</a> --}}
                     <div class="d-flex mt-4 mb-5">
                         <div class="fs-5">
-<<<<<<< HEAD
                             @if ($article->user->id==Auth::id())
                             <a class="btn btnEdit fs-5 p-1 me-5" href="{{route('edit_article', compact('article'))}}"><i class="fa-solid fa-pencil p-2"></i></a>
                             <button class="btn btnDelete fs-5 p-1" type="button" data-bs-toggle="modal" data-bs-target="#modal-{{$article->id}}"><i class="fa-solid fa-trash p-2"></i></button>
                             @endif
-=======
-                            <a class="btn btnEdit fs-5 p-1 me-5" href="{{route('edit_article', compact('article'))}}"><i class="fa-solid fa-pencil p-2"></i></a>
-                            <button class="btn btnDelete fs-5 p-1" type="button" data-bs-toggle="modal" data-bs-target="#modal-{{$article->id}}"><i class="fa-solid fa-trash p-2"></i></button>
->>>>>>> 56fa7bc5704c2b1c0363a449e45ab46337ece0c8
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> 56fa7bc5704c2b1c0363a449e45ab46337ece0c8
 </x-layout>
 
 @foreach ($article->user->articles as $article)
@@ -88,8 +67,4 @@
             </div>
         </div>
     </div>
-<<<<<<< HEAD
 @endforeach
-=======
-@endforeach
->>>>>>> 56fa7bc5704c2b1c0363a449e45ab46337ece0c8
