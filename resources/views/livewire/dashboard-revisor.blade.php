@@ -53,12 +53,13 @@
                                             <div class="fadex">
                                             </div>
                                             <img src="{{$article->images()->first()->GetUrl(500,500)}}" class="card-img-top img-fluid" alt="...">
-                                            <div class="overlay">
-                                            </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title text">{{$article->title}}</h5>
                                                     <p class="card-text text">{{$article->price}} €</p>
                                                     <p class="card-text text">{{$article->category->category}}</p>
+                                                    <a href="{{route('users_articles',['user'=>$article->user])}}" class="z-3 w-100">
+                                                        <h6 class="fst-italic  z-4">Created by: {{Ucwords($article->user->name)}}</h6>
+                                                    </a>
                                                     @if($article->is_accepted===NULL)
                                                         <div class="bg-dark rounded">
                                                             <h6 class="text-light text-center mt-1">{{__('ui.undRev')}}</h6>
