@@ -16,19 +16,22 @@
 <body>
     <x-navbar />
 
-    <section id="Main">
-    {{$slot}}
+
+
+        <section id="Main">
+        {{$slot}}
 
 
 
-    </section>
+        </section>
 
 
 
 
 
 
-    <x-footer/>
+        <div class="push"> </div>
+        <x-footer/>
     @livewireScripts
     <script src="https://kit.fontawesome.com/203597dd98.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>

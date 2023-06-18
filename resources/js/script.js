@@ -19,6 +19,7 @@
 
 
 let logout = document.querySelector('#logout');
+let delete_article = document.querySelector('#delete');
 
 if (logout) {
     logout.addEventListener('click', (event)=>{
