@@ -21,7 +21,7 @@
 
     <div class="container-fluid ">
         <div class="row justify-content-between">
-            <div class="col-12 col-md-4  d-flex flex-column align-items-center justify-content-center ">
+            <div class="col-12 col-md-5  d-flex flex-column align-items-center justify-content-center ">
                 <div class="card card-detail text-center d-flex justify-content-center p-5 bg-light">
                     <h3 class="text-center  mb-5">User info</h3>
                     <h3>{{Ucwords($user->name)}}</h3>
@@ -35,7 +35,7 @@
 
                 </div>
             </div>
-            <div class="col-12 col-md-8 d-flex flex-column justify-content-center">
+            <div class="col-12 col-md-7 d-flex flex-column justify-content-center my-lg-0 my-5">
                 <h3 class="text-center text-light mb-5">User Articles</h3>
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">

@@ -4,7 +4,6 @@
             @if(!Auth::user()->is_revisor)
                 <div class="col-12 col-md-8 pt-5">
                     <h1 class="text-center pb-5 text-white">{{__('ui.work')}}</h1>
-                    <p class="text-center text-white">{{__('ui.tellUs')}}</p>
                     <livewire:revisor-form>
                 </div>
             @else
