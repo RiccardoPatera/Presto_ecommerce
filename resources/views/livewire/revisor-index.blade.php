@@ -121,7 +121,7 @@
 
 @else
 <div class="container-fluid ">
-    <div class="row  align-items-center  vh-100">
+    <div class="row  align-items-center min-100 ">
         <div class="col-12">
             <h1 class="text-white text-center">{{__('ui.revDash')}}</h1>
         </div>

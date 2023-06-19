@@ -15,7 +15,7 @@
         <h1 class="text-light display-1 text-center">Dashboard {{__('ui.rev')}}</h1>
     </div>
 
-    <div class="row d-flex justify-content-between align-items-center vh-75 my-3">
+    <div class="row d-flex justify-content-between align-items-center  my-3">
                 {{-- Colonna Dati Revisor --}}
                 <div class="col-12 col-md-5">
                     <div class="row justify-content-center mb-5">
@@ -79,7 +79,7 @@
                                         <div class="col-12">
                                             <div class="d-flex justify-content-center">
                                                 <form wire:submit.prevent='review({{$article}})'>
-                                                    <button class="btn-sendRewiew rounded"><h6 class="mt-2">{{__('ui.sendRev')}}</h6></button>
+                                                    <button class="btn-sendRewiew rounded mt-2"><h6 class="mt-2">{{__('ui.sendRev')}}</h6></button>
                                                 </form>
                                             </div>
                                         </div>
