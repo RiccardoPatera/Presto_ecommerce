@@ -28,7 +28,7 @@
                 </div>
                 <div class="col-12 justify-content-center d-flex p-0 " id="logo">
 
-                    <h1 class="new mb-5">presto</h1> 
+                    <h1 class="new mb-5">presto</h1>
                 </div>
             </div>
         </div>
@@ -75,7 +75,7 @@
         </div>
         <div class="col-12 col-md-6 text-light mt-5">
             <p class="textcustom text-center">{{__('ui.homestep3')}}</p>
-        </div>  
+        </div>
         </div>
     </div>
 
@@ -95,13 +95,13 @@
                                 <div class="card">
                                     <div class="fadex"></div>
                                     <img src="{{$article->images()->first()->GetUrl(500,500)}}" class="card-img-top-welcome img-fluid rounded-card" alt="...">
-                                    <div class="overlay rounded-end ">
+                                    <div class="overlay rounded-end z-4">
                                         <p class="text-card text-light ms-3">{{$article->price}} €</p>
                                         <a href="{{route('users_articles',['user'=>$article->user])}}" class="d-flex">
                                             <p class="fst-italic text-light ms-3">Created by: <h6 class="ms-2">{{Ucwords($article->user->name)}}</h6></p>
                                         </a>
                                     </div>
-                                    <div class="card-body">
+                                    <div class="card-body z-5">
                                         <p class="card-text text fst-italic text-light mb-2">{{$article->category->category}}</p>
                                         <h5 class="card-title text-light text fw-bold">{{$article->title}}</h5>
                                     </div>
