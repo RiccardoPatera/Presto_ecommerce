@@ -27,9 +27,9 @@
                     <div class="text-start mt-5">
                         <h3>{{ $article->title }}</h3>
                         <hr class="hr">
-                        <p class="fst-italic fs-5">Category: {{ $article->category->category }}</p>
-                        <p class="fs-5 mb-0 fw-semibold">Description: {{ $article->body }}</p>
-                        <p class="fst-italic textPrice">Price: {{ $article->price }}&euro;</p>
+                        <p class="fst-italic fs-5">{{__('ui.singleCat')}}: {{ $article->category->category }}</p>
+                        <p class="fs-5 mb-0 fw-semibold">{{__('ui.desc')}}: {{ $article->body }}</p>
+                        <p class="fst-italic textPrice">{{__('ui.price')}}: {{ $article->price }}&euro;</p>
                         <div class="d-flex justify-content-center mt-4">
                             <a class="btn btn-back fs-5 p-1" href="{{route('items')}}"><i class="fa-solid fa-arrow-left p-2"></i></a>
                         </div>
@@ -55,17 +55,17 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header bg-danger d-flex justify-content-center">
-                    <h1 class="modal-title fs-5" id="Modal-{{$article->id}}-label">Delete Article</h1>
+                    <h1 class="modal-title fs-5" id="Modal-{{$article->id}}-label">{{__('ui.deleteArt')}}</h1>
                 </div>
                 <div class="modal-body text-center">
-                    You are about to delete your article, are you sure?
+                {{__('ui.sureDelArt')}}
                 </div>
                 <div class="modal-footer d-flex justify-content-evenly">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Discard</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{__('ui.discard')}}</button>
                     <form method="POST"   action="{{route('delete_article',compact('article'))}}">
                         @csrf
                         @method('delete')
-                        <button type='submit' type="button" class="btn btn-danger">Delete Article</button>
+                        <button type='submit' type="button" class="btn btn-danger">{{__('ui.deleteArt')}}</button>
                     </form>
                 </div>
             </div>

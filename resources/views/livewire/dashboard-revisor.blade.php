@@ -21,7 +21,7 @@
                     <div class="row justify-content-center mb-5">
                         <div class="col-12">
                             <div class="card card-detail text-center p-5 d-flex justify-content-center bg-light">
-                                <h3 class="text-center mb-5">{{__('ui.rev')}} Info</h3>
+                                <h3 class="text-center mb-5">Info {{__('ui.rev')}}</h3>
                                 @livewire('user-img',compact('user'))
                                 <h3>{{Ucwords($user->name)}}</h3>
                                 <p>{{$user->email}}</p>
@@ -58,7 +58,7 @@
                                                     <h5 class="card-title text-light text">{{$article->title}}</h5>
                                                     <p class="card-text text-light text mb-2">{{$article->price}} €</p>
                                                     <a href="{{route('users_articles',['user'=>$article->user])}}" class="z-3 w-100">
-                                                        <h6 class="fst-italic text-light z-4">Created by: {{Ucwords($article->user->name)}}</h6>
+                                                        <h6 class="fst-italic text-light z-4">{{__('ui.createby')}} {{Ucwords($article->user->name)}}</h6>
                                                     </a>
                                                     @if($article->is_accepted===NULL)
                                                         <div class="bg-dark rounded">
@@ -101,10 +101,10 @@
             <div class="col-12 col-md-6">
                 <div class="row   justify-content-center vh-50">
                     <div class="col-12">
-                        <h2 class="text-white text-center">Articles reviewed</h2>
+                        <h2 class="text-white text-center">{{__('ui.artReviewed')}}</h2>
                     </div>
                     <div class="col-12">
-                        <h4 class="text-light text-center">No products revisored</h4>
+                        <h4 class="text-light text-center">{{__('ui.noProdRev')}}</h4>
                     </div>
                 </div>
             </div>

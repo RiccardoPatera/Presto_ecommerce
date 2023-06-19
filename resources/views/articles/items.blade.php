@@ -10,7 +10,7 @@
                 <h1 class="text-center my-2 text-white display-1"> {{__('ui.allArticles')}} </h1>
             </div>
             @if(count($articles)==1)
-                <h4 class="text-center text-white">{{$articles->total()}} Result </h4>
+                <h4 class="text-center text-white">{{$articles->total()}} {{__('ui.results')}} </h4>
             @else
                 <p class="text-center text-white mb-4 fs-4 fst-italic">{{$articles->total()}} {{__('ui.results')}} </p>
             @endif
@@ -23,7 +23,7 @@
                             <div class="overlay rounded-end">
                                 <p class="text-card text-light ms-3">{{$article->price}} €</p>
                                 <a href="{{route('users_articles',['user'=>$article->user])}}" class="z-3 w-100">
-                                    <p class="fst-italic ms-3 z-4 text-light">Created by: {{Ucwords($article->user->name)}}</p>
+                                    <p class="fst-italic ms-3 z-4 text-light">{{__('ui.createby')}} {{Ucwords($article->user->name)}}</p>
                                 </a>
                             </div>
                             <div class="card-body">
