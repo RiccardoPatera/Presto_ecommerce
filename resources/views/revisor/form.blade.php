@@ -9,6 +9,7 @@
             @else
                 <div class="col-12 d-flex justify-content-center align-items-center flex-column vh-100">
                     <div class="notify rounded mt-5 mb-3 text-center">
+                        <img src="{{Storage::url('public/media/alredyrevisor.png')}}" class="pngstep" alt="">
                         <h4>{{__('ui.alRev')}}</h4>
                         <h4>{{__('ui.viewRev')}}</h4>
                     </div>
