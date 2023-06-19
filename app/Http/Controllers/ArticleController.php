@@ -75,7 +75,7 @@ class ArticleController extends Controller
     {
         if ($article->is_accepted===0){
             if(Auth::id()==$article->user_id){
-                return view('Articles.edit',compact('article'))->with('message','Your article need to be updated');
+                return redirect(route('edit_article', compact('article')))->with('message','Your article need to be updated');
             }
             else{
                 return redirect(route('items'))->with('message',"The request article doesn't exist");
@@ -97,7 +97,7 @@ class ArticleController extends Controller
 
     public function edit(Article $article)
     {
-        if($article->id == Auth::id()){
+        if($article->user_id == Auth::id()){
             return view('articles.edit', compact('article'));
         }
         else {

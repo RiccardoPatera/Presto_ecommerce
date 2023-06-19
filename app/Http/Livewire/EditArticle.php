@@ -50,21 +50,8 @@ class EditArticle extends Component
         'temporary_images.*.image'=> 'The file need to be a image',
     ];
 
-    public function mount(){
-        $this -> title = $this -> article -> title;
-        $this -> price = $this -> article -> price;
-        $this -> body = $this -> article -> body;
-        $this -> category_id = $this -> article -> category->id;
 
-
-        // foreach ($this->article->images as $image)
-        // {   $this->images[]=$image;
-        //     $this->temporary_images[] = $image;
-        //  }
-    }
-
-    public function edit(){
-
+    public function edit() {
         $this->validate();
 
         $this->article->update([
@@ -75,39 +62,27 @@ class EditArticle extends Component
             'is_accepted'=>null,
         ]);
 
-        // if(count($this->images)){
-        //     foreach ($this->images as $image) {
-        //         // $this->article->images()->create(['path'=>$image->store('images', 'public')]);
-        //         $newFileName="articles/{$this->article->id}";
-        //         $newImage=$this->article->images()->create(['path'=>$image->store($newFileName, 'public')]);
-        //         dispatch(new ResizeImage($newImage->path,500,500));
-        //     }
-        //     File::deleteDirectory(storage_path('/app/livewire-tmp'));
-        // }
 
         return redirect(route('user_dashboard',['user'=> $this->article->user]))->with('message','Article updated correctly');
         session()->flash('message','Article edited successfully. Wait for the revisor to accept it.');
         $this->reset();
     }
-    // public function updatedTemporaryImages(){
-    //     if ($this->validate([
-    //         'temporary_images.*'=>"required|image|max:3072",
-    //     ])) {
-    //     foreach ($this->temporary_images as $image) {
-    //         $this->images[] = $image;
-    //     }
-    //     }
-    // }
 
-    // public function removeImage($key){
-    //     if (in_array($key, array_keys($this->images))) {
-    //         unset($this->images[$key]);
-    //     }
-    // }
 
     public function updated($propertyName){
         $this->validateOnly($propertyName);
     }
+
+
+    public function mount(){
+
+        $this -> title = $this -> article -> title;
+        $this -> price = $this -> article -> price;
+        $this -> body = $this -> article -> body;
+        $this -> category_id = $this -> article -> category->id;
+    }
+
+
 
     public function render()
     {
