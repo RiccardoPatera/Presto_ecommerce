@@ -21,6 +21,7 @@
                 <div class="col-12 d-flex align-items-end divcustom mt-5 mt-lg-0 " id='slogan2'>
                     <p class="textcustom ms-5 text-center pads">Elevate Your Style with Timeless Luxury.</p>
                 </div>
+                      
                 <div class="col-12 d-flex align-items-center d-flex flex-column ">
                 <div class="col-12 d-flex align-items-end copy mt-5 mt-lg-0 ">
                     <p class="d-none d-xl-block pads ">Codeartisans 2023 ©</p>
@@ -52,30 +53,41 @@
 
                 {{-- steps --}}
 
-    <div class="container-fluid justify-content-center mt-5 steps">
-        <div class="row">
+    <div class="container-fluid justify-content-center mt-5 pt-5 steps">
+        <div class="row justify-content-center d-flex">
         <div class="col-12 text-light">
-             <h2 class="text-center">{{__('ui.stepstart')}}</h2>
+             <h2 class="text-center">Earn money never was so easy!</h2>
 
         </div>
-        <div class="col-12 col-md-6 text-light mt-5">
-            <h3 class="text-center steptext">STEP 1 <i class="fa-solid fa-arrow-right fa-sm"></i></h3>
+        <div class="col-12 col-md-6 justify-content-center d-flex mt-5 pt-5">
+        <div class="justify-content-center d-flex">
+            <img src="{{Storage::url('public/media/step1.png')}}" class="pngstep" alt="">
+        </div>   
         </div>
-        <div class="col-12 col-md-6 text-light mt-5">
-            <p class="textcustom text-center">{{__('ui.homestep1')}}</p>
+        <div class="col-12 col-md-6 text-light align-items-center mt-5 pt-5 d-flex">
+            <p class="text-center steprule">Registration: Create an account on the selected website by following the registration instructions. Fill in the required fields with your personal information, such as name, email, and password. Verify your account if necessary.</p>
         </div>
-        <div class="col-12 col-md-6 text-light mt-5">
-            <p class="textcustom text-center">{{__('ui.homestep2')}}</p>
+        <div class="col-12 col-md-6 justify-content-center d-block d-sm-none d-sm-block d-flex">
+        <div class="justify-content-center d-flex">
+            <img src="{{Storage::url('public/media/step2.png')}}" class="pngstep" alt="">
         </div>
-        <div class="col-12 col-md-6 text-light mt-5 justify-content-end">
-            <h3 class="text-center steptext"><i class="fa-solid fa-arrow-left fa-sm"></i> STEP2</h3>
         </div>
-        <div class="col-12 col-md-6 text-light mt-5">
-            <h3 class="text-center steptext">STEP 3 <i class="fa-solid fa-arrow-right fa-sm"></i></h3>
+        <div class="col-12 col-md-6 text-light mt-5 align-items-center d-flex">
+            <p class="text-center steprule">Create your product: Log in to your account and create a new listing for the used product you want to sell. Provide a clear description of the product, including details such as brand, model, condition, and key features. Add high-quality photos to attract buyers' attention and wait our revisor accept it!</p>
         </div>
-        <div class="col-12 col-md-6 text-light mt-5">
-            <p class="textcustom text-center">{{__('ui.homestep3')}}</p>
+        <div class="col-12 col-md-6 justify-content-center d-none d-md-block d-lg-block d-flex">
+        <div class="justify-content-center d-flex">
+            <img src="{{Storage::url('public/media/step2.png')}}" class="pngstep" alt="">
         </div>
+        </div>
+        <div class="col-12 col-md-6 justify-content-center d-flex">
+        <div class="justify-content-center d-flex">
+            <img src="{{Storage::url('public/media/step3.png')}}" class="pngstep" alt="">
+        </div>
+        </div>
+        <div class="col-12 col-md-6 text-light mt-5 align-items-center d-flex">
+            <p class="text-center steprule">Managing Offers and Communication: Monitor your account to check for inquiries from interested buyers. Respond promptly to questions and negotiate any offers. Establish the final selling price and coordinate the payment and delivery method with the buyer. Maintain clear and friendly communication throughout the selling process.</p>
+        </div>  
         </div>
     </div>
 

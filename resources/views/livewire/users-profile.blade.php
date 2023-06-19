@@ -1,4 +1,4 @@
-<div class="container-fluid ">
+<div class="container-fluid min-100 ">
     <div class="row justify-content-between ">
         <div class="col-12 d-flex user-info  justify-content-center ">
             <div class="row justify-content-center">
