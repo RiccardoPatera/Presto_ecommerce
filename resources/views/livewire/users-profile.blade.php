@@ -36,7 +36,7 @@
                         </div>
                     @empty
                         <div class="col-12  d-flex align-item-center justify-content-center">
-                            <h4 class="text-center text-light">No products found</h4>
+                            <h4 class="text-center text-light">{{__('ui.noProdFound')}}</h4>
                         </div>
                     @endforelse
                 </div>

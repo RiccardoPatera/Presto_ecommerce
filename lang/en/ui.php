@@ -63,7 +63,7 @@ return[
     'reqPass'=>'The password is required',
     'ourvision'=>'"The vision for a vintage usage shop is to create a space where the beauty, nostalgia, and craftsmanship of bygone eras are celebrated and repurposed for modern-day use. It aims to provide a curated collection of unique and high-quality vintage items that can be integrated seamlessly into contemporary lifestyles. The shop promotes sustainability by encouraging the reuse and upcycling of vintage pieces, allowing customers to infuse their surroundings with character and history. It aspires to be a hub for creativity and inspiration, where individuals can find one-of-a-kind treasures that tell stories and evoke a sense of timelessness."',
     'ourv'=> 'Our vision',
-    'homestep1'=>'Registration: Create an account on the selected website by following the registration instructions. Fill in the required fields with your personal information, such as name, email, and password. Verify your account if necessary.',
+    'homestep1'=>'Registration: Create an account by following the registration instructions. Fill in the required fields with your personal information, such as name, email, and password.',
     'homestep2'=>'Create your product: Log in to your account and create a new listing for the used product you want to sell. Provide a clear description of the product, including details such as brand, model, condition, and key features. Add high-quality photos to attract buyers attention and wait our revisor accept it!',
     'homestep3'=>'Managing Offers and Communication: Monitor your account to check for inquiries from interested buyers. Respond promptly to questions and negotiate any offers. Establish the final selling price and coordinate the payment and delivery method with the buyer. Maintain clear and friendly communication throughout the selling process.',
     'stepstart'=>'Sell your products never was so easy!',
@@ -83,7 +83,7 @@ return[
     'tipRev'=>'Tip from revisor',
     'delete'=>'delete',
     'newArticleRev'=>'There are new articles to review!',
-    'artReviewed'=> 'Articols reviewed',
+    'artReviewed'=> 'Articles reviewed',
     'artRejected'=> 'Articles rejected',
     'artToBeReviewed'=> 'Articles to be reviewed',
     'joinedOn'=> 'Joined on',
@@ -99,5 +99,6 @@ return[
     'discard'=> 'Discard',
     'sureDelArt'=> 'You are about to delete your article, are you sure?',
     'articles'=>'Articles',
+    'noProdRev'=>'No products revisored'
 
 ];

@@ -53,41 +53,55 @@
 
                 {{-- steps --}}
 
-    <div class="container-fluid justify-content-center mt-5 pt-5 steps">
+    <div class="container-fluid justify-content-center mt-5 pt-5 steps" >
         <div class="row justify-content-center d-flex">
         <div class="col-12 text-light">
-             <h2 class="text-center">Earn money never was so easy!</h2>
+             <h2 class="text-center">{{__('ui.stepstart')}}</h2>
 
         </div>
-        <div class="col-12 col-md-6 justify-content-center d-flex mt-5 pt-5">
+
+        <div class="row steprule ">
+            <div class="col-12 col-md-6 justify-content-center d-flex ">
         <div class="justify-content-center d-flex">
             <img src="{{Storage::url('public/media/step1.png')}}" class="pngstep" alt="">
         </div>   
         </div>
-        <div class="col-12 col-md-6 text-light align-items-center mt-5 pt-5 d-flex">
-            <p class="text-center steprule">Registration: Create an account on the selected website by following the registration instructions. Fill in the required fields with your personal information, such as name, email, and password. Verify your account if necessary.</p>
+        <div class="col-12 col-md-6 text-light align-items-center pt-5 d-flex message-bubble">
+            <p class="text-center">{{__('ui.homestep1')}}</p>
         </div>
-        <div class="col-12 col-md-6 justify-content-center d-block d-sm-none d-sm-block d-flex">
+        </div>
+
+
+        <div class="row steprule">
+            <div class="col-12 col-md-6 justify-content-center d-block d-sm-none d-sm-block d-flex">
         <div class="justify-content-center d-flex">
             <img src="{{Storage::url('public/media/step2.png')}}" class="pngstep" alt="">
         </div>
         </div>
         <div class="col-12 col-md-6 text-light mt-5 align-items-center d-flex">
-            <p class="text-center steprule">Create your product: Log in to your account and create a new listing for the used product you want to sell. Provide a clear description of the product, including details such as brand, model, condition, and key features. Add high-quality photos to attract buyers' attention and wait our revisor accept it!</p>
+            <p class="text-center">{{__('ui.homestep2')}}</p>
         </div>
         <div class="col-12 col-md-6 justify-content-center d-none d-md-block d-lg-block d-flex">
         <div class="justify-content-center d-flex">
             <img src="{{Storage::url('public/media/step2.png')}}" class="pngstep" alt="">
         </div>
         </div>
-        <div class="col-12 col-md-6 justify-content-center d-flex">
+        </div>
+
+        <div class="row steprule">
+            <div class="col-12 col-md-6 justify-content-center d-flex">
         <div class="justify-content-center d-flex">
             <img src="{{Storage::url('public/media/step3.png')}}" class="pngstep" alt="">
         </div>
         </div>
         <div class="col-12 col-md-6 text-light mt-5 align-items-center d-flex">
-            <p class="text-center steprule">Managing Offers and Communication: Monitor your account to check for inquiries from interested buyers. Respond promptly to questions and negotiate any offers. Establish the final selling price and coordinate the payment and delivery method with the buyer. Maintain clear and friendly communication throughout the selling process.</p>
+            <p class="text-center">{{__('ui.homestep3')}}</p>
         </div>  
+        </div>
+
+
+        
+        
         </div>
     </div>
 
@@ -104,13 +118,13 @@
                         @foreach ($articles->take(6) as $article)
                         <div class="col-12 col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center my-4">
                             <a href="{{route('show_article',compact('article'))}}" class="">
-                                <div class="card">
+                                <div class="card shadowcard">
                                     <div class="fadex"></div>
                                     <img src="{{$article->images()->first()->GetUrl(500,500)}}" class="card-img-top-welcome img-fluid rounded-card" alt="...">
                                     <div class="overlay rounded-end z-4">
                                         <p class="text-card text-light ms-3">{{$article->price}} €</p>
                                         <a href="{{route('users_articles',['user'=>$article->user])}}" class="d-flex">
-                                            <p class="fst-italic text-light ms-3">Created by: <p class="ms-2 fst-italic text-light">{{Ucwords($article->user->name)}}</p></p>
+                                            <p class="fst-italic text-light ms-3">{{__('ui.createby')}} <p class="ms-2 fst-italic text-light">{{Ucwords($article->user->name)}}</p></p>
                                         </a>
                                     </div>
                                     <div class="card-body z-5">

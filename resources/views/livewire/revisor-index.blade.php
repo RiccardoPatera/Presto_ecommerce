@@ -128,6 +128,7 @@
         <div class="col-12">
                 <div class="col-12 d-flex  flex-column justify-content-center  align-items-center ">
                     <div class="d-flex align-items-center justify-content-center flex-column notify mt-3">
+                        <img src="{{Storage::url('public/media/norev.png')}}" class="pngstep" alt="">
                         <h3 class="text-center">{{__('ui.noRevArt')}}</h3>
                         <h3 class="text-center"> {{__('ui.seeSoon')}} <i class="fa-regular fa-face-smile" style="color: #000000;"></i></h3>
                     </div>
