@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Article;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Models\Category;
+use Illuminate\Support\Facades\Auth;
 
 
 class PublicController extends Controller
@@ -21,7 +23,15 @@ class PublicController extends Controller
         return redirect()->back();
     }
 
+
+    public function users_articles(User $user){
+         if($user->id != Auth::id()){
+            return view('profile',compact('user'));
+    }
+        else{
+            return redirect(route('user_dashboard',['user'=>Auth::user()]));
+        }
 }
 
 
-
+}

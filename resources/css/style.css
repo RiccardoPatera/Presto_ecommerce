@@ -11,9 +11,7 @@
 bg.test{
     background-color: var(--test);
 }
-.test{
-    border-color: white;
-}
+
 }
 html {
     min-height: 100vh;
@@ -22,7 +20,7 @@ html {
 body{
     /* background-color: var(--richblue); */
     min-height: 100vh;
-    background:var(--richblue) linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.397));
+    background: var(--richblue) linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.205));
 }
 
 /* UTILITY */
@@ -43,6 +41,9 @@ body{
     height: 75vh;
 }
 
+.min-100{
+min-height: 100vh
+}
 .title-text{
     font-size: 45px;
     font-weight: bold;
@@ -73,6 +74,7 @@ body{
 
 .user{
     width:400px;
+    height: fit-content;
 }
 
 .btn-link{
@@ -147,7 +149,7 @@ body{
 
 .card-body{
     position: absolute;
-    height: 100%;
+    height: fit-content;
 }
 
 /* CAROUSEL */
@@ -191,16 +193,35 @@ body{
 footer {
     height:fit-content;
     background-color: var(--test);
+    clear: both;
+
 }
+/* .push {
+	height: 50px;
+    clear: both;
+
+}
+html, body {
+	height: 100%;
+}
+
+#container {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -50px;
+} */
 
 
 .revisor-card{
-    height: 65vh;
+    height:fit-content;
+
 }
 
-/* .borderFooterTop{
-    border-top: 2px solid var(--gray);
-} */
+.revisor-carousel{
+
+    width: 100%;
+}
 
 .icona-footer{
     color: white;
@@ -256,7 +277,9 @@ footer {
 .card{
     /* height: 100%; */
     position: relative;
-    border: none;
+    border-radius: 20px;
+    border: solid 0px transparent;
+    /* border: none; */
 }
 
 .card-img-top{
@@ -267,8 +290,8 @@ footer {
 }
 
 .card-img-top-welcome{
-    height:60vh;
-    width:60vh;
+    height:320px;
+    width:320px;
     object-fit:cover;
     color: #0d182180;
 }
@@ -306,7 +329,11 @@ footer {
 
 .rounded-custom{
     border-top-right-radius: var(--bs-border-radius);
-    border-bottom-left-radius: var(--bs-border-radius);
+    border-bottom-left-radius: 20px var(--bs-border-radius);
+}
+
+.rounded-card{
+    border-radius: 20px;
 }
 
 .user_crud{
@@ -330,6 +357,16 @@ footer {
     object-fit: cover;
     object-position: center;
 }
+.user-info{
+    height: fit-content;
+    /* border-bottom: 5px solid white; */
+    background-color: white;
+
+}
+.user-articles{
+    /* background-color: var(--test); */
+    padding-top: 30px;
+}
 
 .card a{
     text-decoration: none;
@@ -344,8 +381,9 @@ footer {
     right: 70px;
     opacity: 0;
     transition: .5s;
-    background-color: rgba(70, 70, 70, 0.659);
+    background-color: rgba(70, 70, 70, 0.404);
     color: white;
+    /* z-index: 1000; */
 }
 
 .text-card{
@@ -370,7 +408,7 @@ footer {
     width: 100%;
     opacity: 1;
     background: linear-gradient(rgba(106, 106, 106, 0.407), rgba(53, 53, 53, 0.363));
-    border-radius: 5px;
+    border-radius: 20px;
 }
 
 /* MEGA CONTAINER SEARCH */
@@ -422,6 +460,21 @@ footer {
     background-color: white;
     border: solid 2px rgb(255, 93, 93);
     box-shadow: 0px 0px 8px 1px rgb(255, 93, 93);
+    transition: .5s;
+}
+
+.btn-back{
+    background-color: rgba(0, 0, 0, 0.650);
+    border: solid 2px rgba(0, 0, 0, 0.650);
+    color: rgb(169, 199, 253);
+    transition: .5s;
+}
+
+.btn-back:hover{
+    color: black;
+    background-color: white;
+    border: solid 2px rgb(169, 199, 253);
+    box-shadow: 0px 0px 8px 1px rgb(169, 199, 253);
     transition: .5s;
 }
 
@@ -488,10 +541,7 @@ div.vh-50 > .btn:hover {
 }
 
 /* HYPERTEXT */
-.nav-link:hover{
-    transform: scale(1.15);
-    transition:1s;
-}
+
 
 .alert-custom{
     height:30px;
@@ -606,7 +656,7 @@ h2{
   }
 
   .tag>p{
-    font-size: 14px;
+    font-size: 11px;
   }
 
 
@@ -624,22 +674,23 @@ h2{
 
 
   /* Media Query */
-  @media screen and (min-width:991px) {
+  @media screen and (min-width:1200px) {
     .under1{
         font-size: 22px;
     }
-    .push{
-        height: 17vh;
+    .nav-link:hover{
+        transform: scale(1.15);
+        transition:1s;
     }
+
+
 
 }
     @media screen and (max-width:767px) {
     .under1{
         font-size: 15px;
     }
-    .push{
-        height: 180vw;
-    }
+
     .textcustom{
         font-size: 19px;
     }
@@ -649,13 +700,15 @@ h2{
     }
 
 
-    @media screen  and (min-width:768px) and (max-width:991px) {
+
+
+    @media screen  and (min-width:768px) and (max-width:1200px) {
     .under1{
         font-size: 17px;
     }
-    .push{
-        height: 35vh;
-    }
+
+
+
 
 
 }
@@ -671,6 +724,8 @@ h2{
         width:500px;
         max-height: 80vh;
     }
+
+
 }
 
 

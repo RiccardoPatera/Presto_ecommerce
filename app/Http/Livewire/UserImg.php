@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
+use Illuminate\Support\Facades\File;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Storage;
 
@@ -27,6 +28,7 @@ class UserImg extends Component
         $this->user->update([
             'img'=>$this->img->store('public/user/'. $this->user->id),
         ]);
+        File::deleteDirectory(storage_path('/app/livewire-tmp'));
 
     }
     public function render()
