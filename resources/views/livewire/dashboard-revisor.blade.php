@@ -19,7 +19,7 @@
                 {{-- Colonna Dati Revisor --}}
                 <div class="col-12 col-md-5">
                     <div class="row justify-content-center mb-5">
-                        <div class="col-12">
+                        <div class="col-8">
                             <div class="card card-detail text-center p-5 d-flex justify-content-center bg-light">
                                 <h3 class="text-center mb-5">Info {{__('ui.rev')}}</h3>
                                 @livewire('user-img',compact('user'))
