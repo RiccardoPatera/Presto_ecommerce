@@ -30,6 +30,9 @@
                         <p class="fst-italic fs-5">Category: {{ $article->category->category }}</p>
                         <p class="fs-5 mb-0 fw-semibold">Description: {{ $article->body }}</p>
                         <p class="fst-italic textPrice">Price: {{ $article->price }}&euro;</p>
+                        <div class="d-flex justify-content-center mt-4">
+                            <a class="btn btn-back fs-5 p-1" href="{{route('items')}}"><i class="fa-solid fa-arrow-left p-2"></i></a>
+                        </div>
                     </div>
                     {{-- <a class="btn btn-outline-dark" href="#">Add to cart</a> --}}
                     <div class="d-flex mt-4 mb-5">
