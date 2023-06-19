@@ -56,7 +56,7 @@
     <div class="container-fluid justify-content-center mt-5 pt-5 steps">
         <div class="row justify-content-center d-flex">
         <div class="col-12 text-light">
-             <h2 class="text-center">Earn money never was so easy!</h2>
+             <h2 class="text-center">Sell your products never was so easy!</h2>
 
         </div>
         <div class="col-12 col-md-6 justify-content-center d-flex mt-5 pt-5">
@@ -64,7 +64,7 @@
             <img src="{{Storage::url('public/media/step1.png')}}" class="pngstep" alt="">
         </div>   
         </div>
-        <div class="col-12 col-md-6 text-light align-items-center mt-5 pt-5 d-flex">
+        <div class="col-12 col-md-6 text-light align-items-center mt-5 pt-5 d-flex message-bubble">
             <p class="text-center steprule">Registration: Create an account on the selected website by following the registration instructions. Fill in the required fields with your personal information, such as name, email, and password. Verify your account if necessary.</p>
         </div>
         <div class="col-12 col-md-6 justify-content-center d-block d-sm-none d-sm-block d-flex">
