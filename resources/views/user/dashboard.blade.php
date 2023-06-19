@@ -18,6 +18,11 @@
             <p class="alert alert-danger text-center">{{ session('deleted') }}</p>
         </div>
     @endif
+    @if (session('edit'))
+    <div class="col-12 ">
+        <p class="alert alert-warning text-center">{{ session('edit') }}</p>
+    </div>
+    @endif
 
     <div class="container-fluid ">
         <div class="row justify-content-between">
