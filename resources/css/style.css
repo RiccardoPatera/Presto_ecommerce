@@ -75,7 +75,7 @@ min-height: 100vh
 
 .user{
     width:400px;
-    height: fit-content;
+
 }
 
 .btn-link{
@@ -805,12 +805,12 @@ h2{
 }
 .steptext{
     font-size: 50px;
-    
+
 }
 .steprule{
     font-size: 20px;
     color: white;
-    
+
 }
 .pngstep{
     width: 40vh;

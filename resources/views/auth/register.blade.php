@@ -4,13 +4,13 @@
         <div class="row justify-content-center min-100 align-items-center ">
 
 
-            <div class="col-12 col-md-8 user rounded bg-light p-5">
+            <div class="col-12 col-md-8 user rounded bg-light ">
                 <div class="row">
                     <div class="col-12 ">
                         <h1 class="text-center display-1 mb-5 mt-3">{{__('ui.register')}}</h1>
                     </div>
                     <div class="col-12">
-                        <form method="POST" action="{{ route('register') }}" clas >
+                        <form method="POST" action="{{ route('register') }}"  >
                             @csrf
 
                             <div class="mb-3">
