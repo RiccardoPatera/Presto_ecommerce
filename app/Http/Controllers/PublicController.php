@@ -25,14 +25,14 @@ class PublicController extends Controller
 
 
     public function users_articles(User $user){
-        //  if($user->id != Auth::id()){
+         if($user->id != Auth::id()){
             return view('profile',compact('user'));
-//     }
-//         else{
-//             return redirect(route('user_dashboard',['user'=>Auth::user()]));
-
-// }
+    }
+        else{
+            return redirect(route('user_dashboard',['user'=>Auth::user()]));
 
 }
 
+
+}
 }
