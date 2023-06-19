@@ -66,13 +66,8 @@
                     <div id="carouselExampleControls" class="carousel slide  " data-bs-ride="carousel">
                         <div class="carousel-inner  ">
                             @foreach ($article->images as $image)
-<<<<<<< HEAD
                                 <div class="carousel-item @if($loop->first) active @endif padimage">
-                                    <img src={{$image->getUrl(500,500)}} class="img-fluid d-block " alt="img">
-=======
-                                <div class="carousel-item @if($loop->first) active @endif">
-                                    <img src={{$image->getUrl(500,500)}} class="img-fluid revisor-carousel d-block  " alt="img">
->>>>>>> cd9993174c77ccfc19a00687fa48e147121553f1
+                                    <img src={{$image->getUrl(500,500)}} class="img-fluid d-block w-100 " alt="img">
                                 </div>
                             @endforeach
                         </div>

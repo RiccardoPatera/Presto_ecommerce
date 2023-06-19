@@ -194,6 +194,7 @@ footer {
     height:fit-content;
     background-color: var(--test);
     clear: both;
+    margin-top: 150px;
 
 }
 /* .push {
