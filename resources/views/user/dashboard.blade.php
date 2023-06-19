@@ -29,8 +29,9 @@
                     <p class="">{{$user->email}}</p>
                     <hr class="hr-custom">
                     <p class="mb-0">{{__('ui.artUploaded')}}: {{count($user->articles)}}</p>
-                    <p class="">{{__('ui.artRejected')}}: {{count($user->articles->where('is_accepted','===', 0))}}</p>
-                    <p class="fst-italic mb-0">{{__('ui.joinedOn')}}: {{$user->created_at }}</p>
+                    <p class="mb-0">{{__('ui.artRejected')}}: {{count($user->articles->where('is_accepted','===', 0))}}</p>
+                    <p class="">{{__('ui.undRev')}}: {{count($user->articles->where('revisored_by', '---', null))}}</p>
+                    <p class="fst-italic mb-0">{{__('ui.joinedOn')}}: {{substr($user->created_at, 0, 10) }}</p>
                 </div>
             </div>
 

@@ -18,46 +18,45 @@
                     <a class="nav-link text-white" href="{{route('items')}}">{{__('ui.allArticles')}}</a>
                 </li>
 
-                @auth
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="{{route('create_article')}}">{{__('ui.create')}}</a>
-                </li>
+                @Auth
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{{route('create_article')}}">{{__('ui.create')}}</a>
+                    </li>
 
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        {{__('ui.welcome')}} {{ucwords(Auth::user()->name)}}
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{route('user_dashboard',['user'=>Auth::user() ])}}">{{__('ui.prof')}}</a></li>
-                    @if(Auth::user()->is_revisor)
-                        <li>
-                            <a class="dropdown-item" href="{{route('revisor_index')}}">{{__('ui.rev')}}
-                                <span class="position-absolute top-50 start-100 translate-middle badge rounded-pill bg-danger">
-                                        {{App\Models\Article::toBeRevisionedCount()}}
-                                </span>
-                            </a>
-                        </li>
-                    @endif
-                        <form id="logoutForm" method="POST" action="{{route('logout')}}">
-                        @csrf
-                        <a id="logout" class="dropdown-item">Logout</a>
-                        </form>
-                    </ul>
-                </li>
-
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            {{__('ui.welcome')}} {{ucwords(Auth::user()->name)}}
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{route('user_dashboard',['user'=>Auth::user() ])}}">{{__('ui.prof')}}</a></li>
+                        @if(Auth::user()->is_revisor)
+                            <li>
+                                <a class="dropdown-item" href="{{route('revisor_index')}}">{{__('ui.rev')}}
+                                    <span class="position-absolute top-50 start-100 translate-middle badge rounded-pill bg-danger">
+                                            {{App\Models\Article::toBeRevisionedCount()}}
+                                    </span>
+                                </a>
+                            </li>
+                        @endif
+                            <form id="logoutForm" method="POST" action="{{route('logout')}}">
+                            @csrf
+                            <a id="logout" class="dropdown-item">Logout</a>
+                            </form>
+                        </ul>
+                    </li>
                 @else
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white " href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        {{__('ui.welcome')}}
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{route('register')}}">{{__('ui.register')}}</a></li>
-                        <li><a class="dropdown-item" href="{{route('login')}}">{{__('ui.login')}}</a></li>
-                    </ul>
-                </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white " href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            {{__('ui.welcome')}}
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{route('register')}}">{{__('ui.register')}}</a></li>
+                            <li><a class="dropdown-item" href="{{route('login')}}">{{__('ui.login')}}</a></li>
+                        </ul>
+                    </li>
                 @endauth
 
 

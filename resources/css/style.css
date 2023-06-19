@@ -40,10 +40,20 @@ body{
 .vh-75{
     height: 75vh;
 }
-
 .min-100{
 min-height: 100vh
 }
+
+.hr-custom{
+    width: 60vw;
+}
+
+@media screen and (min-width: 480px){
+    .hr-custom{
+    width: 20vw;
+    }
+}
+
 .title-text{
     font-size: 45px;
     font-weight: bold;
@@ -72,10 +82,6 @@ min-height: 100vh
     cursor: pointer;
 }
 
-.user{
-    width:400px;
-    height: fit-content;
-}
 
 .btn-link{
     text-decoration:none;
@@ -167,6 +173,9 @@ min-height: 100vh
     background-color: white;
 }
 
+.card-profile{
+    box-shadow: 20px 20px 8px 0px rgba(255, 255, 255, 0.29);
+}
 
 .card-body{
     position: absolute;

@@ -30,9 +30,6 @@
                         <p class="fst-italic fs-5">Category: {{ $article->category->category }}</p>
                         <p class="fs-5 mb-0 fw-semibold">Description: {{ $article->body }}</p>
                         <p class="fst-italic textPrice">Price: {{ $article->price }}&euro;</p>
-                        <div class="d-flex justify-content-center mt-4">
-                            <a class="btn btn-back fs-5 p-1" href="{{route('items')}}"><i class="fa-solid fa-arrow-left p-2"></i></a>
-                        </div>
                     </div>
                     {{-- <a class="btn btn-outline-dark" href="#">Add to cart</a> --}}
                     <div class="d-flex mt-4 mb-5">
@@ -40,7 +37,11 @@
                             @if ($article->user->id==Auth::id())
                                 <a class="btn btnEdit fs-5 p-1 me-5" href="{{route('edit_article', compact('article'))}}"><i class="fa-solid fa-pencil p-2"></i></a>
                                 <button class="btn btnDelete fs-5 p-1" type="button" data-bs-toggle="modal" data-bs-target="#modal-{{$article->id}}"><i class="fa-solid fa-trash p-2"></i></button>
-                                <a class="btn btn-back fs-5 p-1 ms-5" href="{{route('user_dashboard',['user'=>Auth::user()])}}"><i class="fa-solid fa-arrow-left p-2"></i></a>
+                                <a class="btn btn-back fs-5 p-1 ms-5" href="{{route('items')}}"><i class="fa-solid fa-arrow-left p-2"></i></a>
+                            @elseif($article->user->id)
+                                <div class="d-flex justify-content-center">
+                                    <a class="btn btn-back fs-5 p-1" href="{{route('items')}}"><i class="fa-solid fa-arrow-left p-2"></i></a>
+                                </div>
                             @endif
                         </div>
                     </div>

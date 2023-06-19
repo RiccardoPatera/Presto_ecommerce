@@ -29,7 +29,7 @@
                                 <p class="mb-0">{{__('ui.artReviewed')}}: {{count($articles)}}</p>
                                 <p class="mb-0">{{__('ui.artRejected')}}: {{count($articles->where('is_accepted','===', 0))}}</p>
                                 <p>{{__('ui.artToBeReviewed')}}: {{count($articles->where('is_accepted','===', null))}}</p>
-                                <p class="mb-0 fst-italic">{{__('ui.joinedOn')}}: {{$user->created_at }}</p>
+                                <p class="mb-0 fst-italic">{{__('ui.joinedOn')}}: {{substr($user->created_at, 0, 10) }}</p>
                             </div>
                         </div>
                     </div>

@@ -32,7 +32,7 @@
 
 
 
-                                <p class=" ">{{__('ui.notReg')}} <a href="{{route('register')}}" class="text-black">{{__('ui.hereReg')}}</a></p>
+                                <p>{{__('ui.notReg')}} <a href="{{route('register')}}" class="text-black">{{__('ui.hereReg')}}</a></p>
 
                                 <button type="submit" class="btn btn-dark">{{__('ui.login')}}</button>
 
