@@ -98,7 +98,7 @@
                                     <div class="overlay rounded-end z-4">
                                         <p class="text-card text-light ms-3">{{$article->price}} €</p>
                                         <a href="{{route('users_articles',['user'=>$article->user])}}" class="d-flex">
-                                            <p class="fst-italic text-light ms-3">Created by: <h6 class="ms-2">{{Ucwords($article->user->name)}}</h6></p>
+                                            <p class="fst-italic text-light ms-3">Created by: <p class="ms-2 fst-italic text-light">{{Ucwords($article->user->name)}}</p></p>
                                         </a>
                                     </div>
                                     <div class="card-body z-5">

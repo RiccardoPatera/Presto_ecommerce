@@ -12,7 +12,7 @@
                         <h4>{{__('ui.alRev')}}</h4>
                         <h4>{{__('ui.viewRev')}}</h4>
                     </div>
-                    <a href="{{route('revisor_index')}}" class="btn-link"><h5>{{__('ui.go')}}</h5></a>
+                    <a href="{{route('revisor_index')}}" class="btn-link"><p class="mb-0 p-2 fw-semibold fs-5">{{__('ui.go')}}</p></a>
                 </div>
             @endif
         </div>

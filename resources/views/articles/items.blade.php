@@ -21,9 +21,9 @@
                             <div class="fadex"></div>
                             <img src="{{$article->images()->first()->GetUrl(500,500)}}" class="card-img-top-welcome img-fluid rounded-card" alt="...">
                             <div class="overlay rounded-end">
-                                <p class="text-card ms-3">{{$article->price}} €</p>
+                                <p class="text-card text-light ms-3">{{$article->price}} €</p>
                                 <a href="{{route('users_articles',['user'=>$article->user])}}" class="z-3 w-100">
-                                    <h6 class="fst-italic ms-3 z-4 text-light">Created by: {{Ucwords($article->user->name)}}</h6>
+                                    <p class="fst-italic ms-3 z-4 text-light">Created by: {{Ucwords($article->user->name)}}</p>
                                 </a>
                             </div>
                             <div class="card-body">

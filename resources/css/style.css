@@ -87,13 +87,31 @@ min-height: 100vh
     padding-top:1px;
     padding-bottom:1px;
     padding-left:7px ;
-    padding-right:7px
+    padding-right:7px;
+    border: 2px solid white;
 }
 .btn-link:hover{
     color:white;
     background-color:var(--richblue);
     border: 2px solid white;
+}
 
+.btn-sendRewiew{
+    background-color: white;
+    padding-right: 15px;
+    padding-left: 15px;
+    color: rgb(123, 167, 250);
+    border: solid 1px white;
+    transition: .3s;
+}
+
+.btn-sendRewiew:hover{
+    background-color: white;
+    padding-right: 15px;
+    padding-left: 15px;
+    border: solid 1px rgb(169, 199, 253);
+    color: var(--richblue);
+    transition: .3s;
 }
 
 /* NAVBAR */
@@ -114,8 +132,12 @@ min-height: 100vh
     width: 20vw;
 }
 
-
-
+.dropdown-menu[data-bs-popper] {
+    top: 100%;
+    left: 0;
+    margin-top: var(--bs-dropdown-spacer);
+    min-width:fit-content;
+}
 
 .categoryfixed{
     position:fixed;

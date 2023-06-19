@@ -11,6 +11,10 @@
             <ul class="navbar-nav mx-auto mb-lg-0" >
 
                 <li class="nav-item">
+                    <a class="nav-link text-white" href="{{route('welcome')}}"><i class="fa-solid fa-house"></i></a>
+                </li>
+
+                <li class="nav-item">
                     <a class="nav-link text-white" href="{{route('items')}}">{{__('ui.allArticles')}}</a>
                 </li>
 
@@ -67,19 +71,17 @@
                         aria-expanded="false">
                         {{__('ui.lang')}}
                     </a>
-                    <ul class="dropdown-menu">
-                        <div class="container ">
-                            <div class="row ">
-                                <div class="col-12 p-0">
-                                    <li class="nav-item bg-dark p-0">
+                    <ul class="dropdown-menu bg-dark">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 text-center p-0">
+                                    <li class="nav-item p-0 border-bottom">
                                         <x-_locale lang="it"/>
                                     </li>
-                                    <hr class="hr">
-                                    <li class="nav-item bg-dark p-0">
+                                    <li class="nav-item p-0  border-bottom">
                                         <x-_locale lang="en"/>
                                     </li>
-                                    <hr class="hr">
-                                    <li class="nav-item bg-dark p-0">
+                                    <li class="nav-item p-0">
                                         <x-_locale lang="es"/>
                                     </li>
                                 </div>
@@ -87,20 +89,6 @@
                         </div>
                     </ul>
                 </li>
-
-                {{-- <div class="d-flex">
-                    <li class="nav-item">
-                        <x-_locale lang="it"/>
-                    </li>
-
-                    <li class="nav-item">
-                        <x-_locale lang="en"/>
-                    </li>
-
-                    <li class="nav-item">
-                        <x-_locale lang="es"/>
-                    </li>
-                </div> --}}
             </ul>
 
             {{-- <button id="search" class="btn btn-light"><i class="fa-solid fa-magnifying-glass"></i></button> --}}
