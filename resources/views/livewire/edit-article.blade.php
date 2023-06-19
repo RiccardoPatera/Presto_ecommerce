@@ -4,7 +4,7 @@
     </div>
 @endif
 
-<form wire:submit.prevent="edit" class="shadow rounded p-5 my-2 bg-light">
+<form wire:submit.prevent="edit" class="shadowcard rounded p-5 my-2 bg-light">
 
     <div class="col-12">
         @if(session('message'))

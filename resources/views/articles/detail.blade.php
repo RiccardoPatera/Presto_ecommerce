@@ -2,7 +2,7 @@
     <div class="container-fluid mt-lg-0 mt-5">
         <div class="row ms-md-5 vh-100 align-items-center">
             <div class="col-12 col-md-6">
-                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div id="carouselExampleControls" class="carousel slide shadowhite" data-bs-ride="carousel">
                     <div class="carousel-inner carousel">
                         @foreach ($article->images as $image)
                             <div class="carousel-item @if($loop->first) active @endif">

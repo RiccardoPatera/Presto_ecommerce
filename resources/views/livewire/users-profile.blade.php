@@ -21,7 +21,7 @@
                 <div class="swiper-wrapper">
                     @forelse ($user->articles as $article)
                         <div class="swiper-slide">
-                            <div class="card">
+                            <div class="card shadowcard">
                                 <a href="{{ route('show_article', compact('article')) }}">
                                     <div class="fadex"></div>
                                     <img src="{{ $article->images()->first()->GetUrl(500, 500) }}"

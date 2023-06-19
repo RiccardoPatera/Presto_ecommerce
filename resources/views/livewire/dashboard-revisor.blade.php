@@ -49,7 +49,7 @@
                                 @foreach ($articles->where('revisored_by',$this->user->id) as $article)
                                 <div class="swiper-slide">
                                     <a href="{{route('show_article',compact('article'))}}" class="">
-                                        <div class="card shadow">
+                                        <div class="card shadowcard">
                                             <div class="fadex">
                                             </div>
                                             <img src="{{$article->images()->first()->GetUrl(500,500)}}" class="card-img-top img-fluid rounded-card" alt="...">
