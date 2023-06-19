@@ -72,19 +72,39 @@
                         aria-expanded="false">
                         {{__('ui.lang')}}
                     </a>
-                    <ul class="dropdown-menu">
+
+                    <ul class="dropdown-menu p-0 ">
                         <div class="container ">
-                            <div class="row">
+                            <div class="row p-0">
                                 <div class="col-12 text-center p-0">
-                                    <li class="nav-item p-0 border-bottom">
-                                        <x-_locale lang="it"/>
-                                    </li>
-                                    <li class="nav-item p-0  border-bottom">
-                                        <x-_locale lang="en"/>
-                                    </li>
-                                    <li class="nav-item p-0">
-                                        <x-_locale lang="es"/>
-                                    </li>
+                                    @if(App::isLocale('it'))
+                                        <li class="nav-item p-0 border-bottom bg-primary" >
+                                            <x-_locale lang="it"/>
+                                        </li>
+                                    @else
+                                        <li class="nav-item p-0 border-bottom " >
+                                            <x-_locale lang="it"/>
+                                        </li>
+                                    @endif
+                                    @if(App::isLocale('en'))
+                                        <li class="nav-item p-0 border-bottom bg-primary" >
+                                            <x-_locale lang="en"/>
+                                        </li>
+                                    @else
+                                        <li class="nav-item p-0 border-bottom " >
+                                            <x-_locale lang="en"/>
+                                        </li>
+                                    @endif
+                                    @if(App::isLocale('es'))
+                                        <li class="nav-item p-0 border-bottom bg-primary" >
+                                            <x-_locale lang="es"/>
+                                        </li>
+                                    @else
+                                        <li class="nav-item p-0 border-bottom " >
+                                            <x-_locale lang="es"/>
+                                        </li>
+                                    @endif
+
                                 </div>
                             </div>
                         </div>
