@@ -67,7 +67,11 @@
         </div>   
         </div>
         <div class="col-12 col-md-6 text-light align-items-center mt-5 pt-5 d-flex message-bubble">
+<<<<<<< HEAD
             <p class="text-center">{{__('ui.homestep1')}}</p>
+=======
+            <p class="text-center steprule">{{__('ui.homestep1')}}</p>
+>>>>>>> 908a2d8ef6cce8926c932484526633a8280005aa
         </div>
         </div>
 
@@ -79,7 +83,11 @@
         </div>
         </div>
         <div class="col-12 col-md-6 text-light mt-5 align-items-center d-flex">
+<<<<<<< HEAD
             <p class="text-center">{{__('ui.homestep2')}}</p>
+=======
+            <p class="text-center steprule">{{__('ui.homestep2')}}</p>
+>>>>>>> 908a2d8ef6cce8926c932484526633a8280005aa
         </div>
         <div class="col-12 col-md-6 justify-content-center d-none d-md-block d-lg-block d-flex">
         <div class="justify-content-center d-flex">
@@ -95,7 +103,11 @@
         </div>
         </div>
         <div class="col-12 col-md-6 text-light mt-5 align-items-center d-flex">
+<<<<<<< HEAD
             <p class="text-center">{{__('ui.homestep3')}}</p>
+=======
+            <p class="text-center steprule">{{__('ui.homestep3')}}</p>
+>>>>>>> 908a2d8ef6cce8926c932484526633a8280005aa
         </div>  
         </div>
 
