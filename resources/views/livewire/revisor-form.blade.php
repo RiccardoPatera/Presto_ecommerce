@@ -1,4 +1,4 @@
-<form wire:submit.prevent="become_revisor" class="shadow rounded p-5 my-2 bg-light">
+<form wire:submit.prevent="become_revisor" class="shadowcard rounded p-5 my-2 bg-light">
 
     <h3 class="text-center display-6 mb-4">{{__('ui.tellUs')}}</h3>
     <div class="col-12">

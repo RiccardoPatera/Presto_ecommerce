@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row justify-content-center align-items-center min-100   ">
 
-                <div class="col-12 p-5 col-md-4 user rounded bg-light ">
+                <div class="col-12 p-5 col-md-4 user rounded bg-light shadowcard">
                     <div class="row">
                         <div class="col-12">
                             <h1 class="text-center display-1 mb-5 mt-3 ">{{__('ui.login')}}</h1>
@@ -32,7 +32,7 @@
 
 
 
-                                <p class=" ">{{__('ui.notReg')}} <a href="{{route('register')}}" class="text-black">{{__('ui.hereReg')}}</a></p>
+                                <p>{{__('ui.notReg')}} <a href="{{route('register')}}" class="text-black">{{__('ui.hereReg')}}</a></p>
 
                                 <button type="submit" class="btn btn-dark">{{__('ui.login')}}</button>
 

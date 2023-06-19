@@ -53,20 +53,24 @@
 
                 {{-- steps --}}
 
-    <div class="container-fluid justify-content-center mt-5 pt-5 steps">
+    <div class="container-fluid justify-content-center mt-5 pt-5 steps" >
         <div class="row justify-content-center d-flex">
         <div class="col-12 text-light">
              <h2 class="text-center">{{__('ui.stepstart')}}</h2>
 
         </div>
 
-        <div class="row steprule">
+        <div class="row steprule ">
             <div class="col-12 col-md-6 justify-content-center d-flex ">
         <div class="justify-content-center d-flex">
             <img src="{{Storage::url('public/media/step1.png')}}" class="pngstep" alt="">
         </div>
         </div>
+<<<<<<< HEAD
         <div class="col-12 col-md-6 text-light align-items-center mt-5 pt-5 d-flex message-bubble">
+=======
+        <div class="col-12 col-md-6 text-light align-items-center pt-5 d-flex message-bubble">
+>>>>>>> 4f9e5f14051d60b190e4a376c69a06075696e11b
             <p class="text-center">{{__('ui.homestep1')}}</p>
         </div>
         </div>
@@ -79,7 +83,11 @@
         </div>
         </div>
         <div class="col-12 col-md-6 text-light mt-5 align-items-center d-flex">
+<<<<<<< HEAD
             <p class="text-center ">{{__('ui.homestep2')}}</p>
+=======
+            <p class="text-center">{{__('ui.homestep2')}}</p>
+>>>>>>> 4f9e5f14051d60b190e4a376c69a06075696e11b
         </div>
         <div class="col-12 col-md-6 justify-content-center d-none d-md-block d-lg-block d-flex">
         <div class="justify-content-center d-flex">
@@ -95,7 +103,7 @@
         </div>
         </div>
         <div class="col-12 col-md-6 text-light mt-5 align-items-center d-flex">
-            <p class="text-center ">{{__('ui.homestep3')}}</p>
+            <p class="text-center">{{__('ui.homestep3')}}</p>
         </div>
         </div>
 
@@ -118,7 +126,7 @@
                         @foreach ($articles->take(6) as $article)
                         <div class="col-12 col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center my-4">
                             <a href="{{route('show_article',compact('article'))}}" class="">
-                                <div class="card">
+                                <div class="card shadowcard">
                                     <div class="fadex"></div>
                                     <img src="{{$article->images()->first()->GetUrl(500,500)}}" class="card-img-top-welcome img-fluid rounded-card" alt="...">
                                     <div class="overlay rounded-end z-4">

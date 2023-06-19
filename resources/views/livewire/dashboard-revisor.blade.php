@@ -19,7 +19,7 @@
                 {{-- Colonna Dati Revisor --}}
                 <div class="col-12 col-md-5">
                     <div class="row justify-content-center mb-5">
-                        <div class="col-12">
+                        <div class="col-8">
                             <div class="card card-detail text-center p-5 d-flex justify-content-center bg-light">
                                 <h3 class="text-center mb-5">Info {{__('ui.rev')}}</h3>
                                 @livewire('user-img',compact('user'))
@@ -29,7 +29,7 @@
                                 <p class="mb-0">{{__('ui.artReviewed')}}: {{count($articles)}}</p>
                                 <p class="mb-0">{{__('ui.artRejected')}}: {{count($articles->where('is_accepted','===', 0))}}</p>
                                 <p>{{__('ui.artToBeReviewed')}}: {{count($articles->where('is_accepted','===', null))}}</p>
-                                <p class="mb-0 fst-italic">{{__('ui.joinedOn')}}: {{$user->created_at }}</p>
+                                <p class="mb-0 fst-italic">{{__('ui.joinedOn')}}: {{substr($user->created_at, 0, 10) }}</p>
                             </div>
                         </div>
                     </div>
@@ -49,7 +49,7 @@
                                 @foreach ($articles->where('revisored_by',$this->user->id) as $article)
                                 <div class="swiper-slide">
                                     <a href="{{route('show_article',compact('article'))}}" class="">
-                                        <div class="card shadow">
+                                        <div class="card shadowcard">
                                             <div class="fadex">
                                             </div>
                                             <img src="{{$article->images()->first()->GetUrl(500,500)}}" class="card-img-top img-fluid rounded-card" alt="...">

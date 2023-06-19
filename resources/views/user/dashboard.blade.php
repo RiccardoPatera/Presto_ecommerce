@@ -29,8 +29,9 @@
                     <p class="">{{$user->email}}</p>
                     <hr class="hr-custom">
                     <p class="mb-0">{{__('ui.artUploaded')}}: {{count($user->articles)}}</p>
-                    <p class="">{{__('ui.artRejected')}}: {{count($user->articles->where('is_accepted','===', 0))}}</p>
-                    <p class="fst-italic mb-0">{{__('ui.joinedOn')}}: {{$user->created_at }}</p>
+                    <p class="mb-0">{{__('ui.artRejected')}}: {{count($user->articles->where('is_accepted','===', 0))}}</p>
+                    <p class="">{{__('ui.undRev')}}: {{count($user->articles->where('revisored_by', '---', null))}}</p>
+                    <p class="fst-italic mb-0">{{__('ui.joinedOn')}}: {{substr($user->created_at, 0, 10) }}</p>
                 </div>
             </div>
 
@@ -41,7 +42,7 @@
                     <div class="swiper-wrapper">
                         @forelse ($user->articles as $article)
                             <div class="swiper-slide">
-                                <div class="card">
+                                <div class="card shadowcard">
                                     <a href="{{ route('show_article', compact('article')) }}">
                                         <div class="fadex"></div>
                                         <img src="{{ $article->images()->first()->GetUrl(500, 500) }}"

@@ -1,27 +1,27 @@
-<div class="container-fluid min-100 ">
-    <div class="row justify-content-between ">
-        <div class="col-12 d-flex user-info  justify-content-center ">
-            <div class="row justify-content-center">
-                <div class="col-12">
-                    <h3 class="text-center">{{Ucwords($user->name)}} {{__('ui.articles')}}</h3>
-                </div>
-                <div class="col-6 d-flex flex-column align-items-center justify-content-center">
-                    <img src="{{Storage::url($user->img)}}" alt="user_img" class="img-fluid user-img ">
-                </div>
-                <div class="col-6 d-flex flex-column align-items-center justify-content-center">
-                    <h6 class="">{{count($user->articles)}} {{__('ui.artUploaded')}}</h6>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-4">
+            <div class="card card-profile pb-5 pt-3 px-2 bg-light mt-3">
+                <p class="text-center display-6 mb-0">{{Ucwords($user->name)}}</p>
+                <hr class="hr-custom mx-auto">
+                <div class="d-flex justify-content-evenly align-items-center">
+                    <img src="{{Storage::url($user->img)}}" alt="user_img" class="img-fluid user-img ms-md-5">
+                    <div class="ms-4 ms-md-0">
+                        <h5 class="me-md-5">Articles Uploaded: {{count($user->articles)}}</h5>
+                        <p class="mb-0 fst-italic">{{__('ui.joinedOn')}}: {{substr($user->created_at, 0, 10) }}</p>
+                    </div>
                 </div>
             </div>
         </div>
-
-
-        <div class="col-12  d-flex flex-column justify-content-center user-articles">
-            <h3 class="text-center text-light ">{{__('ui.userArt')}}</h3>
+    </div>
+    <div class="row mt-4">
+        <div class="col-12">
+            <p class="text-light text-center display-3 mb-3">Articles</p>
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     @forelse ($user->articles as $article)
                         <div class="swiper-slide">
-                            <div class="card">
+                            <div class="card shadowcard">
                                 <a href="{{ route('show_article', compact('article')) }}">
                                     <div class="fadex"></div>
                                     <img src="{{ $article->images()->first()->GetUrl(500, 500) }}"
