@@ -588,8 +588,8 @@ div.vh-50 > .btn:hover {
 /* sotto logo  */
 
 .underlogo{
-   position: relative;
-    height: 90vh;
+    position: relative;
+    height: fit-content;
     /* width: 70rem; */
     background-color: rgba(255, 255, 255, 0.146);
     border-radius: 20px;
@@ -705,6 +705,9 @@ h2{
         transform: scale(1.15);
         transition:1s;
     }
+    .pngstep{
+        width:700px;
+    }
 
 
 
@@ -721,20 +724,16 @@ h2{
     .user{
         width:450px;
     }
-
-
-
-
-    @media screen  and (min-width:768px) and (max-width:1200px) {
-    .under1{
-        font-size: 17px;
+    .pngstep{
+        width:35vh;
     }
 
+    
 
 
 
 
-}
+    
 }
 
 @media screen and (min-width:768px) {
@@ -747,10 +746,23 @@ h2{
         width:500px;
         max-height: 80vh;
     }
-
+    
 
 }
 
+@media screen  and (min-width:768px) and (max-width:1200px) {
+    .under1{
+        font-size: 17px;
+    }
+    .pngstep{
+        width:350px;
+    }
+
+
+    
+
+
+}
 
 
   @keyframes down-to-up
@@ -810,10 +822,19 @@ h2{
 .steprule{
     font-size: 20px;
     color: white;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.146);
+    height: fit-content;
+    border-radius: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 100px;
     
 }
 .pngstep{
-    width: 40vh;
+    /* width: 35vh; */
     margin: 0%;
 }
 
