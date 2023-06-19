@@ -45,7 +45,8 @@
     @enderror
     @error('images.*')
         <p class="text-danger">{{$message}}</p>
-    @enderror
+    @enderror 
+
     @error('images')
         <p class="text-danger">{{__('ui.reqImage')}}</p>
     @enderror

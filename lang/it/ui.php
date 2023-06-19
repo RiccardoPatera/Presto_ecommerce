@@ -1,6 +1,6 @@
 <?php
 return[
-    'allArticles'=> 'I nostri prodotti',
+    'allArticles'=> 'Negozio',
     'results' => 'risultati',
     'work'=>'Lavora con noi',
     'new'=>'Nuovi arrivi',
@@ -63,7 +63,7 @@ return[
     'reqSurname'=>'Il cognome è richiesto',
     'reqEmail'=>'La email è richiesta',
     'reqPass'=>'La password è richiesta',
-    'homestep1'=>'Registrazione: crea un account seguendo le istruzioni di registrazione. Compila i campi richiesti con le tue informazioni personali, come nome, email e password.',
+    'homestep1'=>'Registrazione: crea un account sul sito Web selezionato seguendo le istruzioni di registrazione. Compila i campi richiesti con le tue informazioni personali, come nome, email e password. Verifica il tuo account se necessario.',
     'homestep2'=>'Crea il tuo prodotto: accedi al tuo account e crea un nuovo annuncio per il prodotto utilizzato che desideri vendere. Fornire una chiara descrizione del prodotto, inclusi dettagli come marca, modello, condizione e caratteristiche chiave. Aggiungi foto di alta qualità per attirare l`attenzione degli acquirenti e aspetta che il nostro Revisor lo accetti!',
     'homestep3'=>'Gestione delle offerte e della comunicazione: controlla il tuo account per verificare le richieste degli acquirenti interessati. Rispondere prontamente alle domande e negoziare eventuali offerte. Stabilire il prezzo di vendita finale e coordinare il metodo di pagamento e consegna con l`acquirente. Mantieni una comunicazione chiara e amichevole durante tutto il processo di vendita.',
     'stepstart'=>'Vendere i vostri prodotti non è mai stato così facile!',
