@@ -19,10 +19,12 @@
                 </li>
 
                 @Auth
+                    @if(!Auth::user()->is_revisor)
                     <li class="nav-item">
                         <a class="nav-link text-white" href="{{route('create_article')}}">{{__('ui.create')}}</a>
                     </li>
-
+                    @else
+                    @endif
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"

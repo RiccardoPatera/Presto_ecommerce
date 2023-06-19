@@ -60,7 +60,7 @@
 
         </div>
 
-        <div class="row steprule ">
+        <div class="row steprule opacity-0" id='step1'>
             <div class="col-12 col-md-6 justify-content-center d-flex ">
         <div class="justify-content-center d-flex">
             <img src="{{Storage::url('public/media/step1.png')}}" class="pngstep" alt="">
@@ -72,7 +72,7 @@
         </div>
 
 
-        <div class="row steprule">
+        <div class="row steprule opacity-0" id='step2'>
             <div class="col-12 col-md-6 justify-content-center d-block d-sm-none d-sm-block d-flex">
         <div class="justify-content-center d-flex">
             <img src="{{Storage::url('public/media/step2.png')}}" class="pngstep" alt="">
@@ -88,7 +88,7 @@
         </div>
         </div>
 
-        <div class="row steprule">
+        <div class="row steprule opacity-0" id='step3'>
             <div class="col-12 col-md-6 justify-content-center d-flex">
         <div class="justify-content-center d-flex">
             <img src="{{Storage::url('public/media/step3.png')}}" class="pngstep" alt="">

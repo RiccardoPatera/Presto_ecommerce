@@ -94,6 +94,7 @@
                     <h5>{{__('ui.price')}}: {{ $article->price }}&euro;</h5>
                     <h5>{{__('ui.desc')}}: {{ $article->body }}</h5>
                     <p>{{__('ui.singleCat')}}: {{ $article->category->category }}</p>
+                    <p>{{__('ui.createby')}} {{Ucwords($article->user->name )}}</p>
                     <div class="col-12  d-flex justify-content-center ">
                         <form wire:submit.prevent='accept_article' class=" d-flex justify-content-center">
                             <button type='submit' class="btn btn-success m-5" >{{__('ui.accept')}}</button>

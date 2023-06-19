@@ -11,24 +11,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container-fluid vh-100" style="background-color: #0d1821">
-        <div class="row">
-            <div class="col-12 d-flex justify-content-start align-items-center h-25" style="background-color: #222f3ed9">
+    <div class="container-fluid vh-100" style="background-color: rgb(37,66,97)">
+        <div class="row ">
+            <div class="col-12 d-flex  align-items-center h-25" style="background-color: #222f3ed9">
                 <h1 class="text-light" style="font-family: 'Righteous', cursive;">presto</h1>
             </div>
 
         </div>
-            <div class="col-12 d-flex align-items-center flex-column p-4 justify-content-start">
-                <h2 class="text-light"> Un utente ha chiesto di lavorare con noi</h2>
-                <p class="text-light">Ecco i suoi dati</p>
-                <p class="text-light">Nome :{{$data['name']}}</p>
-                <p class="text-light">Cognome: {{$data['surname']}}</p>
+            <div class="col-12 mt-2">
+                <h4 class="text-light text-center"> Un utente vorrebbe entrare a far parte del nostro Team</h4>
+            </div>
+            <div class="col-12 d-flex  flex-column p-4 ">
+                <p class="text-light text-start">Ecco i suoi dati</p>
+                <p class="text-light text-start">Nome: {{$data['name']}}</p>
+                <p class="text-light text-start">Cognome: {{$data['surname']}}</p>
 
-                <p class="text-light ">Lettera di presentazione:</p>
+                <p class="text-light text-start">Lettera di presentazione:</p>
                 <div class="bg-light p-3 w-100 h-50 rounded ">
                     {{$data['body']}}
                 </div>
-                <p class="text-light">Per rendere revisore questo utente </p>
+                <p class="text-light text-center">Per rendere revisore questo utente </p>
                 <a href="{{route('make_revisor',compact('user'))}}" class="text-light">Clicca qui</a>
             </div>
 

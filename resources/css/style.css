@@ -659,18 +659,24 @@ h2{
   .down-to-up{
     animation:down-to-up;
     animation-duration: 2s;
-  }
+    }
 
 
   .appare{
     animation:appare;
     animation-duration: 2s;
-  }
+    }
 
   .opacity{
     animation:opacity;
     animation-duration: 4s;
-  }
+    }
+
+  .apparesx{
+    animation:apparesx;
+    animation-duration: 2s;
+    }
+
 
 
 
@@ -796,6 +802,20 @@ h2{
      0%{
         opacity: 0;
         transform:translateX(-300px)
+
+     }
+     100%{
+        opacity: 1;
+        transform: translateX(0px);
+     }
+
+}
+
+@keyframes apparesx
+{
+     0%{
+        opacity: 0;
+        transform:translateX(300px)
 
      }
      100%{

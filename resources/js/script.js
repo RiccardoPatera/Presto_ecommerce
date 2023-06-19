@@ -78,6 +78,12 @@ if (logout) {
     let slogan=document.querySelector('#slogan');
     let slogan2=document.querySelector('#slogan2');
 
+    let step1=document.querySelector('#step1');
+    let step2=document.querySelector('#step2');
+    let step3=document.querySelector('#step3');
+
+
+
 
     let observer= new IntersectionObserver((entries) =>
             {
@@ -103,8 +109,48 @@ if (logout) {
                 });
             })
 
+            let observer3= new IntersectionObserver((entries) =>
+            {
+                entries.forEach(entry =>{
+                    if (entry.isIntersecting)
+                    {
+                        step1.classList.remove('opacity-0');
+                        step1.classList.add('appare');
+                    }
+                });
+            })
+
+            let observer4= new IntersectionObserver((entries) =>
+            {
+                entries.forEach(entry =>{
+                    if (entry.isIntersecting)
+                    {
+                        step2.classList.remove('opacity-0');
+                        step2.classList.add('apparesx');
+                    }
+                });
+            })
+
+
+            let observer5= new IntersectionObserver((entries) =>
+            {
+                entries.forEach(entry =>{
+                    if (entry.isIntersecting)
+                    {
+                        step3.classList.remove('opacity-0');
+                        step3.classList.add('appare');
+                    }
+                });
+            })
+
+
+
+
+
 
  observer.observe(ourvision);
  observer2.observe(container_home)
+ observer3.observe(step1);
+ observer4.observe(step2);
+ observer5.observe(step3);
 
- 
