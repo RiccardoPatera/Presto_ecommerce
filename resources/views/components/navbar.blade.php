@@ -25,7 +25,7 @@
                         aria-expanded="false">
                         {{__('ui.welcome')}} {{ucwords(Auth::user()->name)}}
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu"> 
                         <li><a class="dropdown-item" href="{{route('user_dashboard',['user'=>Auth::user() ])}}">{{__('ui.prof')}}</a></li>
                     @if(Auth::user()->is_revisor)
                         <li>
@@ -65,7 +65,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white " href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        Language
+                        {{__('ui.lang')}}
                     </a>
                     <ul class="dropdown-menu">
                         <div class="container ">

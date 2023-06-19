@@ -14,7 +14,7 @@
             <h1 class=" text-light">{{__('ui.revDash')}}</h1>
         </div>
         <div class="col-md-4 col-6 d-flex justify-content-center bg-light rounded">
-            <h5 class="text-nowrap">{{count($articles)}} article to review</h5>
+            <h5 class="text-nowrap">{{count($articles)}} {{__('ui.artReview')}}</h5>
         </div>
     </div>
     <div class="row  justify-content-between vh-75  align-items-center ">
@@ -38,21 +38,21 @@
                 </div>
                 <div class="col-12 ">
                     <div class="row">
-                        <h5 class=" tc-accent  text-center">Revisione Immagini</h5>
+                        <h5 class=" tc-accent  text-center">{{__('ui.revImg')}}</h5>
                         <div class="col-4 d-flex">
-                            <p class="text-nowrap">Adulti: <span class="{{$image->adult}}"></span></p>
+                            <p class="text-nowrap">{{__('ui.adulti')}} <span class="{{$image->adult}}"></span></p>
                         </div>
                         <div class="col-4 d-flex ">
-                            <p class="text-nowrap">Satira: <span class="{{$image->spoof}}"></span></p>
+                            <p class="text-nowrap">{{__('ui.satira')}} <span class="{{$image->spoof}}"></span></p>
                         </div>
                         <div class="col-4 d-flex">
-                            <p class="text-nowrap">Medicina: <span class="{{$image->medical}}"></span></p>
+                            <p class="text-nowrap">{{__('ui.medicina')}} <span class="{{$image->medical}}"></span></p>
                         </div>
                         <div class="col-4 d-flex">
-                            <p class="text-nowrap">Violenza: <span class="{{$image->violence}}"></span></p>
+                            <p class="text-nowrap">{{__('ui.violenza')}} <span class="{{$image->violence}}"></span></p>
                         </div>
                         <div class="col-4 d-flex">
-                            <p class="text-nowrap">Contenuto ammiccante: <span class="{{$image->racy}}"></span></p>
+                            <p class="text-nowrap">{{__('ui.contAmmi')}} <span class="{{$image->racy}}"></span></p>
                         </div>
                     </div>
                 </div>
@@ -105,13 +105,13 @@
                             <p class="text-danger"></p>
                         @enderror
 
-                        <label  class='form-label my-2' for="tips">Explain why the product doesn't meet the requirements</label>
+                        <label  class='form-label my-2' for="tips">{{__('ui.prodReq')}}</label>
                         <textarea  id="tips" wire:model="tips" cols="30" rows="4" class="form-control  shadow @error('tips') is-invalid @enderror"></textarea>
                     </form>
                 </div>
             </div>
             <div class="col-12 d-flex justify-content-center  ">
-                <h5 class="text-center text-light "> To review your decisions go to your
+                <h5 class="text-center text-light "> {{__('ui.revDecision')}}
                     <a  href={{route('user_dashboard',compact('user'))}} class="btn-link my-2 my-lg-0">Dashboard </a>
                 </h5>
             </div>
@@ -137,7 +137,7 @@
 
 
         <div class="col-12 d-flex justify-content-center ">
-            <h5 class="text-center text-light "> To review your decisions go to your
+            <h5 class="text-center text-light "> {{__('ui.revDecision')}}
                 <a  href={{route('user_dashboard',compact('user'))}} class="btn-link my-2 my-lg-0">Dashboard </a>
             </h5>
         </div>

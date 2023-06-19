@@ -1,6 +1,6 @@
 @if($article->tips!=null)
     <div class="col-12 alert alert-danger">
-        <h4 class="text-center">Tip from revisor: {{$article->tips}}</h4>
+        <h4 class="text-center">{{__('ui.tipRev')}}: {{$article->tips}}</h4>
     </div>
 @endif
 
@@ -63,7 +63,7 @@
             @foreach ($images as $key => $image)
                     <div class="my-3">
                         <div class="img-preview mx-auto shadow rounded" style="background-image: url({{Storage::url($image->path)}})"></div>
-                        <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">Delete</button>
+                        <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">{{__('ui.delete')}}</button>
                     </div>
             @endforeach
             </div> --}}
@@ -71,7 +71,7 @@
             @foreach ($images as $key => $image)
                     <div class="my-3">
                         <div class="img-preview mx-auto shadow rounded" style="background-image: url({{Storage::url($image->path)}}"></div>
-                        <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">Delete</button>
+                        <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">{{__('ui.delete')}}</button>
                     </div>
             @endforeach --}}
 
