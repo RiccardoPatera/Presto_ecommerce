@@ -1,7 +1,7 @@
 :root{
     --main:rgb(236,236,236);
     --acc:rgb(0,0,0);
-    --richblue:#0d1821;
+    --richblue:#0D1821;
     --gray:#7d7c84;
     --isabeline:#F1F0EA;
     --test:#222f3ed9;
@@ -20,7 +20,8 @@ html {
 body{
     /* background-color: var(--richblue); */
     min-height: 100vh;
-    background: var(--richblue) linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.205));
+    /* background: var(--richblue) linear-gradient(rgba(255, 255, 255, 0), rgb(108, 54, 54)); */
+    background-color: rgb(37,66,97);
 }
 
 /* UTILITY */
@@ -40,10 +41,20 @@ body{
 .vh-75{
     height: 75vh;
 }
-
 .min-100{
 min-height: 100vh
 }
+
+.hr-custom{
+    width: 60vw;
+}
+
+@media screen and (min-width: 480px){
+    .hr-custom{
+    width: 20vw;
+    }
+}
+
 .title-text{
     font-size: 45px;
     font-weight: bold;
@@ -73,10 +84,6 @@ min-height: 100vh
     cursor: pointer;
 }
 
-.user{
-    width:400px;
-    height: fit-content;
-}
 
 .btn-link{
     text-decoration:none;
@@ -168,6 +175,9 @@ min-height: 100vh
     background-color: white;
 }
 
+.card-profile{
+    box-shadow: 20px 20px 8px 0px rgba(255, 255, 255, 0.29);
+}
 
 .card-body{
     position: absolute;
@@ -213,8 +223,8 @@ min-height: 100vh
 /* FOOTER */
 
 footer {
+    background-color: rgb(23,23,23);
     height:fit-content;
-    opacity: 0.70;
     clear: both;
     margin-top: 150px;
 
@@ -599,6 +609,7 @@ div.vh-50 > .btn:hover {
     padding-right: 50px;
     padding-bottom: 50px;
     z-index: 3;
+    box-shadow: 5px 15px 35px black;
 
 }
 .under{
@@ -812,8 +823,7 @@ h2{
     padding-left: 50px;
     padding-right: 50px;
     padding-bottom: 100px;
-    border-bottom: var(--gray) 1px solid;
-    border-top: var(--gray) 1px solid;
+
 }
 .steptext{
     font-size: 50px;
@@ -831,11 +841,15 @@ h2{
     padding-left: 10px;
     padding-right: 10px;
     margin-top: 100px;
+    box-shadow: 5px 15px 35px black;
     
 }
 .pngstep{
     /* width: 35vh; */
     margin: 0%;
+}
+.shadowcard{
+    box-shadow: 5px 15px 35px black
 }
 
 
