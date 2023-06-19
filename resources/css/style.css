@@ -11,9 +11,7 @@
 bg.test{
     background-color: var(--test);
 }
-.test{
-    border-color: white;
-}
+
 }
 html {
     min-height: 100vh;
@@ -195,16 +193,35 @@ min-height: 100vh
 footer {
     height:fit-content;
     background-color: var(--test);
+    clear: both;
+
 }
+/* .push {
+	height: 50px;
+    clear: both;
+
+}
+html, body {
+	height: 100%;
+}
+
+#container {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -50px;
+} */
 
 
 .revisor-card{
-    height: 65vh;
+    height:fit-content;
+
 }
 
-/* .borderFooterTop{
-    border-top: 2px solid var(--gray);
-} */
+.revisor-carousel{
+
+    width: 100%;
+}
 
 .icona-footer{
     color: white;
@@ -524,10 +541,7 @@ div.vh-50 > .btn:hover {
 }
 
 /* HYPERTEXT */
-.nav-link:hover{
-    transform: scale(1.15);
-    transition:1s;
-}
+
 
 .alert-custom{
     height:30px;
@@ -660,22 +674,23 @@ h2{
 
 
   /* Media Query */
-  @media screen and (min-width:991px) {
+  @media screen and (min-width:1200px) {
     .under1{
         font-size: 22px;
     }
-    .push{
-        height: 17vh;
+    .nav-link:hover{
+        transform: scale(1.15);
+        transition:1s;
     }
+
+
 
 }
     @media screen and (max-width:767px) {
     .under1{
         font-size: 15px;
     }
-    .push{
-        height: 180vw;
-    }
+
     .textcustom{
         font-size: 19px;
     }
@@ -685,13 +700,15 @@ h2{
     }
 
 
-    @media screen  and (min-width:768px) and (max-width:991px) {
+
+
+    @media screen  and (min-width:768px) and (max-width:1200px) {
     .under1{
         font-size: 17px;
     }
-    .push{
-        height: 35vh;
-    }
+
+
+
 
 
 }
@@ -707,6 +724,8 @@ h2{
         width:500px;
         max-height: 80vh;
     }
+
+
 }
 
 
@@ -761,3 +780,5 @@ h2{
 .steptext{
     font-size: 10vh;
 }
+
+

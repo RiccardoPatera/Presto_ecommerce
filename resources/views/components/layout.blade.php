@@ -17,18 +17,17 @@
     <x-navbar />
 
 
+    <div id="container">
 
-        <section id="Main">
+
         {{$slot}}
 
 
 
-        </section>
 
 
 
-
-
+    </div>
 
         <div class="push"> </div>
         <x-footer/>
