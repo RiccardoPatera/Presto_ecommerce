@@ -87,6 +87,7 @@
         </div>
         </div>
         </div>
+
         <div class="row steprule">
             <div class="col-12 col-md-6 justify-content-center d-flex">
         <div class="justify-content-center d-flex">

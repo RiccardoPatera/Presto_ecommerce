@@ -52,6 +52,7 @@ class EditArticle extends Component
 
 
     public function edit() {
+
         $this->validate();
 
         $this->article->update([
@@ -60,12 +61,13 @@ class EditArticle extends Component
             'body' => $this -> body,
             'category_id'=>$this->category_id,
             'is_accepted'=>null,
+            'tips'=>null,
         ]);
 
 
         return redirect(route('user_dashboard',['user'=> $this->article->user]))->with('message','Article updated correctly');
-        session()->flash('message','Article edited successfully. Wait for the revisor to accept it.');
-        $this->reset();
+        // session()->flash('message','Article edited successfully. Wait for the revisor to accept it.');
+        // $this->reset();
     }
 
 
