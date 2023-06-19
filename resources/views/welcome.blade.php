@@ -95,9 +95,11 @@
                                 <div class="card">
                                     <div class="fadex"></div>
                                     <img src="{{$article->images()->first()->GetUrl(500,500)}}" class="card-img-top-welcome img-fluid rounded-card" alt="...">
-                                    <div class="overlay rounded-end">
-                                        <p class="text-card ms-3">{{$article->price}} €</p>
-                                        <h6 class="fst-italic ms-3">Created by: {{Ucwords($article->user->name)}}</h6>
+                                    <div class="overlay rounded-end ">
+                                        <p class="text-card text-light ms-3">{{$article->price}} €</p>
+                                        <a href="{{route('users_articles',['user'=>$article->user])}}" class="d-flex">
+                                            <p class="fst-italic text-light ms-3">Created by: <h6 class="ms-2">{{Ucwords($article->user->name)}}</h6></p>
+                                        </a>
                                     </div>
                                     <div class="card-body">
                                         <p class="card-text text fst-italic text-light mb-2">{{$article->category->category}}</p>

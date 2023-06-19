@@ -68,6 +68,10 @@ Route::post('/language/{lang}',[PublicController::class, 'setLanguage'])->name('
 Route::get ('/user/{user}',[UserController::class, 'user_dashboard'])->name('user_dashboard');
 
 
+// Rotta profili  ALTRI utenti
+Route::get ('/profiles/{user}',[PublicController::class, 'users_articles'])->name('users_articles');
+
+
 
 
 

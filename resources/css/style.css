@@ -43,6 +43,9 @@ body{
     height: 75vh;
 }
 
+.min-100{
+min-height: 100vh
+}
 .title-text{
     font-size: 45px;
     font-weight: bold;
@@ -73,6 +76,7 @@ body{
 
 .user{
     width:400px;
+    height: fit-content;
 }
 
 .btn-link{
@@ -336,6 +340,16 @@ footer {
     object-fit: cover;
     object-position: center;
 }
+.user-info{
+    height: fit-content;
+    /* border-bottom: 5px solid white; */
+    background-color: white;
+
+}
+.user-articles{
+    /* background-color: var(--test); */
+    padding-top: 30px;
+}
 
 .card a{
     text-decoration: none;
@@ -350,8 +364,9 @@ footer {
     right: 70px;
     opacity: 0;
     transition: .5s;
-    background-color: rgba(70, 70, 70, 0.659);
+    background-color: rgba(70, 70, 70, 0.404);
     color: white;
+    /* z-index: 1000; */
 }
 
 .text-card{

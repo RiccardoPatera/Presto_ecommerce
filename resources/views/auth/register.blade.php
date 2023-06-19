@@ -10,7 +10,7 @@
                         <h1 class="text-center display-1 mb-5 mt-3">{{__('ui.register')}}</h1>
                     </div>
 
-                    <form method="POST" action="{{ route('register') }}" class="p-0">
+                    <form method="POST" action="{{ route('register') }}" clas >
                         @csrf
 
                         <div class="mb-3">
