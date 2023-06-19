@@ -21,22 +21,22 @@
 
     <div class="container-fluid ">
         <div class="row justify-content-between">
-            <div class="col-12 col-md-5  d-flex flex-column align-items-center justify-content-center ">
-                <div class="card card-detail text-center d-flex justify-content-center p-5 bg-light">
-                    <h3 class="text-center  mb-5">User info</h3>
+            <div class="col-12 col-md-5 d-flex flex-column align-items-center justify-content-center">
+                <div class="card card-detail text-center d-flex justify-content-center p-sm-0 p-md-5 bg-light">
+                    <h3 class="text-center display-6 mt-3 mb-5">User info</h3>
                     @livewire('user-img',compact('user'))
                     <h3>{{Ucwords($user->name)}}</h3>
                     <p class="">{{$user->email}}</p>
                     <hr class="hr-custom">
                     <p class="mb-0">Articols Uploaded: {{count($user->articles)}}</p>
                     <p class="">Articles Rejected: {{count($user->articles->where('is_accepted','===', 0))}}</p>
-                    <p class="fst-italic mb-0">Iscritto il: {{$user->created_at }}</p>
+                    <p class="fst-italic">Iscritto il: {{$user->created_at }}</p>
                 </div>
             </div>
 
 
             <div class="col-12 col-md-7 d-flex flex-column justify-content-center my-lg-0 my-5">
-                <h3 class="text-center text-light mb-5">User Articles</h3>
+                <h3 class="text-center text-light mb-4 display-6">User Articles</h3>
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
                         @forelse ($user->articles as $article)
@@ -45,7 +45,7 @@
                                     <a href="{{ route('show_article', compact('article')) }}">
                                         <div class="fadex"></div>
                                         <img src="{{ $article->images()->first()->GetUrl(500, 500) }}"
-                                            class="card-img-top img-fluid rounded" alt="...">
+                                            class="card-img-top img-fluid rounded-card" alt="...">
                                         <div class="card-info ms-3 mt-3">
                                             <p class="text-light fst-italic mb-2">{{ $article->category->category }}</p>
                                             <h5 class="text-light fw-bold text mb-0">{{ $article->title }}</h5>
@@ -60,7 +60,7 @@
 
                                     @elseif($article->is_accepted == 1)
 
-                                        <div class="bg-dark bg-opacity-75 rounded-end position-absolute start-0 bottom-0 pt-1 px-3">
+                                        <div class="bg-dark bg-opacity-75 rounded-custom position-absolute start-0 bottom-0 pt-1 px-3">
                                             <h6 class="text-accepted text-start mt-1 me-4">Accepted</h6>
                                         </div>
 

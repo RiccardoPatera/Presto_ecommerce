@@ -94,7 +94,7 @@
                             <a href="{{route('show_article',compact('article'))}}" class="">
                                 <div class="card">
                                     <div class="fadex"></div>
-                                    <img src="{{$article->images()->first()->GetUrl(500,500)}}" class="card-img-top img-fluid rounded-bottom" alt="...">
+                                    <img src="{{$article->images()->first()->GetUrl(500,500)}}" class="card-img-top-welcome img-fluid rounded-card" alt="...">
                                     <div class="overlay rounded-end">
                                         <p class="text-card ms-3">{{$article->price}} €</p>
                                         <h6 class="fst-italic ms-3">Created by: {{Ucwords($article->user->name)}}</h6>

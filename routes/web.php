@@ -29,7 +29,6 @@ Route::get('/articles/detail/{article}', [ArticleController::class, 'show'])->na
 // MODIFICA PRODOTTO
 Route::get('/article/edit/{article}', [ArticleController::class, 'edit'])->name('edit_article');
 
-
 // MODIFICA PRODOTTO
 Route::delete('/article/delete/{article}', [ArticleController::class, 'delete'])->name('delete_article');
 
