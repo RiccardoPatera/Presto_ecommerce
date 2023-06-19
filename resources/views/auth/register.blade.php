@@ -4,7 +4,7 @@
         <div class="row justify-content-center min-vh-100 align-items-center ">
 
 
-            <div class="col-12 col-md-6 rounded bg-light p-5">
+            <div class="col-12 col-md-6 shadowcard rounded bg-light p-5">
                 <div class="row">
                     <div class="col-12 ">
                         <h1 class="text-center display-1 mb-5 mt-3">{{__('ui.register')}}</h1>
