@@ -723,5 +723,12 @@ h2{
     padding-right: 50px;
 }
 .steptext{
-    font-size: 10vh;
+    font-size: 50px;
+}
+.steprule{
+    font-size: 20px;
+}
+.pngstep{
+    width: 40vh;
+    margin: 0%;
 }
