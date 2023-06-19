@@ -34,8 +34,8 @@ class CreateForm extends Component
         'body' => 'required|min:5',
         'category_id'=> 'required',
         'images'=> 'required',
-        'images.*'=> 'required|image|max:3072',
-        'temporary_images.*'=> 'required|image|max:3072',
+        'images.*'=> 'required|image|max:3072|mimes:jpeg, png, bmp',
+        'temporary_images.*'=> 'required|image|max:3072|mimes:jpeg, png, bmp',
     ];
 
     protected $messages = [

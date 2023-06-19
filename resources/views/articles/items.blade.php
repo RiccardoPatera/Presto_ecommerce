@@ -17,7 +17,7 @@
             @forelse ($articles as $article)
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center my-4">
                     <a href="{{route('show_article',compact('article'))}}" class="">
-                        <div class="card">
+                        <div class="card shadowcard">
                             <div class="fadex"></div>
                             <img src="{{$article->images()->first()->GetUrl(500,500)}}" class="card-img-top-welcome img-fluid rounded-card" alt="...">
                             <div class="overlay rounded-end">
