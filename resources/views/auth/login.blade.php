@@ -1,7 +1,7 @@
 <x-layout>
 
         <div class="container">
-            <div class="row justify-content-center align-items-center vh-100  ">
+            <div class="row justify-content-center align-items-center min-100   ">
 
                 <div class="col-12 p-5 col-md-4 user rounded bg-light ">
                     <div class="row">
@@ -14,7 +14,7 @@
 
                                 <div class="mb-3">
                                     <label for="userMail" class="form-label ">Email</label>
-                                    <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="userMail" aria-describedby="emailHelp">
+                                    <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="userMail" aria-describedby="emailHelp"  >
                                 </div>
 
                                 @error('email')
