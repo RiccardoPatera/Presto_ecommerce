@@ -99,5 +99,6 @@ return[
     'discard'=> 'Discard',
     'sureDelArt'=> 'You are about to delete your article, are you sure?',
     'articles'=>'Articles',
+    'noProdRev'=>'No products revisored'
 
 ];

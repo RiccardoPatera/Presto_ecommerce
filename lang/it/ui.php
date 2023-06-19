@@ -99,5 +99,7 @@ return[
     'discard'=> 'Scarta',
     'sureDelArt'=> 'Stai per eliminare il tuo articolo, sei sicuro?',
     'articles'=>'Articoli',
+    'noProdRev'=>'Nessun prodotto revisionato'
+
 ];
 

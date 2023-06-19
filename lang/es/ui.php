@@ -1,6 +1,6 @@
 <?php
 return[
-    'allArticles'=> 'Nuestros productos',
+    'allArticles'=> 'Tienda',
     'results' => 'resultados',
     'work' => 'Trabaja con nosotros',
     'new'=>'Ultimos productos',
@@ -100,4 +100,6 @@ return[
     'discard'=> 'Descartar',
     'sureDelArt'=> 'Estás a punto de borrar tu artículo, ¿estás seguro?',
     'articles'=>'Artículos',
+    'noProdRev'=>'Ningùn producto revisado'
+
 ];
