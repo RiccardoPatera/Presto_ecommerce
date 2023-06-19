@@ -22,8 +22,8 @@
                     </button>
                 </div>
             </div>
-            <div class="col-12 col-md-5 d-flex align-items-center mt-5">
-                <div class="card-detailProduct d-flex flex-column align-items-center justify-content-center">
+            <div class="col-12 col-md-5 d-flex align-items-center mt-5 ">
+                <div class="card-detailProduct d-flex flex-column align-items-center justify-content-center p-4">
                     <div class="text-start mt-5">
                         <h3>{{ $article->title }}</h3>
                         <hr class="hr">

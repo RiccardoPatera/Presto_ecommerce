@@ -8,7 +8,7 @@
 </div>
 @endif
 @if(!empty($article))
-<div class="container  p-2 pm-md-0 min-100 ">
+<div class="container   min-100 ">
     <div class="row  justify-content-center">
         <div class="col-12 d-flex justify-content-center">
             <h1 class=" text-light display-1">{{__('ui.revDash')}}</h1>
@@ -17,14 +17,14 @@
             <h5 class="text-nowrap text-light">{{count($articles)}} {{__('ui.artReview')}}</h5>
         </div>
     </div>
-    <div class="row  justify-content-center justify-content-lg-between   align-items-center  ">
+    <div class="row  justify-content-center justify-content-lg-between   align-items-center   ">
 
         {{-- Colonna Google API --}}
-        <div class=" col-12 col-lg-3  bg-white rounded  revisor-card  p-3 my-2 my-lg-0">
+        <div class=" col-12 col-lg-3  bg-white rounded  revisor-card  p-lg-3 p-1 my-2 my-lg-0">
             <h5 class="tc-accent  text-dark text-center">Tags</h5>
             <div class="row justify-content-start flex-column justify-content-between p-2">
                 <div class="col-12">
-                    <div class="row  f">
+                    <div class="row ">
                         @foreach ($article->images as $image )
                             @if(isset($image->labels))
                                 @foreach ($image->labels as $label)
@@ -62,7 +62,7 @@
 
 
             {{-- Colonna Foto Articolo --}}
-            <div class="col-11  col-lg-5 revisor-card p-3 rounded d-flex justify-content-center  my-2 my-lg-0">
+            <div class="col-12  col-lg-5 revisor-card p-3 rounded d-flex justify-content-center  my-2 my-lg-0">
                     <div id="carouselExampleControls" class="carousel slide  " data-bs-ride="carousel">
                         <div class="carousel-inner  ">
                             @foreach ($article->images as $image)
@@ -91,27 +91,39 @@
                 <div class="row">
                     <h3>{{ $article->title }}</h3>
                     <hr class="hr">
-                    <h5>{{__('ui.price')}}: {{ $article->price }}&euro;</h5>
-                    <h5>{{__('ui.desc')}}: {{ $article->body }}</h5>
-                    <p>{{__('ui.singleCat')}}: {{ $article->category->category }}</p>
-                    <p>{{__('ui.createby')}} {{Ucwords($article->user->name )}}</p>
-                    <div class="col-12  d-flex justify-content-center ">
+                    <h5>{{__('ui.price')}} </h5>
+                    <div class="p-2 bg-white border border-dark rounded">
+                        {{ $article->price }}&euro;
+                    </div>
+                    <h5>{{__('ui.desc')}}</h5>
+                    <div class="p-2 bg-white border border-dark rounded">
+                        {{ $article->body }}
+                    </div>
+                    <h5>{{__('ui.singleCat')}}</h5>
+                    <div class="p-2 bg-white border border-dark rounded">
+                        {{ $article->category->category }}
+                    </div>
+                    <h6 class="my-1">{{__('ui.createby')}} {{Ucwords($article->user->name )}}</h6>
+                    <div class="col-12  d-flex justify-content-between  mt-1">
                         <form wire:submit.prevent='accept_article' class=" d-flex justify-content-center">
-                            <button type='submit' class="btn btn-success m-5" >{{__('ui.accept')}}</button>
+                            <button type='submit' class="btn btn-success" >{{__('ui.accept')}}</button>
                         </form>
                         <form wire:submit.prevent="reject_article" class="d-flex justify-content-center">
-                            <button type='submit' class="btn btn-danger m-5">{{__('ui.reject')}}</button>
+                            <button type='submit' class="btn btn-danger">{{__('ui.reject')}}</button>
                     </div>
                         @error('tips')
                             <p class="text-danger"></p>
                         @enderror
 
-                        <label  class='form-label my-2' for="tips">{{__('ui.prodReq')}}</label>
-                        <textarea  id="tips" wire:model="tips" cols="30" rows="4" class="form-control  shadow @error('tips') is-invalid @enderror"></textarea>
+                        <label  class='form-label ' for="tips"></label>
+                        <textarea placeholder="{{__('ui.prodReq')}}" id="tips" wire:model="tips" cols="30" rows="3" class="form-control  shadow @error('tips') is-invalid @enderror"></textarea>
+                        @error('tips')
+                                <h6 class="text-danger">{{$message}}</h6>
+                        @enderror
                     </form>
                 </div>
             </div>
-            <div class="col-12 d-flex justify-content-center mb-3 ">
+            <div class="col-12 d-flex justify-content-center mb-5">
                 <h5 class="text-center text-light "> {{__('ui.revDecision')}}
                     <a  href={{route('user_dashboard',compact('user'))}} class=" my-2 my-lg-0 text-light">Dashboard </a>
                 </h5>

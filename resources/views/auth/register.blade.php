@@ -18,9 +18,7 @@
                                 <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" id="userName"
                                     aria-describedby="emailHelp"  value={{old('name')}}>
                             </div>
-                             @error('name')
-                                <div class="alert alert-danger">{{$message}}</div>
-                            @enderror
+
 
                             <div class="mb-3">
                                 <label for="userMail" class="form-label ">Email</label>

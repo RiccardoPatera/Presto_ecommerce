@@ -248,7 +248,7 @@ html, body {
 
 .revisor-card{
     height:fit-content;
-
+    max-width:95% ;
 }
 
 .revisor-carousel{
