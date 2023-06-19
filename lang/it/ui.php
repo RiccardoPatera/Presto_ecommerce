@@ -1,6 +1,6 @@
 <?php
 return[
-    'allArticles'=> 'I nostri prodotti',
+    'allArticles'=> 'Negozi',
     'results' => 'risultati',
     'work'=>'Lavora con noi',
     'new'=>'Nuovi arrivi',

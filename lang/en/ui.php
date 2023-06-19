@@ -1,6 +1,6 @@
 <?php
 return[
-    'allArticles'=> 'Our products',
+    'allArticles'=> 'Store',
     'results' => 'results',
     'work' => 'Work with us',
     'new'=>'New arrivals',
