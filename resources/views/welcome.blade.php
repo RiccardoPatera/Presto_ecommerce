@@ -82,8 +82,8 @@
             <p class="text-center">{{__('ui.homestep2')}}</p>
         </div>
         <div class="col-12 col-md-6 justify-content-center d-none d-md-block d-lg-block d-flex">
-        <div class="justify-content-center d-flex " >
-            <img src="media/ui/step2.png" class="pngstep" alt="" id="point2">
+        <div class="justify-content-center d-flex " id="point2" >
+            <img src="media/ui/step2.png" class="pngstep" alt="" >
         </div>
         </div>
         </div>
