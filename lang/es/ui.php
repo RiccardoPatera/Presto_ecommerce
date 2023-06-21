@@ -38,7 +38,7 @@ return[
     'reject'=>'Niega',
     'singleCat'=>'Categoria',
     'acceptArt'=> 'Has aceptado el articulo',
-    'rejectArt'=>'Has rechazado el articulo', 
+    'rejectArt'=>'Has rechazado el articulo',
     'createMess'=>'Tu articulo ha sido creado correctamente. Espera que un revisor acepte tu articulo ',
     'thankYou'=>'Gracias tu solicitud esta por ser revisada',
     'allCat'=>'Todas las categorias',
@@ -54,7 +54,7 @@ return[
     'noArt'=>'No hay artículos encontrados, pruebe con una búsqueda diferente',
     'reqTitle'=>'Se requiere el titulo',
     'reqPrice'=>'Se requiere el precio',
-    'reqDesc'=>'Se requiere la descripcion', 
+    'reqDesc'=>'Se requiere la descripcion',
     'reqCat'=>'Se requiere la categoria',
     'reqImage'=>'Se requiere la imagen',
     'reqName'=>'Se requiere el nombre',
@@ -65,8 +65,8 @@ return[
     'ourv'=> 'Nuestra visiòn',
     'rejectArt'=>'Has rechazado el articulo',
     'homestep1'=>'Registro: Cree una cuenta siguiendo las instrucciones de registro. Complete los campos requeridos con su información personal, como nombre, correo electrónico y contraseña.',
-    'homestep2'=>'Crea tu producto: Inicia sesión en tu cuenta y crea un nuevo listado para el producto usado que quieres vender. Proporcione una descripción clara del producto, incluyendo detalles como marca, modelo, condición y características clave. Añadir fotos de alta calidad para atraer la atención de los compradores y esperar que  nuestro revisor lo acepte!',
-    'homestep3'=>'Gestión de ofertas y comunicación: Supervise su cuenta para comprobar si hay consultas de compradores interesados. Responda rápidamente a las preguntas y negocie cualquier oferta. Establecer el precio final de venta y coordinar el método de pago y entrega con el comprador. Mantenga una comunicación clara y amigable durante todo el proceso de venta.',
+    'homestep2'=>'Crea tu producto: Inicia sesión en tu cuenta y crea un nuevo listado para el producto usado que quieres vender. Proporcione una descripción clara del producto, incluyendo detalles como marca, modelo, condición y características clave. Añadir fotos de alta calidad para atraer la atención de los compradores.',
+    'homestep3'=>'Revisión y aprobación: Es posible que el anuncio deba ser revisado antes de ser publicado. Revisa regularmente para confirmaciones o cualquier solicitud adicional.',
     'stepstart'=>'Vender sus productos nunca fue tan fácil!',
     'createby'=>'Creado por:',
     'lang'=>'Idiomas',
@@ -100,6 +100,9 @@ return[
     'discard'=> 'Descartar',
     'sureDelArt'=> 'Estás a punto de borrar tu artículo, ¿estás seguro?',
     'articles'=>'Artículos',
-    'noProdRev'=>'Ningùn producto revisado'
+    'noProdRev'=>'Ningùn producto revisado',
+    'slogan'=>'Descubre tesoros del pasado, de nuevo.',
+    'slogan2'=>'Eleva tu estilo con el lujo atemporal.'
+
 
 ];

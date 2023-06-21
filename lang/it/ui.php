@@ -36,7 +36,7 @@ return[
     'go'=>'Vai!',
     'accept'=>'Accetta',
     'reject'=>'Rifiuta',
-    'singleCat'=>'Categoria', 
+    'singleCat'=>'Categoria',
     'acceptArt'=>'Articolo accettato',
     'rejectArt'=>'Articolo rifutato',
     'createMess'=>'Articolo creato con successo. Aspetta che il revisore accetti il tuo articolo.',
@@ -52,11 +52,11 @@ return[
     'detail'=>'Dettaglio',
     'prof'=>'Profilo',
     'noArt'=>'Nessun articolo trovato, prova con una ricerca differente',
-    'ourvision'=>'"La visione per un negozio di utilizzo di vintage è quella di creare uno spazio in cui la bellezza, la nostalgia e l`artigianato delle ere passate vengano celebrati e riutilizzati per l`uso moderno. Si mira a offrire una collezione curata di pezzi vintage unici e di alta qualità che possano essere integrati senza soluzione di continuità nello stile di vita contemporaneo. Il negozio promuove la sostenibilità incoraggiando il riutilizzo e l`upcycling dei pezzi vintage, consentendo ai clienti di infondere i propri ambienti con carattere e storia. Si propone di essere un punto di riferimento per la creatività e l`ispirazione, dove le persone possono trovare tesori unici che raccontano storie e evocano un senso di atemporalità."',
+    'ourvision'=>'"La visione del nostro negozio è quella di creare uno spazio in cui la bellezza, la nostalgia e l`artigianato delle ere passate vengano celebrati e riutilizzati per l`uso moderno. Si mira a offrire una collezione curata di pezzi vintage unici e di alta qualità che possano essere integrati senza soluzione di continuità nello stile di vita contemporaneo. Il negozio promuove la sostenibilità incoraggiando il riutilizzo e l`upcycling dei pezzi vintage, consentendo ai clienti di infondere i propri ambienti con carattere e storia. Si propone di essere un punto di riferimento per la creatività e l`ispirazione, dove le persone possono trovare tesori unici che raccontano storie e evocano un senso di atemporalità."',
     'ourv'=> 'La nostra visione',
     'reqTitle'=>'Il titolo è richiesto',
     'reqPrice'=>'Il prezzo è richiesto',
-    'reqDesc'=>'La descrizione è richiesta', 
+    'reqDesc'=>'La descrizione è richiesta',
     'reqCat'=>'La categoria è richiesta',
     'reqImage'=>'Immagine richiesta',
     'reqName'=>'Il nome è richiesto',
@@ -64,8 +64,8 @@ return[
     'reqEmail'=>'La email è richiesta',
     'reqPass'=>'La password è richiesta',
     'homestep1'=>'Registrazione: crea un account sul sito Web selezionato seguendo le istruzioni di registrazione. Compila i campi richiesti con le tue informazioni personali, come nome, email e password. Verifica il tuo account se necessario.',
-    'homestep2'=>'Crea il tuo prodotto: accedi al tuo account e crea un nuovo annuncio per il prodotto utilizzato che desideri vendere. Fornire una chiara descrizione del prodotto, inclusi dettagli come marca, modello, condizione e caratteristiche chiave. Aggiungi foto di alta qualità per attirare l`attenzione degli acquirenti e aspetta che il nostro Revisor lo accetti!',
-    'homestep3'=>'Gestione delle offerte e della comunicazione: controlla il tuo account per verificare le richieste degli acquirenti interessati. Rispondere prontamente alle domande e negoziare eventuali offerte. Stabilire il prezzo di vendita finale e coordinare il metodo di pagamento e consegna con l`acquirente. Mantieni una comunicazione chiara e amichevole durante tutto il processo di vendita.',
+    'homestep2'=>'Crea il tuo prodotto: accedi al tuo account e crea un nuovo annuncio per il prodotto utilizzato che desideri vendere. Fornire una chiara descrizione del prodotto, inclusi dettagli come marca, modello, condizione e caratteristiche chiave. Aggiungi foto di alta qualità per attirare l`attenzione degli acquirenti.',
+    'homestep3'=>'Approvazione del revisore: L`annuncio potrebbe richiedere una revisione prima della pubblicazione. Controlla regolarmente le comunicazioni per conferme o richieste aggiuntive.',
     'stepstart'=>'Vendere i vostri prodotti non è mai stato così facile!',
     'createby'=>'Creato da:',
     'lang'=>'Lingue',
@@ -99,7 +99,8 @@ return[
     'discard'=> 'Scarta',
     'sureDelArt'=> 'Stai per eliminare il tuo articolo, sei sicuro?',
     'articles'=>'Articoli',
-    'noProdRev'=>'Nessun prodotto revisionato'
-
+    'noProdRev'=>'Nessun prodotto revisionato',
+    'slogan'=>'Scopri tesori del passato, di nuovo.',
+    'slogan2'=>'Eleva il tuo stile con il lusso senza tempo.'
 ];
 

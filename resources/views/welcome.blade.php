@@ -14,12 +14,12 @@
         <div class="row p-0 m-0 b-0 opacity-0" id='container-home' >
 
             <div class="col-12 justify-content-end align-items-start d-flex " id='slogan'>
-                <p class="textcustom d-none d-xl-block">DISCOVER TREASURES FROM THE PAST, ANEW.</p>
+                <p class="textcustom d-none d-xl-block">{{__('ui.slogan')}}</p>
             </div>
 
             <div class="col-12 header d-flex align-items-center d-flex flex-column ">
                 <div class="col-12 d-flex align-items-end divcustom mt-5 mt-lg-0 " id='slogan2'>
-                    <p class="textcustom ms-5 text-center pads">Elevate Your Style with Timeless Luxury.</p>
+                    <p class="textcustom ms-5 text-center pads">{{__('ui.slogan2')}}</p>
                 </div>
 
                 <div class="col-12 d-flex align-items-center d-flex flex-column ">
@@ -63,10 +63,10 @@
         <div class="row steprule opacity-0" id='step1'>
             <div class="col-12 col-md-6 justify-content-center d-flex ">
         <div class="justify-content-center d-flex">
-            <img src="{{Storage::url('public/media/step1.png')}}" class="pngstep" alt="">
+            <img src="../media/ui/step1.png" class="pngstep" alt="">
         </div>
         </div>
-        <div class="col-12 col-md-6 text-light align-items-center pt-5 d-flex message-bubble">
+        <div class="col-12 col-md-6 text-light align-items-center pt-5 d-flex message-bubble" id="point1">
             <p class="text-center">{{__('ui.homestep1')}}</p>
         </div>
         </div>
@@ -75,15 +75,15 @@
         <div class="row steprule opacity-0" id='step2'>
             <div class="col-12 col-md-6 justify-content-center d-block d-sm-none d-sm-block d-flex">
         <div class="justify-content-center d-flex">
-            <img src="{{Storage::url('public/media/step2.png')}}" class="pngstep" alt="">
+            <img src="media/ui/step1.png" class="pngstep" alt="">
         </div>
         </div>
         <div class="col-12 col-md-6 text-light mt-5 align-items-center d-flex">
             <p class="text-center">{{__('ui.homestep2')}}</p>
         </div>
         <div class="col-12 col-md-6 justify-content-center d-none d-md-block d-lg-block d-flex">
-        <div class="justify-content-center d-flex">
-            <img src="{{Storage::url('public/media/step2.png')}}" class="pngstep" alt="">
+        <div class="justify-content-center d-flex " >
+            <img src="media/ui/step2.png" class="pngstep" alt="" id="point2">
         </div>
         </div>
         </div>
@@ -91,10 +91,10 @@
         <div class="row steprule opacity-0" id='step3'>
             <div class="col-12 col-md-6 justify-content-center d-flex">
         <div class="justify-content-center d-flex">
-            <img src="{{Storage::url('public/media/step3.png')}}" class="pngstep" alt="">
+            <img src="media/ui/step3.png" class="pngstep" alt="">
         </div>
         </div>
-        <div class="col-12 col-md-6 text-light mt-5 align-items-center d-flex">
+        <div class="col-12 col-md-6 text-light mt-5 align-items-center d-flex" id="point3">
             <p class="text-center">{{__('ui.homestep3')}}</p>
         </div>
         </div>

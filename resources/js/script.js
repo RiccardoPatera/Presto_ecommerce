@@ -17,7 +17,7 @@
 //     modal.style.display = "block";
 // })
 
-
+// Cattura elementi logout
 let logout = document.querySelector('#logout');
 let delete_article = document.querySelector('#delete');
 
@@ -69,7 +69,7 @@ if (logout) {
 
 
 
-    // Add event listeners
+    // Cattura elementi Homepage
 
     let ourvision=document.querySelector('#ourvision');
     let ourvision_point=document.querySelector('#ourv-obs-point');
@@ -81,10 +81,12 @@ if (logout) {
     let step1=document.querySelector('#step1');
     let step2=document.querySelector('#step2');
     let step3=document.querySelector('#step3');
+    let point1=document.querySelector('#point1');
+    let point2=document.querySelector('#point2');
+    let point3=document.querySelector('#point3');
 
 
-
-
+    // Intersection Observer Homepage
     let observer= new IntersectionObserver((entries) =>
             {
                 entries.forEach(entry =>{
@@ -145,12 +147,11 @@ if (logout) {
 
 
 
-
-
+// Observer Homepage
 
  observer.observe(ourvision);
  observer2.observe(container_home)
- observer3.observe(step1);
- observer4.observe(step2);
- observer5.observe(step3);
+ observer3.observe(point1);
+ observer4.observe(point2);
+ observer5.observe(point3);
 
